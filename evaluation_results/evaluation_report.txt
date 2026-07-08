@@ -1,0 +1,175 @@
+
+============================================================
+  Regelbasierter Ansatz
+============================================================
+
+--- Typ-Klassifikation (K/I/S) ---
+              precision    recall  f1-score   support
+
+           I      0.000     0.000     0.000        38
+           K      0.971     0.806     0.881      1035
+           S      0.106     0.549     0.177        51
+
+    accuracy                          0.767      1124
+   macro avg      0.359     0.452     0.353      1124
+weighted avg      0.899     0.767     0.819      1124
+
+--- Taxonomie-Zuordnung (Primärstufe, 499 klassifiziert, 536 nicht zuordenbar) ---
+              precision    recall  f1-score   support
+
+    Erinnern      0.500     0.074     0.129        54
+   Verstehen      0.789     0.687     0.735       131
+    Anwenden      0.743     0.601     0.665       188
+ Analysieren      0.229     0.457     0.305        35
+    Bewerten      0.450     0.804     0.577        56
+  Erschaffen      0.436     0.686     0.533        35
+
+    accuracy                          0.585       499
+   macro avg      0.525     0.551     0.491       499
+weighted avg      0.639     0.585     0.581       499
+
+Confusion Matrix:
+       1     2     3     4     5     6
+  1:    4     9    21     9     7     4
+  2:    1    90    12     8    11     9
+  3:    2     9   113    25    31     8
+  4:    1     4     3    16     6     5
+  5:    0     0     1     5    45     5
+  6:    0     2     2     7     0    24
+
+--- Aufschlüsselung nach Schwierigkeitskategorie ---
+  standard                        n= 516  Typ-F1=0.994  Tax-F1=0.581 (499/516 klass.)
+  unbekannt                       n= 370  Typ-F1=0.683  Tax: nicht zuordenbar
+  nicht-empfohlen                 n= 149  Typ-F1=0.940  Tax: nicht zuordenbar
+  nicht-K                         n=  89  Typ-F1=0.279
+
+--- Aufschlüsselung nach Hochschule ---
+  Hochschule Fulda                n= 643  Typ-F1=0.874  Tax-F1=0.568 (270/610 klass.)
+  TH Mittelhessen                 n= 294  Typ-F1=0.810  Tax-F1=0.564 (170/281 klass.)
+  TU Darmstadt                    n= 180  Typ-F1=0.631  Tax-F1=0.680 (56/137 klass.)
+  Universität Kassel              n=   7  Typ-F1=0.923  Tax-F1=0.444 (3/7 klass.)
+
+============================================================
+  Embedding-Ansatz (SBERT + SVM)
+============================================================
+
+--- Typ-Klassifikation (K/I/S) ---
+              precision    recall  f1-score   support
+
+           I      0.833     0.526     0.645        38
+           K      0.972     0.996     0.984      1035
+           S      0.897     0.686     0.778        51
+
+    accuracy                          0.966      1124
+   macro avg      0.901     0.736     0.802      1124
+weighted avg      0.964     0.966     0.963      1124
+
+--- Taxonomie-Zuordnung (Primärstufe, 1035 klassifiziert, 0 nicht zuordenbar) ---
+              precision    recall  f1-score   support
+
+    Erinnern      0.850     0.870     0.860       215
+   Verstehen      0.838     0.860     0.849       229
+    Anwenden      0.851     0.889     0.870       379
+ Analysieren      0.787     0.578     0.667        64
+    Bewerten      0.786     0.828     0.806        93
+  Erschaffen      0.923     0.655     0.766        55
+
+    accuracy                          0.842      1035
+   macro avg      0.839     0.780     0.803      1035
+weighted avg      0.842     0.842     0.839      1035
+
+Confusion Matrix:
+       1     2     3     4     5     6
+  1:  187    11    16     0     1     0
+  2:   15   197    13     0     4     0
+  3:   10    13   337     6    11     2
+  4:    5     9    10    37     3     0
+  5:    2     3     7     3    77     1
+  6:    1     2    13     1     2    36
+
+--- Aufschlüsselung nach Schwierigkeitskategorie ---
+  standard                        n= 516  Typ-F1=0.999  Tax-F1=0.810 (516/516 klass.)
+  unbekannt                       n= 370  Typ-F1=0.996  Tax-F1=0.822 (370/370 klass.)
+  nicht-empfohlen                 n= 149  Typ-F1=1.000  Tax-F1=0.987 (149/149 klass.)
+  nicht-K                         n=  89  Typ-F1=0.740
+
+--- Aufschlüsselung nach Hochschule ---
+  Hochschule Fulda                n= 643  Typ-F1=0.985  Tax-F1=0.911 (610/610 klass.)
+  TH Mittelhessen                 n= 294  Typ-F1=0.973  Tax-F1=0.717 (281/281 klass.)
+  TU Darmstadt                    n= 180  Typ-F1=0.867  Tax-F1=0.770 (137/137 klass.)
+  Universität Kassel              n=   7  Typ-F1=1.000  Tax-F1=0.714 (7/7 klass.)
+
+============================================================
+  Hybrider Ansatz (Regel + Embedding)
+============================================================
+
+--- Typ-Klassifikation (K/I/S) ---
+              precision    recall  f1-score   support
+
+           I      1.000     0.132     0.233        38
+           K      0.969     0.984     0.976      1035
+           S      0.426     0.569     0.487        51
+
+    accuracy                          0.936      1124
+   macro avg      0.798     0.561     0.565      1124
+weighted avg      0.945     0.936     0.929      1124
+
+--- Taxonomie-Zuordnung (Primärstufe, 921 klassifiziert, 114 nicht zuordenbar) ---
+              precision    recall  f1-score   support
+
+    Erinnern      0.816     0.560     0.664       150
+   Verstehen      0.785     0.724     0.753       196
+    Anwenden      0.825     0.760     0.791       371
+ Analysieren      0.370     0.576     0.450        59
+    Bewerten      0.540     0.813     0.649        91
+  Erschaffen      0.515     0.630     0.567        54
+
+    accuracy                          0.706       921
+   macro avg      0.642     0.677     0.646       921
+weighted avg      0.739     0.706     0.713       921
+
+Confusion Matrix:
+       1     2     3     4     5     6
+  1:   84    16    29     9     8     4
+  2:   10   142    14     8    13     9
+  3:    5    13   282    28    34     9
+  4:    3     5     5    34     7     5
+  5:    1     1     4     6    74     5
+  6:    0     4     8     7     1    34
+
+--- Aufschlüsselung nach Schwierigkeitskategorie ---
+  standard                        n= 516  Typ-F1=1.000  Tax-F1=0.583 (516/516 klass.)
+  unbekannt                       n= 370  Typ-F1=0.976  Tax-F1=0.833 (353/370 klass.)
+  nicht-empfohlen                 n= 149  Typ-F1=1.000  Tax-F1=0.982 (52/149 klass.)
+  nicht-K                         n=  89  Typ-F1=0.425
+
+--- Aufschlüsselung nach Hochschule ---
+  Hochschule Fulda                n= 643  Typ-F1=0.955  Tax-F1=0.755 (532/610 klass.)
+  TH Mittelhessen                 n= 294  Typ-F1=0.969  Tax-F1=0.624 (272/281 klass.)
+  TU Darmstadt                    n= 180  Typ-F1=0.759  Tax-F1=0.743 (111/137 klass.)
+  Universität Kassel              n=   7  Typ-F1=1.000  Tax-F1=0.381 (6/7 klass.)
+
+  Quellen-Verteilung Hybrid: {'embedding': 469, 'regel': 655}
+  Precision@1 = 0.510
+  Precision@3 = 0.479
+  Precision@5 = 0.465
+
+============================================================
+  ZUSAMMENFASSUNG
+============================================================
+
+Ansatz                                Typ-F1   Tax-F1
+-------------------------------------------------------
+Regelbasiert                           0.819    0.581
+Embedding (SBERT+SVM)                  0.963    0.839
+Hybrid (Regel+Embedding)               0.929    0.713
+
+============================================================
+  McNEMAR-TESTS (Bonferroni-korrigiert, α=0.05/6≈0.0083)
+============================================================
+  Regel vs. Embedding       Typ         n01=  11  n10= 235  χ²=  202.15  p=0.00e+00  ***
+  Regel vs. Embedding       Taxonomie   n01=  40  n10= 619  χ²=  506.96  p=0.00e+00  ***
+  Regel vs. Hybrid          Typ         n01=   8  n10= 198  χ²=  173.40  p=0.00e+00  ***
+  Regel vs. Hybrid          Taxonomie   n01=   0  n10= 358  χ²=  356.00  p=0.00e+00  ***
+  Embedding vs. Hybrid      Typ         n01=  37  n10=   3  χ²=   27.23  p=1.81e-07  ***
+  Embedding vs. Hybrid      Taxonomie   n01= 261  n10=  40  χ²=  160.80  p=0.00e+00  ***

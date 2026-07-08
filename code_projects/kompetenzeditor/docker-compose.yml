@@ -1,0 +1,11 @@
+services:
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ../backend/models:/app/models
+      - ../backend/data:/app/data
+    restart: unless-stopped
