@@ -1,0 +1,231 @@
+\documentclass[12pt,oneside]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   Zusaetzliche Pakete  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{acronym}
+\usepackage{enumerate}
+\usepackage{a4wide}
+\usepackage{fancyhdr}
+\usepackage[pdftex]{graphicx}
+\usepackage{palatino}
+%\usepackage{blindtext}
+\usepackage{multirow}
+%\usepackage[ruled,longend]{algorithm2e}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage[numbib]{tocbibind}
+
+%folgende Zeile auskommentieren für englische Arbeiten
+\usepackage[ngerman]{babel}
+
+\usepackage[bookmarks]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a-1b]{pdfx}
+\usepackage[justification=centering]{caption}
+%\usepackage[style=unsrt,natbib=true,backend=biber]{biblatex}
+\usepackage{csquotes}
+\usepackage{url}
+%\usepackage{subfigure}
+% Layout corrections (Schusterjungen)
+\clubpenalty = 10000 
+% Layout corrections (Hurenkinder) 
+\widowpenalty = 10000 
+\displaywidowpenalty = 10000
+\emergencystretch=1em
+
+% Figures
+\usepackage[hypcap=true,labelformat=simple]{subcaption}
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
+
+% Tables
+\usepackage{booktabs} 
+
+% Newcommand TODO (red in text)
+\newcommand{\todo}[1]{\textcolor{red}{TODO: #1}}
+
+% Newcommand TODOM (red at border)
+\newcommand{\todom}[1]{\marginpar{\parbox{1.5cm}{\textcolor{red}{TODO:\\ #1}}}}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Definition der Kopfzeile %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+\setlength{\headheight}{16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Definition des Deckblattes und der Titelseite  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\HSFTitle}[8]{
+
+  \thispagestyle{empty}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{logo_new_2.png} \\
+    \vspace*{\stretch{1}}
+    \end{center}
+
+  %\vspace*{\stretch{1}}
+  {\parindent0cm
+  \rule{\linewidth}{.7ex}}
+  \begin{center}
+    \vspace*{\stretch{1}}
+    \sffamily\bfseries\Huge
+    #1\\
+    \vspace*{\stretch{1}}
+    \sffamily\bfseries\large
+    #3
+    \vspace*{\stretch{1}}
+  \end{center}
+  \rule{\linewidth}{.7ex}
+
+  \vspace*{\stretch{2}}
+  \begin{center}
+    \Large #2 am #5 der HS Fulda \\
+    \vspace*{\stretch{1}}
+
+    \large Matrikelnummer:  #4 \\[1mm]
+    \large Erstbegutachtung:  #7 \\[1mm]
+    \large Zweitbegutachtung:  #8 \\[1mm]
+
+    \vspace*{\stretch{1}}
+    \large Eingereicht am #6
+  \end{center}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Beginn des Dokuments  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+  \HSFTitle
+      {Embedding-basierte Analyse von Kompetenzformulierungen -- Potenziale eines hybriden Ansatzes mit regelbasierter Textanalyse}        % Titel der Arbeit
+      {Masterarbeit} % Typ der Arbeit
+      {Felix Beinssen}          % Vor- und Nachname der Autor*in
+      {1522578}
+      {Fachbereich AI}  % Name des FBs
+      {31.07.2026}        % Tag der Abgabe
+      {Prof. Dr.-Ing. Johannes Konert}     % Name der Erstgutachter*in
+      {Cathrin Möller}    % Name der Zweitgutachter*in
+
+  \clearpage
+
+\lhead{}
+\pagenumbering{Roman}
+    \setcounter{page}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Kurzzusammenfassung   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+%
+\markboth{Abstract}{Abstract}
+\section*{Abstract}
+Modulhandbücher deutschsprachiger Hochschulen enthalten Kompetenzformulierungen, die beschreiben, welche Fähigkeiten Studierende nach Abschluss eines Moduls erworben haben sollen.
+Die Qualität dieser Formulierungen variiert erheblich: Nicht alle Sätze enthalten beobachtbare Handlungsverben, und die Zuordnung zu kognitiven Taxonomiestufen nach Anderson und Krathwohl ist häufig unklar.
+Ein bestehender regelbasierter Prototyp unterstützt Lehrende bei der Analyse solcher Formulierungen durch exakten Abgleich mit einer statischen Verbliste, stößt jedoch an strukturelle Grenzen, wenn Verben nicht in der Liste enthalten sind.
+
+Diese Arbeit untersucht, welche Potenziale ein Embedding-basierter Ansatz gegenüber regelbasierter Textanalyse für die Unterstützung Lehrender bietet.
+Dazu werden drei Ansätze -- regelbasiert, Embedding-basiert (Sentence-BERT mit SVM-Klassifikation) und ein hybrider Cascading-Ansatz -- entworfen, in einem webbasierten Editor (Nuxt~4, FastAPI) implementiert und auf einem Gold-Standard-Datensatz von 5\,617~Sätzen aus Modulhandbüchern mehrerer deutscher Hochschulen evaluiert, wobei eine Institution den Schwerpunkt bildet.
+
+Der Embedding-Ansatz erreicht $F_1 = 0{,}963$ bei der Satztyp-Klassifikation und $F_1 = 0{,}839$ bei der Taxonomie-Zuordnung -- deutlich über dem regelbasierten Ansatz ($F_1 = 0{,}819$ bzw.\ $0{,}581$) und mit vollständiger Abdeckung statt 48{,}2\,\%.
+Der hybride Cascading-Ansatz ($F_1 = 0{,}929$ bzw.\ $0{,}713$) bleibt hinter dem reinen Embedding-Ansatz zurück, da Fehlerfortpflanzung im Cascading den theoretischen Transparenzvorteil überwiegt.
+Die semantische Repräsentation ermöglicht darüber hinaus ein Empfehlungssystem (Precision@1 $= 0{,}510$) und eine Taxonomie-Abdeckungsanalyse auf Modulebene -- Funktionen, die mit dem regelbasierten Ansatz nicht realisierbar sind.
+Die Konfidenzwerte der SVM-Klassifikation erweisen sich als brauchbarer Qualitätsindikator: Bei hoher Konfidenz ($\geq 0{,}8$) steigt der Typ-F1 auf $0{,}986$.
+\clearpage
+\tableofcontents
+\clearpage
+
+%\addcontentsline{toc}{section}{\listfigurename}
+\listoffigures
+
+%\addcontentsline{toc}{section}{\listtablename}
+\listoftables
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Einstellungen  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\pagenumbering{arabic}
+    \setcounter{page}{1}
+\lhead{\nouppercase{\leftmark}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Hauptteil  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Einleitung}\label{sec:einleitung}
+\input{chapters/einleitung}
+
+\section{Grundlagen}\label{sec:grundlagen}
+\input{chapters/grundlagen}
+
+\section{Methodik}\label{sec:methodik}
+\input{chapters/methodik}
+
+\section{Analyse des bestehenden Systems}\label{sec:vorarbeit}
+\input{chapters/vorarbeit}
+
+\section{Systementwurf}\label{sec:entwurf}
+\input{chapters/systementwurf}
+
+\section{Implementierung}\label{sec:implementierung}
+\input{chapters/implementierung}
+
+\section{Evaluation}\label{sec:evaluation}
+\input{chapters/evaluation}
+
+\section{Diskussion}\label{sec:diskussion}
+\input{chapters/diskussion}
+
+\section{Fazit und Ausblick}\label{sec:fazit}
+\input{chapters/fazit}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Literaturverzeichnis wird
+%% automatisch eingefügt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\def\UrlBreaks{\do\/\do-} %ermöglicht zeilenumbrüche in URLs im Literaturverzeichnis bei / und -
+%\stepcounter{section} % Increase counter (section) by one step
+%\addcontentsline{toc}{section}{\thesection \quad Literaturverzeichnis} 
+\bibliographystyle{unsrt}
+\bibliography{literatur}
+% --------------------------
+
+\appendix
+
+\section{Anhang}\label{sec:anhang}
+
+\subsection*{Quellcode}
+Der vollständige Quellcode des Kompetenzeditors (Frontend und Backend) sowie die Evaluationsskripte sind im zugehörigen Repository verfügbar:
+
+\url{https://github.com/Chafficui/Masterarbeit}
+
+\subsection*{Gold-Standard-Datensatz}
+Der annotierte Gold-Standard-Datensatz (5\,617~Sätze, CSV-Format) ist im Repository im Verzeichnis \texttt{data/} enthalten.
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Eidesstattliche Erklärung
+%% muss angepasst werden
+%% in Erklaerung.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Erklaerung.tex}
+
+\end{document}

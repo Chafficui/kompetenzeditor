@@ -1,0 +1,63 @@
+:root {
+  --color-primary: #1a56db;
+  --color-surface: #ffffff;
+  --color-background: #f0f4f8;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-good: #10b981;
+  --color-good-bg: #d1fae5;
+  --color-bad: #ef4444;
+  --color-bad-bg: #fee2e2;
+  --color-modal: #3b82f6;
+  --color-modal-bg: #dbeafe;
+  --color-neutral: #6b7280;
+  --color-neutral-bg: #f3f4f6;
+  --color-warn: #f59e0b;
+  --color-warn-bg: #fef3c7;
+  --color-stufe-1: #0369a1;
+  --color-stufe-1-bg: #e0f2fe;
+  --color-stufe-1-border: #7dd3fc;
+  --color-stufe-2: #047857;
+  --color-stufe-2-bg: #d1fae5;
+  --color-stufe-2-border: #6ee7b7;
+  --color-stufe-3: #a16207;
+  --color-stufe-3-bg: #fef9c3;
+  --color-stufe-3-border: #fde047;
+  --color-stufe-4: #c2410c;
+  --color-stufe-4-bg: #ffedd5;
+  --color-stufe-4-border: #fdba74;
+  --color-stufe-5: #be185d;
+  --color-stufe-5-bg: #fce7f3;
+  --color-stufe-5-border: #f9a8d4;
+  --color-stufe-6: #6d28d9;
+  --color-stufe-6-bg: #ede9fe;
+  --color-stufe-6-border: #c4b5fd;
+}
+
+html {
+  overflow-y: auto;
+  background: var(--color-background);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.5);
+}

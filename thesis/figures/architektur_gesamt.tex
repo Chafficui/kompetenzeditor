@@ -1,0 +1,163 @@
+\documentclass[border=10pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{palatino}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, fit, backgrounds, calc}
+
+\definecolor{bluefill}{HTML}{DCEEFB}
+\definecolor{blueframe}{HTML}{3B78B5}
+\definecolor{orangefill}{HTML}{FDF0E0}
+\definecolor{orangeframe}{HTML}{D48E2F}
+\definecolor{greenfill}{HTML}{E2F0E2}
+\definecolor{greenframe}{HTML}{4A8C4A}
+\definecolor{purplefill}{HTML}{EDE2F5}
+\definecolor{purpleframe}{HTML}{7B4FA0}
+\definecolor{grayarrow}{HTML}{444444}
+
+\begin{document}
+\begin{tikzpicture}[
+    >=Stealth,
+    node distance=5mm and 8mm,
+    myarrow/.style={->, line width=0.6pt, grayarrow},
+    mydashed/.style={->, line width=0.5pt, grayarrow, dashed},
+]
+
+% =====================
+% FRONTEND components
+% =====================
+\node[draw=blueframe, fill=white, rounded corners=1.5pt,
+      minimum height=12mm, text width=28mm, align=center,
+      font=\footnotesize, line width=0.5pt]
+    (editor) {\textbf{Tiptap-Editor}\\[1pt]{\scriptsize Verb-Highlighting}};
+
+\node[draw=blueframe, fill=white, rounded corners=1.5pt,
+      minimum height=12mm, text width=28mm, align=center,
+      font=\footnotesize, line width=0.5pt, right=12mm of editor]
+    (panel) {\textbf{Analyse-Panel}\\[1pt]{\scriptsize Typ, Stufe, Konfidenz}};
+
+\node[draw=blueframe, fill=white, rounded corners=1.5pt,
+      minimum height=12mm, text width=28mm, align=center,
+      font=\footnotesize, line width=0.5pt, right=12mm of panel]
+    (setview) {\textbf{Set-Analyse}\\[1pt]{\scriptsize Taxonomie-Verteilung}};
+
+% Frontend group box with extra top padding for label
+\begin{scope}[on background layer]
+    \node[draw=blueframe, fill=bluefill, rounded corners=3pt,
+          line width=0.7pt, inner ysep=7mm, inner xsep=5mm,
+          fit=(editor)(panel)(setview)] (fe) {};
+\end{scope}
+\node[font=\footnotesize\sffamily\bfseries, text=blueframe,
+      anchor=north, yshift=-2mm] at (fe.north) {Frontend (Nuxt\,4\,/\,Vue\,3)};
+
+% =====================
+% API arrow between frontend and backend
+% =====================
+\coordinate (apistart) at ($(fe.south)+(0,-3mm)$);
+\coordinate (apiend) at ($(fe.south)+(0,-22mm)$);
+\draw[myarrow] (fe.south) -- (apiend);
+\node[font=\footnotesize\sffamily, text=grayarrow, anchor=west, xshift=3mm]
+    at ($(apistart)!0.5!(apiend)$) {\texttt{POST /api/analyze}};
+
+% =====================
+% BACKEND components
+% =====================
+\node[draw=orangeframe, fill=white, rounded corners=1.5pt,
+      minimum height=13mm, text width=42mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=35mm of panel]
+    (pipeline) {\textbf{Hybrid-Analyse-Pipeline}};
+
+\node[draw=orangeframe, fill=white, rounded corners=1.5pt,
+      minimum height=14mm, text width=26mm, align=center,
+      font=\footnotesize, line width=0.5pt, below left=14mm and 32mm of pipeline]
+    (rule) {\textbf{Regelbasiert}\\[1pt]{\scriptsize Verblisten,}\\[-1pt]{\scriptsize Heuristiken}};
+
+\node[draw=orangeframe, fill=white, rounded corners=1.5pt,
+      minimum height=14mm, text width=28mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=14mm of pipeline]
+    (embsvm) {\textbf{Embedding + SVM}\\[1pt]{\scriptsize Klassifikation}};
+
+\node[draw=orangeframe, fill=white, rounded corners=1.5pt,
+      minimum height=14mm, text width=28mm, align=center,
+      font=\footnotesize, line width=0.5pt, below right=14mm and 32mm of pipeline]
+    (sim) {\textbf{\"Ahnlichkeitssuche}\\[1pt]{\scriptsize Cosine Top-$k$}};
+
+\node[draw=orangeframe, fill=white, rounded corners=1.5pt,
+      minimum height=14mm, text width=26mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=10mm of rule]
+    (spacy) {\textbf{spaCy}\\[1pt]{\scriptsize POS-Tagging,}\\[-1pt]{\scriptsize Lemmatisierung}};
+
+\draw[myarrow] (pipeline) -- (rule);
+\draw[myarrow] (pipeline) -- (embsvm);
+\draw[myarrow] (pipeline) -- (sim);
+\draw[myarrow] (rule) -- (spacy);
+
+% Backend group box with extra top padding for label
+\begin{scope}[on background layer]
+    \node[draw=orangeframe, fill=orangefill, rounded corners=3pt,
+          line width=0.7pt, inner ysep=9mm, inner xsep=7mm,
+          fit=(pipeline)(rule)(embsvm)(sim)(spacy)] (be) {};
+\end{scope}
+\node[font=\footnotesize\sffamily\bfseries, text=orangeframe,
+      anchor=north, yshift=-2mm] at (be.north) {Backend (Python\,/\,FastAPI)};
+
+% Arrow from API to pipeline goes into backend box
+\draw[myarrow] (apiend) -- (pipeline.north);
+
+% =====================
+% TRAINED MODELS
+% =====================
+\node[draw=greenframe, fill=white, rounded corners=1.5pt,
+      minimum height=14mm, text width=28mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=20mm of spacy]
+    (sbert) {\textbf{SBERT}\\[1pt]{\scriptsize cross-en-de-roberta}\\[-1pt]{\scriptsize 768 Dimensionen}};
+
+\node[draw=greenframe, fill=white, rounded corners=1.5pt,
+      minimum height=14mm, text width=20mm, align=center,
+      font=\footnotesize, line width=0.5pt, left=8mm of sbert]
+    (svmtyp) {\textbf{SVM-Typ}\\[1pt]{\scriptsize K / I / S}};
+
+\node[draw=greenframe, fill=white, rounded corners=1.5pt,
+      minimum height=14mm, text width=20mm, align=center,
+      font=\footnotesize, line width=0.5pt, right=8mm of sbert]
+    (svmtax) {\textbf{SVM-Tax}\\[1pt]{\scriptsize Stufe 1--6}};
+
+\begin{scope}[on background layer]
+    \node[draw=greenframe, fill=greenfill, rounded corners=3pt,
+          line width=0.7pt, inner ysep=7mm, inner xsep=5mm,
+          fit=(svmtyp)(sbert)(svmtax)] (models) {};
+\end{scope}
+\node[font=\footnotesize\sffamily\bfseries, text=greenframe,
+      anchor=north, yshift=-2mm] at (models.north) {Trainierte Modelle};
+
+% =====================
+% REFERENCE DB
+% =====================
+\node[draw=purpleframe, fill=white, rounded corners=1.5pt,
+      minimum height=12mm, text width=34mm, align=center,
+      font=\footnotesize, line width=0.5pt]
+    at (sim |- sbert) (refemb)
+    {\textbf{Referenz-Embeddings}\\[1pt]{\scriptsize 3\,213 S\"atze $\times$ 768\,d}};
+
+\node[draw=purpleframe, fill=white, rounded corners=1.5pt,
+      minimum height=12mm, text width=34mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=5mm of refemb]
+    (meta) {\textbf{Metadaten}\\[1pt]{\scriptsize Typ, Stufe, Modul}};
+
+\begin{scope}[on background layer]
+    \node[draw=purpleframe, fill=purplefill, rounded corners=3pt,
+          line width=0.7pt, inner ysep=7mm, inner xsep=5mm,
+          fit=(refemb)(meta)] (refdb) {};
+\end{scope}
+\node[font=\footnotesize\sffamily\bfseries, text=purpleframe,
+      anchor=north, yshift=-2mm] at (refdb.north) {Referenzdatenbank};
+
+% =====================
+% DASHED CONNECTIONS
+% =====================
+\draw[mydashed] (embsvm.south) -- ++(0,-6mm) -| (sbert.north);
+\draw[mydashed] (sim.south) -- ++(0,-6mm) -| (refemb.north);
+
+\end{tikzpicture}
+\end{document}

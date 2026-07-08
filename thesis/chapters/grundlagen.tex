@@ -1,0 +1,226 @@
+% =============================================================================
+% Kapitel 2: Grundlagen
+% =============================================================================
+
+Dieses Kapitel legt die theoretischen Grundlagen der Arbeit dar.
+Zunächst wird der Kompetenzbegriff und seine Operationalisierung in Modulhandbüchern geklärt, anschließend die Taxonomie kognitiver Prozesse nach Anderson und Krathwohl vorgestellt, darauf aufbauend das Konzept der Sentence Embeddings eingeführt und abschließend verwandte Arbeiten eingeordnet.
+
+\subsection{Kompetenzbegriff}\label{sec:grundlagen-kompetenz}
+
+Der Begriff der Kompetenz wird in der bildungswissenschaftlichen Literatur heterogen verwendet.
+Diese Arbeit folgt der in der deutschsprachigen Bildungsforschung einflussreichen Definition von Weinert, der Kompetenzen als \glqq die bei Individuen verfügbaren oder durch sie erlernbaren kognitiven Fähigkeiten und Fertigkeiten, um bestimmte Probleme zu lösen, sowie die damit verbundenen motivationalen, volitionalen und sozialen Bereitschaften und Fähigkeiten, um die Problemlösungen in variablen Situationen erfolgreich und verantwortungsvoll nutzen zu können\grqq\ definiert~\cite{weinert2001leistungsmessung}.
+Diese Definition wurde von der Kultusministerkonferenz als Grundlage des Deutschen Qualifikationsrahmens übernommen~\cite{dqr2013handbuch} und bildet den Referenzpunkt für die Formulierung von Lernergebnissen in Modulhandbüchern.
+
+Klieme et al. konkretisieren den Kompetenzbegriff für den Bildungskontext: Kompetenzen sind demnach \glqq Dispositionen, die im Verlaufe von Bildungs- und Erziehungsprozessen erworben (erlernt) werden und die Bewältigung von unterschiedlichen Aufgaben bzw.\ Lebenssituationen ermöglichen\grqq~\cite{klieme2003bildungsstandards}.
+Zentral ist dabei die Abgrenzung von reinem Wissen: Kompetenz umfasst nicht nur deklaratives Wissen, sondern die Fähigkeit, dieses Wissen in konkreten Handlungssituationen anzuwenden.
+
+\paragraph{Kompetenzorientierung in Modulhandbüchern.}
+
+Mit dem Bologna-Prozess wurde die Shift von einer Input-Orientierung (\emph{was wird gelehrt?}) hin zu einer Output-Orientierung (\emph{was können Studierende nach Abschluss des Moduls?}) vollzogen~\cite{hrknexus2015lernergebnisse}.
+Modulhandbücher beschreiben die Qualifikationsziele jedes Moduls in Form von Lernergebnissen (\emph{Learning Outcomes}).
+Der Qualifikationsrahmen für deutsche Hochschulabschlüsse~\cite{kmk2017qualifikationsrahmen} definiert dabei Niveaustufen (Bachelor, Master), die jeweils spezifische Kompetenzprofile verlangen.
+
+Schaper et al. operationalisieren den Kompetenzbegriff für die akademische Lehre und fordern, dass Kompetenzformulierungen konkretes, beobachtbares Handeln beschreiben~\cite{schaper2012fachgutachten}.
+Der HRK-nexus-Leitfaden konkretisiert die Anforderungen an eine wohlgeformte Kompetenzformulierung~\cite{hrknexus2015lernergebnisse}:
+
+\begin{enumerate}
+    \item Die \textbf{Studierenden} werden als Subjekt benannt.
+    \item Genau ein \textbf{beobachtbares Handlungsverb} beschreibt die erwartete Tätigkeit.
+    \item Der \textbf{fachliche Gegenstand} der Handlung wird spezifiziert.
+\end{enumerate}
+
+Diese Dreiteilung -- Subjekt, Verb, Inhalt -- bildet die Grundlage für die automatisierte Analyse: Das Verb kodiert die kognitive Prozessstufe, der Inhalt die Wissensdimension.
+Kopf et al.\ ergänzen, dass die Formulierung \glqq aus der Perspektive der Studierenden und nicht aus der Perspektive der Lehrenden\grqq\ erfolgen soll~\cite{kopf2010kompetenzen}.
+
+Aus dieser Operationalisierung folgt unmittelbar, warum das Verb eine zentrale Rolle in der automatisierten Analyse spielt: Es ist der Bedeutungsträger, der die kognitive Anforderungsstufe kodiert.
+Gleichzeitig zeigt die Literatur, dass ein einzelnes Verb nicht immer eindeutig einer Stufe zugeordnet werden kann (vgl.\ Kap.~\ref{sec:grundlagen-taxonomie}) -- eine Beobachtung, die den Embedding-basierten Ansatz dieser Arbeit motiviert.
+
+%
+\subsection{Taxonomie kognitiver Prozesse}\label{sec:grundlagen-taxonomie}
+
+\subsubsection{Blooms Originaltaxonomie}
+
+Die erste systematische Klassifikation kognitiver Lernziele wurde 1956 von Bloom et al.\ vorgelegt~\cite{bloom1956taxonomy}.
+Sie unterscheidet sechs hierarchisch angeordnete Stufen: \emph{Knowledge}, \emph{Comprehension}, \emph{Application}, \emph{Analysis}, \emph{Synthesis} und \emph{Evaluation}.
+Die Taxonomie wurde entwickelt, um Prüfungsaufgaben einheitlich nach ihrer kognitiven Anforderung zu klassifizieren und eine gemeinsame Sprache für die Kommunikation über Lernziele zu schaffen.
+
+\subsubsection{Revision nach Anderson und Krathwohl}
+
+Anderson und Krathwohl überarbeiteten Blooms Taxonomie grundlegend~\cite{anderson2001taxonomy}.
+Die wesentlichen Änderungen sind:
+\begin{itemize}
+    \item Die Kategorien werden als \emph{Verben} statt als Substantive formuliert, um den Prozesscharakter zu betonen.
+    \item Die oberste Stufe wird von \emph{Evaluation} zu \emph{Create} (Erschaffen) geändert; \emph{Evaluate} (Bewerten) rückt auf Stufe~5.
+    \item Die Taxonomie wird um eine zweite Dimension erweitert: die \emph{Wissensdimension}.
+\end{itemize}
+
+Die sechs kognitiven Prozessstufen der revidierten Taxonomie sind~\cite{anderson2001taxonomy,krathwohl2002revision}:
+
+\begin{enumerate}
+    \item \textbf{Erinnern} (\emph{Remember}): Relevantes Wissen aus dem Langzeitgedächtnis abrufen. Hierzu zählen Wiedererkennen und Abrufen. Typische Verben: \emph{benennen, aufzählen, wiedergeben, definieren}.
+    \item \textbf{Verstehen} (\emph{Understand}): Die Bedeutung von Informationen erfassen. Umfasst Interpretieren, Exemplifizieren, Klassifizieren, Zusammenfassen, Schlussfolgern, Vergleichen und Erklären. Typische Verben: \emph{beschreiben, erläutern, erklären, zusammenfassen, interpretieren}.
+    \item \textbf{Anwenden} (\emph{Apply}): Ein Verfahren in einer gegebenen Situation ausführen. Umfasst Ausführen und Implementieren. Typische Verben: \emph{anwenden, berechnen, durchführen, implementieren, lösen}.
+    \item \textbf{Analysieren} (\emph{Analyze}): Material in seine Bestandteile zerlegen und deren Beziehungen untereinander und zur Gesamtstruktur bestimmen. Umfasst Differenzieren, Organisieren und Zuordnen. Typische Verben: \emph{analysieren, unterscheiden, vergleichen, untersuchen, gliedern}.
+    \item \textbf{Bewerten} (\emph{Evaluate}): Urteile auf der Grundlage von Kriterien und Standards fällen. Umfasst Überprüfen und Beurteilen. Typische Verben: \emph{bewerten, beurteilen, kritisieren, überprüfen, begründen}.
+    \item \textbf{Erschaffen} (\emph{Create}): Elemente zu einem kohärenten oder funktionalen Ganzen zusammenfügen oder ein neues Muster oder eine neue Struktur erzeugen. Umfasst Generieren, Planen und Produzieren. Typische Verben: \emph{entwerfen, entwickeln, konstruieren, gestalten, konzipieren}.
+\end{enumerate}
+
+\paragraph{Zweidimensionalität.}
+
+Krathwohl~\cite{krathwohl2002revision} betont die Zweidimensionalität der revidierten Taxonomie.
+Neben dem kognitiven Prozess (kodiert durch das Verb) bestimmt die \emph{Wissensdimension} (kodiert durch den Inhalt) das Anspruchsniveau.
+Die vier Wissensdimensionen sind: Faktenwissen, konzeptuelles Wissen, prozedurales Wissen und metakognitives Wissen.
+Ein Lernziel wie \glqq Die Studierenden können Sortieralgorithmen \emph{analysieren}\grqq\ kombiniert den kognitiven Prozess \emph{Analysieren} (Stufe~4) mit konzeptuellem Wissen über Algorithmen.
+
+\paragraph{Mehrdeutigkeit von Verben.}
+
+Für die automatisierte Zuordnung ist die empirisch belegte Mehrdeutigkeit einzelner Verben ein zentrales Problem.
+Stanny~\cite{stanny2016reevaluating} analysierte 176~Verben aus 30~publizierten Verblisten und stellte fest, dass einzelne Verben in bis zu allen sechs Taxonomiestufen auftreten können.
+Cursio und Jahn~\cite{cursio2013leitfaden} weisen darauf hin, dass die in Verblisten angebotenen Verben \glqq nur exemplarischen Charakter\grqq\ haben und \glqq stets mit Blick auf die Inhaltskomponente betrachtet werden\grqq\ müssen.
+
+Diese Mehrdeutigkeit begründet die zentrale Hypothese der vorliegenden Arbeit: Ein Embedding-basierter Ansatz, der den gesamten Satz -- also Verb \emph{und} Inhalt -- als semantische Einheit betrachtet, kann kontextabhängige Zuordnungen treffen, die ein reiner Stringvergleich auf Verbebene nicht leisten kann.
+
+%
+\subsection{Sentence Embeddings}\label{sec:grundlagen-embeddings}
+
+\subsubsection{Von Wortrepräsentationen zu Satzrepräsentationen}
+
+Die maschinelle Verarbeitung natürlicher Sprache erfordert eine numerische Repräsentation von Text.
+Traditionelle Ansätze wie Bag-of-Words oder TF-IDF repräsentieren Texte als hochdimensionale, dünn besetzte Vektoren, die keine semantischen Beziehungen zwischen Wörtern erfassen.
+
+Mikolov et al.\ zeigten mit Word2Vec, dass neuronale Netze dichte, niedrigdimensionale Wortvektoren (\emph{Word Embeddings}) lernen können, die semantische Regularitäten abbilden~\cite{mikolov2013word2vec}.
+Wörter mit ähnlicher Bedeutung liegen in diesem Vektorraum nahe beieinander; zudem lassen sich semantische Beziehungen als Vektoroperationen ausdrücken.
+Word Embeddings sind jedoch kontextunabhängig: Das Wort \emph{erkennen} erhält denselben Vektor, unabhängig davon, ob es \emph{Erinnern} oder \emph{Analysieren} bedeutet.
+
+Dieses Problem adressieren kontextualisierte Sprachmodelle wie BERT~\cite{devlin2019bert}.
+BERT basiert auf der Transformer-Architektur~\cite{vaswani2017attention}, die Eingabesequenzen über einen Selbstaufmerksamkeitsmechanismus (\emph{Self-Attention}) verarbeitet.
+Im Gegensatz zu Word Embeddings erzeugt BERT für jedes Wort eine Repräsentation, die den gesamten Satzkontext berücksichtigt.
+Durch Vortraining auf großen Textkorpora (\emph{Masked Language Modeling} und \emph{Next Sentence Prediction}) lernt BERT allgemeine Sprachrepräsentationen, die durch aufgabenspezifisches Feintuning (\emph{Fine-Tuning}) angepasst werden können.
+
+\subsubsection{Sentence-BERT}
+
+Für den paarweisen Vergleich von Sätzen -- wie er für die ähnlichkeitsbasierte Empfehlung und Klassifikation von Kompetenzformulierungen benötigt wird -- ist ein direkter Einsatz von BERT ineffizient.
+Die Berechnung eines Ähnlichkeitswertes zwischen zwei Sätzen erfordert die gemeinsame Verarbeitung beider Sätze als Eingabepaar; bei $n$ Sätzen entstehen $\frac{n(n-1)}{2}$ Paare, was für Empfehlungssysteme unpraktikabel ist.
+
+Reimers und Gurevych lösen dieses Problem mit Sentence-BERT (SBERT)~\cite{reimers2019sentencebert}.
+SBERT verwendet eine siamesische Netzwerkarchitektur: Zwei identische BERT-Instanzen verarbeiten jeweils einen Satz unabhängig voneinander, und eine Pooling-Schicht erzeugt aus der variablen BERT-Ausgabe einen Satzvektor fester Dimensionalität.
+Das Netzwerk wird so trainiert, dass semantisch ähnliche Sätze nahe beieinanderliegende Vektoren erhalten.
+
+Der zentrale Vorteil für die vorliegende Arbeit liegt in der Trennung von Kodierung und Vergleich:
+Jeder Satz wird genau einmal in einen Vektor überführt; der Ähnlichkeitsvergleich reduziert sich anschließend auf eine Kosinusähnlichkeitsberechnung zwischen den Vektoren -- eine Operation, die in konstanter Zeit durchführbar ist.
+Für die Empfehlungsfunktion (FA3) bedeutet dies, dass eine Referenzdatenbank mit vorberechneten Vektoren angelegt und zur Laufzeit effizient durchsucht werden kann.
+
+\subsubsection{Multilinguale Modelle}
+
+Da die vorliegende Arbeit deutschsprachige Kompetenzformulierungen analysiert, ist die Verfügbarkeit leistungsfähiger deutscher Modelle relevant.
+Reimers und Gurevych~\cite{reimers2020multilingual} zeigen, dass durch \emph{Knowledge Distillation} -- das Übertragen des Wissens eines englischen Lehrermodells auf ein mehrsprachiges Schülermodell -- multilinguale Sentence Embeddings erzeugt werden können, die auf deutschen Texten vergleichbare Qualität erreichen wie das englische Ausgangsmodell.
+
+Neuere Ansätze wie BGE-M3~\cite{chen2024m3embedding} und E5~\cite{wang2022e5} erweitern dieses Paradigma um Multi-Granularität (Wort-, Satz- und Dokumentebene) und schwach überwachtes Vortraining auf großen Webkorpora.
+Die Wahl des konkreten Modells erfolgt in Kap.~\ref{sec:modellauswahl} auf Basis einer aufgabenspezifischen Evaluation.
+
+\subsubsection{Kosinusähnlichkeit}
+
+Die Kosinusähnlichkeit ist das Standardmaß für den Vergleich von Embedding-Vektoren.
+Für zwei Vektoren $\vec{a}$ und $\vec{b}$ ist sie definiert als:
+\begin{equation}\label{eq:cosine}
+    \text{cos}(\vec{a}, \vec{b}) = \frac{\vec{a} \cdot \vec{b}}{\|\vec{a}\| \cdot \|\vec{b}\|}
+\end{equation}
+Der Wertebereich liegt zwischen $-1$ (entgegengesetzte Bedeutung) und $+1$ (identische Bedeutung); in der Praxis liegen Sentence Embeddings typischerweise im positiven Bereich.
+Die Normierung auf die Vektorlänge macht das Maß invariant gegenüber der absoluten Magnitude und damit geeignet für den Vergleich von Sätzen unterschiedlicher Länge.
+
+%
+\subsection{Verwandte Arbeiten}\label{sec:relwork}
+
+Dieser Abschnitt ordnet die vorliegende Arbeit in den Kontext bestehender Forschung ein.
+Zunächst wird der Prototyp von Loth und Konert als direkte Vorarbeit beschrieben (Kap.~\ref{sec:relwork-prototyp}), anschließend werden allgemeinere Ansätze zur automatisierten Schreibunterstützung eingeordnet (Kap.~\ref{sec:relwork-textimprovement}) und verwandte Ansätze zur automatisierten Bloom-Klassifikation diskutiert (Kap.~\ref{sec:relwork-bloom}).
+
+\subsubsection{Prototyp von Loth und Konert}\label{sec:relwork-prototyp}
+
+Der bestehende Prototyp~\cite{loth2022kompetenzeditor,loth2022masterprojekt} implementiert einen webbasierten Editor, der Kompetenzformulierungen in Echtzeit analysiert und Lehrenden visuelles Feedback zur Qualität ihrer Formulierungen gibt.
+Die Architektur besteht aus einem Nuxt-2-Frontend mit Vuetify~2 und einem spaCy-Backend, das die linguistische Vorverarbeitung übernimmt.
+
+\paragraph{Analysepipeline.}
+
+Die Analyse erfolgt in vier Schritten.
+Zunächst wird der eingegebene Text an das spaCy-Backend gesendet, das die Tokenisierung und das Part-of-Speech-Tagging (POS-Tagging) mit dem deutschen Modell \texttt{de\_core\_news\_sm} durchführt.
+Im zweiten Schritt werden alle als Verb getaggten Token extrahiert und deren Lemma bestimmt.
+Im dritten Schritt erfolgt ein exakter Stringvergleich jedes Verb-Lemmas gegen eine statische Liste von rund 80~Handlungsverben, die den sechs Taxonomiestufen nach Anderson und Krathwohl zugeordnet sind.
+Im vierten Schritt wird das Ergebnis als farbliche Hervorhebung im Editor dargestellt: Grün für empfohlene Verben, Rot für nicht empfohlene Verben, Blau für Modalverben und Grau für Verben, die in keiner Liste enthalten sind.
+
+\paragraph{Stärken.}
+
+Der Prototyp demonstriert die Machbarkeit einer Echtzeit-Analyse von Kompetenzformulierungen im Browser.
+Die regelbasierte Zuordnung ist für Lehrende nachvollziehbar: Jede Farbmarkierung lässt sich direkt auf die Zugehörigkeit eines Verbs zu einer Liste zurückführen.
+Das Debounce-Verfahren -- die Analyse wird nach einer Tipp-Pause von 1000\,ms ausgelöst -- gewährleistet, dass die Rückmeldung den Schreibfluss nicht stört.
+Die lokale Datenhaltung über IndexedDB ermöglicht den Einsatz ohne serverseitige Persistenz.
+
+\paragraph{Limitationen.}
+
+Drei strukturelle Limitationen begrenzen die Analysequalität; sie bilden den Ausgangspunkt der vorliegenden Arbeit und wurden bereits in Kap.~\ref{sec:problemstellung} eingeführt:
+(1)~Die geschlossene Verbliste erkennt nur explizit gelistete Verben; Synonyme, Komposita und fachspezifische Verben bleiben unanalysiert.
+(2)~Der Stringvergleich berücksichtigt keinen Satzkontext, obwohl einzelne Verben je nach Inhalt verschiedenen Taxonomiestufen zugeordnet werden können~\cite{stanny2016reevaluating}.
+(3)~Eine Klassifikation, ob ein Satz überhaupt eine Kompetenzformulierung darstellt, findet nicht statt.
+
+Darüber hinaus beschreiben die Autoren selbst weiterführende Erweiterungsmöglichkeiten: die Analyse von Verben in konjugierter und abgewandelter Form sowie den Vergleich mit einer Referenzdatenbank bestehender Formulierungen~\cite{loth2022kompetenzeditor}.
+
+\subsubsection{Automatisierte Schreibunterstützung}\label{sec:relwork-textimprovement}
+
+Der Kompetenzeditor lässt sich in das breitere Feld der automatisierten Schreibunterstützung einordnen, in dem Werkzeuge Textqualität bewerten und Verbesserungsvorschläge generieren.
+Die Ansätze in diesem Feld reichen von regelbasierten Grammatikprüfern bis hin zu LLM-gestützten Feedbacksystemen.
+
+\paragraph{Regelbasierte Werkzeuge.}
+
+LanguageTool~\cite{naber2003languagetool} ist der bekannteste Open-Source-Vertreter regelbasierter Textprüfung.
+Die Architektur kombiniert POS-Tagging mit Pattern-Matching auf einer Regelbasis aus XML-definierten Mustern und erkennt Grammatik-, Stil- und Rechtschreibfehler.
+Für die vorliegende Arbeit ist der Ansatz in zweierlei Hinsicht relevant: Erstens demonstriert er die Stärken regelbasierter Systeme -- Transparenz, Nachvollziehbarkeit und Konsistenz der Ergebnisse.
+Zweitens zeigt er deren Grenzen auf: Die Qualität hängt vollständig von der Vollständigkeit der Regelbasis ab, und semantische Aspekte wie die kognitive Anforderungsstufe eines Satzes lassen sich mit Pattern-Matching nicht erfassen.
+Kommerzielle Werkzeuge wie Grammarly und DeepL Write erweitern den regelbasierten Ansatz um neuronale Komponenten, die kontextsensitivere Korrekturen ermöglichen; ihre Architektur ist jedoch nicht öffentlich dokumentiert.
+
+\paragraph{Automatisiertes Feedback im Bildungskontext.}
+
+Fleckenstein et al.~\cite{fleckenstein2023automated} legen eine Meta-Analyse vor, die den Forschungsstand zu automatisiertem Schreibfeedback im Bildungskontext zusammenfasst.
+Die Analyse zeigt, dass automatisiertes Feedback signifikante positive Effekte auf die Schreibleistung von Studierenden hat.
+Dieser Befund stützt die Grundannahme des Kompetenzeditors: Automatisiertes Echtzeit-Feedback kann Lehrende bei der Formulierung qualitativ hochwertiger Kompetenzformulierungen unterstützen.
+Im Gegensatz zu allgemeinen Schreibassistenten, die auf Grammatik und Stil abzielen, fokussiert der hier entwickelte Editor auf die domänenspezifische Qualität von Kompetenzformulierungen -- insbesondere die taxonomische Einordnung und die Einhaltung formaler Kriterien.
+
+\paragraph{LLM-basierte Ansätze.}
+
+Chamoun et al.~\cite{chamoun2024automated} stellen mit SWIF2T ein Multi-Agenten-System vor, das Large Language Models nutzt, um fokussiertes Feedback zu wissenschaftlichen Texten zu generieren.
+Die Architektur -- spezialisierte Komponenten für Planung, Untersuchung und Bewertung -- ist konzeptionell verwandt mit dem hybriden Ansatz dieser Arbeit, in dem regelbasierte und Embedding-basierte Komponenten zusammenwirken.
+LLM-basierte Systeme erreichen eine hohe Flexibilität, erfordern jedoch erhebliche Rechenressourcen und bieten eingeschränkte Nachvollziehbarkeit der Ergebnisse.
+Der in dieser Arbeit verfolgte Ansatz positioniert sich bewusst zwischen dem regelbasierten und dem LLM-basierten Paradigma: Sentence Embeddings mit SVM-Klassifikation bieten semantische Generalisierung bei deutlich geringerem Ressourcenbedarf und höherer Erklärbarkeit als generative Sprachmodelle.
+
+\subsubsection{Automatisierte Bloom-Klassifikation}\label{sec:relwork-bloom}
+
+Die automatisierte Zuordnung von Lernergebnissen zu den Stufen der Bloom-Taxonomie ist Gegenstand einer wachsenden Zahl von Forschungsarbeiten.
+Die Ansätze lassen sich entlang zweier Dimensionen einordnen: regelbasiert vs.\ lernbasiert sowie englischsprachig vs.\ mehrsprachig.
+
+\paragraph{Regelbasierte Ansätze.}
+
+Der Prototyp von Loth und Konert steht in der Tradition regelbasierter Informationsextraktion, deren Relevanz Chiticariu et al.~\cite{chiticariu2013rulebased} trotz der Fortschritte im maschinellen Lernen betonen.
+Regelbasierte Systeme bieten hohe Transparenz, erfordern kein Trainingsdaten und liefern konsistente Ergebnisse.
+Ihre Abdeckung ist jedoch durch die explizit formulierten Regeln begrenzt.
+
+\paragraph{Embedding- und Deep-Learning-basierte Ansätze.}
+
+Li et al.~\cite{li2022bloomclassification} evaluierten verschiedene BERT-basierte Klassifikatoren auf einem englischen Datensatz von 21.380~Lernergebnissen aus 159~Programmen.
+Ihr bestes Modell erreichte gewichtete F1-Werte zwischen 0{,}88 und 0{,}95 je nach Granularität der Klassifikation.
+Die Autoren zeigten, dass vortrainierte Sprachmodelle die Taxonomiestufen deutlich besser unterscheiden als traditionelle Machine-Learning-Verfahren auf handcodierten Features.
+
+Banujan et al.~\cite{banujan2023bloomclassification} untersuchten die Klassifikation von Prüfungsfragen nach Bloom-Stufen mittels CNN- und LSTM-Architekturen.
+Ihre Ergebnisse bestätigen, dass Deep-Learning-Ansätze regelbasierte Methoden auf ausreichend großen Datensätzen übertreffen.
+
+Kumar et al.~\cite{kumar2025automated} demonstrierten, dass auf kleinen Datensätzen ($<$\,1000~Samples) eine SVM auf Sentence Embeddings (94\,\% Accuracy) sogar Deep-Learning-Modelle übertreffen kann -- ein Befund, der für die vorliegende Arbeit relevant ist, da der deutschsprachige Datensatz ebenfalls in dieser Größenordnung liegt.
+
+\paragraph{Transferierbarkeit und Domänenabhängigkeit.}
+
+Huber und Niklaus~\cite{huber2025llmsblooms} liefern eine kritische Perspektive: Ihr trainierter RoBERTa-Klassifikator erreichte auf dem Trainingsdatensatz einen F1-Wert von 0{,}92, versagte jedoch beim Transfer auf eine andere Domäne (Agreement\,=\,0{,}04).
+Dieses Ergebnis zeigt, dass Embedding-basierte Taxonomie-Klassifikatoren stark domänenabhängig sind und nicht ohne Weiteres generalisieren.
+Für die vorliegende Arbeit bedeutet dies, dass eine Evaluation auf domänenspezifischen Daten -- hier: deutschsprachige Kompetenzformulierungen aus dem Fachbereich Angewandte Informatik -- unerlässlich ist.
+
+\paragraph{Einordnung der vorliegenden Arbeit.}
+
+Die vorliegende Arbeit unterscheidet sich von den genannten Ansätzen in drei wesentlichen Punkten.
+Erstens wird ein \emph{hybrider Ansatz} untersucht, der regelbasierte und Embedding-basierte Verfahren im Cascading-Muster kombiniert -- eine Kombination, die in der gesichteten Literatur zur Bloom-Klassifikation bisher nicht systematisch untersucht wurde.
+Zweitens liegt der Fokus auf \emph{deutschsprachigen} Kompetenzformulierungen, während die Mehrzahl der verwandten Arbeiten englischsprachige Datensätze verwendet.
+Drittens wird die Analyse nicht auf die Taxonomie-Zuordnung beschränkt, sondern umfasst vier Ebenen: Klassifikation, Taxonomie-Zuordnung, Empfehlungen und Set-Analyse.

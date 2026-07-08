@@ -1,0 +1,15 @@
+{
+  "empfohlen": {
+    "1": ["erinnern", "identifizieren", "wiederaufrufen", "zurückrufen", "wiederherstellen", "reproduzieren", "auflisten", "wiederholen", "darlegen"],
+    "2": ["interpretieren", "klären", "paraphrasieren", "darstellen", "übersetzen", "erläutern", "illustrieren", "veranschaulichen", "realisieren", "klassifizieren", "kategorisieren", "subsumieren", "zusammenfassen", "abstrahieren", "generalisieren", "folgern", "schließen", "interpolieren", "extrapolieren", "voraussagen", "vergleichen", "kontrastieren", "abbilden", "anpassen", "erklären", "modellieren", "diskutieren", "beschreiben"],
+    "3": ["anwenden", "ausführen", "benutzen", "implementieren", "durchführen", "übertragen", "handhaben", "umsetzen", "lösen", "demonstrieren", "ableiten", "planen", "steuern"],
+    "4": ["analysieren", "differenzieren", "unterscheiden", "kennzeichnen", "charakterisieren", "auslesen", "auswählen", "erfassen", "organisieren", "auffinden", "hervorheben", "unterstreichen", "strukturieren", "beifügen", "aufteilen"],
+    "5": ["überprüfen", "abstimmen", "ermitteln", "überwachen", "testen", "beurteilen", "evaluieren", "auswerten", "schätzen", "kontrollieren", "reflektieren"],
+    "6": ["generieren", "kreieren", "zusammenstellen", "zusammenführen", "entwerfen", "produzieren", "konstruieren", "gestalten", "entwickeln"]
+  },
+  "mehrdeutig": {
+    "erkennen": [1, 2, 4]
+  },
+  "nicht_empfohlen": ["wissen", "kennen", "erlangen", "beherrschen", "erwerben", "verstehen"],
+  "modal": ["können"]
+}

@@ -1,0 +1,151 @@
+% =============================================================================
+% Kapitel 8: Diskussion
+% =============================================================================
+
+Dieses Kapitel ordnet die Evaluationsergebnisse aus Kap.~\ref{sec:evaluation} in den Kontext der Forschungsfrage ein, diskutiert die Implikationen des hybriden Ansatzes und benennt die Limitationen der Arbeit.
+
+\subsection{Beantwortung der Forschungsfrage}\label{sec:beantwortung}
+
+Die Forschungsfrage lautet: \textit{Welche Potenziale und Grenzen bietet ein Embedding-basierter Ansatz gegenüber regelbasierter Textanalyse für die Unterstützung Lehrender bei der Erstellung qualitativ hochwertiger Kompetenzformulierungen in deutschsprachigen Modulhandbüchern?}
+
+Die Evaluation auf dem Gold-Standard-Datensatz (5\,617~Sätze aus Modulhandbüchern mehrerer Hochschulen, Schwerpunkt Hochschule Fulda) erlaubt eine differenzierte Antwort entlang der vier Analysedimensionen.
+
+\paragraph{Potenziale.}
+Das größte Potenzial zeigt sich bei der \textbf{Satztyp-Klassifikation}: Der Embedding-Ansatz erreicht $F_1 = 0{,}963$ gegenüber $F_1 = 0{,}819$ beim regelbasierten Ansatz.
+Besonders ausgeprägt ist der Vorteil bei Sätzen, die der regelbasierte Ansatz strukturell nicht verarbeiten kann -- Inhaltsbeschreibungen ($F_1 = 0{,}645$ vs.\ $0{,}000$) und Sonstiges ($F_1 = 0{,}778$ vs.\ $0{,}177$).
+Der regelbasierte Ansatz kann ohne Verbliste-Evidenz keine Negativklassifikation vornehmen; die semantische Repräsentation durch Sentence-Embeddings ermöglicht diese Unterscheidung erstmals.
+
+Bei der \textbf{Taxonomie-Zuordnung} übertrifft der Embedding-Ansatz ($F_1 = 0{,}839$) den regelbasierten ($F_1 = 0{,}581$) ebenfalls deutlich.
+Entscheidend ist nicht nur die höhere Genauigkeit, sondern die vollständige Abdeckung: Der regelbasierte Ansatz kann nur 48{,}2\,\% der K-Sätze überhaupt zuordnen, da er auf exakte Verbliste-Treffer angewiesen ist.
+Der Embedding-Ansatz klassifiziert alle Sätze und erreicht dabei in jeder der sechs Taxonomiestufen einen höheren F1-Wert.
+Stufe~1 (Erinnern) illustriert dies besonders deutlich: $F_1 = 0{,}860$ vs.\ $0{,}129$.
+
+Das \textbf{Empfehlungssystem} stellt eine qualitativ neue Funktion dar, die mit dem regelbasierten Ansatz prinzipbedingt nicht realisierbar ist.
+Mit Precision@1 $= 0{,}510$ liefert die Hälfte der Empfehlungen eine taxonomisch passende Referenzformulierung.
+
+Die \textbf{Set-Analyse} profitiert direkt von der verbesserten Einzelsatz-Klassifikation: Nur mit vollständiger Abdeckung kann die Taxonomie-Verteilung eines Moduls zuverlässig bestimmt werden.
+
+\paragraph{Grenzen.}
+Die Grenzen des Embedding-Ansatzes zeigen sich in drei Bereichen.
+Erstens bleibt Stufe~4 (Analysieren) für alle Ansätze die schwierigste ($F_1 = 0{,}667$ beim Embedding-Ansatz), was auf die semantische Nähe zu Stufe~3 (Anwenden) und die geringe Trainingsdatenmenge zurückzuführen ist.
+Zweitens ist der Embedding-Ansatz nicht domänenunabhängig: Bei TH Mittelhessen (Ingenieurwesen) sinkt die Taxonomie-Zuordnung auf $F_1 = 0{,}717$, was die von Huber und Niklaus~\cite{huber2025llmsblooms} berichtete Domänenabhängigkeit von Embedding-Klassifikatoren bestätigt.
+Drittens fehlt dem Embedding-Ansatz die Transparenz des regelbasierten: Die Zuordnung eines Verbs zu einer Taxonomiestufe über eine statische Liste ist für Lehrende unmittelbar nachvollziehbar, eine SVM-Entscheidung auf einem 768-dimensionalen Embedding nicht.
+
+\subsection{Kosten-Nutzen des hybriden Ansatzes}\label{sec:kosten-nutzen}
+
+Der hybride Ansatz wurde mit der Hypothese konzipiert, die Stärken beider Verfahren zu kombinieren: die Transparenz und Geschwindigkeit des regelbasierten Ansatzes für eindeutige Fälle, die Kontextsensitivität der Embeddings für unsichere Fälle.
+Die Evaluation zeigt, dass diese Hypothese nur teilweise zutrifft.
+
+\paragraph{Accuracy.}
+In beiden Hauptdimensionen liegt der hybride Ansatz zwischen den anderen beiden: Typ-Klassifikation $F_1 = 0{,}929$ (vs.\ Embedding $0{,}963$), Taxonomie $F_1 = 0{,}713$ (vs.\ Embedding $0{,}839$).
+Der Abstand zum reinen Embedding-Ansatz beträgt 3{,}4 bzw.\ 12{,}6~Prozentpunkte.
+Ursache ist die Fehlerfortpflanzung im Cascading: Wenn die regelbasierte Stufe einen Satz fälschlich als K klassifiziert, wird das Embedding-Fallback nicht aktiviert.
+Die Quellen-Verteilung zeigt, dass 58{,}2\,\% der Sätze im Test-Set regelbasiert klassifiziert werden -- darunter auch fehlerhafte Zuordnungen, die das Embedding hätte korrigieren können.
+
+\paragraph{Laufzeit.}
+Der potenzielle Laufzeitvorteil des hybriden Ansatzes ergibt sich daraus, dass für einen Teil der Sätze keine Embedding-Berechnung erforderlich ist.
+In der Praxis ist dieser Vorteil gering: Die Embedding-Berechnung mit dem SBERT-Modell benötigt auf moderner Hardware wenige Millisekunden pro Satz, und der Flaschenhals liegt bei der initialen Modellladung (ca.\ 3~Sekunden), nicht bei der Inferenz.
+Da das Empfehlungssystem für jeden K-Satz ohnehin eine Ähnlichkeitssuche auf Embedding-Basis durchführt, wird das SBERT-Modell in jedem Fall geladen und die Embeddings aller Sätze berechnet.
+Der Laufzeitvorteil des Cascading reduziert sich damit auf die eingesparte SVM-Inferenz für regelbasiert zugeordnete Sätze -- eine Operation im Mikrosekundenbereich.
+
+\paragraph{Fazit.}
+Der hybride Ansatz bringt in der aktuellen Cascading-Architektur keinen messbaren Vorteil gegenüber dem reinen Embedding-Ansatz: Er ist weniger genau und nicht signifikant schneller.
+Sein Mehrwert liegt in der Transparenz: Für Sätze mit eindeutigen Verbliste-Treffern kann das System die Zuordnung erklären (\enquote{Das Verb X ist der Stufe Y zugeordnet}), was für die Akzeptanz durch Lehrende relevant sein kann.
+
+\subsection{Cascading vs.\ alternative Hybridisierungsstrategien}\label{sec:cascading-alternativen}
+
+Das gewählte Cascading-Muster ist nicht die einzige Möglichkeit, regelbasierte und Embedding-basierte Analyse zu kombinieren.
+Zwei Alternativen verdienen eine Diskussion.
+
+\paragraph{Oder-Modell (Union).}
+Beide Ansätze werden parallel ausgeführt, und ein Satz wird als K klassifiziert, wenn mindestens einer der beiden Ansätze ihn als K einstuft.
+Dies maximiert den Recall, kann aber zu einer Reduktion der Precision führen, da Falsch-Positive beider Ansätze kumuliert werden.
+
+\paragraph{Und-Modell (Intersection).}
+Ein Satz wird nur als K klassifiziert, wenn beide Ansätze übereinstimmen.
+Dies maximiert die Precision auf Kosten des Recalls: Sätze, die nur einer der beiden Ansätze erkennt, gehen verloren.
+
+\paragraph{Voting / Ensemble.}
+Beide Ansätze geben ihre Klassifikation ab; bei Übereinstimmung wird das Ergebnis übernommen, bei Dissens entscheidet eine gewichtete Kombination (z.\,B.\ basierend auf der SVM-Konfidenz).
+Dieser Ansatz adressiert die Fehlerfortpflanzung des Cascading, erfordert aber stets die Ausführung beider Ansätze und eliminiert damit den theoretischen Laufzeitvorteil.
+
+Da der reine Embedding-Ansatz bereits $F_1 = 0{,}963$ (Typ) bzw.\ $0{,}839$ (Taxonomie) erreicht, ist der erwartbare Zugewinn durch ein Ensemble gering.
+Die Ergebnisse legen nahe, dass die regelbasierte Komponente ihren Mehrwert primär in der Erklärbarkeit hat, nicht in der Klassifikationsgenauigkeit.
+Ein vielversprechender Ansatz für zukünftige Arbeiten wäre, die regelbasierte Zuordnung als \emph{Erklärungsschicht} zu verwenden: Das Embedding klassifiziert, und wenn ein Verbliste-Treffer vorliegt, wird die Zuordnung mit der Listenregel erklärt.
+
+\subsection{Einordnung in den Forschungskontext}\label{sec:einordnung}
+
+Die erzielten Ergebnisse sind im Kontext verwandter Arbeiten plausibel.
+Li et al.~\cite{li2022bloomclassification} berichten F1-Werte zwischen 0{,}88 und 0{,}95 für die Bloom-Klassifikation auf einem englischsprachigen Datensatz von 21\,380~Lernergebnissen -- der hier erzielte $F_1 = 0{,}839$ für die Taxonomie-Zuordnung auf dem deutschen Datensatz (5\,174~K-Sätze) liegt im gleichen Bereich, obwohl die deutsche Sprache und die geringere Datensatzgröße zusätzliche Herausforderungen darstellen.
+Kumar et al.~\cite{kumar2025automated} bestätigen mit 94\,\% Accuracy für SVM auf Sentence-Embeddings die Wirksamkeit dieses Ansatzes gerade auf kleineren Datensätzen.
+
+Der von Huber und Niklaus~\cite{huber2025llmsblooms} beobachtete Domänentransfer-Verlust zeigt sich auch in den hier vorliegenden Daten: Die Taxonomie-Zuordnung bei TH Mittelhessen ($F_1 = 0{,}717$) liegt deutlich unter dem Wert für Hochschule Fulda ($F_1 = 0{,}911$).
+Der Datensatz dieser Arbeit umfasst mit vier Fachbereichen eine größere Domänenbreite als die genannten Arbeiten, wobei die Generalisierbarkeit durch die Konzentration auf eine Hauptinstitution (57\,\% Fulda) eingeschränkt bleibt.
+
+\subsection{Limitationen}\label{sec:limitationen}
+
+Die Ergebnisse unterliegen mehreren Einschränkungen.
+
+\paragraph{Datensatz.}
+Der Gold-Standard-Datensatz ist mit 92{,}1\,\% Kompetenzformulierungen stark unbalanciert.
+Die Minderheitsklassen I ($n = 188$) und S ($n = 255$) sind unterrepräsentiert, was die F1-Werte für diese Klassen mit Vorsicht interpretieren lässt.
+Die Stichproben externer Hochschulen sind klein (TU Darmstadt: 180, Uni Kassel: 7~im Test-Set), sodass die Generalisierbarkeitsaussagen eingeschränkt sind.
+
+\paragraph{Annotation.}
+Die LLM-gestützte Vorannotation birgt das Risiko systematischer Verzerrungen.
+Obwohl die Inter-Annotator-Reliabilität für Satztyp ($\kappa = 0{,}737$) und Taxonomie ($\kappa = 0{,}861$) substanziell bis fast perfekt ist, zeigt die Qualitätsdimension ($\kappa = 0{,}350$/$0{,}401$ vs.\ LLM) eine deutliche Diskrepanz zwischen menschlicher und maschineller Bewertung.
+Da der gesamte Datensatz mit LLM-Labels trainiert und nur 300~Sätze manuell validiert wurden, könnten systematische LLM-Fehler in den nicht-validierten 5\,317~Sätzen die Trainingsdaten verzerren.
+
+\paragraph{Qualitätsdimension.}
+Die Formulierungsqualität wird in dieser Arbeit zwar annotiert, aber nicht als automatische Analysefunktion evaluiert.
+Die geringe Übereinstimmung zwischen LLM und menschlichen Annotatoren ($\kappa = 0{,}350$ bzw.\ $0{,}401$) deutet darauf hin, dass die dreistufige Skala (gut/akzeptabel/schlecht) ohne operationalisierte Kriterien zu subjektiv ist.
+
+Der HRK-nexus-Leitfaden~\cite{hrknexus2015lernergebnisse} definiert sieben Leitlinien für die Formulierung von Lernergebnissen, aus denen sich messbare Qualitätskriterien ableiten lassen:
+
+\begin{enumerate}
+  \item \textbf{Beobachtbares Verb}: Enthält der Satz genau ein beobachtbares Handlungsverb aus einer Taxonomie?
+  \item \textbf{Eindeutigkeit}: Ist das Verb eindeutig einer Taxonomiestufe zuordenbar (keine Mehrdeutigkeit)?
+  \item \textbf{Subjekt-Nennung}: Werden die Studierenden als Subjekt benannt oder impliziert?
+  \item \textbf{Spezifität}: Enthält der Satz einen konkreten fachlichen Gegenstand (nicht nur das Verb)?
+  \item \textbf{Messbarkeit}: Ist das beschriebene Ergebnis feststell- und überprüfbar?
+  \item \textbf{Granularität}: Wird pro Satz nur ein Lernergebnis formuliert?
+  \item \textbf{Taxonomie-Abdeckung}: Sind auf Modulebene verschiedene kognitive Stufen vertreten?
+\end{enumerate}
+
+Die Kriterien~1--4 und~6 lassen sich teilweise automatisiert prüfen (Verbliste-Treffer, Anzahl Verben, Subjekt-Erkennung per spaCy, Satzlänge als Proxy für Spezifität).
+Kriterium~5 (Messbarkeit) erfordert eine inhaltliche Beurteilung, für die Embedding-basierte Ansätze einen Ausgangspunkt bieten könnten.
+Kriterium~7 wird bereits durch die Set-Analyse adressiert.
+Eine Reannotation des Datensatzes anhand dieser operationalisierten Kriterien -- statt der pauschalen dreistufigen Skala -- würde eine reliable Qualitätsbewertung ermöglichen und ist als nächster Schritt vorgesehen.
+
+\paragraph{Semantische Affinität zwischen Annotation und Evaluation.}
+Ein grundsätzliches methodisches Risiko ergibt sich aus der Verwendung LLM-generierter Labels sowohl für das Training als auch für die Evaluation.
+Da 94{,}7\,\% des Datensatzes ausschließlich LLM-annotiert sind, testet der Vergleich der Ansätze teilweise, wie gut ein semantisches Verfahren (SBERT+SVM) die Urteile eines anderen semantischen Verfahrens (Claude Sonnet) reproduziert.
+Der regelbasierte Ansatz funktioniert kategorial anders (exakter Stringvergleich) und könnte durch diese Konstellation systematisch benachteiligt werden -- nicht weil seine Zuordnungen \emph{falsch} sind, sondern weil sie von den Entscheidungsmustern des annotierenden LLM abweichen.
+Die manuelle Validierung von 300~Sätzen ($\kappa = 0{,}737$ Satztyp, $\kappa = 0{,}861$ Taxonomie) zeigt zwar, dass die LLM-Annotationen grundsätzlich mit menschlichen Urteilen übereinstimmen.
+Sie kann jedoch nicht ausschließen, dass in den verbleibenden 5\,317~Sätzen systematische Verzerrungen bestehen, die semantische Ansätze begünstigen.
+
+\paragraph{Modellauswahl.}
+Die Wahl des SBERT-Modells (T-Systems cross-en-de-roberta) erfolgte auf dem initialen Fulda-Datensatz, der den Großteil des finalen Datensatzes stellt.
+Obwohl die Modellauswahl eine qualitative Vorauswahl unter verfügbaren deutschsprachigen Embedding-Modellen war und keine systematische Hyperparameter-Optimierung auf dem Test-Set stattfand, besteht ein geringes Risiko leicht optimistischer F1-Werte: Die Fulda-Sätze, auf denen die Modelleignung beurteilt wurde, fließen anteilig in den finalen Train-Test-Split ein.
+Da der SVM-Klassifikator unabhängig auf dem finalen Trainingssplit trainiert wurde und der Test-Split ausschließlich zur Evaluation dient, ist ein direktes Leakage unwahrscheinlich, aber eine vollständige Trennung von Modellauswahl und Evaluation wäre methodisch sauberer gewesen.
+
+\paragraph{Statistische Absicherung.}
+Die paarweisen Unterschiede zwischen den drei Ansätzen wurden mit McNemar-Tests~\cite{mcnemar1947note} statistisch abgesichert (Tab.~\ref{tab:mcnemar}).
+Alle sechs Vergleiche sind nach Bonferroni-Korrektur hochsignifikant ($p < 0{,}001$), sodass Stichprobenrauschen als Erklärung für die beobachteten Leistungsunterschiede ausgeschlossen werden kann.
+Die Ergebnisse basieren jedoch auf Punktschätzern ohne Konfidenzintervalle; Bootstrap-Konfidenzintervalle hätten die Präzision der Schätzungen zusätzlich quantifiziert.
+Bei Teilgruppen mit kleinem~$n$ (Uni Kassel: 7, TH Mittelhessen Taxonomie) sind die berichteten F1-Werte mit Vorsicht zu interpretieren.
+
+\paragraph{Literaturgrundlage.}
+Einige der zitierten Arbeiten -- insbesondere Kumar et al.~\cite{kumar2025automated}, Pangakis et al.~\cite{pangakis2023validation} und Reiss~\cite{reiss2023testing} -- sind als arXiv-Preprints ohne formales Peer-Review verfügbar.
+Ihre Ergebnisse werden in dieser Arbeit als ergänzende Evidenz herangezogen, nicht als alleinige Grundlage für Entwurfsentscheidungen.
+
+\paragraph{Taxonomie-Evaluation.}
+Die Evaluation der Taxonomie-Zuordnung basiert auf der \emph{Primärstufe} (dem ersten Wert bei Mehrfachzuordnungen).
+Dadurch wird die Fähigkeit des Systems, Nebenverben auf anderen Taxonomiestufen korrekt zu erkennen, nicht vollständig erfasst.
+Eine Multi-Label-Evaluation würde ein differenzierteres Bild liefern.
+
+\paragraph{Konfidenz.}
+Das System zeigt Konfidenzwerte pro Satz an, die aus den SVM-Wahrscheinlichkeitsschätzungen abgeleitet werden.
+Die Evaluation (Kap.~\ref{sec:eval-konfidenz}) zeigt, dass diese Werte eine sinnvolle Qualitätsindikation liefern: Korrekt klassifizierte Sätze weisen eine mittlere Typ-Konfidenz von $0{,}971$ auf, fehlklassifizierte nur $0{,}712$.
+Die Werte sind jedoch nicht kalibriert: Eine angezeigte Konfidenz von 80\,\% bedeutet nicht zwangsläufig, dass 80\,\% der Sätze mit dieser Konfidenz korrekt klassifiziert werden.
+Kalibrierungstechniken wie Platt-Skalierung oder isotonische Regression könnten die Aussagekraft verbessern.

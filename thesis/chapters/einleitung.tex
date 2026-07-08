@@ -1,0 +1,120 @@
+% =============================================================================
+% Kapitel 1: Einleitung
+% =============================================================================
+
+Dieses Kapitel führt in den Gegenstand der Arbeit ein, motiviert die Forschungsfrage und gibt einen Überblick über den Aufbau der Thesis.
+
+\subsection{Kontext}\label{sec:kontext}
+
+Die Qualität der Hochschullehre hängt wesentlich davon ab, wie präzise Lehrende beschreiben, was Studierende am Ende eines Moduls wissen und können sollen.
+Mit dem Bologna-Prozess vollzog sich in der europäischen Hochschullandschaft ein grundlegender Paradigmenwechsel: weg von einer Input-Orientierung, die beschreibt, \emph{was gelehrt wird}, hin zu einer Output-Orientierung, die formuliert, \emph{was Studierende nach Abschluss eines Lernprozesses in der Lage sind zu tun}~\cite{hrknexus2015lernergebnisse}.
+Modulhandbücher, in denen die Qualifikationsziele jedes Studienmoduls festgehalten werden, sind das zentrale Instrument dieser Kompetenzorientierung.
+Die Kultusministerkonferenz und die Hochschulrektorenkonferenz haben mit dem Qualifikationsrahmen für deutsche Hochschulabschlüsse~\cite{kmk2017qualifikationsrahmen} sowie dem Deutschen Qualifikationsrahmen~\cite{dqr2013handbuch} verbindliche Rahmenvorgaben geschaffen, die eine einheitliche Beschreibung von Lernergebnissen auf verschiedenen Niveaustufen verlangen.
+
+Was eine gute Kompetenzformulierung ausmacht, ist in der Fachliteratur gut beschrieben.
+Weinert definiert Kompetenzen als \glqq die bei Individuen verfügbaren oder durch sie erlernbaren kognitiven Fähigkeiten und Fertigkeiten, um bestimmte Probleme zu lösen, sowie die damit verbundenen motivationalen, volitionalen und sozialen Bereitschaften und Fähigkeiten\grqq~\cite{weinert2001leistungsmessung}.
+Schaper et al.\ operationalisieren diesen Begriff für den akademischen Kontext und fordern, dass Kompetenzformulierungen konkretes, beobachtbares Handeln beschreiben~\cite{schaper2012fachgutachten}.
+Der Praxisleitfaden der HRK konkretisiert dies weiter: Eine Kompetenzformulierung benennt die Studierenden als Subjekt, enthält genau ein beobachtbares Handlungsverb und spezifiziert den fachlichen Gegenstand der Handlung~\cite{hrknexus2015lernergebnisse}.
+
+Für die systematische Einordnung dieser Handlungsverben hat sich die Taxonomie kognitiver Prozesse nach Anderson und Krathwohl~\cite{anderson2001taxonomy} als Standard etabliert.
+Sie unterscheidet sechs hierarchische Stufen kognitiver Komplexität: \emph{Erinnern}, \emph{Verstehen}, \emph{Anwenden}, \emph{Analysieren}, \emph{Bewerten} und \emph{Erschaffen}.
+Die Zuordnung von Kompetenzformulierungen zu diesen Stufen ermöglicht es, das Anforderungsniveau einzelner Module transparent zu machen und die Abdeckung verschiedener kognitiver Prozesse innerhalb eines Studiengangs zu überprüfen.
+Krathwohl betont dabei die Zweidimensionalität der Taxonomie: Neben dem kognitiven Prozess (kodiert durch das Verb) bestimmt auch die Wissensdimension (kodiert durch den Inhalt) das Anspruchsniveau einer Formulierung~\cite{krathwohl2002revision}.
+
+In der Praxis stehen Lehrende beim Verfassen von Modulhandbüchern jedoch vor einer anspruchsvollen Aufgabe.
+Sie müssen nicht nur fachlich korrekte Inhalte formulieren, sondern diese auch in einer Form niederschreiben, die den Qualitätskriterien kompetenzorientierter Lernergebnisse genügt.
+Schaper et al.\ stellen fest, dass Kompetenzformulierungen in Modulhandbüchern \glqq teilweise willkürlich und ohne klare Bezüge zu Zieltaxonomien oder Kompetenzanalysen\grqq\ vorgenommen werden~\cite{schaper2012fachgutachten}.
+Softwaregestützte Werkzeuge, die Lehrende beim Formulieren unterstützen und automatisiertes Feedback zur Qualität ihrer Kompetenzformulierungen geben, können diese Situation verbessern.
+
+%
+\subsection{Problemstellung und Motivation}\label{sec:problemstellung}
+
+Ein bestehender Prototyp von Loth und Konert~\cite{loth2022kompetenzeditor} adressiert dieses Problem durch regelbasierte Echtzeitanalyse in einem webbasierten Editor: Verben werden mittels spaCy tokenisiert, per exaktem Stringvergleich gegen eine statische Liste von rund 80~Handlungsverben abgeglichen und farblich hervorgehoben.
+Bei nicht empfohlenen Verben wird eine generische Tabelle empfohlener Alternativen angezeigt.
+Dieser Ansatz bietet Transparenz -- jede Zuordnung ist direkt auf ein Verb und eine Listenregel zurückführbar -- und funktioniert zuverlässig für die Verben, die in der Liste enthalten sind.
+
+Drei strukturelle Probleme begrenzen jedoch die Analysequalität.
+Erstens sind die Listen \emph{geschlossen}: Jedes Verb, das nicht in der Liste vorkommt, wird nicht analysiert, obwohl es durchaus eine valide Kompetenzformulierung sein kann.
+Ungewöhnliche Synonyme, fachspezifische Verben oder Komposita bleiben unerkannt.
+Die Autoren selbst identifizieren in ihrem Fazit die Notwendigkeit, Schlüsselwörter auch in abgewandelter Form zu analysieren und Texte mit Referenzformulierungen vergleichen zu können~\cite{loth2022kompetenzeditor}.
+Zweitens liefert ein reiner Stringvergleich \emph{keine Kontextinformation}.
+Stanny~\cite{stanny2016reevaluating} analysierte 176 Verben aus 30 publizierten Verblisten und wies nach, dass einzelne Verben wie \emph{select} in allen sechs Taxonomiestufen auftreten können.
+Im Deutschen zeigen sich analoge Überlappungen: \emph{unterscheiden} erscheint bei Anwenden, Analysieren und Bewerten; \emph{erkennen} kann Erinnern, Verstehen oder Analysieren bedeuten~\cite{cursio2013leitfaden}.
+Cursio und Jahn warnen explizit, dass die angebotenen Verben \glqq nur exemplarischen Charakter\grqq\ haben und \glqq stets mit Blick auf die Inhaltskomponente betrachtet werden\grqq\ müssen~\cite{cursio2013leitfaden}.
+Drittens fehlt dem Prototyp eine \emph{Klassifikation}, ob ein Satz überhaupt eine Kompetenzformulierung darstellt -- reine Inhaltsbeschreibungen wie \glqq Das Modul behandelt Grundlagen der Statistik\grqq\ werden nicht von Kompetenzformulierungen unterschieden, sondern pauschal als \glqq entbehrlich\grqq\ eingestuft.
+
+Sentence-Embedding-Verfahren wie Sentence-BERT~\cite{reimers2019sentencebert} eröffnen einen alternativen Zugang.
+Sie überführen ganze Sätze in dichte Vektorrepräsentationen, die den semantischen Gehalt -- einschließlich des Zusammenspiels von Verb und Inhalt -- erfassen.
+Auf dieser Grundlage werden Klassifikation, kontextsensitive Taxonomie-Zuordnung und ähnlichkeitsbasierte Empfehlungen prinzipiell möglich.
+Aktuelle Arbeiten zeigen das Potenzial solcher Ansätze: Li et al.~\cite{li2022bloomclassification} erreichen mit BERT-Klassifikatoren auf einem englischen Datensatz von 21.380 Lernergebnissen F1-Werte zwischen 0{,}88 und 0{,}95.
+Kumar et al.~\cite{kumar2025automated} demonstrieren, dass auf kleinen Datensätzen eine SVM auf Embeddings (94\,\% Accuracy) sogar alle Deep-Learning-Modelle übertrifft.
+
+Gleichzeitig sind die Grenzen solcher Verfahren nicht zu unterschätzen.
+Huber und Niklaus~\cite{huber2025llmsblooms} zeigen, dass ein trainierter RoBERTa-Klassifikator (F1\,=\,0{,}92) beim Transfer auf andere Domänen versagt (Agreement\,=\,0{,}04) -- Embedding-basierte Taxonomie-Klassifikatoren sind stark domänenabhängig.
+Zudem sind ihre Entscheidungen für Lehrende weniger nachvollziehbar als eine transparente Listenregel.
+Es ist daher offen, inwieweit Embeddings in der Praxis tatsächlich einen Mehrwert gegenüber dem regelbasierten Ansatz bieten -- insbesondere für die Taxonomie-Zuordnung, bei der die zu unterscheidenden Stufen nicht rein semantisch trennbar sind.
+
+Diese Arbeit untersucht deshalb systematisch, welche Potenziale und welche Grenzen ein Embedding-basierter Ansatz gegenüber der bestehenden regelbasierten Analyse bietet.
+Der regelbasierte Prototyp dient dabei als Baseline.
+Darüber hinaus wird als dritte Variante ein hybrider Ansatz untersucht, der beide Verfahren im Cascading-Muster kombiniert: Die Verblistenprüfung liefert ein erstes Signal für eindeutige Fälle, während Embeddings für unsichere Fälle greifen.
+Die vergleichende Evaluation aller drei Varianten ermöglicht eine empirische Aussage darüber, wo die Kombination Mehrwert bringt und wo nicht.
+
+\paragraph{Forschungsfrage.}
+Aus dieser Problemstellung ergibt sich folgende Forschungsfrage:
+
+\begin{quote}
+\textit{Welche Potenziale und Grenzen bietet ein Embedding-basierter Ansatz gegenüber regelbasierter Textanalyse für die Unterstützung Lehrender bei der Erstellung qualitativ hochwertiger Kompetenzformulierungen in deutschsprachigen Modulhandbüchern?}
+\end{quote}
+
+%
+\subsection{Ziele der Arbeit}\label{sec:ziele}
+
+Zur Beantwortung der Forschungsfrage werden drei Ansätze auf vier Analyseebenen untersucht und verglichen: ein regelbasierter, ein embedding-basierter und ein hybrider Ansatz.
+Die Gewichtung und Ausgestaltung der einzelnen Ebenen konkretisiert sich im Verlauf der Arbeit; die folgenden Ziele definieren den Untersuchungsrahmen:
+
+\begin{enumerate}
+    \item \textbf{Klassifikation:} Es wird untersucht, ob ein Embedding-basierter Ansatz automatisch erkennen kann, ob ein Satz eine Kompetenzformulierung oder eine Inhaltsbeschreibung darstellt -- eine Unterscheidung, die der regelbasierte Prototyp derzeit nicht trifft. Die Klassifikationsleistung wird mittels F1-Score auf einem Gold-Standard-Datensatz aus realen Modulhandbüchern mehrerer deutscher Hochschulen und Fachbereiche evaluiert.
+
+    \item \textbf{Taxonomie-Zuordnung:} Es wird untersucht, inwieweit Sentence-Embeddings die Zuordnung von Kompetenzformulierungen zu den sechs kognitiven Prozessstufen nach Anderson und Krathwohl verbessern können -- insbesondere für Verben außerhalb statischer Listen und für kontextabhängig mehrdeutige Verben. Die Zuordnungsgenauigkeit wird mittels Precision, Recall und F1-Score pro Stufe gemessen und zwischen allen drei Ansätzen verglichen. Es ist dabei offen, ob Embeddings hier tatsächlich einen Vorteil gegenüber dem regelbasierten Verfahren bieten, da Taxonomiestufen nicht rein semantisch trennbar sind.
+
+    \item \textbf{Empfehlungen:} Es wird untersucht, ob ähnlichkeitsbasierte Vorschläge aus einer Referenzdatenbank bestehender Formulierungen eine kontextspezifische Schreibhilfe darstellen können -- eine Funktion, die mit dem regelbasierten Ansatz prinzipbedingt nicht realisierbar ist. Die Qualität der Empfehlungen wird mittels Precision@$k$ evaluiert.
+
+    \item \textbf{Set-Analyse:} Es wird untersucht, ob auf Modulebene die Verteilung der Taxonomiestufen analysiert und auf Abdeckungslücken hingewiesen werden kann. Diese Ebene setzt eine funktionsfähige Taxonomie-Zuordnung voraus und wird qualitativ anhand ausgewählter Modulbeispiele bewertet.
+\end{enumerate}
+
+Alle drei Ansätze werden auf demselben Gold-Standard-Datensatz evaluiert.
+Dieser umfasst über 5\,600 Sätze aus Modulhandbüchern von vier deutschen Hochschulen und vier Fachbereichen, die LLM-gestützt vorannotiert und manuell validiert wurden (vgl. Kap.~\ref{sec:eval-goldstandard}).
+Die Evaluation differenziert nach drei Schwierigkeitskategorien (vgl. Kap.~\ref{sec:eval-schwierigkeit}): Standardformulierungen, deren Verben in der statischen Verbliste enthalten sind (hier wird Gleichstand erwartet), Formulierungen mit unbekannten Verben -- Synonymen, fachspezifischen oder nicht gelisteten Verben (hier wird ein Vorteil des Embedding-Ansatzes erwartet) -- sowie Nicht-Kompetenz\-sätze, bei denen die Klassifikationsfähigkeit aller drei Ansätze verglichen wird.
+Die differenzierte Auswertung ermöglicht eine präzise Aussage darüber, in welchen Fällen welcher Ansatz überlegen ist.
+Die methodische Grundlage bildet der Design-Science-Ansatz nach Hevner et al.~\cite{hevner2004designscience}.
+
+%
+\subsection{Eigenleistung}\label{sec:eigenleistung}
+
+Diese Arbeit greift auf den bestehenden Prototyp von Loth und Konert~\cite{loth2022kompetenzeditor,loth2022masterprojekt} als nicht-öffentlich zugängliche Vorarbeit zurück.
+Der Prototyp wurde im Rahmen eines Forschungsprojekts an der Hochschule Fulda unter Betreuung von Prof.\ Dr.-Ing.\ Johannes Konert entwickelt und implementiert einen webbasierten Editor für Kompetenzformulierungen mit regelbasierter Analyse auf Basis von spaCy und statischen Verblisten.
+Aus dem Prototyp werden folgende Konzepte und Artefakte übernommen:
+
+\begin{itemize}
+    \item Das \textbf{UI-Konzept} eines dreispaltigen Layouts mit Editor, Analyse-Panel und Übersicht als bewährtes Interaktionsmuster.
+    \item Die \textbf{bereinigte und erweiterte Verbliste} mit Zuordnungen zu den sechs Taxonomiestufen nach Anderson und Krathwohl, die als Grundlage der regelbasierten Baseline dient. Ein fehlerhafter Eintrag (\emph{Zusammenhänge} als Verb) wurde korrigiert und die Liste um Verben aus dem HRK-nexus-Leitfaden~\cite{hrknexus2015lernergebnisse} ergänzt.
+    \item Das \textbf{Konzept des Echtzeit-Verb-Highlightings} mit farblicher Kodierung.
+\end{itemize}
+
+Der bestehende Quellcode wird im Rahmen dieser Arbeit auf aktuelle Technologieversionen migriert und um Embedding-basierte Analysefunktionen erweitert.
+Der Prototyp basiert auf Nuxt\,2, Vue\,2 und Vuetify\,2; die Migration auf Nuxt\,4 und Vue\,3 erfordert aufgrund umfangreicher Breaking Changes zwischen den Hauptversionen eine weitgehende Überarbeitung des Quellcodes, wobei die bewährte Architektur und die Interaktionsmuster des Prototyps erhalten bleiben.
+
+Darüber hinaus werden der Gold-Standard-Datensatz (Extraktion, Annotation und Validierung), das Embedding-basierte Analyseverfahren, die hybride Cascading-Variante sowie die vergleichende Evaluation aller drei Ansätze als originäre Eigenleistung erbracht.
+
+%
+\subsection{Aufbau der Arbeit}\label{sec:aufbau}
+
+Die vorliegende Arbeit gliedert sich in neun Kapitel.
+Nach dieser Einleitung werden in Kapitel~\ref{sec:grundlagen} die theoretischen Grundlagen erläutert: der Kompetenzbegriff, die Taxonomie kognitiver Prozesse, Sentence Embeddings sowie verwandte Arbeiten.
+Kapitel~\ref{sec:methodik} legt die methodische Vorgehensweise dar -- den Design-Science-Research-Rahmen, die Anforderungserhebung und die Evaluationsmethodik.
+Kapitel~\ref{sec:vorarbeit} analysiert den bestehenden Prototyp systematisch und identifiziert die Lücken gegenüber den definierten Anforderungen.
+Kapitel~\ref{sec:entwurf} beschreibt den Systementwurf, insbesondere die Gesamtarchitektur und das hybride Cascading-Muster.
+Kapitel~\ref{sec:implementierung} dokumentiert die technische Umsetzung: Framework-Migration, Embedding-Integration und Benutzeroberfläche.
+In Kapitel~\ref{sec:evaluation} wird die vergleichende Evaluation auf dem Gold-Standard-Datensatz vorgestellt.
+Kapitel~\ref{sec:diskussion} diskutiert die Ergebnisse im Kontext der Forschungsfrage und benennt Limitationen.
+Kapitel~\ref{sec:fazit} fasst die Arbeit zusammen und gibt einen Ausblick auf weiterführende Forschungsrichtungen.

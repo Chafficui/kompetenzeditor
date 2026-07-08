@@ -1,0 +1,245 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[ngerman]{babel}
+\usepackage{mathptmx}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{natbib}
+\setcitestyle{round,aysep={},yysep={;}}
+
+% Colors
+\definecolor{accent}{HTML}{1F3864}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{accent}}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{accent}}{\thesubsection}{1em}{}
+\titlespacing*{\section}{0pt}{1.5em}{0.5em}
+\titlespacing*{\subsection}{0pt}{1em}{0.3em}
+
+\pagenumbering{arabic}
+
+\begin{document}
+
+% === DECKBLATT ===
+\begin{titlepage}
+\begin{center}
+
+\vspace*{1cm}
+\includegraphics[width=0.5\textwidth]{logo_new_2.png}
+
+\vspace{3.5cm}
+
+{\noindent\rule{\textwidth}{1.5pt}}
+
+\vspace{1cm}
+
+{\LARGE\bfseries Embedding-basierte Analyse von\\[0.4em]
+Kompetenzformulierungen\,--\\[0.4em]
+Potenziale und Grenzen gegen\"uber\\[0.4em]
+regelbasierter Textanalyse}
+
+\vspace{0.8cm}
+
+{\large\textbf{Felix Bein\ss en}}
+
+\vspace{0.8cm}
+
+{\noindent\rule{\textwidth}{1.5pt}}
+
+\vspace{2cm}
+
+{\large Expos\'e zur Masterarbeit am Fachbereich AI der HS Fulda}
+
+\vspace{1cm}
+
+{Studiengang: Global Software Development (M.Sc.)\\[0.3em]
+Erstbetreuer: Prof.\ Dr.-Ing.\ Johannes Konert}
+
+\vspace{1.5cm}
+
+\end{center}
+\end{titlepage}
+
+\setcounter{page}{1}
+
+% === PROBLEMSTELLUNG ===
+\section{Problemstellung}
+
+Kompetenzformulierungen in Modulhandb\"uchern sind ein zentrales Instrument der Hochschullehre. Sie machen Studierenden transparent, welche Lernergebnisse angestrebt werden, und dienen als Grundlage f\"ur die Pr\"ufungsgestaltung \citep{HRKnexus2015}. In der Praxis treten bei der Erstellung jedoch wiederholt Fehler auf: Lehrende verwenden schwer messbare Verben, nutzen Halbs\"atze statt vollst\"andiger Formulierungen oder vermischen Inhaltsbeschreibungen mit Kompetenzformulierungen \citep{CursioJahn2014}. Der Kompetenzbegriff selbst ist dabei nicht einheitlich definiert -- die meistzitierte Definition stammt von \citet{Weinert2001}, der Kompetenzen als erlernbare kognitive F\"ahigkeiten und Fertigkeiten zur Probleml\"osung beschreibt.
+
+Ein bestehender NLP-basierter Prototyp \citep{LothKonert2022} adressiert dieses Problem durch regelbasierte Echtzeitanalyse: Verben werden mittels spaCy tokenisiert, per exaktem Stringvergleich gegen eine statische Liste abgeglichen und Taxonomiestufen nach \citet{Bloom1956} zugeordnet. Bei nicht empfohlenen Verben wird eine generische Tabelle empfohlener Alternativen angezeigt. Dieser Ansatz st\"o\ss t jedoch an systematische Grenzen: Verben, die nicht exakt in der Liste enthalten sind -- etwa Synonyme oder konjugierte Varianten --, werden nicht erkannt. Kontextabh\"angige Bedeutungen desselben Verbs k\"onnen nicht differenziert werden. Zudem beschr\"ankt sich die konstruktive Hilfe auf statische Verbtabellen; kontextspezifische Empfehlungen oder \"ahnlichkeitsbasierte Reformulierungsvorschl\"age fehlen. Die Autoren selbst identifizieren in ihrem Fazit die Notwendigkeit, Schl\"usselw\"orter auch in abgewandelter Form zu analysieren und Texte mit Referenzformulierungen vergleichen zu k\"onnen.
+
+% === ZIEL ===
+\section{Ziel der Arbeit}
+
+Ziel dieser Masterarbeit ist die Untersuchung, inwieweit ein Embedding-basierter Ansatz die Unterst\"utzung Lehrender bei der Erstellung von Kompetenzformulierungen gegen\"uber dem bestehenden regelbasierten Verfahren verbessern kann. Als Embedding-Verfahren wird insbesondere German Sentence-BERT \citep{ReimersGurevych2019} in Betracht gezogen. Dabei werden insbesondere die folgenden vier Analyseebenen untersucht, deren Gewichtung und Ausgestaltung sich im Verlauf der Arbeit konkretisieren wird:
+
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+  \item \textbf{Klassifikation:} Automatische Erkennung, ob ein Satz eine Kompetenzformulierung oder eine Inhaltsbeschreibung darstellt -- derzeit wird jeder Satz ohne gelistetes Verb pauschal als \glqq entbehrlich\grqq{} eingestuft
+  \item \textbf{Taxonomie-Zuordnung:} Semantische Einordnung in Taxonomiestufen unter Ber\"ucksichtigung der revidierten Taxonomie nach \citet{AndersonKrathwohl2001}, auch bei Verben au\ss erhalb statischer Wortlisten -- wobei offen ist, inwieweit Embeddings hier tats\"achlich einen Mehrwert gegen\"uber dem regelbasierten Ansatz bieten, da Taxonomiestufen nicht rein semantisch trennbar sind
+  \item \textbf{Empfehlungen:} \"Ahnlichkeitsbasierte Vorschl\"age aus einer Referenzdatenbank bestehender Formulierungen als kontextspezifische Schreibhilfe -- eine Funktion, die mit dem bisherigen regelbasierten Ansatz prinzipbedingt nicht realisierbar ist
+  \item \textbf{Set-Analyse:} \"Uberpr\"ufung, ob die Kompetenzformulierungen eines Moduls als Gesamtheit verschiedene Taxonomiestufen abdecken oder sich auf einzelne Niveaus konzentrieren -- mit der M\"oglichkeit, daraus Empfehlungen f\"ur eine breitere Abdeckung abzuleiten
+\end{itemize}
+
+Ein besonderer Mehrwert des Embedding-Ansatzes liegt in der M\"oglichkeit, \"uber Konfidenzma\ss e (z.\,B.\ Cosine Similarity) den Nutzenden transparent zu machen, wie sicher die Software in ihrer Einsch\"atzung ist. Dies erm\"oglicht eine differenziertere R\"uckmeldung als die bin\"are Logik des regelbasierten Systems.
+
+Der bestehende regelbasierte Prototyp \citep{LothKonert2022} dient dabei als Baseline. Dar\"uber hinaus wird als dritte Variante ein hybrider Ansatz untersucht, der beide Verfahren kombiniert: Die Verblistenpr\"ufung liefert ein erstes Signal f\"ur eindeutige F\"alle, w\"ahrend Embeddings f\"ur unsichere F\"alle greifen (Cascading-Muster). Regelbasierte Filter k\"onnen zudem Embedding-Ergebnisse nachtr\"aglich bereinigen. Die systematische Evaluation aller drei Varianten erm\"oglicht eine empirische Aussage dar\"uber, wo die Kombination Mehrwert bringt und wo nicht.
+
+Der Embedding-basierte Ansatz wird als Erweiterung in eine modernisierte Version des Editors (Nuxt~4) integriert.
+
+% === FORSCHUNGSFRAGE ===
+\section{Forschungsfrage}
+
+\begin{quote}
+  \textit{\glqq Welche Potenziale und Grenzen bietet ein Embedding-basierter Ansatz gegen\"uber regelbasierter Textanalyse f\"ur die Unterst\"utzung Lehrender bei der Erstellung qualitativ hochwertiger Kompetenzformulierungen in deutschsprachigen Modulhandb\"uchern?\grqq}
+\end{quote}
+
+% === METHODIK ===
+\section{Methodik und Evaluation}
+
+Die Arbeit folgt einem Design-Science-Research-Ansatz nach \citet{Hevner2004} und gliedert sich in die folgenden Phasen:
+
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+  \item \textbf{Literaturrecherche:} Begriffsabgrenzung (Lernziel, Lernergebnis, Kompetenzziel) auf Basis von \citet{Weinert2001} und \citet{Schaper2012}, Analyse relevanter Taxonomien \citep{Bloom1956, AndersonKrathwohl2001} sowie Stand der Forschung zu Sentence-Embedding-Verfahren f\"ur Deutsch \citep{ReimersGurevych2019}
+  \item \textbf{Anforderungserhebung:} Analyse des bestehenden Prototyps, literaturgest\"utzte Ableitung aus Regelwerken zur Kompetenzformulierung \citep{HRKnexus2015, CursioJahn2014} sowie Analyse realer Modulhandb\"ucher des FBAI
+  \item \textbf{Entwurf und Implementierung:} Entwicklung des Embedding-basierten Analyseverfahrens inkl.\ Klassifikation, Taxonomie-Zuordnung, \"Ahnlichkeitssuche, Empfehlungssystem und Set-Analyse, integriert in eine modernisierte Version des Editors
+  \item \textbf{Evaluation:} Die zentrale Evaluation erfolgt als technischer Benchmark. Dazu wird ein Gold-Standard-Datensatz aus ca.\ 200--300 S\"atzen realer FBAI-Modulhandb\"ucher erstellt. Die initiale Annotation erfolgt LLM-gest\"utzt und wird anschlie\ss end manuell validiert und korrigiert (Klassifikation: Kompetenzformulierung vs.\ Kontextsatz; Taxonomiestufe nach \citealp{AndersonKrathwohl2001}). Zur Sicherstellung der Annotationsvalidit\"at wird ein Teil des Datensatzes von einer zweiten Person annotiert und die Inter-Annotator-Reliabilit\"at mittels Cohen's Kappa gemessen. Der Datensatz wird bewusst in drei Schwierigkeitskategorien unterteilt:
+\end{itemize}
+
+\begin{itemize}[leftmargin=3em, itemsep=2pt]
+  \item \textbf{Standardformulierungen:} S\"atze mit Verben, die direkt in etablierten Verbenlisten stehen (hier wird Gleichstand erwartet)
+  \item \textbf{Synonyme und Randf\"alle:} S\"atze mit semantisch passenden, aber nicht gelisteten Verben (hier wird ein Vorteil des Embedding- bzw.\ hybriden Ansatzes erwartet)
+  \item \textbf{Nicht-Kompetenzs\"atze:} Inhaltsbeschreibungen, Halbs\"atze, Aufz\"ahlungen (hier wird die Klassifikationsf\"ahigkeit aller drei Ans\"atze verglichen)
+\end{itemize}
+
+Alle drei Ans\"atze -- rein regelbasiert (Baseline), rein Embedding-basiert und hybrid -- werden auf demselben Datensatz mittels Precision, Recall und F1-Score verglichen. Die differenzierte Auswertung nach Schwierigkeitskategorie erm\"oglicht eine pr\"azise Aussage dar\"uber, in welchen F\"allen welcher Ansatz \"uberlegen ist und ob die hybride Kombination als dritte Variante zus\"atzlichen Mehrwert bringt.
+
+F\"ur das Empfehlungssystem wird evaluiert, ob die vorgeschlagenen Formulierungen formal korrekte Kompetenzformulierungen darstellen und ob sie der erwarteten Taxonomiestufe entsprechen (Precision@k). Als Referenz dienen die annotierten Formulierungen des Gold-Standards.
+
+% === GLIEDERUNGSENTWURF ===
+\section{Gliederungsentwurf}
+
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+
+\begin{enumerate}[leftmargin=1.5em, itemsep=1pt, parsep=0pt]
+  \item \textbf{Einleitung}
+    \begin{enumerate}[leftmargin=1.5em, itemsep=0pt, parsep=0pt, topsep=2pt]
+      \item Kompetenzformulierungen in der Hochschullehre
+      \item Defizite bestehender Werkzeuge und Forschungsbedarf
+      \item Zielsetzung und Forschungsfrage
+      \item Abgrenzung der Eigenleistung und Aufbau der Arbeit
+    \end{enumerate}
+  \item \textbf{Theoretische Grundlagen und Forschungsstand}
+    \begin{enumerate}[leftmargin=1.5em, itemsep=0pt, parsep=0pt, topsep=2pt]
+      \item Kompetenzbegriff, Lernziele und Lernergebnisse
+      \item Lernzieltaxonomien: Von Bloom zu Anderson/Krathwohl
+      \item Sentence Embeddings und semantische Textanalyse im Deutschen
+      \item Verwandte Arbeiten und Abgrenzung zum Kompetenzeditor (Loth/Konert)
+    \end{enumerate}
+  \item \textbf{Entwicklung eines Embedding-basierten Analyseverfahrens f\"ur Kompetenz\-formulierungen}
+    \begin{enumerate}[leftmargin=1.5em, itemsep=0pt, parsep=0pt, topsep=2pt]
+      \item Erhebung und Priorisierung der Anforderungen
+      \item Systemarchitektur und Portierung auf Nuxt~4
+      \item Entwurf des Embedding-basierten Klassifikations- und Zuordnungsverfahrens
+      \item Konzeption der \"ahnlichkeitsbasierten Formulierungsempfehlung
+      \item Set-Analyse: Taxonomieabdeckung auf Modulebene
+      \item Integration in den Kompetenzeditor und UI-Entwurf
+    \end{enumerate}
+  \item \textbf{Vergleichende Evaluation anhand annotierter Modulhandb\"ucher}
+    \begin{enumerate}[leftmargin=1.5em, itemsep=0pt, parsep=0pt, topsep=2pt]
+      \item Aufbau des Gold-Standard-Datensatzes (LLM-gest\"utzte Vorannotation und manuelle Validierung)
+      \item Methodik der vergleichenden Evaluation (regelbasiert, Embedding, hybrid)
+      \item Ergebnisse der Satzklassifikation und Taxonomie-Zuordnung
+      \item Ergebnisse der \"ahnlichkeitsbasierten Empfehlungen (Precision@k)
+    \end{enumerate}
+  \item \textbf{Diskussion der Ergebnisse und Limitationen}
+  \item \textbf{Fazit und Ausblick}
+\end{enumerate}
+
+% === ZEITPLAN ===
+\section{Zeitplan}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{>{\bfseries}c l p{8.5cm}}
+  \toprule
+  Woche & Zeitraum & Aufgaben \\
+  \midrule
+  1--3   & Mrz 01--21     & Literaturrecherche, Begriffsabgrenzung, Analyse des Prototyps \\
+  4--5   & Mrz 22--Apr 04 & Anforderungserhebung, Analyse Modulhandb\"ucher, Gold-Standard-Annotation beginnen \\
+  6--7   & Apr 05--18     & L\"osungsentwurf, Architekturentscheidungen, Schreiben: Kap.\ 1--2 \\
+  8--11  & Apr 19--Mai 16 & Implementierung: Nuxt-4-Basis, Embedding-Verfahren, \"Ahnlichkeitssuche \\
+  12--14 & Mai 17--Jun 06 & Implementierung: Empfehlungssystem, UI-Integration, Schreiben: Kap.\ 3 \\
+  15--17 & Jun 07--27     & Gold-Standard finalisieren, Evaluation durchf\"uhren, Ergebnisse auswerten \\
+  18--20 & Jun 28--Jul 18 & Schreiben: Kap.\ 4--6, Gesamttext \"uberarbeiten \\
+  21--22 & Jul 19--31     & Korrekturlesen, Formatierung, Abgabe \\
+  \bottomrule
+\end{tabular}
+\end{table}
+
+% === LITERATUR ===
+\renewcommand{\refname}{Ausgangsliteratur}
+
+\begin{thebibliography}{10}
+
+\bibitem[Anderson und Krathwohl(2001)]{AndersonKrathwohl2001}
+Anderson, L.\,W. und Krathwohl, D.\,R., Hrsg. (2001).
+\textit{A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom's Taxonomy of Educational Objectives.}
+New York: Longman.
+
+\bibitem[Bloom(1956)]{Bloom1956}
+Bloom, B.\,S., Hrsg. (1956).
+\textit{Taxonomy of Educational Objectives: The Classification of Educational Goals. Handbook~I: Cognitive Domain.}
+New York: Longmans, Green.
+
+\bibitem[Cursio und Jahn(2014)]{CursioJahn2014}
+Cursio, M. und Jahn, D. (2014).
+Leitfaden zur Formulierung kompetenzorientierter Lernziele auf Modulebene.
+\textit{Schriften zur Hochschuldidaktik}, FBZHL, Friedrich-Alexander-Universit\"at Erlangen-N\"urnberg.
+
+\bibitem[Hevner et~al.(2004)]{Hevner2004}
+Hevner, A.\,R., March, S.\,T., Park, J. und Ram, S. (2004).
+Design Science in Information Systems Research.
+\textit{MIS Quarterly}, 28(1):75--105.
+
+\bibitem[{HRK nexus}(2015)]{HRKnexus2015}
+{HRK nexus} (2015).
+\textit{Lernergebnisse praktisch formulieren.}
+Impulse f\"ur die Praxis, Nr.\,2. Bonn: Hochschulrektorenkonferenz.
+
+\bibitem[Loth und Konert(2022)]{LothKonert2022}
+Loth, L. und Konert, J. (2022).
+Erstellung eines NLP-basierten Editors mit Qualit\"atsindikatoren und \"Anderungsvorschl\"agen f\"ur Kompetenzbeschreibungen.
+In: \textit{Proceedings of DELFI Workshops 2022}, S.\,149--158. Gesellschaft f\"ur Informatik.
+
+\bibitem[Reimers und Gurevych(2019)]{ReimersGurevych2019}
+Reimers, N. und Gurevych, I. (2019).
+Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks.
+In: \textit{Proceedings of EMNLP-IJCNLP 2019}, S.\,3982--3992.
+
+\bibitem[Schaper et~al.(2012)]{Schaper2012}
+Schaper, N., Reis, O., Wildt, J., Horvath, E. und Bender, E. (2012).
+\textit{Fachgutachten zur Kompetenzorientierung in Studium und Lehre.}
+HRK Projekt nexus, Bonn: Hochschulrektorenkonferenz.
+
+\bibitem[Weinert(2001)]{Weinert2001}
+Weinert, F.\,E. (2001).
+Vergleichende Leistungsmessung in Schulen -- eine umstrittene Selbstverst\"andlichkeit.
+In: Weinert, F.\,E. (Hrsg.), \textit{Leistungsmessungen in Schulen}, S.\,17--31. Weinheim: Beltz.
+
+\end{thebibliography}
+
+\end{document}

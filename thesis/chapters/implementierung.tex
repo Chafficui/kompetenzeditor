@@ -1,0 +1,170 @@
+% =============================================================================
+% Kapitel 6: Implementierung
+% =============================================================================
+
+Dieses Kapitel beschreibt die technische Umsetzung des in Kap.~\ref{sec:entwurf} entworfenen Systems.
+Zunächst wird die Framework-Migration behandelt, anschließend die Integration der Embedding-basierten Analysefunktionen und abschließend die Gestaltung der Benutzeroberfläche.
+
+\subsection{Framework-Migration}\label{sec:migration}
+
+Die in Kap.~\ref{sec:vorarbeit} identifizierten Defizite lassen sich in zwei Kategorien einteilen: technische Defizite, die durch die Framework-Migration adressiert werden, und funktionale Lücken, die durch die Embedding-basierte Erweiterung geschlossen werden sollen.
+Dieser Abschnitt beschreibt die Migrationsentscheidungen; die Embedding-Integration folgt in Kap.~\ref{sec:impl-embedding}.
+
+\subsubsection{Technologieentscheidungen}\label{sec:tech-entscheidungen}
+
+Die fehlende Supplier Stability (NFA4) erfordert die Migration der drei zentralen Abhängigkeiten: Nuxt~2 wird durch Nuxt~4, Vue~2 durch Vue~3 und Vuetify~2 durch Vuetify~4 ersetzt.
+Damit werden ausschließlich aktiv gewartete Frameworks eingesetzt, die Security-Patches und langfristigen Support erhalten.
+
+Der in der Anwendungsbewertung kritisierte Mangel an Separation of Concerns -- die gesamte Anwendungslogik in einer 1334-zeiligen Datei -- wird durch den Wechsel von der Options API auf die Composition API adressiert.
+Vue~3 erlaubt es, zusammengehörige Logik in sogenannte Composables zu extrahieren, anstatt sie nach Optionstyp (\texttt{data}, \texttt{methods}, \texttt{computed}) zu gruppieren.
+Dadurch wird die monolithische Editorkomponente in spezialisierte Module aufgeteilt.
+
+Die von Loth und Konert selbst identifizierte Limitation~L1 -- die fehlerhafte Texthervorhebung im Volltexteditor~\cite{loth2022kompetenzeditor} -- wird durch den Ersatz der ContentEditable-Komponente durch Tiptap~3 adressiert.
+Der Prototyp verwendete die Browser-API \texttt{ContentEditable} direkt, was dazu führte, dass HTML-Manipulation und Cursorposition manuell synchronisiert werden mussten.
+Tiptap basiert auf ProseMirror und arbeitet mit einem strukturierten Dokumentenmodell, in dem Textmarkierungen deklarativ als sogenannte Marks definiert werden.
+Die Farbcodierung der Verben wird über Custom Marks realisiert, die den vier Kategorien des Prototyps entsprechen: empfohlen, nicht empfohlen, NLP-erkannt und nicht zugeordnet.
+
+Das inkonsistente Configuration Management wird durch den Wechsel von Vuex auf Pinia sowie durch den Einsatz auto-importierter Composables anstelle globaler Plugins vereinheitlicht.
+Das informelle Datenmodell -- im Prototyp als hardcodierte Seed-Daten in einer Plugin-Datei realisiert -- wird in ein separates Datenmodul überführt, das ein explizites Schema definiert.
+Die Datenbankschicht nutzt Dexie~4 und kapselt alle Verblisten, Taxonomie-Zuordnungen und CRUD-Operationen.
+
+\subsubsection{Architektur der migrierten Anwendung}\label{sec:architektur-migration}
+
+Kern der Restrukturierung ist die Aufteilung der Editorkomponente in vier Composables, die jeweils eine abgegrenzte Verantwortlichkeit übernehmen.
+Das Composable \texttt{useDatabase} kapselt die Dexie-Anbindung und stellt Verblisten, Persistenz und CRUD-Operationen bereit; es adressiert den Befund des informellen Datenmodells, indem das Schema explizit definiert wird.
+\texttt{useVerbAnalysis} enthält die Kernlogik der regelbasierten Analyse: Verb-Extraktion, Abgleich mit der Verbliste und Farbzuordnung -- Funktionalität, die im Prototyp über mehrere Methoden verteilt war.
+\texttt{useSpacy} isoliert die Kommunikation mit dem spaCy-Backend für POS-Tagging als eigenständige Abhängigkeit, sodass diese Schnittstelle später durch das Embedding-Backend ersetzt werden kann.
+\texttt{useScoring} extrahiert die Berechnung des Qualitäts-Scores, die im Prototyp in die UI-Komponente eingebettet war.
+
+Die Seitenkomponente selbst beschränkt sich auf Template und UI-Steuerung; die fachliche Logik wird vollständig über die Composables bezogen.
+
+\subsubsection{Erhaltene Funktionalität}\label{sec:erhaltene-funktionalitaet}
+
+Die Migration verfolgt das Ziel, die in Tab.~\ref{tab:ist-soll} als erfüllt bewerteten Anforderungen zu erhalten.
+Das Echtzeit-Feedback (FA5) wird durch denselben Debounce-Mechanismus realisiert -- nach einer Tipp-Pause wird die Analyse angestoßen und das Ergebnis als farbliche Hervorhebung im Editor dargestellt.
+Die Transparenz (NFA2) bleibt durch die regelbasierte Zuordnung gewährleistet, die deutsche Sprachunterstützung (NFA3) durch die unveränderte Verbliste und das spaCy-Modell sichergestellt, und die Performance (NFA5) durch die weiterhin clientseitige regelbasierte Analyse gegeben.
+
+Die Persistenz (FA6) wird gegenüber dem Prototyp verbessert: Die Speicherfunktion unterscheidet nun zwischen Neuanlage und Aktualisierung bestehender Einträge und adressiert damit den in der IST-Analyse dokumentierten Fehler, bei dem jeder Speichervorgang einen neuen Eintrag erstellte.
+
+\subsubsection{Reproduzierbarkeit und Orchestrierung}\label{sec:orchestrierung}
+
+Die IST-Analyse identifizierte zwei zusammenhängende Defizite: Das spaCy-Backend fehlt im Repository, und das System ist nicht out-of-the-box reproduzierbar (vgl. Kap.~\ref{sec:technische-bewertung}, Failure Rate).
+Beide Defizite werden durch eine Docker-Compose-Konfiguration adressiert, die das spaCy-Backend als Container bereitstellt.
+Ein einzelner Befehl startet sowohl das NLP-Backend als auch den Entwicklungsserver der Anwendung; die manuelle Einrichtung separater Dienste entfällt damit.
+Die Nuxt-Konfiguration leitet API-Anfragen über einen Proxy an den spaCy-Container weiter, sodass Frontend und Backend ohne manuelle URL-Konfiguration zusammenarbeiten.
+
+Das in der IST-Analyse festgestellte Fehlen von CI/CD und automatisierten Tests (vgl. Kap.~\ref{sec:technische-bewertung}, Configuration Management) wird im Rahmen dieser Arbeit nicht vollständig adressiert, da der Fokus auf der Embedding-basierten Analysefunktionalität liegt.
+Die Architekturentscheidung für isolierte Composables schafft jedoch die Voraussetzung für eine spätere Testbarkeit: Jedes Composable kann unabhängig von der UI-Schicht getestet werden.
+
+\subsection{Embedding-Integration}\label{sec:impl-embedding}
+
+Die in Kap.~\ref{sec:entwurf} entworfene Hybrid-Pipeline wird als Python-Backend realisiert, das drei Dienste kapselt: die Analyse-Pipeline, den Embedding-Service und die Ähnlichkeitssuche.
+Dieser Abschnitt beschreibt die Implementierung dieser Komponenten.
+
+\subsubsection{Backend-Service}\label{sec:backend-service}
+
+Der Backend-Service nutzt FastAPI mit dem Lifespan-Pattern: Beim Serverstart werden alle Modelle und Daten synchron in den Speicher geladen, bevor der erste Request bearbeitet wird.
+Das spaCy-Modell \texttt{de\_core\_news\_lg}, das SBERT-Modell, die beiden SVM-Klassifikatoren und die Referenz-Embeddings stehen anschließend für die gesamte Laufzeit im Speicher bereit.
+
+Die API ist bewusst auf zwei Endpunkte beschränkt.
+Der Health-Endpunkt (\texttt{GET /health}) gibt den Ladestatus der Modelle zurück, sodass das Frontend prüfen kann, ob das Backend betriebsbereit ist.
+Der Analyse-Endpunkt (\texttt{POST /analyze}) nimmt den Eingabetext entgegen, delegiert die Verarbeitung an die Pipeline und gibt das strukturierte Ergebnis zurück.
+CORS ist für die Entwicklungsumgebung offen konfiguriert; die Nuxt-Konfiguration leitet API-Anfragen über einen Proxy an den Backend-Service weiter, sodass Frontend und Backend unter derselben Origin operieren.
+
+\subsubsection{Analyse-Pipeline}\label{sec:impl-pipeline}
+
+Die Klasse \texttt{AnalysisPipeline} orchestriert die sechs Verarbeitungsschritte aus Kap.~\ref{sec:cascading-entwurf}.
+Sie kapselt die Abhängigkeiten zu den drei Diensten (spaCy, Embedding-Service, Similarity-Search) und definiert interne Datenstrukturen für Zwischenergebnisse.
+
+Für jeden Satz wird zunächst die linguistische Vorverarbeitung durchgeführt: spaCy extrahiert Verben mit POS-Tag und Lemma und prüft über Dependency-Parsing, ob \emph{die Studierenden} als Subjekt auftreten.
+Die regelbasierte Klassifikation operiert auf den extrahierten Lemmata und gibt entweder ein eindeutiges Ergebnis zurück oder \texttt{None}, was den Embedding-Fallback auslöst.
+
+Für Effizienz werden die Embeddings aller Sätze in einem Batch berechnet, anstatt einzeln.
+Der SBERT-Encoder verarbeitet Listen von Sätzen mit einer konfigurierbaren Batch-Size (Standard: 64), was die GPU-Auslastung bei mehreren Sätzen verbessert.
+
+Die Set-Analyse wird nach der Einzelsatz-Analyse berechnet: Die Taxonomiestufen aller als Kompetenzformulierung klassifizierten Sätze werden aggregiert, die Abdeckung (Anzahl belegter Stufen von sechs) ermittelt und eine textuelle Empfehlung generiert, die auf fehlende Stufen hinweist.
+
+\subsubsection{Embedding-Service}\label{sec:impl-embedding-service}
+
+Der \texttt{EmbeddingService} kapselt das SBERT-Modell und die beiden SVM-Klassifikatoren.
+Das SBERT-Modell wird über die sentence-transformers-Bibliothek geladen; die SVMs werden als serialisierte sklearn-Pipelines (\texttt{.pkl}-Dateien) eingelesen.
+
+Die Encoding-Methode überführt Sätze in 768-dimensionale Vektoren.
+Für die Ähnlichkeitssuche steht eine zusätzliche Methode bereit, die die Vektoren auf Einheitslänge normalisiert, sodass die Cosine-Similarity durch ein einfaches Dot-Produkt berechnet werden kann.
+
+Die Klassifikationsmethoden geben neben der Vorhersage einen Konfidenzwert aus, der aus \texttt{predict\_proba()} der SVM abgeleitet wird -- die maximale Klassenwahrscheinlichkeit über die Platt-Skalierung.
+Dieser Wert wird im Frontend als Prozentangabe angezeigt und adressiert die Anforderung NFA1 (Konfidenzmaße).
+
+\subsubsection{Ähnlichkeitssuche}\label{sec:impl-similarity}
+
+Die Klasse \texttt{SimilaritySearch} lädt beim Start die vorberechneten Referenz-Embeddings als NumPy-Matrix ($n \times 768$, wobei $n$ der Anzahl der Referenzsätze im Gold-Standard entspricht) und die zugehörigen Metadaten.
+Die \texttt{find\_similar()}-Methode berechnet die Cosine-Similarity eines Eingabe-Embeddings gegen alle Referenzen durch eine einzelne Matrix-Vektor-Multiplikation.
+
+Vor der Rückgabe werden Filter angewandt: Der Eingabesatz selbst wird über Textvergleich ausgeschlossen, und optional kann nach Satztyp oder Taxonomiestufe gefiltert werden.
+Die Methode gibt die Top-$k$ Treffer mit Similarity-Wert, Satztext, Taxonomiestufe und Modulherkunft zurück; Treffer mit Similarity $\leq$ 0 werden verworfen.
+
+\subsection{Benutzeroberfläche}\label{sec:impl-ui}
+
+Die Benutzeroberfläche setzt das dreispaltige Layout des Prototyps in aktueller Technologie um und erweitert es um die Darstellung der Embedding-basierten Analyseergebnisse.
+Das Frontend ist als Nuxt-4-Anwendung mit Vue~3 Composition API und Vuetify~4 implementiert.
+
+\subsubsection{Editor und Verb-Highlighting}\label{sec:impl-editor}
+
+Der Editor basiert auf Tiptap~3, einem ProseMirror-Wrapper, der ein strukturiertes Dokumentenmodell bereitstellt.
+Die Verb-Hervorhebung wird über eine Custom Extension realisiert, die ProseMirror-Decorations verwendet.
+Decorations sind Inline-Markierungen, die Text visuell hervorheben, ohne das Dokumentenmodell zu verändern -- ein Muster, das dem Ansatz des Prototyps entspricht, jedoch auf dem robusten ProseMirror-Framework aufsetzt.
+
+Das Composable \texttt{useAnalysis} sendet nach einer Debounce-Pause von einer Sekunde den aktuellen Text an das Backend.
+Die Antwort wird in Highlighting-Anweisungen übersetzt: Für jedes erkannte Verb wird die Position im Text bestimmt, eine CSS-Klasse zugewiesen (\texttt{verb-good}, \texttt{verb-bad}, \texttt{verb-modal} oder \texttt{verb-neutral}) und ein Tooltip-Text generiert, der die Taxonomiestufe und Quelle der Zuordnung enthält.
+Die Highlighting-Extension schreibt diese Anweisungen als \texttt{data-tooltip}-Attribute in die ProseMirror-Decorations.
+
+Bei Textänderungen werden bestehende Decorations automatisch über ProseMirrors Mapping-Mechanismus an die neuen Positionen angepasst, bis die nächste Analyse-Antwort eintrifft.
+Dadurch bleiben die Hervorhebungen während des Tippens stabil.
+
+\subsubsection{Tooltip-System}\label{sec:impl-tooltips}
+
+Die Verb-Tooltips ersetzen die nativen Browser-Tooltips des Prototyps durch gestaltete HTML-Elemente.
+Ein \texttt{mouseover}-Handler auf dem Editor-Bereich prüft, ob das Ziel-Element ein \texttt{data-tooltip}-Attribut trägt.
+Ist dies der Fall, wird ein absolut positioniertes Tooltip-Element oberhalb des Verbs eingeblendet, das die Taxonomiestufe, die Kategorie und -- bei Embedding-basierten Zuordnungen -- die Konfidenz anzeigt.
+Die Farbgebung des Tooltips folgt der Verb-Kategorie: Grün für empfohlene, Rot für nicht empfohlene und Blau für Modalverben.
+
+\subsubsection{Score-Bar und Analyse-Panel}\label{sec:impl-scorebar}
+
+Die Score-Bar am unteren Rand des Editors gibt einen kompakten Überblick über die Analyse.
+Sie besteht aus drei Sektionen: einem Qualitäts-Score als prozentualer Ringindikator, einer Verb-Statistik mit farbcodierten Zählern (empfohlene, nicht empfohlene und Modalverben) sowie einer Taxonomie-Verteilung, die für jede der sechs Stufen die Anzahl zugeordneter Kompetenzformulierungen anzeigt.
+
+\paragraph{Qualitäts-Score.}
+
+Der Qualitäts-Score aggregiert zwei Dimensionen, die in der Literatur als Qualitätskriterien für Kompetenzformulierungen identifiziert werden.
+Die erste Dimension -- \emph{Formulierungsqualität} -- operationalisiert die Forderung der HRK, dass Kompetenzformulierungen \glqq beobachtbares Handeln\grqq\ beschreiben und dazu ein konkretes Handlungsverb verwenden sollen~\cite{hrknexus2015lernergebnisse}.
+Sätze mit empfohlenen Verben erhalten den vollen Qualitätswert (1{,}0), Sätze mit mehrdeutigen, aber prinzipiell empfohlenen Verben einen reduzierten Wert (0{,}7), und Sätze mit nicht empfohlenen Verben einen geringen Wert (0{,}2), da die Formulierung zwar als Kompetenz erkannt, aber als zu unspezifisch eingestuft wird.
+Nicht als Kompetenzformulierung klassifizierte Sätze tragen nicht zum Score bei.
+Die zweite Dimension -- \emph{Taxonomie-Abdeckung} -- folgt der Forderung nach einer breiten Abdeckung kognitiver Anforderungsniveaus~\cite{anderson2001taxonomy}.
+Kopf et al.\ empfehlen, dass Modulbeschreibungen verschiedene kognitive Prozessstufen adressieren sollen~\cite{kopf2010kompetenzen}; die Abdeckung misst den Anteil der sechs Stufen, die im Text vertreten sind.
+Der Gesamtscore berechnet sich als gewichtete Kombination:
+\begin{equation}\label{eq:score}
+Q = 0{,}7 \cdot \frac{1}{n} \sum_{i=1}^{n} q(s_i) + 0{,}3 \cdot \frac{|\{\text{belegte Stufen}\}|}{6}
+\end{equation}
+wobei $q(s_i)$ den Formulierungsqualitätswert des $i$-ten Satzes und $n$ die Gesamtzahl der Sätze bezeichnen.
+Die Gewichtung (70/30) ist eine Designentscheidung, die die Formulierungsqualität auf Satzebene gegenüber der Abdeckung priorisiert, da die Korrektur einzelner Formulierungen die primäre Aufgabe des Editors ist.
+Die Gewichte wurden nicht empirisch kalibriert; eine aufgabenspezifische Optimierung bleibt zukünftiger Arbeit vorbehalten.
+
+Das seitliche Panel zeigt pro Satz detaillierte Analyseergebnisse: Satztyp (K/I/S), Taxonomiestufe mit Konfidenzwert, Quelle der Zuordnung (Regel oder Embedding) und die fünf ähnlichsten Referenzformulierungen aus der Referenzdatenbank.
+Warnungen -- etwa bei Verwendung nicht empfohlener Verben -- werden separat hervorgehoben.
+
+Die ähnlichen Formulierungen werden über alle Sätze dedupliziert, um Redundanz im Panel zu vermeiden, und nach Similarity-Wert sortiert angezeigt.
+Zu jeder Empfehlung werden der Similarity-Wert, die Taxonomiestufe und das Herkunftsmodul angegeben, sodass Nutzende die Relevanz der Empfehlung einschätzen können.
+
+\subsubsection{Set-Analyse-Übersicht}\label{sec:impl-set-analyse}
+
+Die Set-Analyse visualisiert die Taxonomie-Verteilung auf Modulebene als Balkendiagramm.
+Für jede der sechs Stufen nach Anderson und Krathwohl wird die Anzahl zugeordneter Kompetenzformulierungen dargestellt.
+Die Abdeckung -- der Anteil belegter Stufen -- wird numerisch angezeigt.
+Fehlende Stufen werden farblich hervorgehoben, und die vom Backend generierte Empfehlung wird als Hinweistext eingeblendet.
+
+\subsubsection{Persistenz und Speicherverwaltung}\label{sec:impl-persistenz}
+
+Die Persistenz nutzt Dexie~4 als IndexedDB-Wrapper.
+Das Schema definiert Tabellen für Verblisten (empfohlene, nicht empfohlene und Modalverben), Textbausteine und Kompetenzbeschreibungen.
+Die Speicherfunktion unterscheidet -- anders als im Prototyp -- zwischen Neuanlage und Aktualisierung: Bereits gespeicherte Kompetenzbeschreibungen werden per Update aktualisiert, anstatt dupliziert.
+Beim Speichern einer noch unbenannten Kompetenzbeschreibung wird ein Dialog eingeblendet, der zur Namenseingabe auffordert; bereits benannte Beschreibungen werden direkt gespeichert.

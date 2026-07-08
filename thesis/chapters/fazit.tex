@@ -1,0 +1,59 @@
+% =============================================================================
+% Kapitel 9: Fazit und Ausblick
+% =============================================================================
+
+\subsection{Zusammenfassung}\label{sec:zusammenfassung}
+
+Diese Arbeit hat untersucht, welche Potenziale und Grenzen ein Embedding-basierter Ansatz gegenüber regelbasierter Textanalyse für die Unterstützung Lehrender bei der Erstellung qualitativ hochwertiger Kompetenzformulierungen in deutschsprachigen Modulhandbüchern bietet.
+Aufbauend auf dem regelbasierten Prototyp von Loth und Konert~\cite{loth2022kompetenzeditor} wurden drei Analyseansätze -- regelbasiert, Embedding-basiert und hybrid -- entworfen, implementiert und auf einem Gold-Standard-Datensatz von 5\,617~Sätzen aus Modulhandbüchern mehrerer deutscher Hochschulen evaluiert, wobei die Hochschule Fulda mit 57\,\% der Sätze den Schwerpunkt bildet.
+
+Der regelbasierte Ansatz bildet eine solide Baseline für Standardfälle: Sätze mit eindeutigen Verbliste-Treffern werden mit $F_1 = 0{,}994$ korrekt klassifiziert.
+Er stößt jedoch an strukturelle Grenzen, sobald Verben nicht in der statischen Liste enthalten sind ($F_1 = 0{,}683$) oder Nicht-Kompetenz-Sätze erkannt werden müssen ($F_1 = 0{,}279$).
+Die Taxonomie-Zuordnung deckt nur 48{,}2\,\% der Kompetenzformulierungen ab.
+
+Der Embedding-Ansatz überwindet diese Grenzen: Er erreicht $F_1 = 0{,}963$ bei der Satztyp-Klassifikation und $F_1 = 0{,}839$ bei der Taxonomie-Zuordnung -- mit vollständiger Abdeckung.
+Die semantische Repräsentation durch Sentence-BERT ermöglicht erstmals sowohl die Unterscheidung von Kompetenzformulierungen und Inhaltsbeschreibungen als auch die kontextsensitive Taxonomie-Zuordnung für Verben außerhalb statischer Listen.
+Das Empfehlungssystem (Precision@1 $= 0{,}510$) und die Set-Analyse auf Modulebene stellen qualitativ neue Funktionen dar, die mit dem regelbasierten Ansatz nicht realisierbar sind.
+
+Der hybride Cascading-Ansatz kombiniert beide Verfahren, erreicht aber mit $F_1 = 0{,}929$ (Typ) und $F_1 = 0{,}713$ (Taxonomie) nicht die Qualität des reinen Embedding-Ansatzes.
+Die Fehlerfortpflanzung im Cascading -- fehlerhafte regelbasierte Entscheidungen verhindern die Konsultation des Embeddings -- überwiegt den theoretischen Transparenzvorteil.
+Ein Kosten-Nutzen-Vergleich zeigt, dass der hybride Ansatz weder signifikant schneller noch genauer ist als der reine Embedding-Ansatz.
+
+Die Ergebnisse reihen sich in den internationalen Forschungsstand ein: Die erzielten F1-Werte sind vergleichbar mit denen von Li et al.~\cite{li2022bloomclassification} und Kumar et al.~\cite{kumar2025automated} auf englischsprachigen Datensätzen, was die Übertragbarkeit von Embedding-basierten Ansätzen auf den deutschsprachigen Raum bestätigt.
+Gleichzeitig bestätigt die Arbeit die von Huber und Niklaus~\cite{huber2025llmsblooms} beobachtete Domänenabhängigkeit: Bei ingenieurwissenschaftlichen Modulhandbüchern sinkt die Taxonomie-Zuordnung deutlich.
+
+\subsection{Ausblick}\label{sec:ausblick}
+
+Aus den Ergebnissen und Limitationen der Arbeit ergeben sich mehrere Ansatzpunkte für weiterführende Forschung und Entwicklung.
+
+\paragraph{Qualitätsmetriken.}
+Die größte offene Herausforderung ist die reliable Bewertung der Formulierungsqualität.
+Die dreistufige Skala (gut/akzeptabel/schlecht) hat sich als zu subjektiv erwiesen ($\kappa = 0{,}350$/$0{,}401$ zwischen LLM und menschlichen Annotatoren).
+Künftige Arbeiten sollten operationalisierte Qualitätskriterien auf Basis des HRK-nexus-Leitfadens~\cite{hrknexus2015lernergebnisse} definieren -- etwa die Prüfung auf Vorhandensein eines beobachtbaren Verbs, Benennung der Studierenden als Subjekt, Eindeutigkeit und Messbarkeit.
+Eine regelbasierte Prüfung solcher formaler Kriterien, kombiniert mit einer Embedding-basierten Einschätzung der inhaltlichen Qualität, könnte einen robusten Qualitätsindikator ergeben.
+
+\paragraph{Konfidenz und Erklärbarkeit.}
+Das System zeigt bereits unkalibrierte Konfidenzwerte pro Satz an, die aus den SVM-Wahrscheinlichkeitsschätzungen abgeleitet werden.
+Der nächste Schritt wäre die Kalibrierung dieser Werte -- etwa durch Platt-Skalierung oder isotonische Regression --, sodass eine angezeigte Konfidenz von 80\,\% tatsächlich einer 80\,\%-Korrektrate entspricht.
+In Kombination mit der regelbasierten Verbliste als Erklärungsschicht könnte ein System entstehen, das sowohl genau als auch nachvollziehbar ist: Das Embedding klassifiziert, und wenn ein Verbliste-Treffer vorliegt, wird die Zuordnung mit der Listenregel erklärt.
+
+\paragraph{Differenzierte Verbliste.}
+Die statische Verbliste des regelbasierten Ansatzes enthält rund 80~Handlungsverben mit festen Stufenzuordnungen.
+Stanny~\cite{stanny2016reevaluating} zeigt, dass Verben wie \emph{select} in allen sechs Taxonomiestufen auftreten können.
+Eine differenzierte Verbliste, die kontextabhängige Stufenzuordnungen codiert (z.\,B.\ \enquote{unterscheiden: Stufe~2 bei Faktenwissen, Stufe~4 bei konzeptuellem Wissen}), könnte die regelbasierte Baseline verbessern und als reichere Erklärungsgrundlage für den hybriden Ansatz dienen.
+Die Wissensdimension nach Krathwohl~\cite{krathwohl2002revision} bietet hier einen systematischen Rahmen.
+
+\paragraph{Alternative Hybridisierung.}
+Die Diskussion in Kap.~\ref{sec:cascading-alternativen} zeigt, dass das Cascading-Muster nicht optimal ist.
+Ein Ensemble-Ansatz, bei dem die regelbasierte Zuordnung als Feature in den SVM-Klassifikator einfließt, oder ein Voting-Modell mit konfidenzgewichteter Entscheidung, könnte die Komplementarität beider Ansätze besser ausschöpfen.
+
+\paragraph{Datensatzerweiterung.}
+Der Gold-Standard-Datensatz deckt zwar vier Hochschulen und vier Fachbereiche ab, ist aber mit 57\,\% Fulda-Sätzen stark auf eine Institution konzentriert; die Uni Kassel steuert nur 40~Sätze bei.
+Eine Erweiterung um weitere Disziplinen (Geisteswissenschaften, Naturwissenschaften, Medizin) und Sprachvarianten (österreichisches und schweizerisches Deutsch) würde die Generalisierbarkeit der Ergebnisse stärken.
+Insbesondere der Domänentransfer-Verlust bei ingenieurwissenschaftlichen Modulhandbüchern legt nahe, dass domänenspezifisches Fine-Tuning des SBERT-Modells lohnend sein könnte.
+
+\paragraph{LLM-basierte Analyse.}
+Mit der rasanten Entwicklung großer Sprachmodelle stellt sich die Frage, ob ein LLM-basierter Ansatz -- etwa durch direkte Klassifikation mit GPT-4 oder Claude -- die Embedding+SVM-Pipeline übertreffen könnte.
+Die LLM-Vorannotation in dieser Arbeit liefert erste Hinweise: Die hohe Übereinstimmung mit menschlichen Annotatoren bei Satztyp und Taxonomie ($\kappa \geq 0{,}623$) deutet auf das Potenzial hin.
+Die höheren Inferenzkosten und die fehlende Offline-Fähigkeit schränken jedoch den praktischen Einsatz ein.
+Ein hybrider Ansatz, der Embeddings für die Echtzeitanalyse und ein LLM für die asynchrone Qualitätsprüfung einsetzt, könnte beide Stärken vereinen.

@@ -1,0 +1,1125 @@
+satz,hochschule,true_typ,true_tax,regel_typ,embedding_typ,hybrid_typ
+"Die Studierenden finden sich in der betrieblichen Wirklichkeit, die weitgehend vom betriebswirtschaftlichen Rationalitätspostulat bestimmt ist, zurecht und bringen sich produktiv ein.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden verstehen die technischen Grundlagen, welche zum Verständnis digitaler Rechensysteme notwendig sind.",Hochschule Fulda,K,2,K,K,K
+"Die Studierenden erklären den Aufbau, die Baugruppen und die Arbeitsweise des „Von-Neumann-Rechners“.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden benutzen fachgerecht mathematische Symbole.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden führen selbst mathematische Argumentationen im Bereich der Analysis.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden formulieren diese Lösungen in Quellcode, der vorgegebenen Konventionen für guten Programmierstil entspricht.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden nennen die grundlegenden Richtlinien für die MCI und integrieren diese in ihre Überlegungen beim Entwurf von interaktiven Systemen.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden entwickeln Prototypen zur MCI mit verschiedenen Techniken (z.B. PenAndPaper), evaluieren nach etablierten Methoden, analysieren die Ergebnisse und präsentieren diese.",Hochschule Fulda,K,4,K,K,K
+Die Studierenden entwickeln ein Bewusstsein für die Rolle des Fachgebiets MCI .,Hochschule Fulda,K,2,K,K,K
+Die Studierenden erkennen verschiedene algebraische Strukturen.,Hochschule Fulda,K,4,K,K,K
+Die Studierenden treffen Aussagen über die Lösbarkeit linearer Gleichungssysteme und bestimmen deren Lösungsmenge.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen erweiterte Konzepte der Arbeit mit Kommandozeilen und können sie für fortgeschrittene Aufgaben (z.B. Suchen in Dateien und Verzeichnissen mit regulären Ausdrücken) benutzen.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden beurteilen die Eignung von verschiedenen Kommunikationsnetzen und –protokollen für die Realisierung von Netz-Infrastrukturen und Internetdiensten sowie –anwendungen.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden erklären die Funktionsweise ihrer eigenen Lösungen und argumentieren dabei die zugrundeliegenden Entscheidungen bei alternativen Lösungswegen.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden messen das Laufzeitverhalten von Algorithmen und schätzen es ein.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden erstellen in Gruppen Präsentationen zu selbst erarbeiteten komplexen Datenstrukturen und Algorithmen.,Hochschule Fulda,K,6,K,K,K
+Können physischer Datenorganisation beschreiben und erläutern,Hochschule Fulda,K,2,K,K,K
+Demonstrieren grundlegendes Verstehen der Umsetzung/des Anlegens von Indices,Hochschule Fulda,K,2,S,K,S
+Die Studierenden definieren und unterscheiden Fachbegriffe der IT-Sicherheit.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden benennen Protokolle im Bereich der IT-Sicherheit, erklären, wieso die Sicherheitsziele der Protokolle erreicht werden und können passende Protokolle zu gegebenen Problemstellungen auswählen.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden nutzen multimediale Hilfsmittel bei Präsentationen.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden erklären den Unterschied zwischen Mehrdeutigkeit einer kontext-freien Grammatik und (inhärenter) Mehrdeutigkeit einer kontext-freien Sprache.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden nennen Beispiele für Sprachen der einzelnen Stufen der Chomsky-Hierarchie.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden entwickeln Grammatiken bzw. Automaten für eine gegebene Sprache.,Hochschule Fulda,K,6,K,K,K
+Die Studierenden erstellen Syntaxbäume (basierend auf einfachen kontext-freien Grammtiken oder EBNF).,Hochschule Fulda,K,3,K,K,K
+Die Studierenden erarbeiten sich selbständig eine bisher unbekannte Definition und nutzen diese zur Formalisierung.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden analysieren die Schnittstelle heterogener verteilter Betriebssysteme und entwerfen eine kohärente Systemfassade, die das verteilte System vertritt.",Hochschule Fulda,K,4,K,K,K
+Die Studierenden identifizieren für ein gegebenes Problem einen geeigneten Lernalgorithmus und,Hochschule Fulda,K,4,K,K,K
+Die Studierenden planen und realisieren ein umfangreiches Projekt aus dem Gebiet der „Angewandten Informatik“ und wenden dabei im Studium vermittelte Inhalte an.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden benennen wichtige Netzwerkprotokolle für das Internet of Things (IoT).,Hochschule Fulda,K,1,K,K,K
+Die Studierenden implementieren TCP/IP-basierte Kommunikationsnetzwerke auf Mikrocontrollern.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden bearbeiten innerhalb einer vorgegebenen Frist von drei Monaten ein Problem aus dem Fachgebiet der Angewandten Informatik selbständig und nach wissenschaftlichen Methoden,",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden stellen die gewonnenen Ergebnisse verständlich und folgerichtig nach wissenschaftlichen Qualitätsmerkmalen in einer Hausarbeit (Abschlussarbeit) dar,",Hochschule Fulda,K,2,K,K,K
+Die Studierenden fassen die Arbeitsaufgaben eines typischen Berufsbildes der Informatik zusammen.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden erklären die Verwendung verschiedene Renderingverfahren und welche Bereiche der Szene gerendert und welche in der Postproduktion entstehen müssen.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden fassen die grundlegende Funktionsweise prozeduraler Animationstechniken, insbesondere Partikelsysteme fachgerecht zusammen.",Hochschule Fulda,K,2,K,K,K
+"Die Studierenden planen, konzipieren und setzen ein komplexes Medienprojekt selbständig um.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden benennen die einzelnen Phasen eines typischen Medienprojektes.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden lösen Aufgabenstellen unter Anwendung von Methoden der quantitativen BWL wie zum Beispiel Personal- und Materialbedarfsplanung, Werthäufigkeitsverteilung, Stücklistenauflösung anhand von Erzeugnisstrukturen, Bestimmung der optimalen Bestellmenge, Produktionsprogrammplanung mit Hilfe der relativen Deckungsbeitragsrechnung oder der linearen Programmierung.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden wenden aktuelle Techniken (vgl. Cloud-, Virtualisierungs- und Automatisierungslösungen) für den lastverteilten und fehlertoleranten Betrieb von Internetdiensten an.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden können Internetdienste erstellen und anhand definierter Anforderungen umsetzen.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden realisieren fachgerecht Ansätze für Monitoring, Backup/Restore, Skalierbarkeit/Ausfallsicherheit und Wartung von Internetdiensten.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden erläutern Grundbegriffe, Konzepte, Modelle, Probleme und Methoden der Angewandten Statistik und des Data Mining. formulieren Informationsgewinnung aus den verschiedenen Datenbeständen als Probleme der Angewandten Statistik und Data Mining und bieten dazu geeignete Verfahren zu ihrer Lösung an.",Hochschule Fulda,K,2,K,K,K
+"Die Studierenden wenden die Typologie der unterschiedlichen (Programmier-)Schnittstellen zu Datenbanksystemen im zentralisierten und verteilten Umfeld an, zur Einbindung einer Datenbank in eine Anwendung.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden verwenden Bildverarbeitungstools, um die visuelle Korrektheit des Ergebnisses zu überprüfen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden beschreiben die Beziehung/ wesentlichen Unterschiede zu den bisher bekannten Sprachen (etwa Java/ C).,Hochschule Fulda,K,2,K,K,K
+Die Studierenden führen Simulationen mit Simulationswerkzeugen aus.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden beschreiben die Ziele, den Aufbau und die Arbeitsweise heutiger ERP-Systeme.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden benennen und erklären die wichtigsten Algorithmen und Methoden der Computergraphik.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden beschreiben wesentliche Fragen der Anwendung von Informationssystemen.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden definieren die Grundlagenbegriffe von Politik und Wirtschaft, VWL und BWL.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden ordnen die vorgebrachten Argumente theoretisch ein und bewerten diese.,Hochschule Fulda,K,4,K,K,K
+Die Studierenden bereiten digitale mediale Inhalte für die Systemnutzung auf.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden erklären die Personalentlohnung und Personalverwaltung.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden lösen Aufgabenstellungen unter Anwendung von Methoden des Projektmanagements wie zum Beispiel des Netzplans, verschiedener Aufwandsschätzverfahren, Verfahren zur Leistungsfortschrittskontrolle (Earned Value Analyse).",Hochschule Fulda,K,3,K,K,K
+Die Studierenden präsentieren ihre gewonnen Erkenntnisse,Hochschule Fulda,K,3,K,K,K
+Die Studierenden reflektieren und verfassen in eigenen Worten ihren eigenen Arbeitsprozess und Zwischenergebnisse und ziehen daraus korrigierende Schlüsse im Hinblick auf die Erreichung des Forschungszieles.,Hochschule Fulda,K,4,K,K,K
+"Die Studierenden können Ergebnisse eigener und fremder Forschungsarbeiten objektiv beschreiben, interpretieren und kritisch hinterfragen.",Hochschule Fulda,K,2,K,K,K
+"Die Studierenden beschreiben die Anforderungen von fehlertoleranten, leistungsfähigen und skalierbaren IT-Services an Computernetzwerken.",Hochschule Fulda,K,2,K,K,K
+"Die Studierenden benennen Lösungen für Performance, Fehlertoleranz und Skalierbarkeit in Netzen von Unternehmen, Rechenzentren sowie Network und Internet Service Providern.",Hochschule Fulda,K,1,K,K,K
+"Die Studierenden beurteilen Cloud-basierte Services vor dem Hintergrund der flexiblen Bereitstellung, Skalierbarkeit, Sicherheit und des Datenschutzes.",Hochschule Fulda,K,5,K,K,K
+Die Studierenden bewerten den aktuellen Stand der Forschung in diesem Bereich und,Hochschule Fulda,K,5,K,K,K
+Die Studierenden wirken aktiv an der angewandten Forschung im Bereich Cloud Computing mit.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden bewerten und vergleichen aktuelle Lösungen aus der Wissenschaft und Wirtschaft.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden erarbeiten im Peer-Review in Teams eigene wissenschaftliche Beiträge und Projekte im Umfeld des Netzwerk-Management und -Monitoring.,Hochschule Fulda,K,6,K,K,K
+Die Studierenden erklären sicherheits-kritische Softwarefehler und analysieren die Kritikalität von Softwarefehlern in gegebenen Kontexten,Hochschule Fulda,K,2,K,K,K
+Die Studierenden benennen kryptographische Verfahren und benutzen diese in passenden Problemstellungen,Hochschule Fulda,K,1,K,K,K
+Die Studierenden beschreiben Verfahren zum sicheren Umgang mit Software zu verschiedenen Phasen des Softwarelebenszyklus,Hochschule Fulda,K,2,K,K,K
+"Dazu werden unterschiedliche Speichermedien, Algorithmen und Systeme betrachtet.",Hochschule Fulda,I,,S,K,K
+Die Studierenden erklären die Konfiguration verschiedener Dateisysteme und,Hochschule Fulda,K,2,K,K,K
+Die Studierenden führen neue Konfigurationen durch,Hochschule Fulda,K,3,K,K,K
+Die Studierenden entwickeln eigene (special-purpose) Dateisysteme.,Hochschule Fulda,K,6,K,K,K
+weitergehende Funktionen relationaler Datenbanken anzugeben und zu beschreiben.,Hochschule Fulda,K,1,K,K,K
+die inhärenten Restriktionen etablierter relationaler Datenbanksysteme darzustellen und zu beschreiben.,Hochschule Fulda,K,2,K,K,K
+BigData / noSQL Use Cases zu beurteilen und zu evaluieren.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden diskutieren die Problemstellungen und Lösungsansätze der 3D-Computergrafik.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden benennen grundlegende Anwendungsarchitekturen und analysieren die Anforderungen komplexer verteilter Systeme und die damit verbundene Rolle von Ansätzen wie z.B. Middleware, Microservices, SOA und EAI.",Hochschule Fulda,K,1,K,K,K
+"Die Studierenden realisieren fachgerecht eigenständige verteilte Anwendungen unter Verwendung verschiedener Techniken und Programmiersprachen, insb. zur serverseitigen Entwicklung.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden benennen die Anforderungen und Herausforderungen für multimediale Kommunikation über aktuelle und zukünftige Netzinfrastrukturen und können diese fachgerecht umsetzen.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden präsentieren und dokumentieren die eigenständig entwickelten Echtzeit-Kommunikationsdienste und diskutieren deren Bezug zum aktuellen Stand von Forschung und Technik.,Hochschule Fulda,K,4,K,K,K
+"Ein Schwerpunkt sind Ansätze, die sich interdisziplinär auf Design, mit Bezug zu informationstechnischen Fragestellungen, beziehen.",Hochschule Fulda,I,,S,K,K
+Die Studierenden überführen in Praktika exemplarisch Elemente aus der Theorie in die Design-Praxis .,Hochschule Fulda,K,3,K,K,K
+Die Studierenden wählen die passenden Visualisierungsformen auf Basis des Daten- und Informationsdesigns für gegebene Daten aus und begründen diese in eigenen Worten.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden setzen vorhandene Datenvisualisierungs-Tools zur Umsetzung eines Visualisierungskonzeptes fachgerecht und effizient ein.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden geben verschiedene, aktuelle Anwendungsbeispiele in unterschiedlichen Anwendungsdomänen wieder.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden wenden neue wissenschaftliche Erkenntnisse selbständig in einem praktischen Kontext an.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden implementieren Modelle in BPMN und Petri-Netzen und beherrschen die wichtigsten Methoden (Inzidenzmatrix, Invarianten, Zustandsgraphen)",Hochschule Fulda,K,3,K,K,K
+grenzen das Prozess-Mining zu Data-Mining/ und BI sowie zum Geschäftsprozessmanagement ab.,Hochschule Fulda,K,4,S,K,S
+Die Studierenden bewerten den Aufbau heterogener rekonfigurierbarer Rechensysteme mit CPU und FPGA Anteilen.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden entwerfen einfache Anwendungen für rekonfigurierbare Rechensysteme mittels HLS.,Hochschule Fulda,K,6,K,K,K
+Die Studierenden analysieren den Entwurfsraum der HLS um gegebene Zielvorgaben zu erfüllen.,Hochschule Fulda,K,4,K,K,K
+"Die Studierenden überwachen in Kombination mit Stream-Processing-Engines, wie Apache Flink, Datenströme der Sensoren von mobilen Robotern auf das Auftreten definierter Events und verknüpfen diese mit einem semantischen Umgebungsmodell.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden schildern die Unterschiede zwischen begrenzten und unbegrenzten Daten Streams.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden unterscheiden zwischen Processing-time und Event-time und verarbeiten out-of-order und late-arriving Daten robust.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden wirken aktiv an der angewandten Forschung in diesem Bereich mit.,Hochschule Fulda,K,3,K,K,K
+Rauschen und Punktverteilung in den aufgenommenen Daten.,Hochschule Fulda,S,,S,I,S
+Die Studierenden importieren Daten aus verschiedenen Datenquellen wie Dateien oder Datenbanken und bereiten diese für die weitere Analyse vor und exportieren diese.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden beschreiben die Methoden und Bibliotheken zur Erstellung einfacher Machine Learning Workflows und erklären die Notwendigkeit von Data Splitting, Model Evaluation und Hyperparameter Tuning.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden automatisieren und orchestrieren Data Science Workflows.,Hochschule Fulda,K,3,S,K,K
+Dazu gehört die Auswahl und praktische Anwendung sinnvoller Methoden.,Hochschule Fulda,I,,S,I,I
+Dies schließt insbesondere die Auswahl und Bewertung geeigneter Literatur sowie die Präsentation der Ergebnisse mit ein.,Hochschule Fulda,S,,K,I,K
+Die Studierenden erklären die Grundbegriffe der Differential- und Integralrechnung.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden wenden Näherungsverfahren für verschiedene Probleme der Analysis an.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden implementieren Modelle in BPMN und Petri-Netzen und beherrschen die wichtigsten Methoden (Inzidenzmatrix, Invarianten, Zustandsgraphen)",Hochschule Fulda,K,3,K,K,K
+sie bewerten ihre Einschränkungen und führen diese anhand konkreter Beispiele durch,Hochschule Fulda,K,3,S,K,K
+grenzen das Prozess-Mining zu Data-Mining/ und BI sowie zum Geschäftsprozessmanagement ab.,Hochschule Fulda,K,4,S,K,S
+darüberhinausgehende Anwendungen und Use Cases an einzelnen Beispielen zu bearbeiten und architektonische Ansätze aus den Big Data Use Cases abzuleiten.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden erstellen Visualisierungen vorhandener Daten auf verständliche Weise anhand gegebener Kriterien unter Berücksichtigung der Wahrnehmungstheorien.,Hochschule Fulda,K,6,K,K,K
+Die Studierenden führen explorative Datenanalyse strukturiertere Daten aus und bereiten Daten für Data Mining und Prädiktive Analytics Aufgaben vor.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden kennen aktuelle, vertiefende Themen aus Wissenschaft und Praxis.",Hochschule Fulda,K,1,K,K,K
+Sie erleben unterschiedliche Lehr- und Prüfungsstile.,Hochschule Fulda,K,2,S,K,K
+"Die Studierenden vergleichen und bewerten aktuelle wissenschaftliche Veröffentlichungen beziehungsweise Entwicklungen in der Industrie im Bezug zur fokussierten Problemstellung,",Hochschule Fulda,K,4,K,K,K
+die inhärenten Restriktionen etablierter relationaler Datenbanksysteme zu illustrieren.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden zählen aktuelle Erkenntnisse aus der Wissenschaft auf, schätzen deren Bedeutung ein und knüpfen mit einem eigenen Beitrag daran an.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden bezeichnen die Herausforderungen und Möglichkeiten von Data Stream Analytics und Online Machine Learning.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden erklären ausgewählte Data Sketches und,Hochschule Fulda,K,2,K,K,K
+Die Studierenden erklären ausgewählte Online Machine Learning Verfahren und,Hochschule Fulda,K,2,K,K,K
+Einfache Konzepte werden erarbeitet und umgesetzt.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen ferner den Wertschöpfungsprozess in Unternehmen von der Faktorbereitstellung bis hin zum Vertrieb.,Hochschule Fulda,K,1,K,K,K
+"Gestalterische Problemstellungen werden erkannt, einfache Konzepte werden erarbeitet und umgesetzt.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden erlangen grundlegende Kenntnisse der Informatik, die für das Verständnis und die Beurteilung von Aufgabenstellungen in der IT erforderlich sind.",Hochschule Fulda,K,1,K,K,K
+"Die Studierenden kennen die Grundbegriffe der Informatik und wissen, wie Daten repräsentiert und verarbeitet werden.",Hochschule Fulda,K,1,K,K,K
+"Die Studierenden kennen Strategien zu Fehlereingrenzung, -suche und -behebung und wenden diese an.",Hochschule Fulda,K,1,K,K,K
+"Sie erkennen und verstehen die sich hieraus ergebenden Vorteile für die benutzerzentrierte, die systemzentrierte und die anwendungszentrierte Anpassung von Webseiten und Anwendungen.",Hochschule Fulda,K,2,S,K,K
+"Die Studierenden benennen essentielle Netzdienste und –protokolle, erklären deren Funktionsweise und Standards und wenden diese korrekt an.",Hochschule Fulda,K,1,K,K,K
+"Die Studierenden arbeiten in Teams im Netzwerk-Labor an explorativen Lernumgebungen und Experimenten zur Sicherheit, Leistungsfähigkeit und Fehlertoleranz von Netzen und darin verwendeten Protokollen und Anwendungen.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden verfolgen die Weiterentwicklung des Internets sowie zugehöriger Anwendungen und Dienste, schätzen diese ein und kennen damit verbundene Risiken und Möglichkeiten.",Hochschule Fulda,K,1,K,K,K
+Sie haben erste Erfahrungen im fachgerechten Umgang mit der gesamten Studiotechnik im TV- und Fotostudio sowie im Außeneinsatz gesammelt und können diese praktisch für die kreative Produktion audiovisueller Inhalte in individuellen sowie in Gruppenprojekten anwenden.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden analysieren gegebene Problemstellungen der Informatik auf algorithmisch relevante Bestandteile, leiten daraus algorithmische Lösungen ab und setzen diese als objektorientierte Programme um.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden lernen den Einsatz von Frameworks der Webprogrammierung zur Realisierung interaktiver Web-,Hochschule Fulda,K,3,K,K,K
+Die Studierenden wählen abhängig vom Einsatzszenario geeignete Standarddatenstrukturen und Algorithmen zur Problemlösung aus und setzen sie ein.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden erstellen in Gruppen Präsentationen zu selbst erarbeiteten komplexen Datenstrukturen und Algorithmen.,Hochschule Fulda,K,6,K,K,K
+Die Studierenden beherrschen den Umgang mit grundlegenden Begriffen und Methoden der Mathematik hinter der Computergrafik und können diese zur Lösung anwendungsbezogener Fragestellungen anwenden.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden nennen die wichtigsten Grundbegriffe der Mensch-Computer-Interaktion (MCI) und erklären ihre Bedeutung.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden bringen die Perspektive der Nutzer*innen aktiv in den Entwicklungsprozess interaktiver Systeme ein.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden nennen die Grundlagen und Konzepte des menschzentrierten Entwurfs interaktiver Systeme und wenden sie auf einfache Aufgabenstellungen an.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden benennen traditionelle Interaktionen und zeigen aktuelle Entwicklungen hinsichtlich des Interaktionsdesigns auf.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden benutzen fachgerecht die behandelten SE-Konzepte (z.B. in der Anforderungsanalyse, dem Design oder der Qualitätssicherung), erkennen diese in gegebenen Beispielen und können darin fehlerhafte Anwendungen analysieren und benennen.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden analysieren gegebene Problemstellungen der Softwareerstellung auf relevante Bestandteile, leiten daraus Lösungen für eine adäquate System/Softwareentwicklung ab und verwenden die relevanten Methoden.",Hochschule Fulda,K,3,K,K,K
+Sie verstehen die grundlegenden Modellierungskonzepte und Datenstrukturen und deren Anwendungen.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden beschreiben Algorithmen der Graphischen Datenverarbeitung und setzen diese praktisch um.,Hochschule Fulda,K,2,K,K,K
+Hierbei wird auf spezielle Probleme von IT-Unternehmen und IT-Funktionen in Unternehmen eingegangen.,Hochschule Fulda,I,,S,I,I
+Methoden zur Evaluation im Kontext des Usability Engineerings in einem iterativen Prozess abzuleiten und an Bedürfnisse eines konkreten Projekts anzupassen,Hochschule Fulda,K,4,K,K,K
+Die Studierenden wenden Konzeptions- und Entwicklungsphasen mehrfach in einem Designprozess nach dem Prinzip der iterativen Anwendungsentwicklung an.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden berücksichtigen die Anforderungen des Bewerbungsprozesses im Personalauswahlverfahren bei ihrer Bewerbung.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden wenden das erlernte Fach- und Methodenwissen aus dem Studium in einer Unternehmensumgebung an.,Hochschule Fulda,K,3,K,K,K
+Sie kennen die grundlegende Historie der Klangsynthese.,Hochschule Fulda,K,1,K,K,K
+"In der Folge werden die Prototypen mit Interaktionssensorik ausgestattet, etwa durch die Programmierung aktueller Mikrokontroller, deren Daten an die zu kontrollierende Anwendung übermittelt werden, etwa der Manipulation von Objekten in Anwendungen der Virtuellen Realität (VR) oder zur Kontrolle computergestützer Musikinstrumente.",Hochschule Fulda,I,,S,K,K
+"Sie üben die Verwendung von Werkzeugen zur Systemerstellung und Modellierung, sind in der Lage, begreifbare Schnittstellen und zu steuerndes System zu integrieren, verstehen, wie Sensordaten übertragen und integriert werden können und sind in der Lage, eine einfaches System mit begreifbarer Schnittstelle zu konzipieren und zu programmieren.",Hochschule Fulda,K,2,K,K,K
+"Sie erhalten Anleitung in der systematischen Planung, Erfassung und Dokumentation des von Ihnen geleisteten Arbeitsprozesses.",Hochschule Fulda,S,,S,K,K
+"Filterung (Glättungsfilter, Differenz- und Ableitungsfilter, Anwendung der Filtermatrix, kombinierte Abfolge von Filterschritten): Lineare Algebra, insbesondere Matrizen- und Vektorrechnung",Hochschule Fulda,I,,S,I,S
+"Berechnung von Histogrammen (bimodale Histogramme, kummulative Histogramme, automatische Histogrammanpassung): Grundlagen der Statistik, Verteilungen, Erwartungswert, Mittelwert, Varianz, Standardabweichung, diskrete Wahrscheinlichkeitsdichtefunktionen",Hochschule Fulda,I,,S,I,S
+Die Teilnehmenden erwerben Kompetenzen im Umgang mit Beleuchtungstechnik und deren gestalterischen Einsatzmöglichkeiten.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden können die prinzipiellen konzeptionellen Unterschiede verschiedener Low-Code Programmierformen und deren Bezug zum komponentenbasierten Softwareengineering sowie der agilen Softwareentwicklung darstellen.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden erkennen die speziellen Fragestellungen, die sich bei der Entwicklung/ Erweiterung von betrieblicher Anwendungssoftware/ Standardsoftware ergeben.",Hochschule Fulda,K,4,K,K,K
+Die Studierenden beschreiben das Programmiermodell des Anwendungssystems je Anwendungstyp.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden grenzen weiterführende Konzepte der Anwendungsprogrammierung, speziell in Form von Web-Anwendungen, wie Verwendung des MVC-Patterns, weitere Patterns (Separation of Concerns, MVP) voneinander ab.",Hochschule Fulda,K,4,S,K,S
+Die Studierenden verstehen den grundsätzlichen Aufbau abstrakter im Computer generierter Musik und ihrer Programmierung innerhalb eines Laptoporchestra-Settings.,Hochschule Fulda,K,2,K,K,K
+Sie kennen insbesondere die gängigen Interaktionstechniken und können diese anwenden und beherrschen die Methodik des Bewegungsdesigns.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden benennen die verschiedenen Arten von Informationssystemen, die diese Geschäftsprozesse auf unterschiedliche Art unterstützen.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden beschreiben wesentliche Fragen der Anwendung von Informationssystemen.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden wenden die Programmiersprache C zur Lösung eigener Problemstellungen an.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden benennen Verfahren im Bereich der Kryptographie, erklären die Sicherheitseigenschaften der Verfahren und können passende Verfahren zu gegebenen Problemstellungen auswählen.",Hochschule Fulda,K,1,K,K,K
+"Die Studierenden benennen Protokolle im Bereich der IT-Sicherheit, erklären, wieso die Sicherheitsziele der Protokolle erreicht werden und können passende Protokolle zu gegebenen Problemstellungen auswählen.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden beurteilen sicherheitskritische Systeme aus dem Bereich Automotive Systeme und der Medizintechnik.,Hochschule Fulda,K,5,K,K,K
+"Die Studierenden benennen die Charakteristika von Audio, Voice und Video over IP und aktuelle Kompressionsverfahren.",Hochschule Fulda,K,1,K,K,K
+"Die Studierenden bewerten unterschiedliche Protokolle, Dienste und Plattformen für Multimedia-Kommunikation und analysieren deren Nutzen.",Hochschule Fulda,K,4,K,K,K
+Die Studierenden bringen sich aktiv in die Teamarbeit mit Multimedia-Kommunikationssystemen im Labor ein.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden erläutern den Personaleinsatz, die Personalentwicklung und -freisetzung.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden nennen die gängigen Personalauswahlverfahren.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden beschreiben die wesentlichen Faktoren des Berufseinstiegs (Einarbeitung, Gehalt, Einsatz, Kündigungsverfahren).",Hochschule Fulda,K,2,K,K,K
+Die Studierenden setzen die erworbenen Kenntnisse für konkrete Problemstellungen aus dem Bereich mobiler Roboter um.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden kennen die in der Praxis üblichen TCP/IP-Programmiertechniken und -mechanismen, sowie die Werkzeuge für verschiedene Entwicklungsphasen für Internet-Software und die Gegenüberstellung ihrer quantitativen Charakteristika.",Hochschule Fulda,K,1,K,K,K
+"Die Studierenden lernen Theorie und Praxis, Regeln und Werkzeuge für die Umsetzung von Informationen und Daten in eine visuelle Darstellung (visuelle Kommunikation) kennen.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden erläutern die Grundregeln der visuellen Kommunikation und leiten von diesen Regeln für die Verwendung ab.,Hochschule Fulda,K,2,K,K,K
+Sie verstehen die wichtigsten Verfahren zur Bildsynthese (Computergraphik bzw. Visualisierung) sowie zur Bildanalyse (Computer Vision) und können diese bei grundlegenden Bildsynthese- und Bildanalyse-Problemen anwenden.,Hochschule Fulda,K,2,K,K,K
+Verfahren zur Berechnung linearer elektrischer Netzwerke anzuwenden,Hochschule Fulda,K,3,K,K,K
+mit der Dynamik eines Massepunktes umzugehen und einfache Probleme der Newtonschen Mechanik (eines Massepunktes) zu berechnen,Hochschule Fulda,K,3,S,K,K
+die Theorie der Schwingungs- und Wellenvorgänge bei der Lösung einfacher Probleme anzuwenden,Hochschule Fulda,K,3,K,K,K
+"Bindungen, die Kristallstrukturen, die Kristallfehler und den Aufbau von Polymeren zu beschreiben",Hochschule Fulda,K,2,K,K,K
+einfache Digitalschaltungen zu konstruieren,Hochschule Fulda,K,6,K,K,K
+die grundlegenden Konzepte des Aufbaus und der Programmierung von Rechnern wiederzugeben,Hochschule Fulda,K,1,S,K,K
+die typischen Aufgaben von Ingenieur*innen wiederzugeben,Hochschule Fulda,K,1,S,K,K
+naturwissenschaftlich zu denken und methodisch zu arbeiten Die Teilnehmenden beherrschen:,Hochschule Fulda,K,3,S,K,K
+das Vorlesungswissen aus Grundlagen der Elektrotechnik 1 und 2 und Physik in praktischen Versuchen anzuwenden,Hochschule Fulda,K,3,K,K,K
+Messergebnisse zu dokumentieren und zu bewerten,Hochschule Fulda,K,3,S,K,K
+Fehlerschranken zu ermitteln,Hochschule Fulda,K,3,K,K,K
+die wichtigsten aktiven Bauelemente und deren Modelle zu erklären,Hochschule Fulda,K,2,K,K,K
+"die wesentlichen Grundlagen auf dem Gebiet des Messens physikalischer Größen zu wiederholen und Probleme bei der Vorbereitung, Durchführung und Auswertung von Messungen selbständig zu lösen",Hochschule Fulda,K,1,K,K,K
+können Aufgaben zu den erlernten Methoden selbständig bearbeiten,Hochschule Fulda,K,3,S,K,K
+im Team zu arbeiten,Hochschule Fulda,K,3,S,K,K
+einen Überblick über grundlegende Fertigungsverfahren des Maschinenbaus zu geben,Hochschule Fulda,K,2,S,K,K
+Normung und Zertifizierung und deren Anwendung zu beschreiben,Hochschule Fulda,K,2,K,K,K
+Methoden zur Lösung konstruktiver Probleme anzuwenden,Hochschule Fulda,K,3,K,K,K
+einen Überblick über die verschiedenen Realisierungsmöglichkeiten einer Schaltung zu geben,Hochschule Fulda,K,2,S,K,K
+den grundsätzlichen Aufbau eines Mikroprozessor-Systems zu erläutern und einfache Mikroprozessorsysteme zu konzipieren,Hochschule Fulda,K,2,K,K,K
+Assembler-Programme für Mikroprozessoren zu schreiben,Hochschule Fulda,K,6,S,K,K
+sich im Berufsfeld oder verwandten Gebieten der Elektrotechnik und Informationstechnik zu orientieren,Hochschule Fulda,K,3,S,K,K
+praktische Kenntnisse zu vertiefen und berufstypische Arbeitsweisen anzuwenden,Hochschule Fulda,K,2,K,K,K
+"technische, soziale und organisatorische Zusammenhänge der Arbeitswelt wiederzugeben und auf routinemäßige Arbeitsvorgänge anzuwenden",Hochschule Fulda,K,1,K,K,K
+"Die Teilnehmenden sind in der Lage, technische Grundlagen, den Einsatz, die Struktur, den Aufbau und die Funktion moderner Systeme in der Automatisierungstechnik wieder zu geben.",Hochschule Fulda,K,1,S,K,K
+"Die Teilnehmenden sind in der Lage, technische Grundlagen, den Einsatz, die Struktur, den Aufbau und die Funktion moderner Systeme in der Automatisierungstechnik wieder zu geben.",Hochschule Fulda,K,1,S,K,K
+"mit Hilfe typischer Simulationssoftware auf Grundlage der aufgestellten Modellgleichungen die statische und dynamische Analyse vorzunehmen, sowie Simulationen durchzuführen",Hochschule Fulda,K,3,K,K,K
+eigenständig in Gruppen von zwei bis drei Teilnehmer*innen ein vorgegebenes Projekt mit einem technischen bzw. ingenieurtechnischen Schwerpunkt durchzuführen,Hochschule Fulda,K,3,K,K,K
+ein Lasten- und Pflichtenheft zu erstellen,Hochschule Fulda,K,6,S,K,K
+effektiv zu kommunizieren und kooperativ in Teams zu arbeiten,Hochschule Fulda,K,3,S,K,K
+Die Teilnehmenden:,Hochschule Fulda,S,,S,S,S
+"Die Teilnehmenden lernen Fachinhalte anderer Module, wie beispielsweise Informatik, technische Mechanik, Elektrotechnik 1/2/3 oder Energietechnik in automatisierungstechnischen Systemen anzuwenden.",Hochschule Fulda,K,3,K,K,K
+"anhand vermittelter theoretischer Kenntnisse der Robotik aus den Bereichen Mechanik, Kinematik und Kinetik, der Antriebssteuerung/-regelung der Antriebe von Industrierobotern, Bahnberechnung und Programmierung von Bewegungsabläufen die grundsätzlichen technischen Funktionen zu verstehen und die Einsatzgebiete von Industrierobotern, speziell im Bereich Produktionstechnik in Grundzügen zu beurteilen",Hochschule Fulda,K,2,K,K,K
+"Software für eingebettete Systeme zu entwerfen, zu implementieren und in Betrieb zu nehmen",Hochschule Fulda,K,3,K,K,K
+nach einem Terminplan das Entwicklungsprojekt in einem Zweier-Team durchzuführen,Hochschule Fulda,K,3,K,K,K
+Programme für die Kommunikation mit Sensoren und Aktoren zu entwerfen,Hochschule Fulda,K,6,K,K,K
+den Entwurf komplexer Digitalschaltungen zu realisieren,Hochschule Fulda,K,6,K,K,K
+Störungen elektronischer Schaltungen und Geräte (EMV) einzuordnen und Methoden ihrer Vermeidung vorzuschlagen,Hochschule Fulda,K,4,S,K,K
+eigenständig in Gruppen von zwei bis drei Teilnehmer*innen ein vorgegebenes Projekt mit einem technischen bzw. ingenieurtechnischen Schwerpunkt durchzuführen,Hochschule Fulda,K,3,K,K,K
+effektiv zu kommunizieren und kooperativ in Teams zu arbeiten,Hochschule Fulda,K,3,S,K,K
+moderne Entwurfswerkzeuge wie Debugger und Simulator einzusetzen,Hochschule Fulda,K,3,S,K,K
+die Grundsätze des Software-Engineerings wiederzugeben,Hochschule Fulda,K,1,S,K,K
+die Implementierungen in realistischen Szenarien zu testen,Hochschule Fulda,K,3,K,K,K
+Kurven- und Oberflächenintegrale zu berechnen,Hochschule Fulda,K,3,S,K,K
+den Zusammenhang zwischen konkreten Kurven- und Oberflächenintegralen und dem Formalismus der Differentialformen zu verstehen,Hochschule Fulda,K,2,K,K,K
+"die wichtigen Begriffe der Mathematik (z.B. Zahlenmengen, Funktionen, Folgen) und der analytischen Geometrie und linearen Algebra (z.B. Vektoren, Matrizen) zu verstehen",Hochschule Fulda,K,2,K,K,K
+die wichtigsten passiven elektrotechnischen Bauelemente zu benennen und zu erklären,Hochschule Fulda,K,1,K,K,K
+Verfahren zur Berechnung linearer elektrischer Netzwerke anzuwenden,Hochschule Fulda,K,3,K,K,K
+Trägheitsmomente und Drehbewegungen einfacher starrer Körper zu berechnen,Hochschule Fulda,K,3,S,K,K
+abgegrenzte Belastungsaufgaben zu lösen,Hochschule Fulda,K,3,K,K,K
+Aufgaben zur Ermittlung von Schnittgrößen zu erklären und zu lösen,Hochschule Fulda,K,2,K,K,K
+die Grundlagen der Differential- und Integralrechnung zu beherrschen und die grundlegenden Techniken anzuwenden,Hochschule Fulda,K,3,K,K,K
+die wesentlichen dynamischen Grundgesetze auf einfache Problemstellungen anzuwenden,Hochschule Fulda,K,3,K,K,K
+Computer-Programme für numerische Rechnungen einzusetzen,Hochschule Fulda,K,3,S,K,K
+einfache Problemstellungen aus diesem Themenkreis mit angemessenen Lösungsansätzen selbständig zu bearbeiten,Hochschule Fulda,K,3,S,K,K
+die historische Entwicklung der Teilgebiete der Energietechnik und ihres Zusammenhangs mit allgemeinen gesellschaftlichen Fortschritten wiederzugeben,Hochschule Fulda,K,1,S,K,K
+"mit realen, d.h. frequenzabhängigen, nichtlinearen, temperaturabhängigen und alternden Bauelementen stabile Schaltungen mit vorgegebenen Eigenschaften zu entwerfen",Hochschule Fulda,K,6,K,K,K
+"die wesentlichen Grundlagen auf dem Gebiet des Messens physikalischer Größen zu wiederholen und Probleme bei der Vorbereitung, Durchführung und Auswertung von Messungen selbständig zu lösen",Hochschule Fulda,K,1,K,K,K
+das Verhalten einer elektrischen Maschine und eines Stromrichters zu beurteilen,Hochschule Fulda,K,5,K,K,K
+den Aufbau typischer Leistungshalbleiter wiederzugeben,Hochschule Fulda,K,1,S,K,K
+das Schaltverhalten verschiedener Leistungshalbleiter zu erklären,Hochschule Fulda,K,2,K,K,K
+den Aufbau passiver Bauelemente wiederzugeben,Hochschule Fulda,K,1,S,K,K
+Moore- und Mealy-Automaten zu entwerfen,Hochschule Fulda,K,6,K,K,K
+Assembler-Programme für Mikroprozessoren zu schreiben,Hochschule Fulda,K,3,S,K,K
+die Grundlagen des systematischen Konstruierens mechanischer Komponenten und Geräte wiederzugeben und diese zu entwerfen,Hochschule Fulda,K,1,K,K,K
+einen Überblick über Konstruktionselemente mechanischer Bauteile und Baugruppen zu geben,Hochschule Fulda,K,1,S,K,K
+Normung und Zertifizierung und deren Anwendung zu beschreiben,Hochschule Fulda,K,2,K,K,K
+einfache Bauteile und Baugruppen mit Hilfe eines CAD-Programms systematisch zu entwickeln,Hochschule Fulda,K,6,K,K,K
+Methoden zur Lösung konstruktiver Probleme anzuwenden,Hochschule Fulda,K,3,K,K,K
+das Naturprinzip des Regelns wiederzugeben und die Einsatzpotentiale der industriellen Regelungstechnik zu beurteilen,Hochschule Fulda,K,1,K,K,K
+"anhand der vermittelten theoretischen Kenntnisse und anhand der gängigen Verfahren im Zeit- und Frequenzbereich einfache lineare, zeitkontinuierliche Regekreise selbständig zu analysieren und zu entwerfen",Hochschule Fulda,K,4,K,K,K
+"das Verhalten wichtiger Komponenten der regenerativen Energieerzeugung und Elektromobilität zu verstehen, wiederzugeben und zu beurteilen",Hochschule Fulda,K,1,K,K,K
+Energiespeicher für mobile Anwendungen zu beschreiben und zu diskutieren,Hochschule Fulda,K,2,K,K,K
+physikalisch-technische Grundlagen im Kontext der regenerativen Energieerzeugung anzuwenden,Hochschule Fulda,K,3,K,K,K
+regenerative Energiequellen und deren Potenziale zu beurteilen,Hochschule Fulda,K,5,K,K,K
+Geschäftsmodelle und Marktentwicklung zu beschreiben und zu diskutieren,Hochschule Fulda,K,2,K,K,K
+ein Lasten- und Pflichtenheft zu erstellen,Hochschule Fulda,K,6,S,K,K
+Die Teilnehmenden sind in der Lage rechtliche und betriebswirtschaftliche Rahmenbedingungen ingenieurswissenschaftlicher Tätigkeiten zu erläutern.,Hochschule Fulda,K,2,K,K,K
+"die Grundlagen im Bereich des Energiemanagements, d.h. die Erzeugung, den Transport und den Verbrauch verschiedener Energiearten unter Einbeziehung der entsprechenden Wirkungsgrade zu beschreiben, zu vergleichen und zu bewerten",Hochschule Fulda,K,2,K,K,K
+grundlegende technische und betriebswirtschaftliche Kenntnisse bezüglich des Aufbaus und des Betriebs sowie die Netzführung elektrischer Energieübertragungsnetze zu demonstrieren,Hochschule Fulda,K,1,K,K,K
+Verantwortung für ihre Aufgaben zu übernehmen und sich selbstständig zu motivieren,Hochschule Fulda,K,3,S,K,K
+über die gemachten Praxiserfahrungen zu berichten und diese zu reflektieren,Hochschule Fulda,K,2,K,K,K
+Daten von Entfernungs- und Bildsensoren auszulesen,Hochschule Fulda,K,3,S,K,K
+die Implementierungen in realistischen Szenarien zu testen,Hochschule Fulda,K,3,K,K,K
+"Die Teilnehmenden sind in der Lage, technische Grundlagen, den Einsatz, die Struktur, den Aufbau und die Funktion moderner industrieller Kommunikationstechnologie wieder zu geben.",Hochschule Fulda,K,1,S,K,K
+"Sie kennen Komponenten und Geräte, mit denen mobile und stationäre Systeme vernetzt werden können sowie eine Auswahl an Kommunikationsprotokollen und deren applikationsspezifische Anwendung.",Hochschule Fulda,K,1,S,K,K
+Das Modul integriert Fachkompetenzen der Digitaltechnik und der Informatik.,Hochschule Fulda,I,,S,I,I
+Einsatzbereiche und theoretische Grundlagen von Finite-Elemente-Analysen (FEA) widerzugeben,Hochschule Fulda,K,1,S,K,K
+FE-Modelle zu erstellen,Hochschule Fulda,K,6,S,K,K
+numerische Simulationen mittels FEA durchzuführen und die erhaltenen Resultate kritisch zu beurteilen,Hochschule Fulda,K,3,K,K,K
+ können ausgewählte Unit Operations der Lebensmittelherstellung analysieren.,Hochschule Fulda,K,4,K,K,K
+" verstehen es, Prozessabläufe bezüglich ihrer Einflussgrößen zu analysieren und deren Bedeutung für das Endprodukt zu gewichten.  sind in der Lage, aufgrund dieser Analyse den Prozess unter Berücksichtigung modernster Verfahrenstechnik zu optimieren.  sind in der Lage wissenschaftliche Arbeitsmethoden in der Praxis anzuwenden.  können auf der Basis der gewonnenen Methodenkompetenz neue Ansätze für Technologieinnovationen generieren.",Hochschule Fulda,K,3,K,K,K
+ besitzen einen Überblick über wichtige Bereiche der Biochemie und der Molekularbiologie.  können ihre Kenntnisse der biochemischen Prozesse sowie der molekularbiologischen Stoffwechselabläufe und Regulationsmechanismen auf verschiedenste aktuelle lebensmitteltechnologische Entwicklungen anwenden und diese kritisch beurteilen.,Hochschule Fulda,K,1,K,K,K
+" lernen den Unterschied zwischen kurz- und langfristiger Zielbildung und Unternehmenssteuerung kennen.  beherrschen die wesentlichen Tools zur strategischen Planung und können sie auf Unternehmen der Lebensmittelwirtschaft übertragen.  können mit einem umfänglichen Verständnis der Instrumente und Methoden Entscheidungen von Unternehmen nachzeichnen und auf Begründungsqualität hin überprüfen.  sind in der Lage, eigene unternehmensstrategische Überlegungen zu entwickeln und zu diskutieren.  recherchieren und analysieren Sekundärdaten relevanter Märkte und nutzen diese als Grundlage für eigene strategische Entscheidungensind in der Lage, strategische Konzepte auch in die Forschung einzubringen und strategische Überlegungen bei der Projektplanung einfließen zu lassen.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden benutzen fachgerecht die Terminologie und zugehörige Modelle des Cloud Computing bei der Realisierung von Internet-Diensten.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden können gegebene Anforderungen bei der Realisierung Cloud-nativer Dienste fachgerecht anwenden.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden bewerten den aktuellen Stand der Forschung in diesem Bereich und,Hochschule Fulda,K,5,K,K,K
+Die Studierenden wirken aktiv an der angewandten Forschung im Bereich Cloud Computing mit.,Hochschule Fulda,K,3,K,K,K
+Dies schließt insbesondere die Entwicklung und Anpassung entsprechender Werkzeuge ein.,Hochschule Fulda,I,,K,I,K
+Die Studierenden bewerten den Aufbau heterogener rekonfigurierbarer Rechensysteme mit CPU und FPGA Anteilen.,Hochschule Fulda,K,5,K,K,K
+"Die Studierenden identifizieren die verschiedenen Arten von Typsystemen, Polymorphismus und funktionalen Konstrukten in neuen Programmiersprachen und setzen sie ein.",Hochschule Fulda,K,1,K,K,K
+"Die Studierenden benennen grundlegende Anwendungsarchitekturen und analysieren die Anforderungen komplexer verteilter Systeme und die damit verbundene Rolle von Ansätzen wie z.B. Middleware, Microservices, SOA und EAI.",Hochschule Fulda,K,1,K,K,K
+Sie kennen aktuelle Tools und Techniken die die verteilte Entwicklung in Teams unterstützen.,Hochschule Fulda,K,1,S,K,K
+Die Studierenden verstehen aktuelle wissenschaftliche Entwicklungen und Anwendungen im Bereich des Deep Learning.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden analysieren gegebene Problemstellungen der Softwarequalität auf im Softwarelebenszyklus relevante Bestandteile, leiten daraus Lösungen ab und setzen diese als Teststrategie um.",Hochschule Fulda,K,3,K,K,K
+"Sie sind in der Lage, mit kulturellen Unterschieden produktiv und wertschätzend umzugehen.",Hochschule Fulda,K,3,S,K,K
+"Die Studierenden können Ergebnisse eigener und fremder Forschungsarbeiten objektiv beschreiben, interpretieren und kritisch hinterfragen.",Hochschule Fulda,K,2,K,K,K
+die grundlegenden Komponenten des erweiterten Hadoop Ecosystem hands-on zu unterscheiden und anzuwenden.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden unterscheiden zwischen Processing-time und Event-time und verarbeiten out-of-order und late-arriving Daten robust.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden bezeichnen die Herausforderungen und Möglichkeiten von Data Stream Analytics und Online Machine Learning.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden setzen diese für praktische Probleme ein.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden bewerten den aktuellen Stand der Forschung im Bereich Stream Processing und Analytics und,Hochschule Fulda,K,5,K,K,K
+Sie können ihre Erfahrungen während ihres Auslandsaufenthalts reflektieren.,Hochschule Fulda,K,5,K,K,K
+"Die Studierenden kennen die mathematischen Grundlagen, die für das weitere Studium notwendig sind.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden können grundlegende chemische Reaktionen formulieren bzw. nachvollziehen.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden beherrschen durch die Beschäftigung mit der Chemie strukturiertes Arbeiten und logisches Denken.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden können grundlegende chemische Reaktionen formulieren bzw. nachvollziehen.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden sind in der Lage, technische Problemstellungen in der industriellen Herstellung von biotechnologischen Produkten und von Lebensmitteln zu erfassen, zu skizzieren und zu lösen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen die Methoden des wissenschaftlichen Arbeitens und können diese anwenden.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden verfügen über Handlungs- und Problemlösungskompetenz.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden verfügen über Handlungs- und Problemlösungskompetenz.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden verstehen verschiedene Aufgaben des operativen und strategischen Managements und können diese zueinander in Beziehung setzen.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden analysieren den Einfluss des Umfelds auf die Entwicklungen in Unternehmen und können in diesem Zusammenhang die Bedeutung volkswirtschaftlicher Aspekte einordnen.,Hochschule Fulda,K,4,K,K,K
+Die Studierenden können verschiedene Instrumente des Rechnungswesens zielgerichtet zur Abbildung finanzieller Ströme in Unternehmen nutzen.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden erreichen ein Grundwissen der organischen Chemie.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden sind in der Lage, aus der chemischen Struktur von Stoffen deren physikalische und technologische Eigenschaften abzuleiten.",Hochschule Fulda,K,4,K,K,K
+Die Studierenden kennen wichtige biochemische und physiologische Prozesse in pflanzlichen und tierischen Geweben.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden haben Grundkenntnisse zu Methoden der Qualitätsbestimmung und der Bewertung der Eignung von Rohstoffen sowie deren Anwendung in der industriellen Praxis.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden sind vertraut mit den grundlegenden Strukturen und Funktionen pflanzlicher und tierischer Zellen.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen wichtige biochemische und physiologische Prozesse in pflanzlichen und tierischen Geweben.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden sind fähig, wesentliche Eigenschaften und technologische Eignung von Rohstoffen auf der Basis ihrer Zusammensetzung abzuschätzen.",Hochschule Fulda,K,5,K,K,K
+Die Studierenden beherrschen das Grundlagenwissen der allgemeinen Mikrobiologie und mikrobieller Arbeitstechniken,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können Hygienepläne und HACCP-Konzepte (Hazard Analysis and Critical Control Points) selbstständig erstellen und bewerten.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden kennen die grundlegenden Messtechniken der Elektrotechnik.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen die Eigenschaften von wichtigen Sensoren.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden verfügen über grundlegende Kenntnisse in der Steuerungs- und Regelungstechnik.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden verfügen über ein fundiertes Grundwissen über die Konzepte einer höheren Programmiersprache.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können einfache Programmieraufgaben mithilfe der Programmiersprache lösen.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen die Grundlagen der Informationsrepräsentation und Informationsverarbeitung.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können elementare Algorithmen erklären und für einfache Probleme selbst entwickeln.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden können einfache Programmieraufgaben mithilfe der Programmiersprache lösen.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden beherrschen die Bilanzierungen bzgl.,Hochschule Fulda,S,,K,S,K
+Die Studierenden beherrschen die Bilanzierungen bzgl.,Hochschule Fulda,S,,K,S,K
+Die Studierenden verstehen prinzipielle Zusammenhänge der Betriebsparameter bei thermischen Verfahren.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden kennen die verschiedenen Datenformate und biowissenschaftlichen Datenbanken,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können Analyseergebnisse kritisch einordnen und interpretieren,Hochschule Fulda,K,2,K,K,K
+Die Studierenden können einfache Pipelines zur Verarbeitung von Sequenzdaten erstellen und bewerten,Hochschule Fulda,K,5,K,K,K
+Die Studierenden kennen grundlegende Elemente der Steuerung und Apparatetechnik einer biotechnologischen Produktionslinie.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden verstehen das Vorgehen beim Hochskalieren von Bioreaktoren.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden verstehen grundsätzlich die Denk- und Vorgehensweise bei Aufgaben und Problemstellungen in der mechanischen Verfahrenstechnik.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden verstehen es, Arbeitsaufgaben selbstständig im Team zu organisieren, zu erarbeiten und durchzuführen.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden erreichen ein Verständnis für (bio)chemische Reaktionen ausgewählter Komponenten bei der Herstellung, Reifung bzw. Lagerung von Produkten.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden erreichen durch die Arbeit im Labor ein Verständnis für die biochemische Analytik sowie praktische Kompetenz für den späteren Berufsalltag.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden lernen die Grundlagen und wichtigen Begriffe der Statistik kennen.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können verbal dargestellte Sachverhalte interpretieren und durch geeignete mathematische Modelle beschreiben,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden können Zusammenhänge aus dem gesamten Gebiet der Life Sciences miteinander verknüpfen, interdisziplinär bearbeiten, verstehen, strukturieren und darstellen.",Hochschule Fulda,K,2,K,K,K
+"Die Studierenden sind in der Lage, Haltbarkeitszeiten für verschiedene Lebensmittel beim Einsatz unterschiedlicher Verfahren zur Erhöhung der Haltbarkeit rechnerisch abzuschätzen.",Hochschule Fulda,K,3,K,K,K
+"Auf Grund der Kenntnisse können sie die Eignung von Verpackungen für spezifische Produkte abschätzen und Verpackungslösungen verstehen, beurteilen und in engerem Rahmen selbst entwickeln.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden beherrschen die Mechanismen der Verderbsreaktionen.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen rechtliche Unterschiede bei biotechnologischen Arbeiten mit natürlichen und gentechnisch veränderten Organismen.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden können biotechnologische Arbeiten anhand der rechtlichen Rahmenbedingungen bewerten, einschätzen und durchführen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen Methoden der instrumentellen Analytik und können den apparativen Aufbau und das Zusammenwirken der Komponenten beschreiben.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen Methoden der instrumentellen Analytik und können den apparativen Aufbau und das Zusammenwirken der Komponenten beschreiben.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen aktuelle Entwicklungen in der Biotechnologie,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können selbstständig aktuelle wissenschaftliche Texte erarbeiten,Hochschule Fulda,K,3,K,K,K
+"Die Thematik wird im Team bearbeitet und das erarbeitete Ergebnis präsentiert und diskutiert. [Team-/Führungsfähigkeit, 6]",Hochschule Fulda,S,,K,K,K
+"Die Studierenden im Bereich QM für Kosmetik und Medizinprodukte planen und organisieren eigene Arbeitsabläufe selbständig und eigenverantwortlich unter fachlichen und zeitökonomischen Gesichtspunkten. [Eigenständigkeit/Verantwortung, 6]",Hochschule Fulda,K,6,K,K,K
+Die Studierenden orientieren sich in den verschiedenen Berufsfeldern.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden sind in der Lage, innerhalb einer vorgegebenen Frist ein bestimmtes, abgegrenztes Problem aus dem Kontext ihres Studiums nach wissenschaftlichen Prinzipien weitgehend selbstständig zu untersuchen.",Hochschule Fulda,K,4,K,K,K
+Die Studierenden kennen,Hochschule Fulda,S,,K,S,K
+Die Studierenden kennen,Hochschule Fulda,S,,K,S,K
+die Bedeutung von Nährstoffen in Lebensmitteln für die menschliche Ernährung.,Hochschule Fulda,S,,S,S,S
+"die Zusammensetzung von Lebensmitteln und sind so in der Lage, die Bedeutung von Lebensmitteln als Nährstofflieferanten und die Bedeutung für die Entstehung ernährungsabhängiger Erkrankungen einzuschätzen.",Hochschule Fulda,K,1,S,K,K
+Die Studierenden kennen grundlegende Mechanismen der Immunologie sowie der mikrobiologischen Pathophysiologie und können diese in Bezug zu spezifischen Lebensmittelkomponenten und spezifischen Applikationsformen setzen.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen grundlegende Mechanismen der Immunologie sowie der mikrobiologischen Pathophysiologie und können diese in Bezug zu spezifischen Lebensmittelkomponenten und spezifischen Applikationsformen setzen.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können Strategien zu den wissenschaftlichen Auslobungen im Markt und Aspekte der Produktzulassung bewerten und erstellen.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden kennen die unmittelbare Verknüpfung funktioneller Lebensmittelkomponenten mit der Biotechnologie und Molekularbiologie und können diese bewerten.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden sind in der Lage einfache Trocknungsanlagen zu berechnen und auszulegen.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden sind durch die Kenntnis hygienischer Voraussetzung zum Verstehen und Beurteilen der hygienegerechten Gestaltung von Komponenten und Anlagen zur Herstellung sensibler Produkte befähigt.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden verstehen die Grundlagen der Anlagenplanung und das nötige Zusammenspiel zwischen Verfahrenstechnik, Energietechnik, Versorgungstechnik, Produktionstechnik, Maschinenbau und Elektrotechnik und Infrastruktur.",Hochschule Fulda,K,2,K,K,K
+"Die Studierenden sind in der Lage, biotechnologische Prozesse im Bereich der Lebensmittelherstellung zu planen und umzusetzen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden verstehen das besondere Potential biotechnologischer Prozesse bei der Verarbeitung von Lebensmitteln.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden sind in der Lage, biotechnologische Prozesse im Bereich der Lebensmittelherstellung zu planen und umzusetzen.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden erlangen Kenntnisse zur Ideenfindung, Planung und Durchführung einer Produktentwicklung am Beispiel eines Lebensmittels.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden können die entsprechenden Prozesse und Aufgaben in den Rahmen des Innovationsmanagements einordnen.,Hochschule Fulda,K,4,K,K,K
+Die Studierenden sollen die theoretischen Grundlagen im Prozess der Produktentwicklung von Lebensmitteln sowie die wichtigsten Aspekte der Produktentwicklung kennen.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden erlangen Kenntnisse zur Ideenfindung, Planung und Durchführung einer Produktentwicklung am Beispiel eines Lebensmittels.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden können die entsprechenden Prozesse und Aufgaben in den Rahmen des Innovationsmanagements einordnen.,Hochschule Fulda,K,4,K,K,K
+"Die Studierenden wissen um die Bedeutung der Umwelt, Umwelttechnik für die Lebensmittelherstellung.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen und verstehen die rechtlichen Grundlagen.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können einfache rechtliche und technische Problemstellungen bewerten und schwierige Problemstellungen mit Fachleuten erörtern.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden verstehen die Aufgabe und Funktionsweise des Controllings und können dies in Beziehung zum Rechnungswesen setzen,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden verstehen den Aufbau der Kosten- und Erlösrechnung, insbesondere die verschiedenen Teilrechnungen",Hochschule Fulda,K,2,K,K,K
+Die Studierenden können kostenbasierte Entscheidungen in praxisbezogenen Anwendungssituationen treffen.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden kennen aktuelle Weiterentwicklungen des Kostenmanagements und des Controllings,Hochschule Fulda,K,1,K,K,K
+Die Studierenden verstehen die Aufgabe und Funktionsweise des Controllings und können dies in Beziehung zum Rechnungswesen setzen,Hochschule Fulda,K,2,K,K,K
+Die Studierenden kennen aktuelle Weiterentwicklungen des Kostenmanagements und des Controllings,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können technische und naturwissenschaftliche Grundlagen der pharmazeutischen Technologie verstehen und anwenden.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden können pharmazeutische Vorgangsweisen und Prozesse überblicken.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden sind in der Lage einfache wärme- und kältetechnische Anlagen zu berechnen und auszulegen.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden verstehen das besondere Potential biotechnologischer Prozesse im Bereich einer effizienten Ressourcennutzung und des Umweltschutzes.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden können ein Projekt im Team bearbeiten.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden haben Kenntnisse zu Veränderungen von Nährstoffen bei der Verarbeitung von Lebensmitteln.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden erwerben einen Überblick über wichtige physikalisch-chemische und biochemische Analysenverfahren.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden lernen aktuelle Themen der Lebensmitteltechnologie kennen und sind in der Lage, Querbezüge zwischen neuen Techniken, aktuellen Themen der Grundstoffnutzung und zukünftigen Anforderungen der Technologieentwicklung zu ziehen.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden sind auf die gegenwärtigen und zukünftigen Anforderungen an Lebensmitteltechnolog*innen vorbereitet.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden sind nach Abschluss des Moduls in der Lage, im Rahmen des Auslandsstudiums erworbene Kenntnisse im Bereich der Lebensmitteltechnologie (LT, WIng (LT)), der Biotechnologie (IBT, WIng (IBT)) oder der Betriebswirtschaft (WIng (LT), WIng (IBT)) anzuwenden und auf bereits erworbene Lerninhalte zu übertragen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden können grundlegende chemische Reaktionen formulieren bzw. nachvollziehen.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden sind aufgrund der Kenntnisse des stöchiometrischen Rechnens für die praktische Laborarbeit gut vorbereitet.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden erlangen ein Verständnis für die Bio- und Lebensmitteltechnologie als interdisziplinäre Fächer an der Schnittstelle von Natur- und Ingenieurwissenschaften.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden erkennen die ingenieurwissenschaftlichen Zusammenhänge bei der Produktion von biotechnologischen Produkten und Lebensmitteln.,Hochschule Fulda,K,4,K,K,K
+"Die Studierenden sind in der Lage, technische Zeichnungen zu lesen.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden erkennen die ingenieurwissenschaftlichen Zusammenhänge bei der Produktion von biotechnologischen Produkten und Lebensmitteln.,Hochschule Fulda,K,4,K,K,K
+Die Studierenden verfügen über Handlungs- und Problemlösungskompetenz.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden erwerben Kenntnisse über die Grundlagen des sicheren Arbeitens insbesondere in Laboratorien.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden kennen die fachrelevanten Literaturdatenbanken und sind in der Lage, Literaturrecherchen selbständig zu bewältigen und zu präsentieren.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden erwerben Kenntnisse über die Grundlagen des sicheren Arbeitens insbesondere in Laboratorien.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden verstehen verschiedene Aufgaben des operativen und strategischen Managements und können diese zueinander in Beziehung setzen.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden kennen die mathematischen Grundlagen, die für das weitere Studium notwendig sind.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden erreichen ein Grundwissen der organischen Chemie.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können grundlegende organisch-chemische Reaktionen formulieren bzw. nachvollziehen und sind somit imstande auch biochemische bzw. lebensmittelchemische Prozesse zu verstehen.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden sind in der Lage, aus der chemischen Struktur von Stoffen deren physikalische und technologische Eigenschaften abzuleiten.",Hochschule Fulda,K,4,K,K,K
+Die Studierenden können grundlegende organisch-chemische Reaktionen formulieren bzw. nachvollziehen und sind somit imstande auch biochemische bzw. lebensmittelchemische Prozesse zu verstehen.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden sind in der Lage, die in der Physikalischen Chemie behandelten Phänomene auf techno- logische Verfahren und biologische Prozesse zu übertragen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen wichtige biochemische und physiologische Prozesse in pflanzlichen und tierischen Geweben.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden sind fähig, wesentliche Eigenschaften und technologische Eignung von Rohstoffen auf der Basis ihrer Zusammensetzung abzuschätzen.",Hochschule Fulda,K,5,K,K,K
+Die Studierenden sind vertraut mit den grundlegenden Strukturen und Funktionen pflanzlicher und tierischer Zellen.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen die spezifischen Wachstumsbedingungen der relevanten Organismen-Hauptgruppen und können grundlegende Kultivierungstechniken von Mikroorganismen durchführen,Hochschule Fulda,K,1,K,K,K
+Die Studierenden beherrschen das Grundlagenwissen der allgemeinen Mikrobiologie und mikrobieller Arbeitstechniken,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen die spezifischen Wachstumsbedingungen der relevanten Organismen-Hauptgruppen und können grundlegende Kultivierungstechniken von Mikroorganismen durchführen,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden verstehen die dahinterliegenden physikalischen, chemischen und biologischen Prinzipien und können dadurch innovative Änderungen in den Rezepturen vornehmen.",Hochschule Fulda,K,2,K,K,K
+"Die Studierenden sind in der Lage, in einem sensorischen Panel mitzuarbeiten und – nach entsprechender Einarbeitung bzw. unter Anleitung – sensorische Untersuchungen selbst vorzubereiten, durchzuführen und auszuwerten.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden kennen ausgewählte sensorische Prüfverfahren und sind in der Lage, diese anzuwenden und deren Ergebnisse zu beurteilen.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden werden zu einer ganzheitlichen Betrachtungsweise komplexer Vorgänge befähigt.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden werden zu einer ganzheitlichen Betrachtungsweise komplexer Vorgänge befähigt.,Hochschule Fulda,K,2,K,K,K
+"kennen molekulare und immunologische Nachweismethoden für mikrobielle Lebensmittelkontaminanten und assoziierte Stoffkontaminanten (LPS, Toxine).",Hochschule Fulda,K,1,K,K,K
+Die Studierenden verstehen die betriebswirtschaftlichen Teilfunktionen aus realisations- und managementorientierter Sicht und können diese zueinander in Beziehung setzen.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden können verschiedene Instrumente der strategischen Planung, der Organisationsgestaltung und Personalführung in unternehmensbezogenen Anwendungskontexten nutzen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden beherrschen die Bilanzierungen bzgl.,Hochschule Fulda,S,,K,S,K
+Die Studierenden kennen,Hochschule Fulda,S,,K,S,K
+"die Zusammensetzung von Lebensmitteln und sind so in der Lage, die Bedeutung von Lebensmitteln als Nährstofflieferanten und die Bedeutung für die Entstehung ernährungsabhängiger Erkrankungen einzuschätzen.",Hochschule Fulda,K,1,S,K,K
+"Die Studierenden sind in der Lage, Experimente nach statistischen Aspekten zu planen.",Hochschule Fulda,K,6,K,K,K
+Die Studierenden werden in die Denkweise und die Methoden der Statistik eingeführt.,Hochschule Fulda,S,,K,S,S
+Die Studierenden lernen kritisch mit Datenmaterial umzugehen sowie einfache Abschätzungen und statistische Entscheidungsfindungsverfahren durchzuführen.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden lernen anwendungsbezogene Beispiele selbstständig zu bearbeiten.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden erreichen ein Verständnis für (bio)chemische Reaktionen ausgewählter Komponenten bei der Herstellung, Reifung bzw. Lagerung von Produkten.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden erreichen durch die Arbeit im Labor ein Verständnis für die biochemische Analytik sowie praktische Kompetenz für den späteren Berufsalltag.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden verstehen grundsätzlich die Denk- und Vorgehensweise bei Aufgaben und Problemstellungen in der mechanischen Verfahrenstechnik.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden verstehen es, Arbeitsaufgaben selbstständig im Team zu organisieren, zu erarbeiten und durchzuführen.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden verfügen über Kenntnisse und Fertigkeiten aus folgenden Gebieten: Projektdefinition, Projektcontrolling, Projektmanagement, interdisziplinäres Arbeiten, Problemlösungsstrategien, Teamarbeit, Gruppendynamik, Präsentation und Moderation, Informationsmanagement.",Hochschule Fulda,K,1,K,K,K
+"Die Studierenden sind in der Lage, dass in den ersten 4 Semestern erworbene Wissen anzuwenden und es in praktische Erfahrungen umzusetzen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden können Verfahren zur Haltbarmachung nach Produkterfordernis auswählen.,Hochschule Fulda,K,5,K,K,K
+"Die Studierenden sind in der Lage, Verpackungen allgemein und insbesondere Verpackungen für Lebensmittelindustrie, pharmazeutische Industrie und kosmetische Industrie zu verstehen und in groben rechtlichen und technologischen Grundzügen zu bewerten.",Hochschule Fulda,K,2,K,K,K
+"Auf Grund der Kenntnisse können sie die Eignung von Verpackungen für spezifische Produkte abschätzen und Verpackungslösungen verstehen, beurteilen und in engerem Rahmen selbst entwickeln.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden erreichen ein allgemeines Grundverständnis für juristische Fragestellungen.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden sind auf die gegenwärtigen und zukünftigen Anforderungen an Lebensmitteltechnolog*innen vorbereitet.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen die verschiedenen rechtlichen Normen sowie (über-)regionale Verantwortungsträger/institutionen im Kontext von Lebensmittelsicherheit und -qualität,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können Maßnahmen zur Sicherung der Lebensmittelintegrität (insb. zur Vermeidung von Food Fraud und Food Defense) ergreifen •,Hochschule Fulda,K,3,K,K,K
+Die Studierenden sind in der Lage einfache Trocknungsanlagen zu berechnen und auszulegen.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden sind durch die Kenntnis hygienischer Voraussetzung zum Verstehen und Beurteilen der hygienegerechten Gestaltung von Komponenten und Anlagen zur Herstellung sensibler Produkte befähigt.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden können Planungsvarianten und deren Bedeutung bei der Realisierung erfassen.,Hochschule Fulda,K,4,K,K,K
+"Die Studierenden sind in der Lage, biotechnologische Prozesse im Bereich der Lebensmittelherstellung zu planen und umzusetzen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden entwickeln ein grundlegendes Verständnis für die Prinzipien der Pharmakologie.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden erkennen den Zusammenhang zwischen Pharmakologie und Arzneiform.,Hochschule Fulda,K,4,K,K,K
+"Die Studierenden sind in der Lage, diese Kenntnisse in Teamarbeit in die Praxis umzusetzen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden können die entsprechenden Prozesse und Aufgaben in den Rahmen des Innovationsmanagements einordnen.,Hochschule Fulda,K,4,K,K,K
+Die Studierenden kennen und verstehen die rechtlichen Grundlagen.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden wissen um die Bedeutung der Umwelt, Umwelttechnik für die Lebensmittelherstellung.",Hochschule Fulda,K,1,K,K,K
+"Die Studierenden sind in der Lage, Produktentwicklungsvorhaben mit nährwertmodifizierenden Zielsetzungen zu planen und durchzuführen.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden sind in der Lage, Produktentwicklungsvorhaben mit nährwertmodifizierenden Zielsetzungen zu planen und durchzuführen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen klassische und moderne Methoden der Gentechnik und können sie praktisch anwenden.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können die Chancen und Gefahren der Gentechnik differenziert beurteilen.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden verstehen die Aufgabe und Funktionsweise des Controllings und können dies in Beziehung zum Rechnungswesen setzen,Hochschule Fulda,K,2,K,K,K
+Die Studierenden analysieren Kosten- und Erlösstrukturen anhand praxisbezogener Fallbeispiele,Hochschule Fulda,K,4,K,K,K
+Die Studierenden können kleinere Projekte zur Berechnung und Auslegung von Apparaten/Verfahren zur Lebensmittelverfahrenstechnik selbstständig durchführen. − Versuche können frei geplant und selbstständig durchgeführt werden. − Modellrechnungen können in eingeschränktem Rahmen entwickelt werden.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden verfügen über grundlegende Kenntnisse in der Steuerungs- und Regelungstechnik.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen die grundlegenden Messtechniken der Elektrotechnik.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können Lösungen für spezielle Anwendungen entwickeln und Lösungsvorschläge bewerten.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden verstehen neuste biotechnologischen Verfahren und können diese deuten und kritisch einordnet,Hochschule Fulda,K,2,K,K,K
+Die Studierenden können selbstständig aktuelle wissenschaftliche Texte erarbeiten,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden können Programmcode analysieren, Fehler identifizieren und korrigieren.",Hochschule Fulda,K,1,K,K,K
+"Die Studierenden sind nach Abschluss des Moduls in der Lage, im Rahmen des Auslandsstudiums erworbene Kenntnisse im Bereich der Lebensmitteltechnologie (LT, WIng (LT)), der Biotechnologie (IBT, WIng (IBT)) oder der Betriebswirtschaft (WIng (LT), WIng (IBT)) anzuwenden und auf bereits erworbene Lerninhalte zu übertragen.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden lernen den Umgang mit anderen Kulturen, indem sie für deren charakteristische Eigenschaften sensibilisiert werden.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden werden auf künftige Auslandsaufenthalte im Studium und Beruf bzw. die Zusammenarbeit mit multikulturellen Arbeitsgruppen vorbereitet.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden reflektieren auf diese Weise auch die Charakteristika der eigenen Kultur und erkennen mögliche Reibungspunkte mit anderen Kulturen.,Hochschule Fulda,K,4,K,K,K
+Die Studierenden erweitern in Vorbereitung auf den zweisemestrigen Auslandsaufenthalt im Rahmen des erweiterten Bachelor-Studiengangs Lebensmitteltechnologie PLUS ihre sprachlichen Kenntnisse,Hochschule Fulda,K,1,K,K,K
+"die wichtigen Begriffe der Mathematik (z.B. Zahlenmengen, Funktionen, Folgen) und der analytischen Geometrie und linearen Algebra (z.B. Vektoren, Matrizen) zu verstehen",Hochschule Fulda,K,2,K,K,K
+nichtlineare Netzwerke grundlegend zu beschreiben und zu berechnen,Hochschule Fulda,K,2,K,K,K
+Trägheitsmomente und Drehbewegungen einfacher starrer Körper zu berechnen,Hochschule Fulda,K,3,S,K,K
+die Grundlagen der spez.,Hochschule Fulda,S,,S,S,S
+abgegrenzte Belastungsaufgaben zu lösen,Hochschule Fulda,K,3,K,K,K
+die grundlegenden Konzepte des Aufbaus und der Programmierung von Rechnern wiederzugeben,Hochschule Fulda,K,1,S,K,K
+verschiedene Typen von Differentialgleichungen zu lösen und ihre Bedeutung für Anwendungen zu verstehen,Hochschule Fulda,K,2,K,K,K
+"die Methodik für das Anfertigen von wissenschaftlichen Arbeiten aus dem Bereich der Elektrotechnik und Informationstechnik, der Erneuerbaren Energien oder der Mechatronik (je nach Studiengang) anzuwenden.",Hochschule Fulda,K,3,K,K,K
+"eine vorgebebene Aufgabenstellung im Team zu analysieren, zu lösen und zu präsentieren",Hochschule Fulda,K,3,K,K,K
+Grundverständnis für technische und physikalische Zusammenhänge,Hochschule Fulda,K,2,S,K,S
+die Erstellung einfacher mechanische Konstruktionen,Hochschule Fulda,K,3,S,K,S
+Methoden der Numerik anhand ausgewählter Themen anzuwenden,Hochschule Fulda,K,3,K,K,K
+Simulationen durch Entwicklung eines komplexen Modells anzuwenden,Hochschule Fulda,K,3,K,K,K
+"Sie sind in der Lage, eine den Belastungen gerechte Dimensionierung durchzuführen.",Hochschule Fulda,K,3,K,K,K
+die wichtigsten aktiven Bauelemente und deren Modelle zu erklären,Hochschule Fulda,K,2,K,K,K
+die Problematik der Anwendung vereinfachter Modelle auf reale Sachverhalte darzulegen,Hochschule Fulda,K,2,K,K,K
+grundlegende Maschinenelemente fertigungsgerecht und funktionssicher auszulegen,Hochschule Fulda,K,3,S,K,K
+die Funktion und das Zusammenwirken der Maschinenelemente innerhalb einer Maschine zu erkennen,Hochschule Fulda,K,4,S,K,K
+"Die Teilnehmenden sind in der Lage, technische Grundlagen, den Einsatz, die Struktur, den Aufbau und die Funktion moderner Systeme in der Automatisierungstechnik wieder zu geben.",Hochschule Fulda,K,1,S,K,K
+"Technologien, die zur Digitalisierung von Produktionsabläufen, Produktionsplanungen und den Betrieb geeignet sind, auszuwählen und zu beurteilen",Hochschule Fulda,K,3,K,K,K
+die Dynamik der Technologieentwicklung vor dem Hintergrund produktionstechnischer Anforderungen zu analysieren und deren Einsatz dafür zu spezifizieren,Hochschule Fulda,K,4,K,K,K
+"ein Projekt zu planen, zu organisieren und zu präsentieren",Hochschule Fulda,K,6,K,K,K
+"den Einsatz von Industrierobotern im industriellen Umfeld zu planen, projektieren und in Grundzügen zu programmieren",Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen die wesentlichen Komponenten und Abläufe der technischen Logistik und der Montagetechnik sowie die Wechselwirkung und Abhängigkeiten zwischen diesen Bereichen.,Hochschule Fulda,K,1,K,K,K
+Verantwortung für ihre Aufgaben zu übernehmen und sich selbstständig zu motivieren,Hochschule Fulda,K,3,S,K,K
+sich im Berufsfeld oder verwandten Gebieten der Mechatronik zu orientieren,Hochschule Fulda,K,3,S,K,K
+praktische Kenntnisse zu vertiefen und berufstypische Arbeitsweisen anzuwenden,Hochschule Fulda,K,3,K,K,K
+"Die Teilnehmenden sollen durch die erworbenen Fähigkeiten und Methoden im Studium zeigen, dass sie innerhalb einer vorgegebenen Frist",Hochschule Fulda,S,,S,S,S
+Lösungswege und Ergebnisse sowohl schriftlich als auch mündlich darstellen und vertreten können,Hochschule Fulda,K,2,K,K,K
+"Die Teilnehmenden sind in der Lage, technische Grundlagen, den Einsatz, die Struktur, den Aufbau und die Funktion moderner industrieller Kommunikationstechnologie wieder zu geben.",Hochschule Fulda,K,1,S,K,K
+Die Studierenden geben die wesentlichen Grundlagen der Betriebswirtschaftslehre wieder.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können die grundlegenden Geschäftsprozesse eines Industrieunternehmens inhaltlich einordnen sowie methodisch korrekt vereinfacht darstellen und unter verschiedenen Gesichtspunkten analysieren.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden beschreiben mathematische und logische Probleme mit eigenen Worten, die in natürlicher Sprache formuliert sind (z.B. Zahlenfolgen und -reihen, Sortieren, Game of Life, Türme von Hanoi).",Hochschule Fulda,K,2,K,K,K
+"Die Studierenden sind in der Lage, ähnliche oder neue Probleme aus den verschiedensten Anwendungsbereichen als Probleme der Statistik zu formulieren und mit geeigneten Verfahren zu lösen.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden erwerben Kompetenzen, die ihnen erlauben, selbständig weiterführende Lernprozesse zu gestalten und sich mit Fachvertretern und mit Laien über Ideen, Probleme und Lösungen auszutauschen.",Hochschule Fulda,K,5,K,K,K
+Die Studierenden wenden die entsprechenden Methoden und Techniken der Kommunikation an.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden erklären die Grundprinzipien wissenschaftlichen Arbeitens und wenden diese auf kleine Arbeiten an.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden benennen mindestens drei Merkmale objektorientierter Programmierung (OOP).,Hochschule Fulda,K,1,K,K,K
+Die Studierenden erkennen die Bedeutung eines Data-Warehouse im Kontext der betrieblichen Anwendungssoftware.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden bilden ausgewählte betriebliche Geschäftsprozesse in einer integrierten ERP-Standardsoftware ab.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden beschreiben hierbei auch die Abbildung der Unternehmensstruktur auf das ERP-System sowie die Möglichkeiten der Anpassung eines ERP-Systems an individuelle Geschäftsprozesse.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden erklären das wesentliche Grundprinzip der Trennung von inhaltlicher Struktur und visueller Gestaltung.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden erstellen fachgerecht interaktive, dynamische Webanwendungen und multimediale Webseiten.",Hochschule Fulda,K,6,K,K,K
+Die Studierenden kommunizieren und koordinieren in kleinen Lerngruppen die Anwendung praxisrelevanter Werkzeuge anhand von Beispielaufgaben.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden können eine umfangreiche Aufgabe aus dem Gebiet „kommerzielle Anwendungen“ im Team bearbeiten und sind in der Lage, das Arbeiten in der Form eines Projektes selbstständig zu organisieren.",Hochschule Fulda,K,3,K,K,K
+Dabei wird die Thematik zunächst immer aus der Sicht des allgemeinen Controllings eingeführt und dann die jeweiligen speziellen Aspekte des IT-Controllings ergänzt.,Hochschule Fulda,I,,S,I,I
+"Die Studierenden wenden ihr Wissen und Verstehen auf ihre Tätigkeit oder ihren Beruf an,",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden formulieren und verteidigen fachbezogene Positionen und Problemlösungen ,",Hochschule Fulda,K,5,K,K,K
+"Die Studierenden grenzen den Bezug der Prozesse untereinander und zu den übrigen Systemen (z.B. ERP, DataWarehouse) ab.",Hochschule Fulda,K,4,S,K,S
+Die Studierenden sind mit den Vor- und Nachteilen einer solchen Automatisierung vertraut und können diese nennen und mit Hilfe von Modellen darstellen & implementieren.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden erkennen die speziellen Fragestellungen, die sich bei der Entwicklung/ Erweiterung von betrieblicher Anwendungssoftware/ Standardsoftware ergeben.",Hochschule Fulda,K,4,K,K,K
+Die Studierenden beschreiben das Programmiermodell des Anwendungssystems je Anwendungstyp.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden implementieren die verschiedenen Anwendungstypen (Reports, Transaktionen).",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden grenzen weiterführende Konzepte der Anwendungsprogrammierung, speziell in Form von Web-Anwendungen, wie Verwendung des MVC-Patterns, weitere Patterns (Separation of Concerns, MVP) voneinander ab.",Hochschule Fulda,K,4,S,K,S
+Die Studierenden beantworten ausgewählte Fragestellung aus der Wirtschaftspolitik.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden ordnen die vorgebrachten Argumente theoretisch ein und bewerten diese.,Hochschule Fulda,K,4,K,K,K
+"Die Studierenden erläutern den Personaleinsatz, die Personalentwicklung und -freisetzung.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden haben einen Überblick über Probleme und Ansätze der Anwendung von Computersimulationen in der sozialwissenschaftlichen Wissenschaft und Praxis.,Hochschule Fulda,K,1,K,K,K
+"Darüber hinaus können Sie Probleme modellieren, softwarebasierte Simulationsexperimente durchführen, Simulationsergebnisse auswerten und präsentieren.",Hochschule Fulda,K,3,K,K,K
+"Die Studierenden sind in der Lage, selbstständig (bzw. in Teamarbeit) betriebswirtschaftliche Entscheidungen unter Berücksichtigung von deren Konsequenzen (z.B. auf Cash Flow oder Gewinn) zu treffen.",Hochschule Fulda,K,5,K,K,K
+Die Studierenden erklären die Gütekriterien wissenschaftlicher Arbeit und wenden sie beim Verfassen einer wissenschaftlichen Ausarbeitung an,Hochschule Fulda,K,2,K,K,K
+nichtlineare Netzwerke grundlegend zu beschreiben und zu berechnen,Hochschule Fulda,K,2,K,K,K
+Relativitätstheorie zu beschreiben und den rechnerischen Umgang mit deren technischen Konsequenzen zu nennen,Hochschule Fulda,K,1,K,K,K
+"Bindungen, die Kristallstrukturen, die Kristallfehler und den Aufbau von Polymeren zu beschreiben",Hochschule Fulda,K,2,K,K,K
+verschiedene Typen von Differentialgleichungen zu lösen und ihre Bedeutung für Anwendungen zu verstehen,Hochschule Fulda,K,2,K,K,K
+"Ströme, Spannungen und Leistungen in Mehrphasensystemen zu berechnen",Hochschule Fulda,K,3,S,K,K
+naturwissenschaftlich zu denken und methodisch zu arbeiten Die Teilnehmenden beherrschen:,Hochschule Fulda,K,3,S,K,K
+Grundverständnis für technische und physikalische Zusammenhänge,Hochschule Fulda,I,,S,K,S
+die Bedienung von einfachen Messgeräten,Hochschule Fulda,K,3,S,K,S
+methodisches Arbeiten,Hochschule Fulda,I,,S,I,S
+mit wissenschaftlichen Quellen zu arbeiten,Hochschule Fulda,K,3,S,K,K
+die Buchführungstechnik der wichtigsten Geschäftsvorfälle in der Praxis zu beherrschen und die Bilanzierung grundlegender Bilanzposten vorzunehmen,Hochschule Fulda,K,3,S,K,K
+die Zusammenhänge zu anderen betriebswirtschaftlichen Teilbereichen auf Basis der Buchführung zu erkennen,Hochschule Fulda,K,4,S,K,K
+die Zielsetzungen von Handels- und Steuerbilanz und deren Verknüpfung bzw. Trennung sowie grundlegende Bilanzposten in der Handelsbilanz zu unterscheiden,Hochschule Fulda,K,4,K,K,K
+lernen das Denken in Wahrscheinlichkeiten und sind sich der zugrundeliegenden Annahmen und der Gefahr von Irrtümern bewusst,Hochschule Fulda,K,2,S,K,K
+lernen die wichtigsten Begriffe der elementaren Wahrscheinlichkeitsrechnung und Statistik kennen,Hochschule Fulda,K,1,S,K,K
+die wichtigsten aktiven Bauelemente und deren Modelle zu erklären,Hochschule Fulda,K,2,K,K,K
+die spezifischen Anforderungen internationaler Unternehmen an die Controlling-Funktion zu differenzieren,Hochschule Fulda,K,4,K,K,K
+Verantwortung für ihre Aufgaben zu übernehmen und sich selbstständig zu motivieren,Hochschule Fulda,K,3,S,K,K
+mit modernen Softwarewerkzeugen kleine digitale Fabriken zu projektieren und zu betreiben,Hochschule Fulda,K,3,S,K,K
+das Wettbewerbsprinzip und seine Bedeutung für die Funktionsweise von Märkten zu beschreiben,Hochschule Fulda,K,2,K,K,K
+eigenständig in Gruppen von zwei bis drei Teilnehmer*innen ein vorgegebenes Projekt mit einem technischen bzw. ingenieurtechnischen Schwerpunkt durchzuführen,Hochschule Fulda,K,3,K,K,K
+effektiv zu kommunizieren und kooperativ in Teams zu arbeiten,Hochschule Fulda,K,3,S,K,K
+Studieninhalte in die betriebliche Praxis zu übertragen und dort anzuwenden,Hochschule Fulda,K,3,K,K,K
+Moore- und Mealy-Automaten zu entwerfen,Hochschule Fulda,K,6,K,K,K
+Austauschformate anhand von Datenblättern in ROS-Nachrichten zu implementieren,Hochschule Fulda,K,3,K,K,K
+"Sie kennen Komponenten und Geräte, mit denen mobile und stationäre Systeme vernetzt werden können sowie eine Auswahl an Kommunikationsprotokollen und deren applikationsspezifische Anwendung.",Hochschule Fulda,K,1,S,K,K
+Das Modul integriert Fachkompetenzen der Digitaltechnik und der Informatik.,Hochschule Fulda,I,,S,I,I
+Die Teilnehmenden…,Hochschule Fulda,S,,S,S,S
+können die Eignung von analytischen und heuristischen Verfahren beurteilen,Hochschule Fulda,K,5,K,K,K
+wenden die Lösungsverfahren händisch als auch rechnergestützt an,Hochschule Fulda,K,3,S,K,K
+"die wesentlichen Konzepte, Methoden und Ziele der Unternehmensführung zu erklären",Hochschule Fulda,K,2,K,K,K
+Die Studierenden werden in das mathematische Denken eingeführt.,Hochschule Fulda,S,,K,K,K
+Die Studierenden können grundlegende chemische Reaktionen formulieren bzw. nachvollziehen.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden beherrschen durch die Beschäftigung mit der Chemie strukturiertes Arbeiten und logisches Denken.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden erreichen ein Grundwissen der allgemeinen und anorganischen Chemie.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden sind aufgrund der Kenntnisse des stöchiometrischen Rechnens für die praktische Laborarbeit gut vorbereitet.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen die grundlegenden Begriffe und Konzepte der geometrischen Optik.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden sind in der Lage, technische Problemstellungen in der industriellen Herstellung von biotechnologischen Produkten und von Lebensmitteln zu erfassen, zu skizzieren und zu lösen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden können grundlegende Berechnungen durchführen und diese an Beispielen praktisch anwenden.,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden sind in der Lage, technische Problemstellungen in der industriellen Herstellung von biotechnologischen Produkten und von Lebensmitteln zu erfassen, zu skizzieren und zu lösen.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden können grundlegende Berechnungen durchführen und diese an Beispielen praktisch anwenden.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen die Methoden des wissenschaftlichen Arbeitens und können diese anwenden.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden verfügen über Handlungs- und Problemlösungskompetenz.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden erwerben Kenntnisse über die Grundlagen des sicheren Arbeitens insbesondere in Laboratorien.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden verfügen über Handlungs- und Problemlösungskompetenz.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden verstehen verschiedene Aufgaben des operativen und strategischen Managements und können diese zueinander in Beziehung setzen.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden können grundlegende organisch-chemische Reaktionen formulieren bzw. nachvollziehen und sind somit imstande auch biochemische bzw. lebensmittelchemische Prozesse zu verstehen.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden kennen die grundlegenden Begriffe und Konzepte der Elektrizitätslehre.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können das Erlernte auf praktische Problemstellungen anwenden.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden verstehen thermodynamische Prozesse.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden kennen die grundlegenden Begriffe und Konzepte der Elektrizitätslehre.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen die verfahrenstechnischen Grundoperationen auf Basis der Grundlagen von Wärme- und Stoffübergang und können diese anwenden.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden beherrschen die Bilanzierungen bzgl.,Hochschule Fulda,S,,K,S,K
+Die Studierenden verstehen prinzipielle Zusammenhänge der Betriebsparameter bei thermischen Verfahren.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden verfügen über das Know-How und Instrumentarium, um ein effizientes Innovationsmanagement in und für Unternehmen zu entwickeln.",Hochschule Fulda,K,6,K,K,K
+"Die Studierenden werden in die Planung, Steuerung und Kontrolle der Entwicklung und Vermarktung von Produkten eingeführt.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden können ihr Wissen bei praktischen Fragestellungen anwenden.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden können ihr Wissen bei praktischen Fragestellungen anwenden.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden verstehen die Aufgabe und Funktionsweise des Controllings und können dies in Beziehung zum Rechnungswesen setzen,Hochschule Fulda,K,2,K,K,K
+Die Studierenden verstehen die Aufgabe und Funktionsweise des Controllings und können dies in Beziehung zum Rechnungswesen setzen,Hochschule Fulda,K,2,K,K,K
+Die Studierenden können situationsbezogen Controllinginstrumente zur Entscheidungsunterstützung in Unternehmen auswählen und einsetzen,Hochschule Fulda,K,3,K,K,K
+Die Studierenden können kostenbasierte Entscheidungen in praxisbezogenen Anwendungssituationen treffen.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden werden in die Denkweise und die Methoden der Statistik eingeführt.,Hochschule Fulda,S,,K,S,S
+"Die Studierenden lernen, anwendungsbezogene Beispiele selbstständig zu bearbeiten.",Hochschule Fulda,K,3,K,K,K
+Die Studierenden können statistische Software einsetzen.,Hochschule Fulda,K,3,K,K,K
+Sie verfügen über ein Verständnis entsprechender Grundbegriffe und können Marketingfragestellungen bearbeiten.,Hochschule Fulda,K,2,S,K,K
+"Die Studierenden lernen die typischen Aufgaben des Vertriebsinnen- und -außendienstes kennen, um im späteren Berufskontext mit den entsprechenden Abteilungen und Verantwortlichen fundiert und effektiv zu kommunizieren.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden können Verfahren zur Haltbarmachung nach Produkterfordernis auswählen.,Hochschule Fulda,K,5,K,K,K
+"Auf Grund der Kenntnisse können sie die Eignung von Verpackungen für spezifische Produkte abschätzen und Verpackungslösungen verstehen, beurteilen und in engerem Rahmen selbst entwickeln.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden schätzen die eigene betriebliche Situation und die Wettbewerbssituation korrekt ein.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden orientieren sich in den verschiedenen Berufsfeldern.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können die im Studium erworbenen Fach- und Methodenkenntnisse in der Praxisinstitution anwenden und festigen.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden verfügen über einen Überblick über moderne und sich in der Entwicklung befindliche Alternativen zu den bestehenden Techniken und Technologieschritten sowie deren Kombinationsmöglichkeiten.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen Aufbau und Funktion der menschlichen Sinnesorgane sowie die physiologischen Vorgänge der Sinneswahrnehmung.,Hochschule Fulda,K,1,K,K,K
+können Desinfektions- und Sterilisationstechniken beurteilen und anwenden.,Hochschule Fulda,K,3,K,K,K
+erreichen durch die Arbeit im Labor ein Verständnis für die mikrobiologische Lebensmittelanalytik sowie praktische Kompetenz für den späteren Berufsalltag.,Hochschule Fulda,K,2,S,K,K
+Die Studierenden:,Hochschule Fulda,S,,S,S,S
+"kennen molekulare und immunologische Nachweismethoden für mikrobielle Lebensmittelkontaminanten und assoziierte Stoffkontaminanten (LPS, Toxine).",Hochschule Fulda,K,1,K,K,K
+erreichen durch die Arbeit im Labor ein Verständnis für die mikrobiologische Lebensmittelanalytik sowie praktische Kompetenz für den späteren Berufsalltag.,Hochschule Fulda,K,2,S,K,K
+"Sie kombinieren strategische, finanzielle und technische Aspekte zum Aufbau neuer Unternehmen in der Lebensmittelbranche.",Hochschule Fulda,K,3,S,K,K
+Die Studierenden erreichen ein allgemeines Grundverständnis für juristische Fragestellungen.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden lernen durch die vielfältigen Themenstellungen im Lebensmittelrecht fachübergreifend zu argumentieren.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen Struktur und Prinzipien des europäischen und nationalen Lebensmittelrechtes.,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden erreichen ein Verständnis für Dynamik und Veränderungsprinzipien der gesetzlichen Normen und sind dadurch in der Lage, zukünftige Änderungen der Gesetzgebung zu antizipieren und in den beruflichen Alltag zu integrieren.",Hochschule Fulda,K,2,K,K,K
+Die Studierenden lernen durch die vielfältigen Themenstellungen im Lebensmittelrecht fachübergreifend zu argumentieren.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden können verschiedene Vorgehensweisen und Instrumente zur Sicherung der Lebensmittelqualität in lebensmittelbezogenen Fallsituationen zielgerichtet anwenden,Hochschule Fulda,K,3,K,K,K
+"Die Studierenden kennen die Grundlagen und verschiedenen Anwendungsgebiete der Biotechnologie, sowie die Besonderheiten und Probleme bei biotechnologischen Prozessen",Hochschule Fulda,K,1,K,K,K
+Die Studierenden erreichen durch die Arbeit im Labor ein Verständnis für die mikrobiologische Analytik sowie praktische Kompetenz für den späteren Berufsalltag.,Hochschule Fulda,K,2,K,K,K
+"Die Studierenden kennen Methoden zum „Bioprospecting“ für neue mikrobiologische Ressourcen (Organismen, Enzyme, bioaktive Moleküle)",Hochschule Fulda,K,1,K,K,K
+Die Studierenden können Desinfektions- und Sterilisationstechniken beurteilen und anwenden.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden können Hygienepläne und HACCP-Konzepte (Hazard Analysis and Critical Control Points) selbstständig erstellen und bewerten.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden kennen molekulare Ursachen verschiedener Humanerkrankungen,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen die Grundlagen der Informationsrepräsentation und Informationsverarbeitung.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden kennen Grundprinzipien der Programmierung und des Softwareentwurfs.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können Programme in einer höheren Programmiersprache selbstständig entwerfen und implementieren.,Hochschule Fulda,K,3,K,K,K
+Die Studierenden kennen wichtige Rechnerkomponenten und deren Funktionsprinzipien.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden verfügen über ein fundiertes Grundwissen über die Konzepte einer höheren Programmiersprache.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden verstehen das Vorgehen beim Hochskalieren von Bioreaktoren.,Hochschule Fulda,K,2,K,K,K
+Die Studierenden kennen klassische und moderne Methoden der Gentechnik und können sie praktisch anwenden.,Hochschule Fulda,K,1,K,K,K
+Die Studierenden können die Chancen und Gefahren der Gentechnik differenziert beurteilen.,Hochschule Fulda,K,5,K,K,K
+"Die Studierenden kennen die grundlegenden Konzepte der Molekularbiologie und Gentechnik, können sie einordnen und gezielt wiedergeben.",Hochschule Fulda,K,1,K,K,K
+Die Studierenden können die Chancen und Gefahren der Gentechnik differenziert beurteilen.,Hochschule Fulda,K,5,K,K,K
+Die Studierenden kennen rechtliche Unterschiede bei biotechnologischen Arbeiten mit natürlichen und gentechnisch veränderten Organismen.,Hochschule Fulda,K,1,K,K,K
+Kennen den rechtlichen Rahmen und wichtigsten Gesetzestexte/Verordnungen für die Biotechnologie,Hochschule Fulda,K,1,K,K,K
+"Die Studierenden können biotechnologische Arbeiten anhand der rechtlichen Rahmenbedingungen bewerten, einschätzen und durchführen.",Hochschule Fulda,K,3,K,K,K
+"Sie werden befähigt, eine strukturierte Quellenrecherche zu betreiben.",Hochschule Fulda,K,3,S,K,K
+sind vertraut mit den theoretischen Grundlagen des Qualitätsmanagements und können die Verbindungen zwischen Qualitätsmanagement und GCP/GMP/GQP/GLP/GVP ziehen.,Hochschule Fulda,K,1,S,K,K
+Die Studierenden sind in der Lage entsprechende Dokumentationsunterlagen zu beurteilen.,Hochschule Fulda,K,5,K,K,K
+"Ihnen ist es dabei insbesondere möglich, die Argumentationsrationalität von Entscheidungen im Kontext des strategischen Managements zu beurteilen und zu verbessern.",Hochschule Fulda,K,5,K,K,K
+"Sie identifizieren die Kernprobleme der vorgestellten Corporate Governance-Systeme und analysieren mögliche Zusammenhänge zwischen Corporate Governance, Compliance Management und dem Unternehmenserfolg.",Hochschule Fulda,K,1,K,K,K
+"Sie entwickeln Führungskompetenz im Spannungsfeld von Ökonomie, Recht und Ethik bei unternehmerischen Entscheidungen.",Hochschule Fulda,K,6,K,K,K
+"Selbstorganisation, Projektorganisation und -dokumentation (mündlich und schriftlich) erfolgreich durchzuführen.",Hochschule Fulda,K,3,K,K,K
+wissenschaftliche Beiträge zu verfassen.,Hochschule Fulda,K,6,S,K,K
+auf der Grundlage eines vertieften Wissens in den Bereichen strategische Unternehmensprozesse und Produktentstehungsprozesse sowie Methodenwissen in der Strategischen Planung das Produkt- und Dienstleistungsspektrum eines fiktiven Unternehmens und seine Kernkompetenzen an der Stellung des Unternehmens im Markt auszurichten.,Hochschule Fulda,K,3,S,K,K
+Basierend auf den produktionstechnischen Grundlagen Lösungen für betriebswirtschaftliche Entscheidungsprobleme zu erarbeiten,Hochschule Fulda,K,3,S,K,K
+"Die Studierenden werden befähigt, in berufsbezogenen Situationen des unternehmensbezogenen und unternehmensübergreifenden Supply Chain Management schwierige Verhandlungssituationen im Sinne einer Win-Win-Strategie zielorientiert zu führen.",Hochschule Fulda,K,3,K,K,K
+Sie lernen Kommunikationsmodelle kennen und bauen ihre persönliche interkulturelle Kompetenz aus.,Hochschule Fulda,K,1,S,K,K
+aufgabenspezifische Fertigkeiten und Kenntnisse selbständig zu erwerben.,Hochschule Fulda,K,3,K,K,K
+typische Aufgabenstellungen aus dem Bereich der Elektrotechnik und Informationstechnik sowie für MWI aus dem Bereich des Wirtschaftsingenieurwesens selbständig zu lösen,Hochschule Fulda,K,3,K,K,K
+wissenschaftliche Beiträge zu verfassen.,Hochschule Fulda,K,6,S,K,K
+Die Studierenden können mit reellen und komplexen Zahlen umgehen Gleichungen auflösen und Funktionen anwenden Gleichungssysteme lösen,TH Mittelhessen,K,3,K,K,K
+Die Studierenden können die grundlegenden Prinzipien der Kombinatorik und der Wahrscheinlichkeitsrechnung auf technische Fragestellungen anwenden statistische Methoden in unterschiedlichsten Anwendungsbereichen einsetzen. problembezogen Wahrscheinlichkeitsverteilungen auswählen und ausgewählte statistische Testverfahren anwenden,TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können erkennen, dass sie mit dem Wissen aus dem Modul Technische Mechanik 1, den neu zu erwerbenden Kenntnissen der Kinematik und der Anwendung der Impulsbilanz (dynamisches Kräftegleichgewicht) und der Drehimpulsbilanz (dynamisches Momentengleichgewicht) in der Lage sind, die Bewegung von Körpern unter der Einwirkung von Kräften und Momenten zu bestimmen.",TH Mittelhessen,K,4,K,K,K
+"Die Studierenden können darstellen, wie Materie und damit Werkstoffe entstehen den Aufbau von Materie und deren Aufbauprinzipien beschreiben die Arten der chemischen Bindungen voneinander abgrenzen und beurteilen, wann diese Bindungen auftreten die aus den Bindungen folgenden grundlegenden Eigenschaften von Metallen, Keramiken, Gläsern und Polymeren ableiten und kennen die wichtigsten Struktur-Eigenschaftsbeziehungen für die wichtigsten Werkstoffgruppen die jeweils geeigneten Herstellungsverfahren nennen",TH Mittelhessen,K,1,K,K,K
+"Die Studierenden können die wichtigsten Grundlagen der Physik, Chemie und Technik erläutern die wichtigsten Einflüsse der Herstellungs- und Fertigungsverfahren auf Werkstoffeigenschaften beurteilen die grundlegenden naturwissenschaftlichen Prinzipien anwenden und deren Bedeutung beschreiben die erworbenen Kenntnisse zur Beurteilung technischer Fragestellungen des Alltags nutzen",TH Mittelhessen,K,2,K,K,K
+Die Studierenden können ihre persönlichen Ressourcen reflektieren und die Notwendigkeit eines lebenslangen Lernens erkennen ihren Lernprozess den individuellen Ressourcen entsprechend sinnvoll planen und strukturieren ihren Lernfortschritt reflektieren und ihr Lernverhalten ggf. (methodisch/zeitlich) anpassen,TH Mittelhessen,K,5,K,K,K
+Die Studierenden können die Abhängigkeiten zwischen den Fertigungsprozessschritten erkennen alternative Fertigungsverfahren bzgl.,TH Mittelhessen,K,4,K,K,K
+"Die Studierenden beherrschen die Vorgehensweisen bei der Gestaltung, Analyse, Berechnung und dem Einsatz von Maschinenelementen als Teil von Maschinensystemen die Anwendungen und Berechnungsmethoden zu gängigen Maschinenelementen Methodenkompetenzen (fachlich & überfachlich)",TH Mittelhessen,K,2,K,K,K
+Maschinensysteme auch mit elektrischen/elektronischen/mechatronischen Komponenten funktional in ihre Teilsysteme ordnen und so komplexere funktionale Zusammenhänge abstrahieren. das Bewegungsverhalten von Maschinen(teil)systemen mit Hilfe der Theorie der Starrkörperkinetik simulieren Methodenkompetenzen (fachlich & überfachlich),TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können komplexe Maschinensysteme zur mechanischen Antriebstechnik funktional in Teilsystemen strukturieren diese komplexen Maschinensysteme mit Hilfe der erlernten Berechnungsmethoden auslegen und deren Charakteristika den funktionalen Anwendungen zuordnen durch die weiterentwickelten CAD-Kenntnisse komplexere Maschinen(teil)systeme mit Freiformflächen, FEM- und Starrkörper-Simulation auslegen und konstruieren",TH Mittelhessen,K,3,K,K,K
+Die Studierenden können die vermittelten Berechnungsverfahren zur Gleichstrom- und Wechselstromtechnik anwenden prinzipielle Vorgehensweisen und Techniken zum Lösen ingenieurmäßiger Aufgaben auf dem Gebiet der Elektrotechnik anwenden,TH Mittelhessen,K,3,K,K,K
+Die Studierenden können den eigenen Leistungsstand auf dem Gebiet der Elektrotechnik beurteilen ihre persönlichen Ressourcen reflektieren und Ziele für die eigene Entwicklung definieren ihren Lernprozess den individuellen Ressourcen entsprechend sinnvoll planen und strukturieren ihren Lernfortschritt reflektieren und ihr Lernverhalten ggf. (methodisch/zeitlich) anpassen,TH Mittelhessen,K,5,K,K,K
+"Die Studierenden beherrschen Grundlagen der Betriebswirtschaftslehre Grundzüge des betrieblichen Rechnungswesens Grundlagen des Rechts, der Normauslegung und der Rechtsanwendung strategische und operative Planungen durchführen einfache Businesspläne aufstellen",TH Mittelhessen,K,1,K,K,K
+Aufgaben der Wissenschaften und Wissenschaftsvokabular,TH Mittelhessen,I,,S,K,S
+"Verarbeitung und Speicherung wissenschaftlichen Materials (Literaturverwaltung, Bibliografieren) Grundlagen des wissenschaftlichen Schreibens",TH Mittelhessen,I,,S,I,S
+"wissen, was unter Wissenschaft zu verstehen ist und können eine grundlegende Systematisierung vornehmen,",TH Mittelhessen,K,1,S,K,K
+erlernen das direkte und indirekte Zitieren sowie den Umgang mit wissenschaftlichen Quellen,TH Mittelhessen,K,1,S,K,K
+"sind in der Lage, die Richtigkeit und Präzision experimenteller Daten zu beurteilen.",TH Mittelhessen,K,5,K,K,K
+lernen die Grundlagen des wissenschaftlichen Arbeitens kennen und wenden diese an,TH Mittelhessen,K,1,S,K,K
+Die Studierenden besitzen ein Verständnis für die physikalischen Funktionsweisen von optischen und akustischen Instrumenten und verfügen über Kenntnisse beim Einsatz von solchen Instrumenten in der praktischen Anwendung,TH Mittelhessen,K,2,K,K,K
+"Die Studierenden können die grundlegenden Eigenschaften von Wellen beschreiben die physikalischen Grundlagen von Wellenphänomenen wie Reflektion, Brechung und Interferenz darstellen optische Elemente wie Prismen, Linsen und Spiegel in ihren Eigenschaften beschreiben die physikalischen Grundlagen von akustischen und elektromagnetischen Wellen unterscheiden",TH Mittelhessen,K,2,K,K,K
+Die Studierenden können die Grundsätze der Fluidmechanik an typischen strömungsmechanischen Fragestellungen insbesondere im Bereich des Maschinenbaus anwenden.,TH Mittelhessen,K,3,K,K,K
+Die Studierenden können durch die Arbeit in Gruppen ihre Kommunikations- und Teamfähigkeit steigern,TH Mittelhessen,K,3,K,K,K
+Die Studierenden beherrschen die Grundlagen der Finite-Elemente-Methode mit besonderem Bezug zum Leichtbau,TH Mittelhessen,K,1,K,K,K
+Die Studierenden können die FE-Methode mittels marktführenden Computer-Programmen an Leichtbaustrukturen anwenden Bauteile und Systeme nach den Regeln des Leichtbaus methodisch entwickeln und konstruieren,TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können die Prinzipien für die Leichtbau-Konstruktion wiedergeben und sind befähigt, diese auf praktische Probleme anzuwenden begleitende Überschlagsberechnungen auf Basis der Technischen Mechanik ausführen und bewerten durch die Nutzung englischsprachiger Software speziell die fachbezogenen Englischkenntnisse vertiefen Methodenkompetenzen (fachlich & überfachlich)",TH Mittelhessen,K,1,K,K,K
+Sandwich-Strukturen sowohl auf Basis der Technischen Mechanik (Berechnung von Hand) als auch mit Hilfe der Finite-Elemente-Methode (numerische Simulation) auslegen,TH Mittelhessen,K,3,S,K,K
+Die Studierenden können ihren Kenntnisstand auf dem Gebiet des Leichtbaus einschätzen,TH Mittelhessen,K,5,K,K,K
+"Aufbau und Funktionsweise elektrischer Standardmaschinen darstellen Arbeitspunktberechnungen für einen gegebenen Versorgungs- und Belastungszustand selbstständig durchführen Maschinenmodelle auswählen und für die Berechnungen bezüglich der Phasen- und Leistungsverhältnisse (cosφ, Wirkungsgrad) anwenden typische elektrische Maschinen in Betrieb nehmen dynamische Eigenschaften von Stellglieder beurteilen und Regelungsparameter einstellen",TH Mittelhessen,K,2,K,K,K
+Elektrische Maschinen und Regelungssysteme unter der Berücksichtigung jeweiliger Vor- und Nachteile auswählen wichtigste Betriebsparameter unter der Berücksichtigung der Ersatzschaltbilder ermitteln. dynamisches Verhalten eines Antriebssystems beurteilen und die Regelungssysteme optimal auslegen,TH Mittelhessen,K,3,K,K,K
+Die Studierenden können in Gruppen kooperativ und effektiv Lösungen für Problemstellungen entwickeln ihren Standpunkt in Diskussionen argumentativ sachlich vertreten das eigene Kooperationsverhalten in Gruppen reflektieren und erweitern,TH Mittelhessen,K,5,K,K,K
+"Die Studierenden können im Rahmen eines zeitlich klar festgelegten Projektes das im Rahmen des bisherigen Bachelorstudiums erlangte, meist theoretische Fach- und Methodenwissen praxisbezogen einsetzen den Projektablauf schriftlich dokumentieren sowie die Projektergebnisse schriftlich klar darstellen",TH Mittelhessen,K,3,K,K,K
+Die Studierenden können in Gruppen kooperativ und effektiv Lösungen für Problemstellungen entwickeln sich im industriellen und beruflichen Umfeld eingliedern sich in Teams und Abteilungen einbringen und konstruktiv mitarbeiten,TH Mittelhessen,K,3,K,K,K
+Die Studierenden können entsprechende Anlagen in stationäre und eindimensionale Anwendungsfälle abstrahieren und daraus erste analytische Lösungsansätze für Verbesserungen ableiten,TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können die Kriterien zur Abgrenzung der unterschiedlichen Arbeitsmaschinen und zur Einordnung unterschiedlicher Verbrennungsmotoren (VM) darstellen die Grundlagen der wichtigsten thermodynamischen Modellprozesse erklären und diese in Bezug auf die wesentlichen Größen eines VM (Arbeit, Wirkungsgrad, Belastung) abgrenzen sowie die einzelnen Zustandsänderungen berechnen die Vereinfachungen zu realen Prozessführungen anwenden und so die Aussagen von Vergleichsprozessen auf reale VM übertragen die wichtigsten Kenngrößen und Kennfelder zur technischen Beschreibung und Beurteilung von VM erläutern und beherrschen den Umgang mit diesen zur grundlegenden Auslegung von VM den grundlegenden chemischen Aufbau von Kraftstoffen und deren wichtigsten physikalisch/chemischen Eigenschaften darstellen und so die Wirkung eines veränderten Kraftstoffs (z.B. alternative Kraftstoffe) auf die Betriebsgrößen des VM übertragen die funktionalen Grundlagen von Otto- und Dieselmotoren (Verbrennung, Einspritzung, Zündung, Gemischbildung) erläutern",TH Mittelhessen,K,2,K,K,K
+Die Studierenden können die Vereinfachungen zu realen Prozessführungen anwenden und so die Aussagen von Vergleichsprozessen auf reale VM übertragen,TH Mittelhessen,K,3,K,K,K
+Die Studierenden können ihren Lernfortschritt reflektieren und ihr Lernverhalten ggf. (methodisch/zeitlich) anpassen,TH Mittelhessen,K,5,K,K,K
+Die Studierenden können unter Anwendung von Ähnlichkeitsbeziehungen und der Kenntnis von Leistungsgrenzen die Regeln der Anpassungskonstruktion bei Verbrennungsmotoren erläutern die wirkenden Kräfte und Momente im Triebwerk berechnen und kennen die Kinetik des Hubkolbentrieb-werkes können unterschiedliche Bauformen und konstruktive Gestaltungen der Triebwerke rechnerisch vergleichen und so auf neue Auslegungen erfolgreich übertragen.,TH Mittelhessen,K,2,K,K,K
+"Die Studierenden können den Aufbau und die Wirkungsweise von Turbokraft- und Turboarbeitsmaschinen sowie deren Gemeinsamkeiten und Unterschiede erläutern die bekannten Gesetze der Thermodynamik und Strömungsmechanik auf Strömungsmaschinen anwenden und Fragen nach deren Leistung, Wirkungsgrad oder Durchsatz beantworten die Vorgänge in einer Strömungsmaschinenstufe durch die Verwendung dimensionsloser Stufenkenngrößen unabhängig von der realen Baugröße der Maschine beschreiben und beurteilen Erprobungsprozeduren selbständig für das Versuchsziel entwickeln und die Ergebnisse hinsichtlich der Zielsetzungen kritisch beurteilen",TH Mittelhessen,K,2,K,K,K
+Die Studierenden beherrschen die Grundlagen der Modellbildung mechatronischer Systeme,TH Mittelhessen,K,1,K,K,K
+Die Studierenden können unterschiedliche Beschreibungsformen von analogen und digitalen Systemen anwenden,TH Mittelhessen,K,3,K,K,K
+Die Studierenden können die grundlegenden Zusammenhänge zwischen Antriebsleistung und Fahrwiderständen erkennen sowie die üblichen Techniken/Methoden zur Angleichung über Kennungswandler anwenden unter Berücksichtigung der erlernten Zusammenhänge der grundlegenden Fahrphysik die Systeme in ihrer Wirkung einschätzen und auf zukünftige Weiterentwicklungen übertragen.,TH Mittelhessen,K,3,K,K,K
+Die Studierenden können das eigene Verhalten im Betrieb unter Qualitätsmanagement-Aspekten beurteilen. ihre persönlichen Ressourcen reflektieren und Ziele für die eigene Entwicklung definieren ihren Lernprozess den individuellen Ressourcen entsprechend sinnvoll planen und strukturieren,TH Mittelhessen,K,5,K,K,K
+"Die Studierenden können die Bedeutung der Tribologie in der Technik beschreiben und lernen die Abstraktion realer technischer Systeme zur Beschreibung als tribologisches System die wesentlichen Charakteristika (Kenngrößen, Mechanismen und Arten) von Reibung und Verschleiß sowie einige spezielle Erscheinungsformen erläutern die Grundlagen und Kenngrößen der Zuverlässigkeit sowie den Zusammenhang zwischen tribologischen Mechanismen und der Zuverlässigkeit von technischen Systemen darstellen die Grundlagen der Drucklufttechnik und Hydraulik aus physikalischer Sicht erläutern die notwendigen Komponenten zur Drucklufterzeugung und -aufbereitung beschreiben die notwendigen Komponenten zum Betreiben von Hydraulikaggregaten und Aufbereitungssystemen für Öl beschreiben den Aufbau, den Betrieb sowie die Wartung und Instandhaltung von Druckluft- und Hydrauliknetzen (Öl- Kreisläufen) erklären die notwendigen Komponenten zum Aufbau und Betrieb von pneumatischen und hydraulischen Systemen im Bereich der Automatisierungstechnik beschreiben unterschiedliche pneumatische und hydraulische Systeme für die Automatisierungstechnik entwickeln und konstruieren und deren Betrieb beschreiben unterschiedliche pneumatische und hydraulische Werkzeuge und Werkstückhandlingsysteme beschreiben und deren Einbindung in pneumatische und hydraulische Systeme erklären einfache Schaltungen aus den Gebieten der Pneumatik und Hydraulik entwerfen und aufbauen sowie komplizierte Schaltpläne sicher lesen und die zu Grunde liegenden Funktionen und Abläufe verstehen und beschreiben",TH Mittelhessen,K,2,K,K,K
+Die Studierenden können die Möglichkeiten der Fahrwerkentwicklung und -auslegung anwenden und kritisch beurteilen,TH Mittelhessen,K,3,K,K,K
+Die Studierenden können ihren Lernfortschritt reflektieren und ihr Lernverhalten methodisch/zeitlich anpassen,TH Mittelhessen,K,5,K,K,K
+Die Studierenden können ihren Lernfortschritt reflektieren und ihr Lernverhalten ggf. (methodisch/zeitlich) anpassen,TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können die Grundlagen und Prinzipien der Hochtemperaturtechnik darstellen geeignete Werkstoffe für urformtechnische Anwendungen bei metallischen Werkstoffen, wie z.B. der Stahlerzeugung, der Gießereitechnik, Wärmebehandlungsanlagen sowie in der Energietechnik auswählen die Herstellung und Verarbeitung von Hochtemperaturwerkstoffen beschreiben die wichtigsten Eigenschaften von Werkstoffen, die in der Elektronik Anwendung finden, erläutern die werkstoffkundlichen Grundlagen der Energiespeicherung angeben spezielle Beispiele der aktuellen Batterie- und Akkumulatortechnologie beschreiben",TH Mittelhessen,K,1,K,K,K
+Die Studierenden können die Anwendungsmöglichkeiten von Hochtemperaturwerkstoffen beurteilen die Wechselwirkung von Werkstoffen mit elektrischen und magnetischen Feldern darstellen,TH Mittelhessen,K,2,K,K,K
+"Messwerte aus experimentellen Untersuchungen aufbereiten Mittelwerte, Varianzen und weiteren statistischen Kenngrößen ermitteln Messwerte aus experimentellen Untersuchungen und deren statistische Kenngrößen darstellen Ausreißer ermitteln und entsprechende Korrekturen vornehmen prüfen, ob experimentelle Daten normalverteilt sind geeignete Versuchspläne für das „Design of Experiments“ auswählen mit Hilfe des Statistikprogrammes „Minitab“ statistische Versuchsplanungen durchführen und die entsprechenden Versuchsergebnisse auswerten",TH Mittelhessen,K,3,K,K,K
+eine Auswahl nachhaltiger Materialien für ein Produkt durchführen,TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können eine systematische Entwicklung der Konzepte nachhaltiger Produkte (Ökodesign-Prinzipien, Checklisten, etc.) durchführen",TH Mittelhessen,K,3,K,K,K
+"Analyse- und Bewertungsmethoden anwenden: Ökobilanz, eindimensionale Methoden, Datenbanken",TH Mittelhessen,K,3,K,K,K
+Eigenverantwortlich Entscheidungen im Sinne der Nachhaltigkeit treffen,TH Mittelhessen,K,5,S,K,K
+"Optimierungs- und Approximationsprobleme lösen,",TH Mittelhessen,K,3,K,K,K
+"nehmen aktiv am Lernen teil,",TH Mittelhessen,K,3,S,K,K
+ihren Lernfortschritt reflektieren. 1012-2 Labor (2 CrP):,TH Mittelhessen,K,5,K,S,K
+"nehmen aktiv am Lernen teil,",TH Mittelhessen,K,3,S,K,K
+stellen ihre Standpunkte und Interessen sachlich dar.,TH Mittelhessen,K,3,S,K,K
+"wissen, welche Aufgaben/Funktionen die Wissenschaften in der Gesellschaft erfüllen/wahrnehmen,",TH Mittelhessen,K,1,S,K,K
+Die Studierenden lernen,TH Mittelhessen,S,,K,K,K
+"die grundlegende Herangehensweise in der Forschung kennen,",TH Mittelhessen,K,1,K,K,K
+erhalten und geben sich gegenseitig Feedback.,TH Mittelhessen,K,3,S,K,K
+"können ihre persönlichen Ressourcen reflektieren und den Lernprozess sinnvoll planen,",TH Mittelhessen,K,5,K,K,K
+lernen die eigenständige Steuerung und Planung ihrer Kursaufgaben und Prüfungsleistungen.,TH Mittelhessen,K,3,S,K,K
+"den Aufbau eines Unternehmens und seine Grundfunktionen beschreiben,",TH Mittelhessen,K,2,K,K,K
+"das Zustandekommen von Marktgleichgewichten erklären,",TH Mittelhessen,K,2,K,K,K
+"in der Gruppe kooperativ und effektiv Lösungen für die Problemstellung entwickeln,",TH Mittelhessen,K,6,K,K,K
+"erkennen die Volkswirtschaftslehre als dritten Pfeiler der Sozialwissenschaften neben der Politologie und der Soziologie,",TH Mittelhessen,K,1,S,K,K
+"bei der argumentativen Darstellung ihrer Rechtsauffassung anwenden, erlernen fachliche Grundlagen für zivilrechtliche Rechtsfragen und können so mögliche Implikationen in ihrem späteren Arbeitsfeld erkennen und ggf. lösen.",TH Mittelhessen,K,1,K,K,K
+"Vektoralgebra auf geometrische Fragestellungen anwenden,",TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können lineare Gleichungssysteme lösen,",TH Mittelhessen,K,3,K,K,K
+"den Gaußschen Algorithmus anwenden,",TH Mittelhessen,K,3,K,K,K
+"Doppel- und Mehrfachintegrale berechnen,",TH Mittelhessen,K,3,S,K,K
+"nehmen aktiv am Lernen teil,",TH Mittelhessen,K,1,S,K,K
+"Die Studierenden können mit Grundbegriffen der Industriebetriebslehre und Logistik umgehen,",TH Mittelhessen,K,2,K,K,K
+"Die Studierenden können im Fachgebiet Informationen eigenständig in unterschiedlichen Quellen recherchieren und bewerten,",TH Mittelhessen,K,3,K,K,K
+können bestimmte Methoden in verschiedenen wirtschaftlichen und technischen Teilgebieten einsetzen und kontextbezogen interpretieren.,TH Mittelhessen,K,2,K,K,K
+"Die Studierenden können sicher die Selbstkosten und Preise für Kostenträger auf Basis geeigneter Kalkulationsverfahren in Industrie, Handel, Handwerk und Dienstleistung berechnen,",TH Mittelhessen,K,3,K,K,K
+"Problemlösungen erfassen, klar formulieren und argumentativ verteidigen.",TH Mittelhessen,K,2,K,K,K
+"kennen die Methoden im Bereich des Marketing-Mix und können diese beispielhaft anwenden,",TH Mittelhessen,K,1,K,K,K
+die Entstehung und Entwicklung von Verfahren zur Qualitätsverbesserung verstehen,TH Mittelhessen,K,2,K,K,K
+die im Rahmen des Qualitätsmanagements angewandten Normen erläutern und verstehen die Auswirkungen auf betriebliche Abläufe,TH Mittelhessen,K,2,K,K,K
+Die Studierenden können im Rahmen der Übungen,TH Mittelhessen,S,,K,S,S
+"in der Gruppe kooperativ und effektiv Lösungen für die Problemstellung entwickeln,",TH Mittelhessen,K,6,K,K,K
+Die Studierenden können das eigene Verhalten im Betrieb unter Qualitätsmanagement-Aspekten beurteilen,TH Mittelhessen,K,5,K,K,K
+"Ergebnisse der Linearen Programmierung erklären, vergleichen und beurteilen,",TH Mittelhessen,K,2,K,K,K
+"grundlegende Prognoseverfahren unterscheiden,",TH Mittelhessen,K,4,K,K,K
+"auf der Grundlage von Ergebnisrechnungen Abweichungsanalysen durchführen und Ergebnisse beurteilen,",TH Mittelhessen,K,4,K,K,K
+"eine Investitionsentscheidung im Unternehmen vorbereiten und organisieren,",TH Mittelhessen,K,6,K,K,K
+"Kennzahlen zur Unternehmenssteuerung berechnen und bewerten,",TH Mittelhessen,K,3,S,K,K
+Verfahren der statischen und dynamischen Investitionsplanung sowie des vollständigen Finanzplans anwenden und interpretieren.,TH Mittelhessen,K,2,K,K,K
+Die Studierenden können ihre eigenen Schwächen und Stärken reflektieren und die eigene Entwicklung planen.,TH Mittelhessen,K,5,K,K,K
+"Produktionsprozesse planen und bewerten,",TH Mittelhessen,K,5,K,K,K
+"Die Studierenden können alleine und in Gruppen zielorientiert und auf Augenhöhe gestalterisch zusammenarbeiten,",TH Mittelhessen,K,6,K,K,K
+Das Berufsbild des Wirtschaftsingenieurs positioniert sich interdisziplinär zwischen fachlich-technischer Gestaltung von Produktion und Services sowie betriebswirtschaftlicher Bewertung und dem Management des Betriebs und dessen Weiterentwicklung.,TH Mittelhessen,S,,S,K,K
+"tauchen in ein wichtiges Themenfeld des Personalmanagements tiefer ein und erwerben dort Spezialwissen,",TH Mittelhessen,K,1,S,K,K
+"stellen dominierende und erfolgreiche Geschäfts- und Führungsmodelle in Frage und entwickeln und diskutieren Weiterentwicklungsmöglichkeiten,",TH Mittelhessen,K,5,K,K,K
+"erkennen und beurteilen die Grundfunktionen des Arbeitsrechts,",TH Mittelhessen,K,4,K,K,K
+"überprüfen und untersuchen vertragliche Gestaltungsformen von Arbeitsverhältnissen,",TH Mittelhessen,K,4,K,K,K
+"Sie können ein Thema systematisch erörtern und dabei entscheidende Punkte in angemessener Weise hervorheben (Produktion, ebd.",TH Mittelhessen,K,3,K,K,K
+"können die Perspektive eines Laien einnehmen und komplexe (technische) Sachverhalte adäquat erklären,",TH Mittelhessen,K,2,K,K,K
+geben anhand von Kriterien anderen Studierenden Feedback zu ihrer Sprachproduktion.,TH Mittelhessen,K,5,S,K,K
+"reflektieren ihre individuellen Sprachkenntnisse und definieren Ziele für die eigene Entwicklung; sie evaluieren den eigenen Sprachlernerfolg und setzen neue Ziele,",TH Mittelhessen,K,5,K,K,K
+Die Studierenden verfassen geschäftliche Korrespondenz mit Geschäftspartnern in angemessenem,TH Mittelhessen,K,3,K,K,K
+"Anfragen, Bitten, Anträge und Beschwerden.",TH Mittelhessen,S,,S,S,S
+"Die Studierenden entnehmen schriftlichen Quellen des eigenen Fachgebiets Informationen, Gedanken und Meinungen.",TH Mittelhessen,K,3,K,K,K
+"können das eigene Kooperationsverhalten in Gruppen reflektieren und erweitern,",TH Mittelhessen,K,5,K,K,K
+geben anhand von Kriterien anderen Studierenden Feedback zu ihrer Sprachproduktion.,TH Mittelhessen,K,5,S,K,K
+"reflektieren ihre Lernstrategien und deren Erfolg, probieren neue Sprachlernstrategien aus und evaluieren diese angemessen,",TH Mittelhessen,K,3,K,K,K
+"entwickeln in Gruppen kooperativ und effektiv Lösungen für Problemstellungen,",TH Mittelhessen,K,6,K,K,K
+"können ihren Standpunkt in Diskussionen argumentativ sachlich vertreten,",TH Mittelhessen,K,5,S,K,K
+"können das eigene Kooperationsverhalten in Gruppen reflektieren und erweitern,",TH Mittelhessen,K,5,K,K,K
+"können die Perspektive eines Laien einnehmen und komplexe (technische) Sachverhalte adäquat erklären,",TH Mittelhessen,K,2,K,K,K
+Verwendbarkeit des Moduls Pflichtmodul in allen Schwerpunkten der Bachelorstudiengänge Wirtschaftsingenieurwesen und Wirtschaftsingenieurwesen-Industrie und Wahlpflichtmodul in beiden Schwerpunkten der Bachelorstudiengänge Wirtschaftsingenieurwesen-Immobilien und Immobilien- und Facility Management,TH Mittelhessen,S,,S,K,S
+"können das eigene Kooperationsverhalten in Gruppen reflektieren und erweitern,",TH Mittelhessen,K,5,K,K,K
+"verfügen über geeignete Strategien, Fehler in eigenen Texten zu finden und erfolgreich zu korrigieren,",TH Mittelhessen,K,3,S,K,K
+reflektieren und passen ihre Sprachverwendungsstrategien an oder erweitern das Repertoire.,TH Mittelhessen,K,3,K,K,K
+Das Ziel des Kurses ist Vertiefung und Erweiterung der Sprachkompetenz in der schriftlichen und mündlichen Kommunikation im fachsprachlichen Kontext.,TH Mittelhessen,S,,S,S,S
+"Anfragen, Bitten, Anträge und Beschwerden.",TH Mittelhessen,S,,S,S,S
+Hierbei kann es sich um verschiedene Sprachen (Zielsprache Englisch) oder verschiedene Register innerhalb der englischen Sprache handeln.,TH Mittelhessen,I,,S,S,S
+"Methoden zur Unternehmens-, Konkurrenz- und Umfeldanalyse anwenden, Ergebnisse auswerten und interpretieren,",TH Mittelhessen,K,3,K,K,K
+"studiengangsadäquate berufsqualifizierende Tätigkeiten zur Vorbereitung auf das künftige Berufsfeld ausüben,",TH Mittelhessen,K,3,S,K,K
+"lernen, die Informationen aus der Recherche entsprechend zu bewerten,",TH Mittelhessen,K,5,S,K,K
+"lernen Kritikfähigkeit,",TH Mittelhessen,K,1,S,K,K
+bearbeiten eine praktische oder theoretische Problemlösung in ihrem ausgewählten Themengebiet.,TH Mittelhessen,K,3,S,K,K
+"bei Bedarf Beratungsangebote ihrer Betreuer*innen annehmen,",TH Mittelhessen,K,3,S,K,K
+Die Studierenden können ihre persönlichen Stärken und Schwächen in Bezug auf die Darstellung komplexer Sachverhalte reflektieren und verbessern.,TH Mittelhessen,K,5,K,K,K
+"Die Studierenden können den atomaren Aufbau und die Eigenschaften von metallischen Werkstoffen beschreiben,",TH Mittelhessen,K,2,K,K,K
+"die Grundbegriffe der Legierungskunde benennen,",TH Mittelhessen,K,1,S,K,K
+"mechanische Modelle aus der Realität extrahieren, klassifizieren und statisch bestimmte Systeme mithilfe der erlernten Methoden analysieren,",TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können auf verschiedene Arten und Weisen komplexe Zustände, z.B. Maschinen und Anlagenteile, Fahrzeugkomponenten usw. in einfachere Teilsysteme zerlegen,",TH Mittelhessen,K,4,K,K,K
+anhand erlernter Methoden schnell und einfach die Ergebnisse anderer überprüfen bzw. kontrollieren.,TH Mittelhessen,K,5,K,K,K
+"Die Studierenden können mittels verschiedener Methoden mögliche Versagensursachen von Bauteilen kritisch hinterfragen und deuten,",TH Mittelhessen,K,4,K,K,K
+Methoden zur Deutung und Berechnung von Stabilitätsproblemen anwenden.,TH Mittelhessen,K,3,K,K,K
+Methoden und die Ergebnisse anderer erkennen und diese kritisch hinterfragen und ggf. alternative Lösungsansätze einsetzen.,TH Mittelhessen,K,3,S,K,K
+können den Ablauf industrierelevanter Fertigungsverfahren sowie deren Vor- und Nachteile erläutern.,TH Mittelhessen,K,2,K,K,K
+"technische Zeichnungen lesen, interpretieren und beurteilen zu können,",TH Mittelhessen,K,2,K,K,K
+"Skizzen, Volumenkörper und Zeichnungen für Einzelteile im CAD-System erstellen zu können.",TH Mittelhessen,K,3,S,K,K
+"Problemlösungen erfassen, klar formulieren, zielgruppengerecht präsentieren und argumentativ verteidigen.",TH Mittelhessen,K,2,K,K,K
+Die Studierenden können im Zuge der Übungen ihren Lernfortschritt reflektieren und Ihr Lernverhalten eigenständig anpassen.,TH Mittelhessen,K,3,K,K,K
+arbeiten effizient auf ein Ziel hin.,TH Mittelhessen,K,3,S,K,K
+"nehmen aktiv am Lernen teil,",TH Mittelhessen,K,3,S,K,K
+"den Festigkeitsnachweis von Maschinenelementen praktisch durchführen,",TH Mittelhessen,K,3,K,K,K
+"Entwicklungs- und Konstruktionsaufgaben im Team organisieren,",TH Mittelhessen,K,6,K,K,K
+Die Studierenden können im Zuge der Übungen ihren Lernfortschritt reflektieren und Ihr Lernverhalten eigenständig anpassen.,TH Mittelhessen,K,5,K,K,K
+gebrauchen eine Software für numerische Mathematik zum Lösen von Gleichungssystemen und Darstellen von Funktionsverläufen,TH Mittelhessen,K,3,S,K,K
+erarbeiten und diskutieren Lösungen zu Aufgabenstellungen in Kleingruppen,TH Mittelhessen,K,3,K,K,K
+"computerrelevante Zahlensysteme darstellen und handhaben,",TH Mittelhessen,K,1,K,K,K
+"Die Studierenden können die Funktion und Anwendung grundlegender aktiver, digital gesteuerter Bauteile der Elektrotechnik beschreiben,",TH Mittelhessen,K,2,K,K,K
+Die Studierenden können einfache digitale Schaltungen mit aktiven Komponenten der Elektrotechnik berechnen und analysieren.,TH Mittelhessen,K,3,K,K,K
+"kennen dynamische Speicherverwaltung mit malloc, calloc, ralloc, free, einfach und zweifach verkettete Listen,",TH Mittelhessen,K,1,K,K,K
+"können strukturierte Datentypen deklarieren und Datentypen für verkettete Listen definieren,",TH Mittelhessen,K,3,S,K,K
+"lernen an ausgewählten Beispielen alle relevanten Bereiche der Elektrotechnik in der Praxis kennen,",TH Mittelhessen,K,1,S,K,K
+können reale Schaltungen und Systeme analysieren,TH Mittelhessen,K,4,K,K,K
+"ihr eigenes Handeln und das der anderen Gruppenteilnehmer reflektieren,",TH Mittelhessen,K,5,K,K,K
+"Die Studierenden können eine regelungstechnische Problemstellung erkennen,",TH Mittelhessen,K,4,K,K,K
+"die regelungstechnischen Teilaufgaben in einem Entwicklungsprozess identifizieren,",TH Mittelhessen,K,1,K,K,K
+"ihre persönlichen Ressourcen reflektieren und Ziele für die eigene Entwicklung definieren,",TH Mittelhessen,K,5,K,K,K
+"ihren Lernprozess den individuellen Ressourcen entsprechend sinnvoll planen und strukturieren,",TH Mittelhessen,K,6,K,K,K
+"erworbene fachliche Kompetenzen zielgerichtet einsetzen,",TH Mittelhessen,K,3,S,K,K
+"aus mehreren Lösungsoptionen die geeignetste auswählen,",TH Mittelhessen,K,5,K,K,K
+"die Umsetzung einer Lösung planen und realisieren,",TH Mittelhessen,K,6,K,K,K
+"Die Studierenden können effizient und effektiv mit Kommilitonen und Kommilitoninnen zusammenarbeiten,",TH Mittelhessen,K,3,K,K,K
+die Bedeutung von Strom im Energiemix bewerten.,TH Mittelhessen,K,5,S,K,K
+Versorgungsvarianten wirtschaftliche bewerten.,TH Mittelhessen,K,5,S,K,K
+"Die Studierenden sind in der Lage,",TH Mittelhessen,S,,K,S,S
+Methoden und Instrumente zur Messung und Bewertung der Nutzung natürlicher Ressourcen und von Umweltwirkungen beschreiben und durch Beispiele erläutern,TH Mittelhessen,K,2,K,K,K
+"können in kleinen Gruppen Sachverhalte diskutieren und Aufgaben bearbeiten,",TH Mittelhessen,K,3,K,K,K
+"mechanische Modelle aus der Realität extrahieren, klassifizieren und statisch bestimmte Systeme mithilfe der erlernten Methoden analysieren,",TH Mittelhessen,K,4,K,K,K
+"das ermittelte Ergebnis mittels verschiedener erlernter Methoden selbst prüfen,",TH Mittelhessen,K,5,S,K,K
+"Die Studierenden können den atomaren Aufbau und die Eigenschaften von metallischen Werkstoffen beschreiben,",TH Mittelhessen,K,2,K,K,K
+"Umwelteigenschaften von Werkstoffen unterscheiden,",TH Mittelhessen,K,4,K,K,K
+"ein Versagen von Bauteilen in Folge verschiedener Belastungen prognostizieren,",TH Mittelhessen,K,5,S,K,K
+Methoden zur Deutung und Berechnung von Stabilitätsproblemen anwenden.,TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können das Erlernte wiedergeben, so dass Sie im späteren Berufsleben die angewendeten Methoden auch erklären können,",TH Mittelhessen,K,1,K,K,K
+"Die Studierenden können selbstständig die Problematik eines komplexen Systems erkennen, dieses auf das Wesentliche so reduzieren, um es zu berechnen,",TH Mittelhessen,K,3,K,K,K
+"Normen auf technische Produkte anzuwenden,",TH Mittelhessen,K,3,K,K,K
+"Darstellungen in technischen Zeichnungen normgerecht zu erstellen,",TH Mittelhessen,K,3,S,K,K
+"Bauteile und Baugruppen zeichnerisch darstellen zu können,",TH Mittelhessen,K,3,K,K,K
+"Skizzen, Volumenkörper und Zeichnungen für Einzelteile im CAD-System erstellen zu können.",TH Mittelhessen,K,3,S,K,K
+"Bauteile und Baugruppen unter Berücksichtigung von Funktions-, Herstellungs-, Wirtschaftlichkeits- und Umweltanforderungen konzipieren, entwickeln und konstruieren,",TH Mittelhessen,K,6,K,K,K
+Die Studierenden können im Zuge der Übungen ihren Lernfortschritt reflektieren und Ihr Lernverhalten eigenständig anpassen.,TH Mittelhessen,K,5,K,K,K
+"ausgewählte betriebliche und produktbezogene Methoden, Konzepte und Instrumente des LCM anwenden und kritisch reflektieren,",TH Mittelhessen,K,3,K,K,K
+"auf Fragen und in Diskussionen sachlich antworten und argumentieren,",TH Mittelhessen,K,3,S,K,K
+"Die Studierenden können selbstständig eigene und fremd gesetzte Lern- und Arbeitsziele verfolgen,",TH Mittelhessen,K,3,K,K,K
+"Ergebnisse begründen und über ausgewählte betriebliche und produktbezogene Methoden, Konzepte und Instrumente des Life Cycle Managements umfassend kommunizieren.",TH Mittelhessen,K,2,S,K,K
+können den Ablauf industrierelevanter Fertigungsverfahren sowie deren Vor- und Nachteile erläutern.,TH Mittelhessen,K,2,K,K,K
+können für gegebene Werkstücke passende Fertigungsverfahren auswählen.,TH Mittelhessen,K,5,K,K,K
+können Fertigungsverfahren für ein Werkstück in eine sinnvolle Reihenfolge bringen.,TH Mittelhessen,K,4,S,K,K
+können alternative Fertigungsverfahren auswählen.,TH Mittelhessen,K,5,K,K,K
+"Die Studierenden können eigene Wissenslücken erkennen und schließen,",TH Mittelhessen,K,4,K,K,K
+"Die Vor- und Nachbereitung des Vorlesungsstoffes sowie das Bearbeiten von Übungen und/ oder Testaten sind dabei Teile des Selbststudiums der eigenständig gestaltet werden kann,",TH Mittelhessen,S,,K,S,K
+"Die Studierenden können verschiedene Maschinenelemente eigenständig dimensionieren und auslegen,",TH Mittelhessen,K,3,K,K,K
+"Entwicklungs- und Konstruktionsaufgaben im Team organisieren,",TH Mittelhessen,K,3,K,K,K
+ihren Standpunkt in Diskussionen argumentativ sachlich vertreten.,TH Mittelhessen,K,3,S,K,K
+"die Grundlagen, Grundbegriffe und übergeordnete Zusammenhänge von Corporate Social Responsibility (CSR), Nachhaltigkeitsmanagement und –berichterstattung wiedergeben,",TH Mittelhessen,K,1,S,K,K
+"Methoden und Konzepte des Nachhaltigkeitsmanagements in Unternehmen einordnen und abgrenzen,",TH Mittelhessen,K,2,S,K,K
+"Die Studierenden können die Modulinhalte in angemessener Fachsprache (auch in Englisch) kommunizieren,",TH Mittelhessen,K,3,K,K,K
+ihre erworbenen Kenntnisse in CSR / Nachhaltigkeitsmanagement an Dritte weitergeben.,TH Mittelhessen,K,3,S,K,K
+"CSR, Nachhaltigkeitsmanagement und ihre Umsetzung in Organisationen kritisch reflektieren,",TH Mittelhessen,K,5,K,K,K
+ihre Arbeitsergebnisse und Vorgehensweise kritisch reflektieren.,TH Mittelhessen,K,5,K,K,K
+können ausgewählte Techniken des PPS darstellen und in eigenen Aufgabenbereichen einsetzen.,TH Mittelhessen,K,2,K,K,K
+"den Planungsprozess unter technischen, organisatorischen und wirtschaftlichen Gesichtspunkten erklären,",TH Mittelhessen,K,2,K,K,K
+Die Studierenden können ausgewählte Instrumente des Lean Managements anwenden.,TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können ihre Entscheidungen fachkompetent gegenüber Dritten argumentativ vertreten und sich konstruktiv mit anderen Vorstellungen, Anregungen und Kritik auseinandersetzen.",TH Mittelhessen,K,5,K,K,K
+"können die wesentlichen Einflussfaktoren der Digitalisierung und ihre Auswirkungen auf die Gesellschaft/ Wirtschaft benennen,",TH Mittelhessen,K,1,S,K,K
+"haben sich mit ausgewählten Aspekten des digitalen Wandels auseinandergesetzt und können diese interpretieren und erklären,",TH Mittelhessen,K,2,K,K,K
+"können die Methodik der Geschäftsmodellentwicklung darstellen und in eigenen Projekten einsetzen,",TH Mittelhessen,K,2,K,K,K
+"Die Studierenden können sich weiterführende Literatur selbständig erarbeiten,",TH Mittelhessen,K,3,K,K,K
+ihren Lernfortschritt reflektieren und ihr Lernverhalten anpassen.,TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können die wesentlichen Kennzahlen von Montageanlagen berechnen,",TH Mittelhessen,K,3,K,K,K
+Die Studierenden können während der Praktika die gegebenen Aufgaben aufteilen und mit anderen konstruktiv zusammenarbeiten.,TH Mittelhessen,K,3,K,K,K
+"Laborpraktika an Montageanlagen bzw. Komponenten unter Anleitung durchführen,",TH Mittelhessen,K,3,K,K,K
+"verstehen den Zusammenhang von Maschinengenauigkeit und physikalischen Parametern wie z.B. Reibung,",TH Mittelhessen,K,2,K,K,K
+können Versuche an Werkzeugmaschinen planen und diese durchführen.,TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können wissenschaftlich komplexe Systeme betrachten,",TH Mittelhessen,K,4,K,K,K
+im Team arbeiten.,TH Mittelhessen,K,3,S,K,K
+"nehmen aktiv an den Übungen im Labor teil,",TH Mittelhessen,K,3,S,K,K
+relevante Themen der Gebäudeautomation erkennen und darüber diskutieren.,TH Mittelhessen,K,4,K,K,K
+kennen die Eigenschaften von realen Fluiden und von Fluidgemischen.,TH Mittelhessen,K,1,K,K,K
+"ermitteln die energietechnischen Parameter, stellen die zwischen diesen Größen vorliegenden Zusammenhänge dar und lösen praktische Aufgaben systematisch,",TH Mittelhessen,K,3,K,K,K
+"Die Studierenden können sich sachkompetent an Diskussionen über Energiefragen beteiligen,",TH Mittelhessen,K,3,K,K,K
+"ihren Lernprozess den individuellen Ressourcen entsprechend sinnvoll planen und strukturieren,",TH Mittelhessen,K,6,K,K,K
+ihren Lernfortschritt reflektieren und ihr Lernverhalten ggf. anpassen.,TH Mittelhessen,K,3,K,K,K
+"Konzepte zur Umrüstung und Erweiterung von Maschinen und Anlagen erstellen,",TH Mittelhessen,K,6,S,K,K
+"einfache Vorkalkulationen erstellen, Angebote einholen und interpretieren,",TH Mittelhessen,K,2,K,K,K
+"Die Studierenden können im Team Entwicklungs- und Konstruktionsaufgaben organisieren,",TH Mittelhessen,K,3,K,K,K
+"erlernen zukunftsweisende Technologien und Strategien im Bereich der Produktion und Fertigung, die über die konventionellen Methoden der Produktionstechnologie hinausgehen,",TH Mittelhessen,K,1,S,K,K
+Die Studierenden können innovative Verfahren finden und für ihr Unternehmen gewinnbringend einsetzen.,TH Mittelhessen,K,3,K,K,K
+richtungsweisende Vorschläge erarbeiten.,TH Mittelhessen,K,6,S,K,K
+"Die Studierenden können einfache Drehstromnetze ohne und mit Fehler charakterisieren und alle Ströme, Spannungen und die aufgenommene bzw. abgegebene Leistung berechnen,",TH Mittelhessen,K,2,K,K,K
+"einfache Kenngrößen der einzelnen Kraftwerkstypen aufschlüsseln und bewerten, Komponenten von Transformatoren und Leitungen anhand energietechnischer Anforderungen auslegen und berechnen,",TH Mittelhessen,K,3,S,K,K
+"einfache Netzwerke physikalisch mit Differentialgleichungen beschreiben,",TH Mittelhessen,K,2,K,K,K
+"Die Studierenden können in Gruppen kooperativ und effektiv Lösungen für Problemstellungen entwickeln,",TH Mittelhessen,K,6,K,K,K
+"Die Studierenden können ihre persönlichen Ressourcen reflektieren und Ziele für die eigene Entwicklung definierren,",TH Mittelhessen,K,5,K,K,K
+"Aufbau und Funktionsweise elektrischer Standardmaschinen darstellen,",TH Mittelhessen,K,2,K,K,K
+"Arbeitspunktberechnungen für einen gegebenen Versorgungs- und Belastungszustand selbständig durchführen,",TH Mittelhessen,K,3,K,K,K
+"wichtigste Betriebsparameter unter der Berücksichtigung der Ersatzschaltbilder ermitteln,",TH Mittelhessen,K,3,K,K,K
+das eigene Kooperationsverhalten in Gruppen reflektieren und erweitern.,TH Mittelhessen,K,5,K,K,K
+"Die Studierenden können ihre persönlichen Ressourcen reflektieren und Ziele für die eigene Entwicklung definieren,",TH Mittelhessen,K,5,K,K,K
+Konflikte im Team ansprechen und diese versuchen zu lösen.,TH Mittelhessen,K,3,K,K,K
+Planungstools praktisch anwenden.,TH Mittelhessen,K,3,K,K,K
+"können automatisierte Prozesse energieeffizient gestalten,",TH Mittelhessen,K,6,K,K,K
+"können Wirtschaftlichkeitsbetrachtungen (Entwicklung, Konstruktion, Umsetzung und Umrüstungen) durchführen,",TH Mittelhessen,K,3,K,K,K
+Die Studierenden können sowohl pneumatische wie auch hydraulische Lösungen für Insel- als auch integrierte Systeme auslegen.,TH Mittelhessen,K,3,K,K,K
+"stellen ihre Standpunkte und Interessen sachlich dar, können sich in der Gruppe kooperativ verhalten.",TH Mittelhessen,K,2,S,K,K
+"Sicherheitseinrichtungen in kabelgebundenen und drahtlosen LANs planen und umsetzen,",TH Mittelhessen,K,3,K,K,K
+"Netzwerkverbindungen und Gerätekonfigurationen kritisch überprüfen, Fehlöer finden und korrigieren (Troubleshooting),",TH Mittelhessen,K,3,K,K,K
+sind in der Lage mit den in den Modulinhalten genannten Theoremen und Gleichungen zielgerichtete Berechnungen anzustellen.,TH Mittelhessen,K,3,S,K,K
+"die Strategien auf die taktische und operative Ebene der Supply Chain übersetzen,",TH Mittelhessen,K,3,K,K,K
+Anforderungen an den Aufbau einer Wertschöpfungskette konkret formulieren und Vorgaben erstellen.,TH Mittelhessen,K,3,S,K,K
+"die Anwendung der vermittelten Methoden und Konzepte auf ausgewählte Fallbeispiele transferieren,",TH Mittelhessen,K,3,S,K,K
+"selbständig und im Team wissenschaftliche Sachverhalte recherchieren, aufbereiten und präsentieren sowie ihre erworbenen Kenntnisse an Dritte weitergeben.",TH Mittelhessen,K,1,S,K,K
+"Die Studierenden können wissenschaftliche Sachverhalte und Zusammenhänge anhand von Fachliteratur erarbeiten und Adressatengerecht präsentieren,",TH Mittelhessen,K,3,K,K,K
+"Methoden und Konzepte des Life Cycle Assessment praxisorientiert anwenden,",TH Mittelhessen,K,3,K,K,K
+Die Studierenden können aus den Ergebnissen der Methodenanwendung Verbesserungsmaßnahmen ableiten und entwickeln sowie diese kritisch beurteilen.,TH Mittelhessen,K,4,K,K,K
+"die Anwendung der vermittelten Methoden und Konzepte auf ausgewählte Fallbeispiele transferieren,",TH Mittelhessen,K,3,S,K,K
+"evaluieren Systeme und schaffen neue Lösungen,",TH Mittelhessen,K,5,K,K,K
+"erfinden, erstellen und integrieren soziale, ökologische und nachhaltige Produkte, Konzepte, Modelle und Strategien,",TH Mittelhessen,K,6,S,K,K
+"entwickeln eigene soziale, ökologische und ökonomische Innovationsvorhaben und Verantwortung dafür zu übernehmen, erstellen Nachhaltigkeitsbewertung für die Innovationsvorhaben, Produkte, Prozesse und Systeme, konzipieren Startups und bauen Strukturen für erfolgreiche KMU auf.",TH Mittelhessen,K,5,K,K,K
+andere für eine eigene Sache mobilisieren und die Interessen der Gemeinschaft wahren.,TH Mittelhessen,K,5,S,K,K
+"ihren Lernfortschritt reflektieren und ihr Lernverhalten ggf. (methodisch/zeitlich) anpassen,",TH Mittelhessen,K,3,K,K,K
+"betriebliche Umwelt-/Ökobilanzen konzipieren, erstellen und weiterentwickeln,",TH Mittelhessen,K,6,S,K,K
+"Methoden des betrieblichen Ressourcenmanagements wie z.B. Betriebliche Umwelt-/Ökobilanzen, Corporate Carbon Footprint anwenden und Ergebnisse kritisch reflektieren.",TH Mittelhessen,K,3,K,K,K
+"die Anwendung der vermittelten Methoden und Konzepte auf ausgewählte Fallbeispiele transferieren,",TH Mittelhessen,K,3,S,K,K
+"in der Gruppe kooperativ und effektiv Lösungen für die Problemstellung entwickeln,",TH Mittelhessen,K,6,K,K,K
+in Diskussionen den eigenen Standpunkt argumentativ und sachlich darstellen.,TH Mittelhessen,K,2,K,K,K
+"Kennzahlen, mit deren Hilfe der Erfolg in den einzelnen Prozessschritten gemessen werden.",TH Mittelhessen,I,,S,K,K
+"Die Studierenden können die Übergänge zwischen den einzelnen Prozessschritten aktiv gestalten und in einen Gesamtzusammenhang bringen,",TH Mittelhessen,K,3,K,K,K
+die Ergebnisse Ihrer Vorschläge bewerten.,TH Mittelhessen,K,5,S,K,K
+"auf Kritik reagieren und diese positiv nutzen, um zukünftig noch bessere Entscheidungen treffen zu können,",TH Mittelhessen,K,3,S,K,K
+anhand der gemachten Erfahrungen konstruktiv an ihrer Weiterentwicklung arbeiten.,TH Mittelhessen,K,6,S,K,K
+"können die notwendigen Komponenten zur Drucklufterzeugung und -aufbereitung beschreiben,",TH Mittelhessen,K,2,K,K,K
+"Transport- und Zuordnungsprobleme, Lagerhaltungsmodelle sowie die Methoden der Routen- und Tourenplanung in die logistischen Kernfunktionen und das Operations Research einordnen,",TH Mittelhessen,K,4,S,K,K
+"Verfahren zur Erzeugung von dreidimensionalen Körpern (Extrusion, Rotation etc.) anwenden,",TH Mittelhessen,K,3,K,K,K
+"Bauteile mittleren bis hohen Schwierigkeitsgrades erzeugen,",TH Mittelhessen,K,3,S,K,K
+"Bauteile zu einer Baugruppe zusammenbauen,",TH Mittelhessen,K,3,S,K,K
+Die Studierenden können anhand digitaler Modelle Sachverhalte erklären.,TH Mittelhessen,K,2,K,K,K
+"selbstständig ein komplexes System in Form einer 3D Baugruppe und Zeichnung fertigungsgerecht darstellen,",TH Mittelhessen,K,6,K,K,K
+"die Notwendigkeit der Ganzzahligkeit bei LP erkennen und erklären,",TH Mittelhessen,K,2,K,K,K
+"verschiedene Verfahren von OR, Statistik und Logistischen Spezialproblemen erkennen und mit Hilfe von Anwendungsprogrammen am PC lösen und interpretieren.",TH Mittelhessen,K,3,K,K,K
+betriebswirtschaftliche Probleme/Aufgaben und logistische Spezialprobleme mit Hilfe von spezieller Software am PC modellieren und lösen.,TH Mittelhessen,K,3,K,K,K
+Die Studierenden können alleine und kooperativ in Gruppen ihre Ergebnisse argumentativ sachlich vertreten und auf Fragen ihrer Mitstudierenden eingehen.,TH Mittelhessen,K,5,K,K,K
+Die Studierenden können in Diskussionen den eigenen Standpunkt argumentativ und sachlich darstellen.,TH Mittelhessen,K,2,K,K,K
+"vertiefen in Gruppenübungen das Arbeiten im Team mit den zugehörigen Kommunikationsprozessen,",TH Mittelhessen,K,3,S,K,K
+"die Möglichkeiten und Grenzen der Informationsverarbeitung bewerten,",TH Mittelhessen,K,5,S,K,K
+Die Studierenden können die Grundprinzipien für das Programmieren anwenden.,TH Mittelhessen,K,3,K,K,K
+ihren Lernfortschritt reflektieren.,TH Mittelhessen,K,5,K,K,K
+kennen die Eigenschaften von realen Fluiden und von Fluidgemischen.,TH Mittelhessen,K,1,K,K,K
+"Die Studierenden können sich sachkompetent an Diskussionen über Energiefragen beteiligen,",TH Mittelhessen,K,3,K,K,K
+"in Gruppen kooperativ und effektiv Lösungen für Problemstellungen entwickeln,",TH Mittelhessen,K,6,K,K,K
+ihren Standpunkt in Diskussionen argumentativ sachlich vertreten.,TH Mittelhessen,K,3,S,K,K
+"ihren Lernprozess den individuellen Ressourcen entsprechend sinnvoll planen und strukturieren,",TH Mittelhessen,K,6,K,K,K
+Sie haben einen Überblick über die Bezugsdisziplinen der Sozialen Arbeit.,Universität Kassel,K,1,S,K,K
+Die Studierenden verfügen über Kenntnisse in einer breiten Spanne unterschiedlicher empirischer Forschungsansätze und den dazugehörenden qualitativen sowie quantitativen Forschungsmethoden und -methodologien.,Universität Kassel,K,1,K,K,K
+Die Studierenden verfügen dadurch über ein vertieftes Verständnis von Professionalität und professionellen Kompetenzen sowie über entsprechendes anwendungsbezogenes Wissen.,Universität Kassel,K,2,K,K,K
+"Aufbauend auf Modul 7.1. können Studierende durch die Einbindung in ein Theorie-Praxis Projekt, Theorien und Handlungskonzepte der Sozialen Arbeit identifizieren und an ihrer methodischen Anwendung gezielt mitwirken.",Universität Kassel,K,1,K,K,K
+Die Studierenden haben dadurch ein vertieftes Verständnis von Professionalität und professionellen Kompetenzen entwickelt.,Universität Kassel,K,2,K,K,K
+"Sie wissen, wie diese sich historisch entwickelt haben und welcher gesellschaftlichen und rechtlichen Dynamik sie weiterhin unterliegen.",Universität Kassel,K,1,K,K,K
+"Studierende kennen Lebenssituationen, Ressourcen und Handlungsmöglichkeiten von Adressat*innen im Arbeitsfeld ihrer Praxiseinrichtung.",Universität Kassel,K,1,K,K,K
+Sourcecode grundlegend unter Zuhilfenahme von Standardwerkzeugen dokumentieren.,TU Darmstadt,K,3,S,K,K
+"Sie verfügen über die notwendigen Grundkenntnisse, Grammatiken und formale Sprachen im Rahmen der Chomsky-Hierarchie und zugehöriger Berechnungsmodelle einzuordnen und zu analysieren.",TU Darmstadt,K,4,K,K,K
+"Sie erwerben die Fähigkeiten, die Grundprinzipien der Algorithmik anzuwenden und asymptotische Komplexität einzuschätzen und zu bestimmen.",TU Darmstadt,K,3,K,K,K
+Sie können die Qualität der Realisierungen in verschiedenen Gütemaßen bewerten.,TU Darmstadt,K,5,S,K,K
+Sie verstehen die Trennung zwischen Syntax und Semantik formaler Sprachen und können sowohl Aussagen über konkrete Programme und Spezifikationen als auch einfache Metaaussagen über Programmier- und Spezifikationssprachen beweisen.,TU Darmstadt,K,2,S,K,K
+Sie können Systemanforderungen denotationell formalisieren und die Angemessenheit solcher Formalisierungen beurteilen.,TU Darmstadt,K,3,K,K,K
+"ein tiefgehendes Verständnis ausgewählter, elementarer Algorithmen, Protokolle und Verfahren, die im Internet eingesetzt werden sowie",TU Darmstadt,K,2,S,K,K
+Nach dem erfolgreichen Besuch der Veranstaltung verstehen Studierende die Grundlagen paralleler Systeme und ihrer sowohl korrekten als auch effizienten Programmierung.,TU Darmstadt,K,2,K,K,K
+Sie können einfache Anwendungen mittels paralleler Programmierung auf ausgewählten Plattformen entwickeln und analysieren.,TU Darmstadt,K,4,K,K,K
+"Nach erfolgreichem Abschluss des Teamprojektes Softwareentwicklung sind die Studierenden in der Lage, folgende Aufgaben lösen zu können:",TU Darmstadt,S,,K,K,K
+Studierende erhalten nach erfolgreichem Besuch der Veranstaltung einen Überblick über grundlegende Betriebssystem-Konzepte.,TU Darmstadt,K,2,K,K,K
+"Voraussetzung für die Teilnahme Empfohlen: “Algorithmen und Datenstrukturen”, “Funktionale und objektorientierte Programmierung”, “Rechnerorganisation”",TU Darmstadt,S,,S,S,S
+"Sie kennen die wesentlichen Schritte zum Aufbau solcher Simulationssysteme (Problemspezifikation, Modellbildung und Parameteridentifikation, Modellanalyse, Implementierung und Validierung) und können mit diesen erste Simulationen konstruieren, die gegebene Anforderungen erfüllen.",TU Darmstadt,K,1,K,K,K
+Hierbei wird die Fähigkeit erlernt für grundlegende Aufgabenstellungen in der Simulation geeignete numerische Verfahren auszuwählen und anzuwenden.,TU Darmstadt,K,3,K,K,K
+Nach erfolgreichem Besuch der Veranstaltung haben die Studierenden praktisch anwendbare Grundkenntnisse in den beiden wichtigsten Verfahren zur formalen Spezifikation und Verifikation von Software: 1.,TU Darmstadt,K,1,K,K,K
+Studierende beherrschen nach erfolgreichem Besuch der Veranstaltung die Grundlagen der Computer Vision.,TU Darmstadt,K,1,K,K,K
+"Nach erfolgreichen Abschluss der Lehrveranstaltung, verstehen Studierende die wichtigsten Methoden und Ansätze des Statischen Maschinellen Lernens.",TU Darmstadt,K,2,K,K,K
+"Sie lösen das Inferenzproblem mittels diskreter oder kontinuierlicher Inferenzalgorithmen, und wenden diese auf realistische Bilddaten an.",TU Darmstadt,K,3,K,K,K
+"Sie verstehen Inferenzalgorithmen, beurteilen deren Eignung und gebrauchen diese für graphische Modelle in relevanten Anwendungen.",TU Darmstadt,K,2,K,K,K
+"Sie ermitteln weiterhin welche Lernverfahren sich eignen, um die Modellparameter anhand von Beispieldaten zu bestimmen, und wenden diese an.",TU Darmstadt,K,3,K,K,K
+Nach erfolgreichen Abschluss der Lehrveranstaltung verstehen Studierende die Grundlagen des Maschinellen Lernens und der Robotik.,TU Darmstadt,K,2,K,K,K
+"Sie können maschinelle Lernverfahren anwenden um einen Roboter zu befähigen, neue Aufgaben zu erlernen.",TU Darmstadt,K,3,K,K,K
+"Die erfolgreiche Teilnahme an der Lehrveranstaltung versetzt die Studierenden in die Lage, die wichtigsten modernen automatische Beweisverfahren im Detail zu verstehen, ihre Vorund Nachteile zu beurteilen und in der Praxis anzuwenden.",TU Darmstadt,K,2,K,K,K
+"Die Lehrveranstaltung ist eine systematische Einführung in die Grundlagen und Methodik des statistisch-relationalen Lernens und Künstlichen Intelligenz: Das Studium und Design von intelligenten Agenten, die in verrauschten Welten agieren, die aus Individuen (Objekte, Dinge) und komplexe Beziehungen zwischen den Individuen bestehen.",TU Darmstadt,I,,S,K,K
+Sie verstehen die grundlegenden Herausforderungen von relationalen Domänen.,TU Darmstadt,K,2,K,K,K
+Sie sind außerdem in der Lage ihre Kenntnisse auf aktuelle Probleme anzuwenden.,TU Darmstadt,K,3,K,K,K
+"Sie sind auch in der Lage sein, fundierte Entscheidungen über die Wahl eines universellen Deep Learning Paradigmas für ein gegebenes medizinische Bildanalyseproblem zu treffen.",TU Darmstadt,K,5,S,K,K
+"Nachdem Studierende das Modul besucht haben, können sie",TU Darmstadt,S,,K,S,S
+grundlegende DGMs in einer dafür ausgelegten höheren Programmiersprache selbstständig konstruieren / implementieren,TU Darmstadt,K,6,K,K,K
+"Techniken einsetzen, um Befangenheit und Unfairness in Modellen und Daten zu identifizieren und genezusteuern",TU Darmstadt,K,3,K,K,K
+"Nach erfolgreichem Abschluss des Kurses verstehen die Studierenden affektive Interaktionen und deren Auswirkungen auf die Mensch-Computer-Interaktion, lernen Methoden zur Erhebung, Analyse und Auswertung affektiver Verhaltensdaten anzuwenden.",TU Darmstadt,K,2,K,K,K
+Sie gewinnen praktische Erfahrung mit den Rahmenbedingungen für menschliches Affekt- und Verhaltensverständnis und ein Bewusstsein für potenzielle Verzerrungen in Daten sowie mögliche Gefahren im Umgang mit sensitiven personenbezogenen Daten.,TU Darmstadt,K,2,S,K,K
+die IT Sicherheitsziele und die kryptographischen Primitive zu deren Realisierung verstehen.,TU Darmstadt,K,2,K,K,K
+Verstehen der Prinzipien von Public und Secret-Key-Verschlüsselung und der relevanten Verfahren einschließlich ihrer Sicherheit und Effizienz,TU Darmstadt,K,2,S,K,S
+Sie können Herausforderungen der Multimedia Sicherheit aus einer Palette von Lösungsmechanismen bedarfsabhängig optimal adressieren.,TU Darmstadt,K,3,S,K,K
+"Studenten haben nach Abschluss der Veranstaltung in breites Wissen über IT-Sicherheit, Datenschutz und Privatsphäre im Internet.",TU Darmstadt,K,1,S,K,K
+Die Studierenden können die wichtigsten Basistechnologien zur Absicherung von Netzen unterscheiden.,TU Darmstadt,K,4,K,K,K
+"Somit sind sie in der Lage, die Charakteristiken und Grundprinzipien des Problemraumes zu erfassen und weisen auf dem Feld sicherer mobiler Systeme ein fundiertes Wissen in Praxis und Theorie auf.",TU Darmstadt,K,2,K,K,K
+Sie können die Arbeiten anderer präsentieren und neue Forschungsfragen ableiten.,TU Darmstadt,K,2,K,K,K
+Insbesondere werden folgende Fragestellungen behandelt:,TU Darmstadt,S,,S,S,S
+Die Entwicklung von sicheren verteilten Systemen,TU Darmstadt,I,,S,K,S
+"Die grundlegenden Konzepte von Blockchain-Systemen, insbesondere Konsensmechanismen, Wallets und Mining",TU Darmstadt,I,,S,I,S
+Ein Überblick über verschiedene Altcoins und deren Vor-/Nachteile Voraussetzung für die Teilnahme Empfohlen: Besuch der Vorlesung “Introduction to Cryptography / Einführung in die Kryptographie” bzw. entsprechende Kenntnisse aus anderen Studiengängen,TU Darmstadt,S,,S,S,S
+"Kenntnisse über sicherheitskritische interaktive Systeme (Betriebliche Informationssysteme, Krisenmanagementsysteme, Medizintechnik, Warn- und Assistenzsysteme)",TU Darmstadt,K,1,S,K,S
+"Das Hauptziel dieser Veranstaltung ist es zu vermitteln, wie die IT- und Informationssicherheit in einem Unternehmen ganzheitlich gemanagt wird, wobei der Fokus auf dem Management und weniger auf technischer oder formaler IT-Sicherheit liegt. * Kenntnisse, Inhalte und Strukturen eines Informationssicherheitsmanagements (ISMS) * Überblick über gängige Verfahren bzgl.",TU Darmstadt,I,,S,K,K
+"Informationssicherheitsmanagement wie z.B. ISO 27001, IT-Grundschutz, NIST Cybersecurity Framework * Identifikation und Schutzbedarfsanalyse von Assets im Unternehmen * Kenntnisse über übliche Verfahren im Risikomanagement * Systematische Bewertung der Informationssicherheit im Unternehmen anhand von Metriken * Etablierung von informationssicherheitsrelevanten Prozessen wie Vulnerability Management, BCM-Prozesse, Incident Management und Audit Management",TU Darmstadt,I,,S,K,S
+Sie können die wichtigsten Grundlagen drahtloser Kommunikationstechniken erläutern. weiterhin Medienzugriffsverfahren kategorisieren und die Funktionsweise dieser Verfahren im Detail erklären.,TU Darmstadt,K,2,K,K,K
+Voraussetzung für die Teilnahme,TU Darmstadt,S,,S,S,S
+"Das Hauptziel ist es, dass die Studierenden das Wissen besitzen, solche Systeme zu designen und zu entwickeln, inklusive praktischer Übungen auf Basis von bestehenden Systemen wie Spark.",TU Darmstadt,K,6,K,K,K
+"Nach erfolgreichem Abschluss des Moduls kennen die Studierenden die grundlegenden Konstruktionsprinzipien moderner Kommunikationsnetze, insbesondere des Internets.",TU Darmstadt,K,1,K,K,K
+"Studierende haben nach Abschluss des Moduls vertiefende Einblicke in Software Defined Networking, sowie grundlegender Technologien und Anwendungen, erhalten.",TU Darmstadt,K,2,K,K,K
+"Nach erfolgreichem Besuch dieser Veranstaltung sind Studierende in der Lage alle Komponenten der Graphikpipeline zu verstehen und dadurch variable Bestandteile (VertexShader, Fragment-Shader, etc.) anzupassen.",TU Darmstadt,K,2,K,K,K
+"Nach erfolgreichem Besuch dieser Veranstaltung sind Studierende in der Lage mit diversen Objekt- und Oberflächen-Repräsentationen umzugehen, das heißt diese zu verwenden, anzupassen, anzuzeigen (rendern) und effektiv zu speichern.",TU Darmstadt,K,3,K,K,K
+Studierende beherrschen nach erfolgreichem Besuch der Veranstaltung die Grundlagen der rechnergestützten Methoden der geometrischen Modellierung und Simulation.,TU Darmstadt,K,1,K,K,K
+Weiter kennen Sie klassische Datenstrukturen und Algorithmen aus dem Computer Aided Design (CAD).,TU Darmstadt,K,1,K,K,K
+"Sie sind in der Lage, diese Techniken praktisch umzusetzen und damit 3D-Geometrie im Rechner darzustellen und zu visualisieren.",TU Darmstadt,K,3,K,K,K
+Noch erfolgreichem Besuch der Veranstaltung haben die Studierenden einen Überblick über die Funktionsweise und die Möglichkeiten der modernen Bildverarbeitung.,TU Darmstadt,K,2,K,K,K
+Visualisierung und automatische Datenverarbeitung kombinieren um Big Data Probleme zu lösen,TU Darmstadt,K,3,K,K,K
+"Nachdem Studierende die Veranstaltung erfolgreich besucht haben, können sie Technologietrends und Forschungserkenntnisse im Bereich Ambient Intelligence beschreiben.",TU Darmstadt,K,2,K,K,K
+"Die wichtigsten Konzepte zur Realisierung „intelligenter Umgebungen“ intelligente Netzwerke und Objekte, Techniken der erweiterten, mobilen Realität, ubiquitäre und allgegenwärtige Informationsräume, nomadische Kommunikationen, Echt-ZeitKommunikation und relevante Middleware, Eingebettete Systeme, Sensor Netzwerke und Wearable Computing - können diskutiert und eingeordnet werden.",TU Darmstadt,K,2,K,K,K
+Sie verstehen grundlegende parallele Algorithmen und Programmierparadigmen und können sich selbständig aktuelle Literatur erarbeiten.,TU Darmstadt,K,2,S,K,K
+Studierende kennen nach einem erfolgreichen Besuch der Veranstaltung Mehrkörpersysteme und diskrete und kontinuierliche deformierbare Simulationsmodelle.,TU Darmstadt,K,1,K,K,K
+Sie haben einen grundlegenden Überblick über Verfahren der Echtzeitsimulation in der Computergraphik.,TU Darmstadt,K,1,S,K,K
+Sie beherrschen Optimierungsverfahren für eine Reihe von Aufgaben sowie fundamentale Verfahren für die Registerallokation.,TU Darmstadt,K,3,K,K,K
+Sie kennen die interne Struktur von realen Compilern für den Produktivbetrieb.,TU Darmstadt,K,1,K,K,K
+Geeignete Methoden zur Entwicklung von benutzerzentrierten Softwarelösungen identifizieren und begründen,TU Darmstadt,K,1,K,K,K
+Techniken zu benutzerzentrierten Nutzungsschnittstellen anwenden,TU Darmstadt,K,3,K,K,K
+"Verbesserungen zur Informationsaufnahme und Navigation auf Basis vorhandener Untersuchungen und Evaluationen vorschlagen Voraussetzung für die Teilnahme Empfohlen: Grundlagen des Visual Computing, wie sie beispielsweise in den Veranstaltungen „Visual Computing“ und „Graphische Datenverarbeitung I“ vermittelt werden",TU Darmstadt,K,5,S,S,S
+"Nach erfolgreichem Abschluss des Kurses sind die Studierenden in der Lage sein, alle Komponenten der Formulierung eines medizinischen Bildanalyseproblems als Problem des Maschinellen Lernens zu verstehen.",TU Darmstadt,K,2,K,K,K
+"den Aufbau und die Funktionsweise Tiefer Generativer Modelle (Deep Generative Models, DGM) erklären",TU Darmstadt,K,2,K,K,K
+wissenschaftliche Veröffentlichungen zum Thema DGMs kritisch hinterfragen und damit fachlich beurteilen,TU Darmstadt,K,5,K,K,K
+grundlegende DGMs in einer dafür ausgelegten höheren Programmiersprache selbstständig konstruieren / implementieren,TU Darmstadt,K,6,K,K,K
+"Im Rahmen des Kurses sollen die Studierenden folgende Fähigkeiten erwerben: * Verständnis der theoretischen Grundlagen der Temporallogiken LTL, CTL und CTL* * Fähigkeit zur Auswahl der geeigneten Logik zur Spezifikation und Modellprüfung in Abhängigkeit von dem zu modellierenden System und der zu prüfenden Eigenschaft * Verfahren und Techniken zur Modellprüfung (Model Checking) z.B. Modellprüfung mit Büchiautomaten, Partial Order Reduction u.ä. * Wissen über die Charakteristika und Grenzen der Modellprüfung * Kenntnisse in der Modellprüfung von Timed Automate * Fähigkeit zur Anwendung von Tools zur Modellprüfung",TU Darmstadt,I,,K,K,K
+basierend auf den zuvor erarbeiteten Forschungsfragen ein dazu passendes Studiendesign entwerfen.,TU Darmstadt,K,6,K,K,K
+"Das Modul vermittelt den Studierenden nach erfolgreichem Abschluss anhand praktischer Beispiele grundlegende Software-Wartungs- und Qualitätssicherungs-Techniken, also eine ingenieurmäßige Vorgehensweise zur zielgerichteten Wartung und Evolution von Softwaresystemen.",TU Darmstadt,I,,S,K,K
+"Die Studierenden sind in der Lage, die im Rahmen der Softwarewartung und -pflege eines größeren Systems anfallenden Tätigkeiten durchzuführen.",TU Darmstadt,K,3,K,K,K
+"Dazu gehören folgende Fähigkeiten:  Systemarchitekturen zu bewerten und Echtzeitsysteme zu klassifizieren  selbständig ausführbare Modelle zu erstellen und zu analysieren  Prozesseinplanungen anhand üblicher Schedulingalgorithmen durchzuführen  Echtzeitprogrammiersprachen und -Betriebssysteme zu unterscheiden, zu bewerten und einzusetzen.",TU Darmstadt,K,3,K,K,K
+"Voraussetzung für die Teilnahme Grundkenntnisse des Software-Engineerings sowie Kenntnisse einer objektorientierten Programmiersprache Prüfungsform Modulabschlussprüfung:  Modulprüfung (Fachprüfung, mündliche / schriftliche Prüfung, Dauer 90 Min, Standard) Die Prüfung erfolgt durch eine Klausur (Dauer: 90 Min.).",TU Darmstadt,S,,S,S,S
+kennen sie Verfahren zur Effizienzsteigerung,TU Darmstadt,K,1,K,K,K
+"beherrschen sie Methoden, um spezielle Eigenschaften (Planarität, Dünnbesetztheit) auszunutzen",TU Darmstadt,K,3,S,K,K
+können sie die Effizienz von Verfahren in der Praxis beurteilen,TU Darmstadt,K,5,K,K,K
+"Nachdem Studierende erfolgreich diese Veranstaltung besucht haben,",TU Darmstadt,S,,K,S,S
+Sie verstehen die Funktionsweise der einzelnen Analysetechniken und verstehen die Unterschiede zwischen diesen.,TU Darmstadt,K,2,K,K,K
+"Am Ende der Vorlesung wird eine Zusammenfassung der neuesten Entwicklungen in Industrie und Wissenschaft gegeben, die es den Studierenden ermöglicht, ihre zukünftigen Interessen in diesem Bereich zu steuern.",TU Darmstadt,S,,K,K,K
+"In dieser Veranstaltung vertiefen Studierende die Kompetenz zur Lösung algorithmischer Problemstellungen aus der Praxis und die Fähigkeit, Algorithmen in praktisch effiziente Implementationen umzusetzen.",TU Darmstadt,K,3,K,K,K
+jeweils eine Visualisierung für die zentralen Elemente von zwei ausgewählten Algorithmus zu konstruieren.,TU Darmstadt,K,6,K,K,K
+den Erfolg des Einsatzes solcher Techniken evaluieren und messen zu können,TU Darmstadt,K,5,K,K,K
+"Nach dem erfolgreichen Abschluss des Praktikums sind die Studierenden dazu in der Lage, selbständig ein Problem aus dem Bereich des Visual Computings zu analysieren, zu lösen und die Ergebnisse zu bewerten.",TU Darmstadt,K,4,K,K,K
+"Die Studierenden sind in der Lage die gewählten Protokolle und Anwendungen zu implementieren, zu testen und deren Funktionsfähigkeit und Leistungsfähigkeit zu evaluieren.",TU Darmstadt,K,3,K,K,K
+Sie verstehen die Vorteile der Verwendung von Proof-Carrying Code.,TU Darmstadt,K,2,K,K,K
+Nach erfolgreichem Absolvieren der Veranstaltung können die Studierenden eine praktische Aufgabenstellung aus dem „Serious Games“-Umfeld eigenständig bearbeiten sowie die dafür nötige Software konzipieren und prototypisch umsetzen.,TU Darmstadt,K,3,K,K,K
+Außerdem können sie die von ihnen erzielten Ergebnisse einem Publikum unter Anwendung von verschiedenen Präsentationstechniken vorstellen sowie eine dazugehörige Fachdiskussion aktiv bestreiten.,TU Darmstadt,K,3,S,K,K
+Nach Bearbeitung dieses Projekts sind die Studierenden in der Lage,TU Darmstadt,S,,K,S,S
+in einem wissenschaftlichen Vortrag zu präsentieren,TU Darmstadt,K,3,S,K,K
+"Hierzu können sie aktuelle Techniken analysieren, modifizieren und anwenden.",TU Darmstadt,K,3,K,K,K
+"Nach erfolgreicher Teilnahme an der Veranstaltung kennen Studierende die Formalismen auf denen Isabelle/HOL basiert, und sie könnnen dieses moderne Verifikationswerkzeug verwenden.",TU Darmstadt,K,1,K,K,K
+"Sie können erstellte formale Modelle und Beweise beurteilen, anderen präsentieren und im Team fundiert diskutieren.",TU Darmstadt,K,5,K,K,K
+Sie können Mechanismen zur dynamischen Kontrolle für konkrete Systeme und Anforderungen einsetzen und adaptieren.,TU Darmstadt,K,3,S,K,K
+Nach erfolgreicher Teilnahme an der Veranstaltung kennen Studierende grundlegende Konzepte von Android wie das Berechtigungssystem.,TU Darmstadt,K,1,K,K,K
+Nach erfolgreichem Absolvieren der Veranstaltung können die Studierenden wesentliche Teile von modernen Compilern selbständig implementieren und ggf. in existierende CompilerFrameworks integrieren.,TU Darmstadt,K,3,K,K,K
+"sprachtechnologische Frameworks verstehen und einsetzen,",TU Darmstadt,K,2,S,K,K
+"komplexe NLP-Systeme eigenständig planen und umsetzen,",TU Darmstadt,K,3,K,K,K
+Sie können durch Verwendung der EAD/CAD-Werkzeuge ihre Entwürfe in ein rekonfigurierbares System-on-Chip integrieren.,TU Darmstadt,K,3,S,K,K
+"Die Teilnehmenden erwerben die Fertigkeiten, das in vorangehenden Veranstaltungen erworbene Methodenwissen nun anzuwenden, um ein eingebettetes System mittels Hardware/Software-Co-Entwurf zu realisieren.",TU Darmstadt,K,3,K,K,K
+Sie trainieren weiterhin Präsentationsfähigkeiten und die Arbeit in einem Team.,TU Darmstadt,K,3,S,K,K
+"Nach der Teilnahme am ""DSP-Praktikum"" können Studierende technische und wissenschaftliche Probleme im Bereich DS lösen.",TU Darmstadt,K,3,K,K,K
+"Da die angebotenen Themen ein großes Themengebiet abdecken, sind die Anforderungen sehr verschieden und projektabhängig.",TU Darmstadt,S,,S,S,S
+Wertschätzung der verschiedenen Rollen im Rahmen von Softwareentwicklungsprojekten,TU Darmstadt,K,5,S,K,S
+Präsentation von Projektergebnissen in Berichten und Vorträgen,TU Darmstadt,K,3,S,I,S
+Die Fähigkeit eine praktische Aufgabe ggf. im Team erfolgreich nach Vorgabe zu bearbeiten und deren Ergebnisse angemessen zu präsentieren.,TU Darmstadt,K,3,S,K,K
+Evaluation und Weiterentwicklung bestehender Anwendungen,TU Darmstadt,I,,S,I,S
+können Methoden zur automatischen Zusammenfassung auf Texttypen verschiedener Art anwenden,TU Darmstadt,K,3,K,K,K
+Mehr Erfahrung in Softwareentwicklung und Projektmanagement,TU Darmstadt,K,1,S,K,S
+Mehr Erfahrung in Softwareentwicklung und Projektmanagement,TU Darmstadt,K,1,S,K,S
+Ziel dieses Praktikums ist die Ausweitung von Programmierkentnissen sowie die Partizipation in Forschungsprojekten.,TU Darmstadt,S,,S,S,S
+"Am Ende der Veranstaltung sind die Studierenden in der Lage, mit komplexen Spezifikationen von Funkprotokollen umzugehen und in die Praxis zu transferieren.",TU Darmstadt,K,3,K,K,K
+Weiterhin wird der praktische Umgang mit eingebetteten Systemen und Laborequipment vermittelt.,TU Darmstadt,I,,S,K,K
+Beispiele sind:,TU Darmstadt,S,,S,S,S
+Lösen einer Fragestellung im Bereich der interaktiven resilienten Informationstechnik,TU Darmstadt,I,,S,K,S
+Evaluation bestehender Anwendungen in Bezug auf verschiedene Gütemaße,TU Darmstadt,I,,S,I,S
+Ein theoretischer Teil vermittelt den Studierende Methoden zur Schwachstellenidentifikation und Bedrohungsmodellierung von Softwareprojekten.,TU Darmstadt,I,,S,K,K
+"Die Studierenden können nach dem Praktikum die Schwere und die Folgen von Sicherheitslücken einschätzen, sowie Gegenmaßnahmen benennen.",TU Darmstadt,K,1,K,K,K
+Studierende verstehen nach erfolgreichem Besuch der Veranstaltung die technischen und praktischen Implikationen von verteilten kryptographischen Systemen.,TU Darmstadt,K,2,K,K,K
+Entwicklung von Smart Contracts und verteilten Applikationen,TU Darmstadt,I,,S,I,S
+Sicherheit und Anonymität von Nutzern von kryptographischen Währungen,TU Darmstadt,I,,S,I,S
+Erlernen von fortgeschrittenen Techniken der modernen Kryptographie,TU Darmstadt,I,,S,K,S
+Durchführen von Literaturrecherche in der Kryptographie,TU Darmstadt,I,,S,I,S
+Sie werden in der Lage sein diese Erfahrungen zu reproduzieren und Projekte von vergleichbarer Komplexität eigenständig zum Erfolg führen.,TU Darmstadt,K,3,K,K,K
+Dabei lernen sie in Teamarbeit eine umfangreiche Aufgabe zu bewältigen.,TU Darmstadt,K,3,S,K,K
+"Darüber hinaus wird geübt, in der Gruppe vorhandenes theoretisches Wissen (aus anderen Lehrveranstaltungen wie insbesondere Software-Engineering – Einführung) gezielt zur Lösung der praktischen Aufgabe einzusetzen.",TU Darmstadt,K,3,S,K,K
+können sich Studierende kritische mit wissenschaftlicher Literatur auseinandersetzen,TU Darmstadt,K,4,K,K,K
+"Durch erfolgreiche Teilnahme erwerben Studierende vertiefte Kenntnisse in ausgewählten Bereichen, Teilsystemen und Methoden moderner Robotersysteme und trainieren Präsentations- und Dokumentationsfähigkeiten.",TU Darmstadt,K,1,K,K,K
+Nach dem Vortrag können die Studierenden aktiv eine Fachdiskussion zu dem präsentierten Thema leiten und bestreiten.,TU Darmstadt,K,3,K,K,K
+Nach erfolgreicher Teilnahme an der Veranstaltung können die Studierenden sich eigenständig in ein Thema anhand von wissenschaftlichen Veröffentlichungen einarbeiten und dieses wissenschaftlich beschreiben.,TU Darmstadt,K,2,K,K,K
+"Die schriftliche Ausarbeitung ermöglicht die wissenschaftliche Wiedergabe in Form von Schrift, während die Präsentation vor einem Fachpublikum die mündliche Wiedergabe fördert.",TU Darmstadt,S,,S,K,K
+"Nachdem Studierende die Veranstaltung besucht haben, können sie",TU Darmstadt,S,,K,S,S
+"wissenschaftliche Veröffentlichungen verstehen, kritisch beurteilen und untereinander diskutieren,",TU Darmstadt,K,2,K,K,K
+ein Forschungsthema eigenständig aufarbeiten und,TU Darmstadt,K,3,S,K,K
+Nach erfolgreicher Teilnahme an der Veranstaltung können die Studierenden sich eigenständig in aktuelle Themen der Computergraphik anhand von wissenschaftlichen Veröffentlichungen einarbeiten.,TU Darmstadt,K,3,K,K,K
+Nach dem Vortrag können die Vortragenden aktiv eine Fachdiskussion zu dem von ihnen präsentierten Thema bestreiten.,TU Darmstadt,K,3,S,K,K
+Software-Sicherheit für mobile Endgeräte; Verbesserung der Fähigkeiten zum Lesen und Verstehen wissenschaftlicher Artikel; Fähigkeit wissenschaftliche Ergebnisse als solche zu erkennen und inhaltlich zu bewerten; Fähigkeit über wissenschaftliche Arbeiten und Ergebnisse schriftlich zu berichten; Verbesserung der Fähigkeit zum Präsentieren und Diskutieren wissenschaftlicher Projekte und Ergebnisse,TU Darmstadt,K,1,S,K,K
+Dabei wenden sie verschiedene Präsentationstechniken an.,TU Darmstadt,K,3,S,K,K
+Kenntnisse von Methoden und aktuellen Forschungsfragestellungen zum Thema Nutzungskontrolle; Verbesserung der Fähigkeiten zum Lesen und Verstehen wissenschaftlicher Artikel; Fähigkeit wissenschaftliche Ergebnisse als solche zu erkennen und inhaltlich zu bewerten; Fähigkeit über wissenschaftliche Arbeiten und Ergebnisse schriftlich zu berichten; Verbesserung der Fähigkeit zum Präsentieren und Diskutieren wissenschaftlicher Projekte und Ergebnisse,TU Darmstadt,S,,S,K,K
+Sie können über mehrere wissenschaftliche Arbeiten hinweg Techniken vergleichen und Forschungsergebnisse übergreifend evaluieren.,TU Darmstadt,K,2,K,K,K
+Das Seminar richtet sich an Bachelor- und Masterstudenten die sich für das Thema Privatheit in der digitalen Welt interessieren.,TU Darmstadt,S,,S,K,K
+Nach erfolgreicher Teilnahme an der Veranstaltung können die Studierenden sich eigenständig in ein Thema anhand von wissenschaftlichen Veröffentlichungen einarbeiten.,TU Darmstadt,K,3,K,K,K
+Sie können über mehrere wissenschaftliche Arbeiten hinweg Techniken vergleichen und Forschungsergebnisse übergreifend evaluieren.,TU Darmstadt,K,4,K,K,K
+Die Studierenden lernen aktuelle und praktikable Techniken zum Schutz der Privatsphäre.,TU Darmstadt,K,1,K,K,K
+- Erstellen von wissenschaftlichen Kurzvorträgen,TU Darmstadt,I,,S,I,S
+"Nach erfolgreicher Teilnahme an diesem Seminar werden die Studierenden fähig sein, aktuelle Entwicklungen im Bereich von Programmsemantiken zu diskutieren.",TU Darmstadt,K,2,K,K,K
+Insbesondere lernen sie:,TU Darmstadt,S,,S,K,K
+Herausforderungen der IT-Gestaltung und –Nutzung im Kontext von Frieden und Sicherheit,TU Darmstadt,I,,S,I,S
+Verfassen wissenschaftlicher Ausarbeitungen,TU Darmstadt,K,6,S,I,S
+Insbesondere lernen sie:,TU Darmstadt,S,,S,K,K
+Methoden zur Entwicklung sicherheitskritischer Mensch-Computer-Interaktion,TU Darmstadt,I,,S,I,S
+Die Studierenden lernen die theoretischen Grundlagen sicherer Mehrparteienberechnungen und diverse Anwendungsbereiche im Detail kennen.,TU Darmstadt,K,1,K,K,K
+Außerdem sammeln die Studierenden praktische Erfahrungen im Umgang mit gängigen Analysewerkzeugen.,TU Darmstadt,K,3,K,K,K
+Die Studierenden sind nach der Veranstaltung in der Lage sich selbstständig in weitere ähnliche und komplexere Themen dieser Art einzuarbeiten.,TU Darmstadt,K,3,K,K,K
+"Nach der Teilnahme am ""DSP-Seminar"" können Studierende technische und wissenschaftliche Probleme im Bereich DS aufarbeiten und präsentieren.",TU Darmstadt,K,3,K,K,K
+* Fähigkeit ein wissenschaftliche Thema aufzuarbeiten und zu präsentieren * Fähigkeit wissenschaftliche Berichte zu lesen und verwandte Arbeiten zu recherchieren * Erwerb von Wissen über Aktor-basierte Sprachen und deren Anwendung,TU Darmstadt,K,1,S,K,K
+Die Studierenden können nach erfolgreicher Durchführung der Veranstaltung ausgewählte Forschungsaktivitäten und -resultaten zu modular Verifikation diskutieren.,TU Darmstadt,K,2,K,K,K
+"Sie lernen auch, wie Sie die Thematik für ein branchenorientiertes Publikum aufbereiten und die Anwendbarkeit für die Industrie dabei zu berücksichtigen.",TU Darmstadt,K,3,S,K,K
+Sie können Resultate aus diesem Bereich präsentieren und die Vorteile der präsentierten Methoden kritisch hinterfragen.,TU Darmstadt,K,2,S,K,K
+Das Seminar wird in Form einer Konferenz abgehalten.,TU Darmstadt,I,,S,S,S
+Die Studenten werden sich am Beispiel der Risikoeinschätzung und Kontrollstrategien die folgenden Fertigkeiten aneignen:,TU Darmstadt,S,,S,K,K
+Am Ende dieses Kurses verstehen die Studierenden aktuelle Forschungsthemen der humanoiden Robotik und können:,TU Darmstadt,K,2,K,K,K
+sich anhand von wissenschaftlichen Publikationen selbstständig in ein Themengebiet einarbeiten und,TU Darmstadt,K,3,S,K,K
+ihre Ergebnisse mündlich und schriftlich vor einem Fachpublikum präsentieren.,TU Darmstadt,K,3,S,K,K
+neuronale Funktionssysteme in ihren Teilen und Funktionsbezügen zu beschreiben.,TU Darmstadt,K,2,K,K,K
+"Es sollen Fähigkeiten erlernt werden, geeignete Lernmaterialien für Schulungen in Informatikthemen selbst zu erstellen, ihren Einsatz kritisch zu begleiten und dabei auch die Lernenden zu betreuen und anzuleiten.",TU Darmstadt,K,5,S,K,K
+"Es sollen Fähigkeiten erlernt werden, geeignete Lernmaterialien für Schulungen in Informatikthemen selbst zu erstellen, ihren Einsatz kritisch zu begleiten und dabei auch die Lernenden zu betreuen und anzuleiten.",TU Darmstadt,K,5,S,K,K
+Aufbereitung und Vermittlung des Vorlesungsinhaltes.,TU Darmstadt,I,,S,I,S
+Die Studierenden können nach erfolgreicher Durchführung der Veranstaltung:,TU Darmstadt,S,,K,S,S
+Lehrinhalte aus der Vorlesung für Haus- und Präsenzübungen aufbereiten,TU Darmstadt,K,3,S,K,K
+Praxisnahe Übungsformen konzipieren und erstellen,TU Darmstadt,K,6,S,K,K
+"Sie können Studierende in direktem persönlichen Kontakt, aber auch über elektronische Kommunikationsmedien anleiten und betreuen.",TU Darmstadt,K,3,S,K,K
+Studenten sind in der Lage:,TU Darmstadt,S,,S,S,S
+"Nach erfolgreichem Absolvieren der Veranstaltung sind die Studierenden in der Lage, selbständig Lehrmaterialien zu Informatikthemen zu erstellen.",TU Darmstadt,K,6,K,K,K
+Lehrinhalte aus der Vorlesung für Haus- und Präsenzübungen aufbereiten,TU Darmstadt,K,3,S,K,K
+Studentengruppen didaktisch unterstützen,TU Darmstadt,K,3,S,K,K

@@ -1,0 +1,40 @@
+# Environment & secrets
+.env
+.venv/
+*.pyc
+__pycache__/
+
+# Node
+node_modules/
+
+# IDE
+.claude/
+.vscode/
+*.swp
+*.swo
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.xmpdata
+*.pdfa.xmpi
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large binary models (tracked separately)
+code_projects/backend/models/
+
+# PDF materials (copyrighted)
+materials/
+CLAUDE.md

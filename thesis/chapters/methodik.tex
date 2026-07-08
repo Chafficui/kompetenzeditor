@@ -1,0 +1,113 @@
+% =============================================================================
+% Kapitel 3: Methodik
+% =============================================================================
+
+Dieses Kapitel beschreibt die methodische Vorgehensweise der vorliegenden Arbeit.
+Zunächst wird der übergeordnete Forschungsrahmen dargestellt, anschließend die systematische Anforderungserhebung erläutert und abschließend die Evaluationsmethodik definiert.
+
+\subsection{Forschungsrahmen: Design Science Research}\label{sec:dsr}
+
+Die Arbeit folgt dem Design-Science-Research-Paradigma (DSR) nach Hevner et al.~\cite{hevner2004designscience}.
+DSR zielt darauf ab, durch die Konstruktion und Evaluation von IT-Artefakten sowohl praktische als auch wissenschaftliche Erkenntnisse zu gewinnen.
+Im Gegensatz zu rein verhaltensorientierten Ansätzen, die beobachten und erklären, steht bei DSR das \emph{Gestalten} im Vordergrund: Ein Artefakt wird entworfen, implementiert und anhand definierter Kriterien evaluiert.
+
+Das zentrale Artefakt dieser Arbeit ist ein hybrider Analyseansatz, der regelbasierte und Embedding-basierte Textanalyse kombiniert, um Kompetenzformulierungen in deutschen Modulhandbüchern zu klassifizieren, taxonomisch einzuordnen und Verbesserungsvorschläge zu generieren.
+Der Ansatz wird als prototypische Weiterentwicklung des bestehenden Systems von Loth und Konert~\cite{loth2022kompetenzeditor} realisiert.
+
+Hevner et al. definieren sieben Richtlinien für Design-Science-Forschung, die im Folgenden auf diese Arbeit bezogen werden:
+
+\begin{enumerate}
+  \item \textbf{Design as an Artifact:} Das Artefakt ist der hybride Kompetenzeditor -- ein funktionsfähiges System, das die drei Analyseansätze (regelbasiert, Embedding-basiert, hybrid) implementiert und vergleichend evaluierbar macht.
+  \item \textbf{Problem Relevance:} Die Qualitätssicherung von Kompetenzformulierungen ist ein reales Problem der Hochschullehre. Bestehende Werkzeuge nutzen entweder statische Verblisten oder rein datengetriebene Ansätze; eine systematische Kombination beider Paradigmen für den deutschsprachigen Raum fehlt (vgl. Kap.~\ref{sec:grundlagen}).
+  \item \textbf{Design Evaluation:} Die Evaluation erfolgt quantitativ auf einem Gold-Standard-Datensatz mit den Metriken Precision, Recall, F1-Score und Precision@k (vgl. Kap.~\ref{sec:eval-methodik}).
+  \item \textbf{Research Contributions:} Die Beiträge umfassen (a)~den hybriden Cascading-Ansatz als Entwurfsmuster, (b)~den annotierten Gold-Standard-Datensatz deutschsprachiger Kompetenzformulierungen und (c)~die vergleichende Evaluation dreier Ansätze.
+  \item \textbf{Research Rigor:} Die Evaluation nutzt etablierte Klassifikationsmetriken, stratifizierte Datensplits und eine systematische Anforderungserhebung nach Sommerville~\cite{sommerville2016software}.
+  \item \textbf{Design as a Search Process:} Der iterative Charakter zeigt sich in der schrittweisen Entwicklung: Zunächst wird der bestehende Prototyp analysiert, dann Anforderungen erhoben, darauf aufbauend die Architektur entworfen und schließlich implementiert und evaluiert.
+  \item \textbf{Communication of Research:} Die Ergebnisse werden in dieser Thesis dokumentiert und der Quellcode zur Nachvollziehbarkeit bereitgestellt.
+\end{enumerate}
+
+\subsection{Anforderungserhebung}\label{sec:anforderungen}
+
+Die Anforderungserhebung folgt einem systematischen Vorgehen, das vier Quellenkategorien kombiniert.
+Sommerville~\cite{sommerville2016software} beschreibt Requirements Engineering als iterativen Prozess aus Ermittlung, Analyse, Spezifikation und Validierung.
+Im Kontext dieser Arbeit wird die Ermittlung durch die Kombination mehrerer Perspektiven operationalisiert.
+
+\subsubsection{Quellen der Anforderungen}\label{sec:anf-quellen}
+
+Die Anforderungen werden aus vier Quellenkategorien abgeleitet:
+
+\paragraph{Prototyp-Schwächen (S1--S8).}
+Die systematische Analyse des bestehenden Prototyps (vgl. Kap.~\ref{sec:vorarbeit}) identifiziert acht konkrete Schwächen: exakter Stringvergleich statt semantischer Analyse~(S1), geschlossene Verbliste~(S2), fehlende Kontextsensitivität~(S3), keine Klassifikation von Satztypen~(S4), statische Empfehlungen~(S5), fehlende Set-Analyse~(S6), simplifizierter Score~(S7) und fehlendes Konfidenzmaß~(S8).
+Jede Schwäche motiviert mindestens eine Anforderung.
+
+\paragraph{Betreuer-Feedback (K1--K5).}
+Rückmeldungen von Prof.\ Konert zum Exposé definieren zusätzliche Erwartungen: Precision@k als Evaluationsmetrik für Empfehlungen~(K1), Set-Analyse auf Modulebene~(K2), Konfidenzmaße für alle Zuordnungen~(K3), Hybrid als dritte Vergleichsvariante~(K4) und LLM-gestützte Vorannotation des Gold-Standards~(K5).
+
+\paragraph{Literatur.}
+Die Taxonomieforschung (Krathwohl~\cite{krathwohl2002revision}, Stanny~\cite{stanny2016reevaluating}, Cursio~\cite{cursio2013leitfaden}) zeigt, dass Verben mehrdeutig sind und Kontextanalyse erfordern.
+Die Embedding-Literatur (Reimers und Gurevych~\cite{reimers2019sentencebert}) liefert die technische Grundlage.
+Chiticariu et al.~\cite{chiticariu2013rulebased} belegen, dass regelbasierte Ansätze in kommerziellen Systemen dominant sind, wenn Transparenz und Nachvollziehbarkeit gefordert werden.
+
+\paragraph{Praxisanforderungen.}
+HRK nexus~\cite{hrknexus2015lernergebnisse} und Kopf et al.~\cite{kopf2010kompetenzen} definieren Qualitätskriterien für Kompetenzformulierungen, die als fachliche Validierungsgrundlage dienen.
+
+\subsubsection{Anforderungskatalog}\label{sec:anf-katalog}
+
+Aus den genannten Quellen werden sechs funktionale Anforderungen (FA1--FA6) und fünf nicht-funktionale Anforderungen (NFA1--NFA5) abgeleitet.
+Tab.~\ref{tab:anforderungen} gibt eine Übersicht mit Priorisierung nach dem MoSCoW-Schema.
+
+\begin{table}[H]
+\caption{Anforderungskatalog mit MoSCoW-Priorisierung\label{tab:anforderungen}}
+\centering
+\small
+\begin{tabular}{lllll}
+\hline
+\textbf{ID} & \textbf{Anforderung} & \textbf{Typ} & \textbf{Prio} & \textbf{Quelle} \\
+\hline
+FA1 & Klassifikation (K vs.\ Inhalt) & funktional & Must & S4, HRK \\
+FA2 & Taxonomie-Zuordnung (Stufe 1--6) & funktional & Must & S1--S3, K4 \\
+FA3 & Ähnlichkeitsbasierte Empfehlungen & funktional & Should & S5, K1 \\
+FA4 & Set-Analyse auf Modulebene & funktional & Should & S6, K2 \\
+FA5 & Echtzeit-Feedback & funktional & Must & P-Stärke \\
+FA6 & Persistenz & funktional & Should & P-Stärke \\
+\hline
+NFA1 & Konfidenzmaße pro Zuordnung & nicht-funkt. & Must & S8, K3 \\
+NFA2 & Transparenz der Analyse & nicht-funkt. & Should & Chiticariu \\
+NFA3 & Deutsche Sprache & nicht-funkt. & Must & Kontext \\
+NFA4 & Technologie-Migration (Nuxt 4) & nicht-funkt. & Must & S-EOL \\
+NFA5 & Antwortzeit $< 2$\,s & nicht-funkt. & Must & Usability \\
+\hline
+\end{tabular}
+\end{table}
+
+Die sieben Must-have-Anforderungen (FA1, FA2, FA5, NFA1, NFA3, NFA4, NFA5) definieren den Minimalumfang des Systems.
+Die Should-have-Anforderungen (FA3, FA4, FA6, NFA2) erweitern den Funktionsumfang und werden im Rahmen der verfügbaren Zeit umgesetzt.
+
+\subsection{Evaluationsmethodik}\label{sec:eval-methodik}
+
+Die Evaluation vergleicht drei Analyseansätze -- regelbasiert, Embedding-basiert und hybrid -- auf einem gemeinsamen Gold-Standard-Datensatz.
+Dieser Abschnitt beschreibt die Konstruktion des Datensatzes und die verwendeten Metriken.
+
+\subsubsection{Gold-Standard-Datensatz}\label{sec:gold-standard}
+
+Die Evaluationsgrundlage bildet ein Datensatz aus über 5\,600~Sätzen, die automatisiert aus Modulhandbüchern von vier deutschen Hochschulen und vier Fachbereichen extrahiert wurden.
+Die Datenquellen umfassen die Hochschule Fulda (Angewandte Informatik), die TU Darmstadt (Informatik), die TH Mittelhessen (Maschinenbau, Wirtschaftsingenieurwesen) und die Universität Kassel (Soziale Arbeit).
+Die Diversität der Hochschulen und Fachbereiche gewährleistet, dass die Evaluation nicht auf eine einzelne Institution oder Domäne beschränkt ist.
+
+Die Annotation erfolgt in einem zweistufigen Verfahren:
+Zunächst werden alle Sätze durch ein Large Language Model vorannotiert (LLM-gestützte Vorannotation nach K5), anschließend wird eine stratifizierte Stichprobe manuell validiert.
+Jeder Satz erhält drei Annotationen: den \emph{Satztyp} (Kompetenzformulierung, Inhaltsbeschreibung oder Sonstiges), für Kompetenzformulierungen die \emph{Taxonomiestufe} nach Anderson und Krathwohl~\cite{anderson2001taxonomy} (Stufen 1--6, wobei Mehrfachzuordnungen möglich sind) sowie eine Bewertung der \emph{Formulierungsqualität} (gut, akzeptabel, schlecht).
+Die Mehrfachzuordnung bei der Taxonomie trägt dem Umstand Rechnung, dass Sätze mit mehreren Handlungsverben verschiedenen Stufen angehören können.
+
+Der Datensatz wird stratifiziert nach Hochschule und Typ in ein Trainings-Set (80\,\%) und ein Test-Set (20\,\%) aufgeteilt (Seed~42), um reproduzierbare Ergebnisse zu gewährleisten.
+
+\subsubsection{Metriken}\label{sec:metriken}
+
+Für die Klassifikation (FA1) und Taxonomie-Zuordnung (FA2) werden Precision, Recall und F1-Score berechnet.
+Da die Klassenverteilung unbalanciert ist (94,6\,\% Kompetenzformulierungen), wird der \emph{gewichtete} F1-Score (\emph{weighted F1}) als primäre Metrik verwendet, der die Metriken jeder Klasse proportional zu ihrer Häufigkeit gewichtet.
+Ergänzend werden die klassenweisen F1-Werte berichtet, um die Leistung auf unterrepräsentierten Klassen (insbesondere Stufe~4 \emph{Analysieren} und Stufe~5 \emph{Bewerten}) transparent zu machen.
+
+Für das Empfehlungssystem (FA3) wird Precision@k verwendet: Unter den Top-$k$ vorgeschlagenen Referenzformulierungen wird der Anteil relevanter Ergebnisse gemessen.
+Die Relevanz wird durch Übereinstimmung der Taxonomiestufe operationalisiert.
+
+Die Set-Analyse (FA4) wird qualitativ bewertet, da keine quantitative Ground Truth auf Modulebene vorliegt.

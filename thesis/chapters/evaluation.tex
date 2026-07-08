@@ -1,0 +1,527 @@
+% =============================================================================
+% Kapitel 7: Evaluation
+% =============================================================================
+
+Dieses Kapitel beschreibt die Evaluation des in Kap.~\ref{sec:implementierung} implementierten Systems.
+Zunächst wird die Konstruktion des Gold-Standard-Datensatzes dargestellt, anschließend die Validierung der LLM-gestützten Annotation und abschließend die vergleichende Evaluation der drei Analyseansätze.
+
+\subsection{Gold-Standard-Datensatz}\label{sec:eval-goldstandard}
+
+Die in Kap.~\ref{sec:gold-standard} beschriebene Evaluationsmethodik erfordert einen annotierten Datensatz, der als Ground Truth dient.
+Dieser Abschnitt beschreibt die Datenquellen, das Annotationsverfahren und die resultierende Datensatzstruktur.
+
+\subsubsection{Datenquellen}\label{sec:eval-datenquellen}
+
+Um die Generalisierbarkeit der Ergebnisse über eine einzelne Hochschule hinaus zu gewährleisten, wurden Qualifikationsziel-Abschnitte aus Modulhandbüchern von vier Hochschulen und vier Fachbereichen extrahiert.
+Tab.~\ref{tab:datenquellen} gibt eine Übersicht.
+
+\begin{table}[H]
+\caption{Datenquellen des Gold-Standard-Datensatzes\label{tab:datenquellen}}
+\centering
+\small
+\begin{tabular}{llrr}
+\hline
+\textbf{Hochschule} & \textbf{Fachbereich} & \textbf{Module} & \textbf{Sätze} \\
+\hline
+Hochschule Fulda & Angewandte Informatik & 391 & 3\,213 \\
+TU Darmstadt & Informatik & 41 & 896 \\
+TH Mittelhessen & Maschinenbau & 73 & 281 \\
+TH Mittelhessen & Wirtschaftsingenieurwesen & 63 & 1\,187 \\
+Uni Kassel & Soziale Arbeit & 17 & 40 \\
+\hline
+\textbf{Gesamt} & \textbf{4 Fachbereiche} & \textbf{585} & \textbf{5\,617} \\
+\hline
+\end{tabular}
+\end{table}
+
+Die Auswahl der externen Hochschulen folgt drei Kriterien: (1)~öffentliche Verfügbarkeit der Modulhandbücher als PDF, (2)~Diversität der Fachbereiche, um domänenübergreifende Robustheit zu prüfen, und (3)~unterschiedliche Formulierungstraditionen, da ingenieurwissenschaftliche und sozialwissenschaftliche Modulhandbücher andere sprachliche Muster aufweisen als informatische.
+
+Die Textextraktion erfolgt mit \texttt{pdftotext} (Poppler-Bibliothek), da komplexe PDF-Layouts mit Python-Bibliotheken wie pdfplumber zu Abstürzen führten.
+Für jede Hochschule wurde ein spezifischer Extraktor implementiert, der die jeweilige Dokumentstruktur berücksichtigt.
+Kurze Fragmente ($< 10$~Zeichen) sowie Abschnittsüberschriften werden per Regex-Filter entfernt.
+
+\subsubsection{Annotationsschema}\label{sec:eval-schema}
+
+Jeder Satz wird in drei Dimensionen annotiert:
+
+\begin{enumerate}
+  \item \textbf{Satztyp} (\texttt{typ}): Kompetenzformulierung~(K), Inhaltsbeschreibung~(I) oder Sonstiges~(S), gemäß den Entscheidungsregeln in Kap.~\ref{sec:eval-methodik}.
+  \item \textbf{Taxonomiestufe} (\texttt{taxonomie}): Für Kompetenzformulierungen die kognitive Prozessstufe nach Anderson und Krathwohl~\cite{anderson2001taxonomy} (Stufen 1--6). Ein Satz kann mehreren Stufen zugeordnet werden, wenn er mehrere Handlungsverben auf verschiedenen Stufen enthält (z.\,B. \enquote{analysieren und anwenden} $\rightarrow$ Stufen~3;4).
+  \item \textbf{Formulierungsqualität} (\texttt{qualitaet}): Eine dreistufige Bewertung (gut, akzeptabel, schlecht), die erfasst, ob die Formulierung den Kriterien für outcome-orientierte Kompetenzformulierungen entspricht~\cite{hrknexus2015lernergebnisse}.
+\end{enumerate}
+
+Die Mehrfachzuordnung bei der Taxonomie unterscheidet den Datensatz von bestehenden Ansätzen, die typischerweise die höchste Stufe als alleinige Annotation verwenden.
+Dies ermöglicht eine differenziertere Evaluation, da das System auch Nebenverben korrekt erkennen muss.
+
+\subsubsection{LLM-gestützte Vorannotation}\label{sec:eval-vorannotation}
+
+Die manuelle Annotation von 5\,617~Sätzen in drei Dimensionen wäre mit einem Aufwand von geschätzt 100--150~Stunden verbunden.
+Um diesen Aufwand zu reduzieren und gleichzeitig eine konsistente Ausgangsbasis zu schaffen, wird ein zweistufiges Annotationsverfahren eingesetzt.
+
+\paragraph{Stufe 1: LLM-Vorannotation.}
+Alle Sätze werden automatisiert durch Claude Sonnet annotiert.\footnote{Modell: \texttt{claude-sonnet-4-6}, Anthropic API, Temperatur~0.}
+Das LLM erhält den vollständigen Annotationsleitfaden als Systemprompt und verarbeitet die Sätze in Batches von je 25~Sätzen.
+Neben den drei Annotationsdimensionen gibt das Modell für jeden Satz einen Konfidenzwert zwischen 0.0 und 1.0 aus, der die Selbsteinschätzung der Annotationssicherheit widerspiegelt.
+
+Aktuelle Forschung zeigt, dass LLM-Annotationen bei verschiedenen Klassifikationsaufgaben mit menschlichen Annotatoren vergleichbar oder überlegen sein können.
+Gilardi et al.~\cite{gilardi2023chatgpt} berichten, dass ChatGPT bei vier Textklassifikations-Tasks Crowd-Worker um durchschnittlich 25~Prozentpunkte in der Accuracy übertrifft, bei Kosten von unter \$0,003 pro Annotation.
+Törnberg~\cite{tornberg2025llm} bestätigt dies für politische Textklassifikation: GPT-4 erreicht höhere Accuracy und Reliabilität als sowohl Crowd-Worker als auch trainierte Experten.
+
+Gleichzeitig warnen Pangakis et al.~\cite{pangakis2023validation}, dass die Performance stark je nach Aufgabentyp variiert -- bei 9 von 27~replizierten Tasks lag Precision oder Recall unter~0,5, trotz hoher Gesamt-Accuracy.
+Reiss~\cite{reiss2023testing} weist zudem auf die Nicht-Determiniertheit von LLMs hin: Selbst bei identischem Input können verschiedene Durchläufe unterschiedliche Ergebnisse erzeugen.
+Törnberg~\cite{tornberg2024bestpractices} empfiehlt daher explizit, LLMs in einen rigorosen Annotationsprozess einzubetten, der systematische Validierung gegen menschliche Labels umfasst.
+
+Das hier eingesetzte zweistufige Verfahren -- LLM-Vorannotation mit anschließender stratifizierter manueller Validierung und Cohen's~$\kappa$ -- entspricht diesen Best Practices.
+
+\paragraph{Stufe 2: Manuelle Validierung.}
+Eine stratifizierte Stichprobe von 300~Sätzen wird manuell überprüft und bei Bedarf korrigiert.
+Die Stratifizierung erfolgt nach drei Kriterien: Hochschule, Satztyp und LLM-Konfidenz (unterteilt in niedrig $< 0.7$, mittel $0.7$--$0.9$, hoch $> 0.9$).
+Dadurch werden systematisch auch unsichere Annotationen und unterrepräsentierte Hochschulen in der Validierung berücksichtigt.
+
+\subsubsection{Inter-Annotator-Reliabilität}\label{sec:eval-kappa}
+
+Um die Qualität der Annotationen unabhängig von der LLM-Vorannotation zu bewerten, wird die Inter-Annotator-Reliabilität (IAR) bestimmt.
+Ein zweiter, unabhängiger Annotator annotiert dieselben 300~Sätze der Validierungsstichprobe, ohne Kenntnis der LLM- oder Erstannotation.
+
+Die Übereinstimmung wird mittels Cohen's $\kappa$~\cite{cohen1960coefficient} berechnet, das die beobachtete Übereinstimmung um die zufallsbedingte Übereinstimmung korrigiert:
+
+\begin{equation}\label{eq:kappa}
+\kappa = \frac{p_o - p_e}{1 - p_e}
+\end{equation}
+
+\noindent wobei $p_o$ die beobachtete und $p_e$ die erwartete Übereinstimmung bei Zufall bezeichnet.
+Die Bewertung folgt der Skala von Landis und Koch~\cite{landis1977measurement}: $\kappa < 0.20$~(gering), $0.21$--$0.40$~(ausreichend), $0.41$--$0.60$~(moderat), $0.61$--$0.80$~(substanziell), $0.81$--$1.00$~(fast perfekt).
+
+Tab.~\ref{tab:kappa} zeigt die Ergebnisse für die drei Annotationsdimensionen.
+
+\begin{table}[H]
+\caption{Inter-Annotator-Reliabilität (Cohen's $\kappa$)\label{tab:kappa}}
+\centering
+\begin{tabular}{llrrrl}
+\hline
+\textbf{Dimension} & \textbf{Klassen} & \textbf{Erst\,$\leftrightarrow$\,LLM} & \textbf{Zweit\,$\leftrightarrow$\,LLM} & \textbf{Erst\,$\leftrightarrow$\,Zweit} & \textbf{Bewertung} \\
+\hline
+Satztyp (K/I/S) & 3 & 0{,}623 & 0{,}768 & 0{,}737 & substanziell \\
+Taxonomie (Primärstufe) & 6 & 0{,}852 & 0{,}806 & 0{,}861 & fast perfekt \\
+Qualität (gut/akz./schl.) & 3 & 0{,}350 & 0{,}401 & 0{,}869 & siehe Text \\
+\hline
+\end{tabular}
+\end{table}
+
+Die Ergebnisse zeigen ein differenziertes Bild.
+Die \textbf{Taxonomie-Zuordnung} erreicht mit $\kappa \geq 0{,}806$ in allen drei Paaren die höchste Übereinstimmung -- die Primärstufe nach Anderson und Krathwohl lässt sich offenbar auch ohne fachwissenschaftlichen Hintergrund reliabel annotieren.
+Zwischen Erstannotator und Zweitannotator liegt $\kappa = 0{,}861$ (fast perfekt), was die Konsistenz des Annotationsleitfadens bestätigt.
+
+Beim \textbf{Satztyp} liegt die Übereinstimmung zwischen Zweitannotator und LLM ($\kappa = 0{,}768$) höher als zwischen Erstannotator und LLM ($\kappa = 0{,}623$).
+Die Inter-Annotator-Übereinstimmung ($\kappa = 0{,}737$) ist substanziell.
+Abweichungen betreffen vor allem die Abgrenzung zwischen Kompetenzformulierungen und Sonstigem bei Infinitivkonstruktionen ohne explizites Subjekt.
+
+Die \textbf{Qualitätsbewertung} zeigt ein auffälliges Muster: Während die beiden menschlichen Annotatoren nahezu perfekt übereinstimmen ($\kappa = 0{,}869$), weichen beide deutlich vom LLM ab ($\kappa = 0{,}350$ bzw.\ $0{,}401$).
+Das LLM vergab 19-mal die Bewertung \enquote{schlecht}, die menschlichen Annotatoren hingegen nur 0- bzw.\ 2-mal.
+Diese systematische Abweichung deutet darauf hin, dass das LLM einen strengeren Qualitätsmaßstab anlegt als die menschlichen Annotatoren.
+Da die Inter-Annotator-Reliabilität für die Qualitätsdimension hoch ist, wird für die Evaluation der menschliche Konsens als Referenz verwendet.
+
+\subsubsection{Datensatzstatistiken}\label{sec:eval-stats}
+
+Der finale Gold-Standard umfasst 5\,617~Sätze, die stratifiziert nach Hochschule und Satztyp in ein Trainings-Set (80\,\%, $n = 4\,493$) und ein Test-Set (20\,\%, $n = 1\,124$) aufgeteilt werden (Seed~42).
+Tab.~\ref{tab:datensatz-stats} zeigt die Verteilung nach Hochschule und Satztyp.
+
+\begin{table}[H]
+\caption{Verteilung des Gold-Standard-Datensatzes nach Satztyp\label{tab:datensatz-stats}}
+\centering
+\small
+\begin{tabular}{lrrrr}
+\hline
+\textbf{Hochschule} & \textbf{K} & \textbf{I} & \textbf{S} & \textbf{Gesamt} \\
+\hline
+Hochschule Fulda & 3\,049 & 66 & 98 & 3\,213 \\
+TU Darmstadt & 684 & 104 & 108 & 896 \\
+TH Mittelhessen & 1\,404 & 18 & 46 & 1\,468 \\
+Uni Kassel & 37 & 0 & 3 & 40 \\
+\hline
+\textbf{Gesamt} & \textbf{5\,174} & \textbf{188} & \textbf{255} & \textbf{5\,617} \\
+\hline
+\end{tabular}
+\end{table}
+
+Der Datensatz ist erwartungsgemäß unbalanciert: 92{,}1\,\% der Sätze sind Kompetenzformulierungen~(K), 3{,}3\,\% Inhaltsbeschreibungen~(I) und 4{,}5\,\% Sonstiges~(S).
+TU Darmstadt weist mit 23{,}7\,\% den höchsten Anteil an Nicht-Kompetenz-Sätzen (I+S) auf, während Hochschule Fulda mit 5{,}1\,\% den niedrigsten hat.
+
+31{,}5\,\% der Kompetenzformulierungen sind mehreren Taxonomiestufen zugeordnet.
+Tab.~\ref{tab:taxonomie-verteilung} zeigt die Verteilung der Taxonomiestufen über den gesamten Datensatz.
+
+\begin{table}[H]
+\caption{Taxonomiestufen-Verteilung (Mehrfachzuordnung möglich)\label{tab:taxonomie-verteilung}}
+\centering
+\begin{tabular}{lrr}
+\hline
+\textbf{Stufe} & \textbf{Anzahl} & \textbf{Anteil} \\
+\hline
+1 -- Erinnern & 1\,082 & 14{,}9\,\% \\
+2 -- Verstehen & 1\,355 & 18{,}6\,\% \\
+3 -- Anwenden & 2\,376 & 32{,}7\,\% \\
+4 -- Analysieren & 682 & 9{,}4\,\% \\
+5 -- Bewerten & 1\,027 & 14{,}1\,\% \\
+6 -- Erschaffen & 749 & 10{,}3\,\% \\
+\hline
+\end{tabular}
+\end{table}
+
+Stufe~3 (Anwenden) dominiert mit 32{,}7\,\%, während die höheren Stufen~4--6 zusammen 33{,}8\,\% ausmachen.
+Die Qualitätsverteilung zeigt 35{,}2\,\% \enquote{gut}, 52{,}3\,\% \enquote{akzeptabel} und 12{,}4\,\% \enquote{schlecht}.
+
+% =============================================================================
+\subsection{Vergleichende Evaluation}\label{sec:eval-vergleich}
+
+Die drei in Kap.~\ref{sec:entwurf} definierten Analyseansätze -- regelbasiert, Embedding-basiert und hybrid -- werden auf dem Test-Set des Gold-Standards evaluiert.
+Für jeden Ansatz werden die in Kap.~\ref{sec:metriken} definierten Metriken berechnet.
+
+\subsubsection{Klassifikation}\label{sec:eval-klassifikation}
+
+Tab.~\ref{tab:eval-klassifikation} zeigt die Ergebnisse der Satztyp-Klassifikation (K/I/S) für die drei Ansätze.
+
+\begin{table}[H]
+\caption{Klassifikationsergebnisse (Satztyp K/I/S)\label{tab:eval-klassifikation}}
+\centering
+\begin{tabular}{lrrr}
+\hline
+\textbf{Ansatz} & \textbf{Precision} & \textbf{Recall} & \textbf{F1 (weighted)} \\
+\hline
+Regelbasiert & 0{,}899 & 0{,}767 & 0{,}819 \\
+Embedding (SVM) & 0{,}964 & 0{,}966 & 0{,}963 \\
+Hybrid & 0{,}945 & 0{,}936 & 0{,}929 \\
+\hline
+\end{tabular}
+\end{table}
+
+Der Embedding-Ansatz erreicht mit $F_1 = 0{,}963$ das beste Ergebnis und übertrifft den regelbasierten Ansatz ($F_1 = 0{,}819$) deutlich.
+Der hybride Ansatz liegt mit $F_1 = 0{,}929$ dazwischen.
+Die gewichteten Metriken werden von der dominanten K-Klasse (92{,}1\,\%) bestimmt; die klassenweisen Ergebnisse in Tab.~\ref{tab:eval-klassifikation-detail} zeigen ein differenzierteres Bild.
+
+\begin{table}[H]
+\caption{Klassenweise F1-Scores der Satztyp-Klassifikation\label{tab:eval-klassifikation-detail}}
+\centering
+\begin{tabular}{lrrr}
+\hline
+\textbf{Klasse} & \textbf{Regelbasiert} & \textbf{Embedding} & \textbf{Hybrid} \\
+\hline
+K (Kompetenz) & 0{,}881 & 0{,}984 & 0{,}976 \\
+I (Inhalt) & 0{,}000 & 0{,}645 & 0{,}233 \\
+S (Sonstiges) & 0{,}177 & 0{,}778 & 0{,}487 \\
+\hline
+\end{tabular}
+\end{table}
+
+Der regelbasierte Ansatz erkennt Inhaltsbeschreibungen überhaupt nicht ($F_1 = 0{,}000$), da er ohne Verbliste-Treffer keine Unterscheidung zwischen I und S vornehmen kann.
+Der Embedding-Ansatz erzielt hier $F_1 = 0{,}645$ (I) bzw.\ $F_1 = 0{,}778$ (S) -- die semantische Repräsentation ermöglicht eine Unterscheidung, die rein lexikalisch nicht möglich ist.
+Der hybride Ansatz erreicht bei I zwar perfekte Precision ($1{,}000$), aber sehr niedrigen Recall ($0{,}132$): Er erkennt I-Sätze nur, wenn das Embedding eindeutig ist, klassifiziert aber viele als K.
+
+\subsubsection{Taxonomie-Zuordnung}\label{sec:eval-taxonomie}
+
+Tab.~\ref{tab:eval-taxonomie} zeigt die Ergebnisse der Taxonomie-Zuordnung für Kompetenzformulierungen.
+Da der regelbasierte Ansatz nur Sätze mit Verbliste-Treffern klassifizieren kann, werden 536 von 1\,035~K-Sätzen (51{,}8\,\%) nicht zugeordnet.
+Die Metriken beziehen sich jeweils nur auf die klassifizierten Sätze.
+
+\begin{table}[H]
+\caption{Taxonomie-Zuordnung (Primärstufe 1--6, nur K-Sätze)\label{tab:eval-taxonomie}}
+\centering
+\begin{tabular}{lrrrr}
+\hline
+\textbf{Ansatz} & \textbf{Precision} & \textbf{Recall} & \textbf{F1 (weighted)} & \textbf{Abdeckung} \\
+\hline
+Regelbasiert & 0{,}639 & 0{,}585 & 0{,}581 & 48{,}2\,\% \\
+Embedding (SVM) & 0{,}842 & 0{,}842 & 0{,}839 & 100\,\% \\
+Hybrid & 0{,}739 & 0{,}706 & 0{,}713 & 89{,}0\,\% \\
+\hline
+\end{tabular}
+\end{table}
+
+Der Embedding-Ansatz klassifiziert alle K-Sätze und erreicht $F_1 = 0{,}839$.
+Der regelbasierte Ansatz erreicht auf den 48{,}2\,\% der Sätze, die er abdeckt, nur $F_1 = 0{,}581$.
+Der hybride Ansatz verbessert die Abdeckung auf 89{,}0\,\%, bleibt aber mit $F_1 = 0{,}713$ hinter dem reinen Embedding-Ansatz zurück.
+
+Tab.~\ref{tab:eval-taxonomie-detail} schlüsselt die Ergebnisse nach Taxonomiestufe auf.
+
+\begin{table}[H]
+\caption{F1-Score nach Taxonomiestufe\label{tab:eval-taxonomie-detail}}
+\centering
+\begin{tabular}{lrrr}
+\hline
+\textbf{Stufe} & \textbf{Regelbasiert} & \textbf{Embedding} & \textbf{Hybrid} \\
+\hline
+1 -- Erinnern & 0{,}129 & 0{,}860 & 0{,}664 \\
+2 -- Verstehen & 0{,}735 & 0{,}849 & 0{,}753 \\
+3 -- Anwenden & 0{,}665 & 0{,}870 & 0{,}791 \\
+4 -- Analysieren & 0{,}305 & 0{,}667 & 0{,}450 \\
+5 -- Bewerten & 0{,}577 & 0{,}806 & 0{,}649 \\
+6 -- Erschaffen & 0{,}533 & 0{,}766 & 0{,}567 \\
+\hline
+\end{tabular}
+\end{table}
+
+Der Embedding-Ansatz übertrifft den regelbasierten in jeder Stufe.
+Besonders auffällig ist Stufe~1 (Erinnern): Der regelbasierte Ansatz erreicht nur $F_1 = 0{,}129$, da viele Wissensverben (z.\,B.\ \enquote{kennen}, \enquote{wissen}) nicht in der statischen Verbliste enthalten sind oder mit anderen Stufen geteilt werden.
+Stufe~4 (Analysieren) ist für alle Ansätze die schwierigste, was mit der geringen Trainingsdatenmenge (9{,}4\,\% des Datensatzes) und der semantischen Nähe zu Stufe~3 zusammenhängt.
+Stufe~3 (Anwenden) erreicht beim Embedding-Ansatz mit $F_1 = 0{,}870$ den besten Wert, begünstigt durch den größten Stichprobenumfang (32{,}7\,\%).
+
+\subsubsection{Aufschlüsselung nach Schwierigkeit}\label{sec:eval-schwierigkeit}
+
+Um die Stärken und Schwächen der Ansätze differenziert zu bewerten, werden die Ergebnisse nach drei Schwierigkeitskategorien aufgeschlüsselt:
+
+\begin{enumerate}
+  \item \textbf{Standard}: Sätze mit Verben, die eindeutig in der Verbliste enthalten sind und deren Taxonomiestufe unstrittig ist.
+  \item \textbf{Unbekannte Verben}: Kompetenzformulierungen mit Verben, die nicht in der statischen Verbliste des regelbasierten Systems vorkommen (z.\,B. Synonyme, fachspezifische Verben).
+  \item \textbf{Nicht-Kompetenz}: Inhaltsbeschreibungen und Sonstiges -- Sätze, die das System korrekt als Nicht-Kompetenz erkennen muss.
+\end{enumerate}
+
+\begin{table}[H]
+\caption{F1-Score nach Schwierigkeitskategorie\label{tab:eval-schwierigkeit}}
+\centering
+\begin{tabular}{lrrr}
+\hline
+\textbf{Kategorie} & \textbf{Regelbasiert} & \textbf{Embedding} & \textbf{Hybrid} \\
+\hline
+Standard & 0{,}994 & 0{,}999 & 1{,}000 \\
+Unbekannte Verben & 0{,}683 & 0{,}996 & 0{,}976 \\
+Nicht-Kompetenz & 0{,}279 & 0{,}740 & 0{,}425 \\
+\hline
+\end{tabular}
+\end{table}
+
+Bei Standardfällen -- Sätze mit eindeutigen Verbliste-Treffern -- erreichen alle drei Ansätze nahezu perfekte Klassifikation ($F_1 \geq 0{,}994$).
+Die Unterschiede zeigen sich bei den schwierigeren Kategorien: Bei unbekannten Verben bricht der regelbasierte Ansatz auf $F_1 = 0{,}683$ ein, da er Kompetenzformulierungen mit Verben außerhalb der statischen Liste nicht zuverlässig erkennt.
+Der Embedding-Ansatz bleibt mit $F_1 = 0{,}996$ stabil, der hybride Ansatz mit $F_1 = 0{,}976$ nur geringfügig darunter.
+Bei Nicht-Kompetenz-Sätzen ist der Abstand am größten: Der regelbasierte Ansatz erreicht nur $F_1 = 0{,}279$, da er ohne Verbliste-Evidenz kaum zwischen Inhaltsbeschreibungen und Kompetenzformulierungen differenzieren kann.
+
+\subsubsection{Aufschlüsselung nach Hochschule}\label{sec:eval-hochschule}
+
+Um die Generalisierbarkeit zu prüfen, werden die Ergebnisse nach Hochschule aufgeschlüsselt.
+Da das System primär auf Daten der Hochschule Fulda trainiert wurde, ist ein Leistungsabfall bei externen Hochschulen zu erwarten.
+
+\begin{table}[H]
+\caption{F1-Score (Klassifikation) nach Hochschule\label{tab:eval-hochschule}}
+\centering
+\begin{tabular}{lrrr}
+\hline
+\textbf{Hochschule} & \textbf{Regelbasiert} & \textbf{Embedding} & \textbf{Hybrid} \\
+\hline
+HS Fulda (Informatik) & 0{,}874 & 0{,}985 & 0{,}955 \\
+TU Darmstadt (Informatik) & 0{,}631 & 0{,}867 & 0{,}759 \\
+TH Mittelhessen (Ing.) & 0{,}810 & 0{,}973 & 0{,}969 \\
+Uni Kassel (Soz. Arbeit)$^*$ & 0{,}923 & 1{,}000 & 1{,}000 \\
+\hline
+\multicolumn{4}{l}{\scriptsize $^*$\,$n = 7$ im Test-Set; F1-Werte eingeschränkt interpretierbar.} \\
+\end{tabular}
+\end{table}
+
+Der Embedding-Ansatz generalisiert deutlich besser über Hochschulen hinweg als der regelbasierte.
+Hochschule Fulda als Hauptdatenquelle zeigt erwartungsgemäß die besten Ergebnisse ($F_1 = 0{,}985$).
+TU Darmstadt weist den stärksten Leistungsabfall auf ($F_1 = 0{,}867$), was mit dem hohen Anteil an Nicht-Kompetenz-Sätzen (23{,}7\,\%) zusammenhängt, die in den informatischen Modulhandbüchern der TU Darmstadt häufiger auftreten.
+TH Mittelhessen erreicht trotz des ingenieurwissenschaftlichen Fachvokabulars $F_1 = 0{,}973$, was die domänenübergreifende Robustheit des Embedding-Ansatzes bestätigt.
+Uni Kassel (Soziale Arbeit) erreicht $F_1 = 1{,}000$ bei beiden nicht-regelbasierten Ansätzen, wobei die geringe Stichprobengröße ($n = 7$ im Test-Set) die Aussagekraft einschränkt.
+
+Ergänzend zeigt Tab.~\ref{tab:eval-hochschule-tax} die Taxonomie-Zuordnung nach Hochschule.
+
+\begin{table}[H]
+\caption{F1-Score (Taxonomie) nach Hochschule\label{tab:eval-hochschule-tax}}
+\centering
+\begin{tabular}{lrrr}
+\hline
+\textbf{Hochschule} & \textbf{Regelbasiert} & \textbf{Embedding} & \textbf{Hybrid} \\
+\hline
+HS Fulda (Informatik) & 0{,}568 & 0{,}911 & 0{,}755 \\
+TU Darmstadt (Informatik) & 0{,}680 & 0{,}770 & 0{,}743 \\
+TH Mittelhessen (Ing.) & 0{,}564 & 0{,}717 & 0{,}624 \\
+Uni Kassel (Soz. Arbeit)$^*$ & 0{,}444 & 0{,}714 & 0{,}381 \\
+\hline
+\multicolumn{4}{l}{\scriptsize $^*$\,$n = 7$ im Test-Set; F1-Werte eingeschränkt interpretierbar.} \\
+\end{tabular}
+\end{table}
+
+Bei der Taxonomie-Zuordnung zeigt sich ein ähnliches Muster: Der Embedding-Ansatz erreicht durchgehend die höchsten F1-Werte.
+Der regelbasierte Ansatz erzielt bei TU Darmstadt ($F_1 = 0{,}680$) einen höheren Wert als bei HS Fulda ($F_1 = 0{,}568$), da er dort auf weniger, aber eindeutigere Verbliste-Treffer trifft.
+TH Mittelhessen zeigt bei allen Ansätzen niedrigere Taxonomie-Werte, was auf das ingenieurwissenschaftliche Fachvokabular zurückzuführen ist, das sich von den informatischen Trainingsverben unterscheidet.
+
+% =============================================================================
+\subsection{Empfehlungssystem}\label{sec:eval-empfehlung}
+
+Die Evaluation des Empfehlungssystems (FA3) erfolgt mittels Precision@k: Unter den Top-$k$ vorgeschlagenen Referenzformulierungen wird der Anteil relevanter Ergebnisse gemessen.
+Die Relevanz wird durch Übereinstimmung der Taxonomiestufe operationalisiert.
+
+\begin{table}[H]
+\caption{Precision@k des Empfehlungssystems (SBERT-Ähnlichkeitssuche)\label{tab:eval-precision-k}}
+\centering
+\begin{tabular}{lr}
+\hline
+\textbf{Metrik} & \textbf{Precision} \\
+\hline
+Precision@1 & 0{,}510 \\
+Precision@3 & 0{,}479 \\
+Precision@5 & 0{,}465 \\
+\hline
+\end{tabular}
+\end{table}
+
+Das Empfehlungssystem verwendet unabhängig vom Klassifikationsansatz dieselbe SBERT-basierte Ähnlichkeitssuche über die Referenzdatenbank (4\,918~Sätze nach Qualitätsfilterung).
+Die Relevanz wird über die Übereinstimmung der Taxonomiestufe operationalisiert: Eine Empfehlung gilt als relevant, wenn ihre Primärstufe mit der des Eingabesatzes übereinstimmt.
+
+Precision@1 $= 0{,}510$ bedeutet, dass die ähnlichste Referenzformulierung in 51\,\% der Fälle dieselbe Taxonomiestufe aufweist.
+Zum Vergleich: Die häufigste Taxonomiestufe (Stufe~3, Anwenden) umfasst 32{,}7\,\% des Datensatzes; eine naive Baseline, die stets Formulierungen dieser Mehrheitsklasse empfehlen würde, erreichte $P@1 \approx 0{,}327$.
+Die erzielten Werte liegen somit deutlich über dieser Baseline.
+Der moderate Abfall auf Precision@5 $= 0{,}465$ zeigt, dass auch bei breiteren Empfehlungslisten knapp die Hälfte der Vorschläge taxonomisch passend ist.
+Diese Werte sind im Kontext zu interpretieren: Semantische Ähnlichkeit korreliert mit, ist aber nicht identisch zu taxonomischer Übereinstimmung -- ein Satz auf Stufe~3 (Anwenden) kann semantisch einem Satz auf Stufe~4 (Analysieren) ähneln, wenn beide thematisch verwandt sind.
+
+% =============================================================================
+\subsection{Set-Analyse}\label{sec:eval-set}
+
+Die Set-Analyse (FA4) wird qualitativ evaluiert, da keine quantitative Ground Truth auf Modulebene vorliegt.
+Anhand ausgewählter Module wird geprüft, ob die automatisch ermittelte Taxonomiestufen-Verteilung und die daraus abgeleiteten Empfehlungen fachlich plausibel sind.
+
+Die Set-Analyse aggregiert die Einzelsatz-Ergebnisse auf Modulebene und visualisiert die Taxonomiestufen-Verteilung als Balkendiagramm.
+Dadurch wird sichtbar, ob ein Modul alle kognitiven Stufen abdeckt oder sich auf wenige konzentriert.
+
+Als Beispiel sei ein Informatik-Modul der Hochschule Fulda mit sechs Qualifikationszielen betrachtet.
+Das System erkennt vier Sätze auf Stufe~3 (Anwenden) und je einen auf Stufe~2 (Verstehen) und Stufe~5 (Bewerten).
+Die Stufen~1, 4 und 6 sind nicht vertreten -- das System generiert daraufhin den Hinweis, dass höhere kognitive Stufen unterrepräsentiert sind.
+Eine solche Rückmeldung entspricht der didaktischen Empfehlung, Qualifikationsziele über mehrere Taxonomiestufen zu streuen~\cite{anderson2001taxonomy}.
+
+Die Plausibilität der Set-Analyse hängt direkt von der Qualität der Einzelsatz-Klassifikation ab.
+Da der Embedding-Ansatz mit $F_1 = 0{,}839$ die zuverlässigste Taxonomie-Zuordnung liefert, ist die darauf basierende Set-Analyse am aussagekräftigsten.
+Der regelbasierte Ansatz kann aufgrund seiner geringen Abdeckung (48{,}2\,\%) kein vollständiges Bild der Taxonomie-Verteilung eines Moduls liefern.
+
+% =============================================================================
+\subsection{Konfidenz-Analyse}\label{sec:eval-konfidenz}
+
+Um die Nutzbarkeit der Konfidenzwerte zu bewerten, werden die Klassifikationsergebnisse des Embedding-Ansatzes nach Konfidenzbereichen aufgeschlüsselt.
+Die Konfidenz ergibt sich aus den SVM-Wahrscheinlichkeitsschätzungen (\texttt{predict\_proba}).
+Tab.~\ref{tab:eval-konfidenz} zeigt die Ergebnisse.
+
+\begin{table}[H]
+\caption{F1-Score des Embedding-Ansatzes nach Konfidenzbereich\label{tab:eval-konfidenz}}
+\centering
+\begin{tabular}{lrrr}
+\hline
+\textbf{Konfidenz} & \textbf{Anteil} & \textbf{Typ-F1} & \textbf{Tax-F1} \\
+\hline
+Hoch ($\geq 0{,}8$) & 94{,}8\,\% & 0{,}986 & 0{,}918 \\
+Mittel ($0{,}5$--$0{,}8$) & 4{,}7\,\% & 0{,}585 & 0{,}694 \\
+Niedrig ($< 0{,}5$) & 0{,}5\,\% & 0{,}250 & 0{,}434 \\
+\hline
+\end{tabular}
+\end{table}
+
+Die Ergebnisse zeigen, dass die Konfidenzwerte eine sinnvolle Qualitätsindikation liefern: Im Hoch-Konfidenz-Bereich ($\geq 0{,}8$) steigt der Typ-F1 auf $0{,}986$ -- ein Zugewinn von $2{,}3$ Prozentpunkten gegenüber der Gesamtpopulation.
+Bei der Taxonomie ist der Effekt noch deutlicher: $F_1 = 0{,}918$ gegenüber $0{,}839$ gesamt, bei einer Abdeckung von 73{,}8\,\%.
+Korrekt klassifizierte Sätze weisen eine durchschnittliche Typ-Konfidenz von $0{,}971$ auf, fehlklassifizierte nur $0{,}712$.
+Bei der Taxonomie beträgt die mittlere Konfidenz $0{,}877$ (korrekt) gegenüber $0{,}676$ (falsch).
+Die Konfidenzwerte sind somit ein brauchbarer -- wenn auch unkalibrierter -- Indikator für die Vorhersagezuverlässigkeit.
+
+Die Konfidenzwerte werden im Frontend pro Satz angezeigt und farblich kodiert (grün $\geq 80\,\%$, gelb $50$--$80\,\%$, rot $< 50\,\%$).
+Dies ermöglicht es Lehrenden, unsichere Zuordnungen gezielt zu überprüfen.
+
+% =============================================================================
+\subsection{Qualitative Fehleranalyse}\label{sec:eval-fehleranalyse}
+
+Die aggregierten Metriken zeigen \emph{wie oft} die Ansätze korrekt klassifizieren, lassen aber offen, \emph{warum} Fehler auftreten.
+Dieser Abschnitt illustriert anhand konkreter Beispielsätze aus dem Test-Set typische Fehlermuster.
+Tab.~\ref{tab:eval-beispiele} zeigt je ein Beispiel für fünf charakteristische Kategorien.
+
+\begin{table}[H]
+\caption{Illustrative Beispielsätze für typische Fehlermuster\label{tab:eval-beispiele}}
+\centering
+\small
+\begin{tabular}{p{0.38\textwidth}p{0.12\textwidth}p{0.12\textwidth}p{0.12\textwidth}p{0.12\textwidth}}
+\hline
+\textbf{Satz (gekürzt)} & \textbf{Gold} & \textbf{Regel} & \textbf{Embed.} & \textbf{Hybrid} \\
+\hline
+\enquote{Die Studierenden automatisieren und orchestrieren Data Science Workflows.}
+  & K / St.\,3 & S / -- & K / St.\,3 & S / -- \\[4pt]
+\enquote{Die Studierenden entwickeln ein Bewusstsein für die Rolle des Fachgebiets MCI.}
+  & K / St.\,2 & K / St.\,6 & K / St.\,2 & K / St.\,6 \\[4pt]
+\enquote{Die Studierenden erkennen verschiedene algebraische Strukturen.}
+  & K / St.\,4 & -- & K / St.\,1 & K / St.\,1 \\[4pt]
+\enquote{Sie erhalten Anleitung in der systematischen Planung [\ldots] des Arbeitsprozesses.}
+  & S & S & K & K \\[4pt]
+\enquote{Die Thematik wird im Team bearbeitet und das Ergebnis präsentiert und diskutiert.}
+  & S & S & K & S \\
+\hline
+\end{tabular}
+\end{table}
+
+Die Beispiele verdeutlichen drei wiederkehrende Muster:
+
+\paragraph{Unbekannte Verben.}
+\enquote{Automatisieren} und \enquote{orchestrieren} fehlen in der statischen Verbliste.
+Der regelbasierte Ansatz kann den Satz nicht als K erkennen; der Embedding-Ansatz erfasst die semantische Handlungsorientierung und klassifiziert korrekt.
+Dieses Muster erklärt den Großteil der 235~Fälle im Test-Set, in denen der Embedding-Ansatz beim Satztyp korrekt ist und der regelbasierte nicht.
+Im hybriden Cascading wird die fehlerhafte regelbasierte Entscheidung nicht korrigiert, da das Embedding-Fallback erst bei fehlender Regelentscheidung aktiviert wird.
+
+\paragraph{Kontextabhängige Verben.}
+\enquote{Entwickeln} ist in der Verbliste als Stufe~6 (Erschaffen) hinterlegt, meint im Kontext \enquote{ein Bewusstsein entwickeln} jedoch Stufe~2 (Verstehen).
+Ebenso ist \enquote{erkennen} in der Verbliste Stufe~4 (Analysieren) zugeordnet, beschreibt im Kontext \enquote{algebraische Strukturen erkennen} aber eher Stufe~1 (Erinnern) oder Stufe~4.
+Der Embedding-Ansatz nutzt den Satzkontext und ordnet den ersten Fall korrekt als Stufe~2 ein; beim zweiten Beispiel scheitert auch er -- Stufe~4 (Analysieren) ist mit $F_1 = 0{,}667$ die schwächste Kategorie.
+Von 82~Stufe-4-Sätzen im Test-Set werden 27 falsch klassifiziert, überwiegend als Stufe~1 oder Stufe~3.
+
+\paragraph{Formale vs.\ inhaltliche Kompetenzsprache.}
+\enquote{Sie erhalten Anleitung} ist kein Lernergebnis, sondern beschreibt eine Lehrmethode.
+Der Embedding-Ansatz klassifiziert den Satz fälschlich als K (Konfidenz~0{,}940), da das umgebende Fachvokabular (Planung, Dokumentation, Arbeitsprozess) semantisch nah an echten Kompetenzformulierungen liegt.
+Der regelbasierte Ansatz erkennt korrekt, dass kein aktives Handlungsverb vorliegt.
+Dieses Muster betrifft 30 der 89~Nicht-K-Sätze im Test-Set (33{,}7\,\% Falsch-Positiv-Rate bei I+S).
+
+% =============================================================================
+\subsection{Zusammenfassung der Ergebnisse}\label{sec:eval-zusammenfassung}
+
+Tab.~\ref{tab:eval-zusammenfassung} fasst die Kernergebnisse der vergleichenden Evaluation zusammen.
+
+\begin{table}[H]
+\caption{Zusammenfassung der Evaluationsergebnisse (F1 weighted)\label{tab:eval-zusammenfassung}}
+\centering
+\begin{tabular}{lrr}
+\hline
+\textbf{Ansatz} & \textbf{Typ-Klassifikation} & \textbf{Taxonomie-Zuordnung} \\
+\hline
+Regelbasiert & 0{,}819 & 0{,}581 \\
+Embedding (SVM) & 0{,}963 & 0{,}839 \\
+Hybrid & 0{,}929 & 0{,}713 \\
+\hline
+\end{tabular}
+\end{table}
+
+Zur statistischen Absicherung der Unterschiede wurde für alle paarweisen Vergleiche ein McNemar-Test~\cite{mcnemar1947note} durchgeführt (Tab.~\ref{tab:mcnemar}).
+Der McNemar-Test prüft auf Basis der diskordanten Paare (Sätze, bei denen genau ein Klassifikator korrekt liegt), ob die Unterschiede zwischen zwei Klassifikatoren statistisch signifikant sind.
+Bei sechs Vergleichen wird eine Bonferroni-Korrektur angewandt ($\alpha = 0{,}05/6 \approx 0{,}0083$).
+
+\begin{table}[H]
+\caption{McNemar-Tests für paarweise Klassifikatorvergleiche. $n_{01}$/$n_{10}$: diskordante Paare (nur A bzw.\ nur B korrekt). Alle Vergleiche sind nach Bonferroni-Korrektur hochsignifikant ($p < 0{,}001$).\label{tab:mcnemar}}
+\centering
+\small
+\begin{tabular}{llrrrl}
+\hline
+\textbf{Vergleich} & \textbf{Dimension} & $n_{01}$ & $n_{10}$ & $\chi^2$ & $p$ \\
+\hline
+Regel vs.\ Embedding & Typ & 11 & 235 & 202{,}15 & $< 0{,}001$ \\
+Regel vs.\ Embedding & Taxonomie & 40 & 619 & 506{,}96 & $< 0{,}001$ \\
+Regel vs.\ Hybrid & Typ & 8 & 198 & 173{,}40 & $< 0{,}001$ \\
+Regel vs.\ Hybrid & Taxonomie & 0 & 358 & 356{,}00 & $< 0{,}001$ \\
+Embedding vs.\ Hybrid & Typ & 37 & 3 & 27{,}23 & $< 0{,}001$ \\
+Embedding vs.\ Hybrid & Taxonomie & 261 & 40 & 160{,}80 & $< 0{,}001$ \\
+\hline
+\end{tabular}
+\end{table}
+
+Alle sechs Vergleiche sind hochsignifikant ($p < 0{,}001$).
+Die diskordanten Paare bestätigen die Rangfolge: Bei Typ-Klassifikation liegt der Embedding-Ansatz in 235~Fällen richtig, in denen der regelbasierte falsch liegt, aber nur in 11~Fällen umgekehrt.
+Auch der Unterschied zwischen Embedding und Hybrid ist signifikant ($\chi^2 = 27{,}23$), mit 37~Fällen zugunsten des Embedding-Ansatzes gegenüber 3~zugunsten des Hybrids.
+
+Der \textbf{Embedding-Ansatz} erzielt in beiden Dimensionen die besten Ergebnisse.
+Bei der Typ-Klassifikation übertrifft er den regelbasierten Ansatz um 14{,}4~Prozentpunkte, bei der Taxonomie-Zuordnung um 25{,}8~Prozentpunkte.
+Der Vorteil ist besonders ausgeprägt bei Sätzen mit unbekannten Verben ($F_1 = 0{,}996$ vs.\ $0{,}683$) und bei Nicht-Kompetenz-Sätzen ($F_1 = 0{,}740$ vs.\ $0{,}279$).
+
+Der \textbf{hybride Ansatz} liegt in beiden Dimensionen zwischen den anderen beiden, erreicht aber nicht die Qualität des reinen Embedding-Ansatzes.
+Seine Stärke zeigt sich bei Standardfällen ($F_1 = 1{,}000$) und bei unbekannten Verben ($F_1 = 0{,}976$), wo er die Abdeckung des regelbasierten Ansatzes durch Embedding-Fallback deutlich verbessert.
+Die Schwäche liegt im Cascading: Wenn der regelbasierte Ansatz einen Satz fälschlich als K klassifiziert, wird das Embedding nicht mehr konsultiert.
+
+Der \textbf{regelbasierte Ansatz} bleibt bei Standardfällen konkurrenzfähig ($F_1 = 0{,}994$), versagt aber systematisch bei Sätzen außerhalb seines Verblisten-Wissens.
+Seine Abdeckung von nur 48{,}2\,\% bei der Taxonomie-Zuordnung zeigt die grundsätzliche Limitation statischer Verblisten.
+
+Diese Ergebnisse werden in Kap.~\ref{sec:diskussion} im Hinblick auf die Forschungsfrage, den Kosten-Nutzen-Aspekt des hybriden Ansatzes und mögliche Verbesserungen diskutiert.

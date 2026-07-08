@@ -1,0 +1,186 @@
+\documentclass[border=10pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{palatino}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric, calc}
+
+\definecolor{processblue}{HTML}{4285F4}
+\definecolor{decisionorange}{HTML}{D48E2F}
+\definecolor{resultgreen}{HTML}{4A8C4A}
+\definecolor{warnred}{HTML}{C0392B}
+\definecolor{grayio}{HTML}{555555}
+\definecolor{arrowgray}{HTML}{444444}
+
+\begin{document}
+\begin{tikzpicture}[
+    >=Stealth,
+    node distance=9mm,
+    myarrow/.style={->, line width=0.6pt, arrowgray},
+]
+
+% =====================
+% INPUT
+% =====================
+\node[draw=grayio, fill=grayio!6, rounded corners=2pt,
+      minimum height=11mm, text width=50mm, align=center,
+      font=\footnotesize, line width=0.5pt]
+    (input) {Eingabetext};
+
+% =====================
+% STEP 1
+% =====================
+\node[draw=processblue, fill=processblue!6, rounded corners=2pt,
+      minimum height=14mm, text width=54mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=12mm of input]
+    (seg) {\textbf{Satzsegmentierung}\\[2pt]{\scriptsize Regex + Abk\"urzungsschutz}};
+\node[font=\scriptsize\sffamily\bfseries, text=processblue,
+      anchor=south east, inner sep=2pt] at (seg.north east) {1};
+
+\draw[myarrow] (input) -- (seg);
+
+% =====================
+% STEP 2
+% =====================
+\node[draw=processblue, fill=processblue!6, rounded corners=2pt,
+      minimum height=14mm, text width=54mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=of seg]
+    (spacy) {\textbf{spaCy-Analyse}\\[2pt]{\scriptsize POS-Tagging, Lemmatisierung,}\\[-1pt]{\scriptsize Subjekt-Erkennung}};
+\node[font=\scriptsize\sffamily\bfseries, text=processblue,
+      anchor=south east, inner sep=2pt] at (spacy.north east) {2};
+
+\draw[myarrow] (seg) -- (spacy);
+
+% =====================
+% DECISION: Verb in list?
+% =====================
+\node[draw=decisionorange, fill=decisionorange!8,
+      diamond, aspect=2.6,
+      minimum width=46mm, minimum height=16mm,
+      font=\footnotesize, align=center, line width=0.5pt,
+      inner sep=2pt, below=12mm of spacy]
+    (d1) {Lemma in\\Verbliste?};
+\node[font=\scriptsize\sffamily\bfseries, text=processblue,
+      anchor=south west, inner sep=2pt] at (d1.north east) {3};
+
+\draw[myarrow] (spacy) -- (d1);
+
+% =====================
+% LEFT BRANCH: Not in list -> check bad verbs
+% =====================
+\node[draw=decisionorange, fill=decisionorange!8,
+      diamond, aspect=2.6,
+      minimum width=42mm, minimum height=16mm,
+      font=\footnotesize, align=center, line width=0.5pt,
+      inner sep=2pt, left=28mm of d1]
+    (dbad) {Lemma in\\Negativliste?};
+
+\draw[myarrow] (d1.west) -- node[above, font=\scriptsize\sffamily, text=arrowgray] {nein} (dbad.east);
+
+% Warning box
+\node[draw=warnred, fill=warnred!8, rounded corners=2pt,
+      minimum height=11mm, text width=24mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=10mm of dbad]
+    (warning) {\textbf{Warnung}\\[1pt]{\scriptsize \glqq{}vages Verb\grqq{}}};
+
+\draw[myarrow] (dbad) -- node[right, font=\scriptsize\sffamily, text=arrowgray] {ja} (warning);
+
+% =====================
+% RIGHT BRANCH: In list -> unique?
+% =====================
+\node[draw=decisionorange, fill=decisionorange!8,
+      diamond, aspect=2.6,
+      minimum width=42mm, minimum height=16mm,
+      font=\footnotesize, align=center, line width=0.5pt,
+      inner sep=2pt, below=12mm of d1]
+    (d2) {Eindeutige\\Zuordnung?};
+
+\draw[myarrow] (d1) -- node[right, font=\scriptsize\sffamily, text=arrowgray] {ja} (d2);
+
+% Rule result
+\node[draw=resultgreen, fill=resultgreen!8, rounded corners=2pt,
+      minimum height=13mm, text width=30mm, align=center,
+      font=\footnotesize, line width=0.5pt, right=28mm of d2]
+    (ruleresult) {\textbf{Regel: Stufe} $s$\\[2pt]{\scriptsize Konfidenz: 0{,}95}\\[-1pt]{\scriptsize Quelle: Regel}};
+
+\draw[myarrow] (d2) -- node[above, font=\scriptsize\sffamily, text=arrowgray] {ja} (ruleresult);
+
+% Annotation
+\node[font=\scriptsize, text=resultgreen, align=center, right=3mm of ruleresult]
+    {Transparente\\Zuordnung};
+
+% =====================
+% STEP 4: Embedding
+% =====================
+\node[draw=processblue, fill=processblue!6, rounded corners=2pt,
+      minimum height=14mm, text width=54mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=12mm of d2]
+    (embed) {\textbf{SBERT-Embedding berechnen}\\[2pt]{\scriptsize T-Systems cross-en-de-roberta (768\,d)}};
+\node[font=\scriptsize\sffamily\bfseries, text=processblue,
+      anchor=south east, inner sep=2pt] at (embed.north east) {4};
+
+\draw[myarrow] (d2) -- node[right, font=\scriptsize\sffamily, text=arrowgray] {nein} (embed);
+
+% Bad verb "nein" -> embedding
+\coordinate (belowbad) at ($(dbad.south)+(0,-10mm)$);
+\draw[myarrow] (dbad.south) -- node[left, font=\scriptsize\sffamily, text=arrowgray, pos=0.2] {nein}
+    (belowbad) |- (embed.west);
+
+% Warning also feeds into embedding
+\draw[myarrow] (warning.south) |- ([yshift=-2mm]embed.south west) -- (embed.south west);
+
+% =====================
+% STEP 5: SVM
+% =====================
+\node[draw=processblue, fill=processblue!6, rounded corners=2pt,
+      minimum height=14mm, text width=54mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=of embed]
+    (svm) {\textbf{SVM-Klassifikation}\\[2pt]{\scriptsize Typ (K/I/S) + Taxonomiestufe (1--6)}};
+
+\draw[myarrow] (embed) -- (svm);
+
+% Annotation
+\node[font=\scriptsize, text=processblue, align=center, right=3mm of svm.east]
+    {Kontextsensitive\\Zuordnung};
+
+% =====================
+% STEP 5: Similarity
+% =====================
+\node[draw=processblue, fill=processblue!6, rounded corners=2pt,
+      minimum height=14mm, text width=54mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=of svm]
+    (simil) {\textbf{\"Ahnlichkeitssuche}\\[2pt]{\scriptsize Cosine-Similarity, Top-5 aus Referenz-DB}};
+\node[font=\scriptsize\sffamily\bfseries, text=processblue,
+      anchor=south east, inner sep=2pt] at (simil.north east) {5};
+
+\draw[myarrow] (svm) -- (simil);
+
+% =====================
+% STEP 6: Merge
+% =====================
+\node[draw=processblue, fill=processblue!6, rounded corners=2pt,
+      minimum height=14mm, text width=54mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=of simil]
+    (merge) {\textbf{Ergebnis-Zusammenf\"uhrung}\\[2pt]{\scriptsize Typ, Stufe, Konfidenz, Quelle, Empfehlungen}};
+\node[font=\scriptsize\sffamily\bfseries, text=processblue,
+      anchor=south east, inner sep=2pt] at (merge.north east) {6};
+
+\draw[myarrow] (simil) -- (merge);
+
+% Rule result -> merge
+\draw[myarrow] (ruleresult.south) -- ++(0,-4mm) -| ([xshift=6mm]merge.north east)
+    -- ([xshift=0mm]merge.north east);
+
+% =====================
+% OUTPUT
+% =====================
+\node[draw=grayio, fill=grayio!6, rounded corners=2pt,
+      minimum height=11mm, text width=50mm, align=center,
+      font=\footnotesize, line width=0.5pt, below=12mm of merge]
+    (output) {Analyse-Ergebnis pro Satz};
+
+\draw[myarrow] (merge) -- (output);
+
+\end{tikzpicture}
+\end{document}

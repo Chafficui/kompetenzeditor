@@ -1,0 +1,74 @@
+[
+  {
+    "vergleich": "Regel vs. Embedding",
+    "dimension": "Typ",
+    "n": 1124,
+    "n01": 11,
+    "n10": 235,
+    "n11": 851,
+    "n00": 27,
+    "chi2": 202.15040650406505,
+    "p": 0.0,
+    "signifikant": true
+  },
+  {
+    "vergleich": "Regel vs. Embedding",
+    "dimension": "Taxonomie",
+    "n": 1035,
+    "n01": 40,
+    "n10": 619,
+    "n11": 252,
+    "n00": 124,
+    "chi2": 506.9559939301973,
+    "p": 0.0,
+    "signifikant": true
+  },
+  {
+    "vergleich": "Regel vs. Hybrid",
+    "dimension": "Typ",
+    "n": 1124,
+    "n01": 8,
+    "n10": 198,
+    "n11": 854,
+    "n00": 64,
+    "chi2": 173.40291262135923,
+    "p": 0.0,
+    "signifikant": true
+  },
+  {
+    "vergleich": "Regel vs. Hybrid",
+    "dimension": "Taxonomie",
+    "n": 1035,
+    "n01": 0,
+    "n10": 358,
+    "n11": 292,
+    "n00": 385,
+    "chi2": 356.0027932960894,
+    "p": 0.0,
+    "signifikant": true
+  },
+  {
+    "vergleich": "Embedding vs. Hybrid",
+    "dimension": "Typ",
+    "n": 1124,
+    "n01": 37,
+    "n10": 3,
+    "n11": 1049,
+    "n00": 35,
+    "chi2": 27.225,
+    "p": 1.81101728724542e-07,
+    "signifikant": true
+  },
+  {
+    "vergleich": "Embedding vs. Hybrid",
+    "dimension": "Taxonomie",
+    "n": 1035,
+    "n01": 261,
+    "n10": 40,
+    "n11": 610,
+    "n00": 124,
+    "chi2": 160.79734219269102,
+    "p": 0.0,
+    "signifikant": true
+  }
+]
