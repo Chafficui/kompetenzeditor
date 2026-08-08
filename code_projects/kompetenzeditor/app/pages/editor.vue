@@ -366,7 +366,9 @@ function focusEditor() {
 
 async function analyze() {
   if (!editor.value) return
-  const text = editor.value.getText()
+  // blockSeparator '\n' (1 Zeichen) muss zur posMap in textToProseMirrorHighlights
+  // passen, die pro Blockgrenze genau einen Eintrag reserviert
+  const text = editor.value.getText({ blockSeparator: '\n' })
   if (!text || text.trim() === '') {
     resetAnalysis()
     return
