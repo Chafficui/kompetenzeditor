@@ -35,10 +35,6 @@ Thumbs.db
 # Large binary models (tracked separately)
 code_projects/backend/models/
 
-# PDF materials (copyrighted, not redistributed by default).
-# To include them on purpose: `git add -f materials/` or remove these lines.
-materials/**
-!materials/README.md
 
 # Thesis, Exposee, Docs (separate Verwaltung)
 thesis/

@@ -24,7 +24,7 @@ Masterarbeit/
 │   └── *.py                      Skripte der Datenpipeline & Evaluation
 ├── data/                         CSV-Datensätze (Gold-Standard, Annotationen, Stichproben)
 ├── evaluation_results/           Auswertungen des Ansatzvergleichs
-└── materials/                    Quell-PDFs der Modulhandbücher (nicht im Repo, siehe materials/README.md)
+└── materials/                    Quell-PDFs der Modulhandbücher (19 Dateien, siehe materials/README.md)
 ```
 
 Details zu den einzelnen Bereichen stehen in den jeweiligen README-Dateien:
@@ -121,7 +121,8 @@ Das Skript benötigt die trainierten Modelle in `code_projects/backend/models/`
 (siehe Schnellstart) und schreibt die Ergebnisse nach `evaluation_results/`.
 Ergänzende Auswertungen: `evaluate_embeddings.py` (Modellvergleich), `evaluate_confidence*.py`
 (Konfidenz-Bins), `evaluate_correlation.py`, `evaluate_pk_clean.py` (Precision@k ohne
-Test-Set-Leakage).
+Test-Set-Leakage), `evaluate_sensitivity.py` (Kernmetriken nur auf den manuell validierten
+Sätzen mit menschlichen Labels als Ground Truth).
 
 ### Kernergebnisse (aus `evaluation_results/evaluation_report.txt`)
 

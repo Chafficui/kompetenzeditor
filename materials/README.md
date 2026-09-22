@@ -1,23 +1,21 @@
 # Materials (Quell-PDFs)
 
-Der Inhalt dieses Ordners ist per `.gitignore` von der Versionierung ausgeschlossen
-(Regel `materials/**` in der Root-`.gitignore`, nur diese README ist ausgenommen), da die
-Modulhandbücher urheberrechtlich bei den jeweiligen Hochschulen liegen. Wer die
-Extraktionsskripte in `code_projects/` ausführen möchte, muss die PDFs selbst hier
-ablegen.
+Dieser Ordner enthält die Modulhandbuch-PDFs, aus denen die Qualifikationsziele
+extrahiert wurden (19 Dateien, 4 Hochschulen). Zusammen mit den CSV-Dateien in `data/`
+bilden sie den vollständigen Basis-Datensatz der Arbeit (siehe
+[`data/README.md`](../data/README.md)).
 
-Der vollständige Basis-Datensatz der Arbeit besteht aus **diesen PDFs + den CSV-Dateien
-in `data/`**. Ohne die PDFs lässt sich nur mit den bereits extrahierten/annotierten Daten
-in `data/` weiterarbeiten (siehe [`data/README.md`](../data/README.md)); die
-Extraktionsskripte selbst benötigen die Originale.
+Die PDFs sind öffentlich zugängliche Modulhandbücher der jeweiligen Hochschulen; das
+Urheberrecht liegt bei diesen. Sie sind hier ausschließlich zur Nachvollziehbarkeit und
+Reproduzierbarkeit der Studie enthalten und fallen nicht unter die MIT-/CC-BY-Lizenz des
+Repositories.
 
-## Erwartete Struktur
+## Struktur
 
 ### `materials/Modulhandbücher/` — Hochschule Fulda
 
-Erwartet von `code_projects/extract_qualifikationsziele.py`. Die folgenden 15
-Dateinamen sind **erwartete Dateinamen** (aus den Studiengangsnamen abgeleitet,
-Leerzeichen durch Bindestriche ersetzt, Suffix `-Modulbeschreibungen.pdf`):
+Eingabe für `code_projects/extract_qualifikationsziele.py` (15 Dateien; der Studiengangsname
+wird aus dem Dateinamen abgeleitet):
 
 ```
 materials/Modulhandbücher/
@@ -40,7 +38,7 @@ materials/Modulhandbücher/
 
 ### `materials/modulhandbuecher_extern/` — externe Hochschulen
 
-Erwartet von `code_projects/extract_externe_modulhandbuecher.py`:
+Eingabe für `code_projects/extract_externe_modulhandbuecher.py`:
 
 ```
 materials/modulhandbuecher_extern/
@@ -49,15 +47,3 @@ materials/modulhandbuecher_extern/
 ├── Uni_Kassel_Soziale_Arbeit_BA_MHB.pdf
 └── TU_Darmstadt_Informatik_BSc_MHB_PO2023.pdf
 ```
-
-## PDFs ins Repository aufnehmen
-
-Da `materials/**` per `.gitignore` ausgeschlossen ist, werden Dateien in diesem Ordner
-standardmäßig **nicht** committet. Wer die PDFs dennoch versionieren möchte:
-
-```bash
-git add -f materials/
-```
-
-Alternativ die beiden Zeilen `materials/**` und `!materials/README.md` in der
-Root-`.gitignore` entfernen.
