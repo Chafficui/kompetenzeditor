@@ -1,0 +1,20 @@
+Die Annotationen und abgeleiteten Datensätze in diesem Verzeichnis (data/)
+sowie in evaluation_results/ stehen unter der Lizenz
+
+    Creative Commons Attribution 4.0 International (CC BY 4.0)
+    https://creativecommons.org/licenses/by/4.0/
+
+Urheber der Annotationen: Felix Beinßen, 2026.
+
+Bei Nutzung bitte angeben:
+    Beinßen, F. (2026): Hybride NLP-Pipeline zur Analyse von
+    Kompetenzformulierungen in Modulhandbüchern. Masterarbeit,
+    Hochschule Fulda. https://github.com/Chafficui/Masterarbeit
+    (Zitationsangaben siehe CITATION.cff im Repository-Root)
+
+Hinweis: Die Satztexte (Spalte "satz") sind Auszüge aus öffentlich
+zugänglichen Modulhandbüchern der Hochschule Fulda, der TH Mittelhessen,
+der TU Darmstadt und der Universität Kassel. Das Urheberrecht an diesen
+Texten liegt bei den jeweiligen Hochschulen; die CC-BY-Lizenz bezieht
+sich auf die Annotationen (typ, taxonomie, qualitaet, konfidenz, split,
+val_*) und die Zusammenstellung des Datensatzes.

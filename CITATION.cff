@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "Wenn Sie diese Software oder den Datensatz verwenden, zitieren Sie bitte wie unten angegeben."
+type: software
+title: "Kompetenzeditor: Hybride NLP-Pipeline zur Analyse von Kompetenzformulierungen in Modulhandbüchern"
+authors:
+  - family-names: "Beinßen"
+    given-names: "Felix"
+    email: "info@felixbeinssen.com"
+version: "1.0.0"
+date-released: "2026-09-22"
+repository-code: "https://github.com/Chafficui/Masterarbeit"
+license: MIT
+keywords:
+  - Kompetenzformulierungen
+  - Qualifikationsziele
+  - Modulhandbuch
+  - Lernzieltaxonomie
+  - NLP
+  - Sentence Embeddings
+  - Bildungstechnologie
+abstract: >-
+  Werkzeug und Datensatz aus der Masterarbeit an der Hochschule Fulda (Betreuung:
+  Prof. Dr. Johannes Konert). Enthält eine hybride Analyse-Pipeline (regelbasiert
+  + SBERT/SVM) zur Klassifikation von Qualifikationszielen nach Satztyp,
+  Taxonomiestufe (Anderson/Krathwohl) und Formulierungsqualität, einen
+  annotierten Gold-Standard mit 5617 Sätzen aus 18 Studiengängen an vier
+  Hochschulen sowie die Evaluationsskripte und -ergebnisse.
+references:
+  - type: conference-paper
+    title: "Erstellung eines NLP-basierten Editors mit Qualitätsindikatoren und Änderungsvorschlägen für Kompetenzbeschreibungen"
+    authors:
+      - family-names: "Loth"
+        given-names: "Ludwig"
+      - family-names: "Konert"
+        given-names: "Johannes"
+    year: 2022
+    collection-title: "Proceedings of DELFI Workshops 2022"
+    doi: "10.18420/delfi2022-ws-32"
